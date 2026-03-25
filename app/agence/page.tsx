@@ -90,13 +90,13 @@ const reasons = [
 ]
 
 const team = [
-  { name: 'Olivier Trubert', role: 'Président' },
-  { name: 'Gaëlle Aubert', role: 'Directrice Administrative & Financière' },
-  { name: 'Miriame Yvard', role: 'Directrice Stratégie' },
-  { name: 'Jérome Renard', role: 'Directeur Associé' },
-  { name: 'Carole Kabanda', role: 'Directrice Media' },
-  { name: 'Thomas Courjeault', role: 'Directeur SEO / SEA / SMA' },
-  { name: 'Amaury Micha de Faletans', role: 'Directeur Stratégie & Innovation' },
+  { name: 'Olivier Trubert', role: 'Président', photo: '/images/team/olivier-trubert.jpg' },
+  { name: 'Gaëlle Aubert', role: 'Directrice Administrative & Financière', photo: '/images/team/gaelle-aubert.jpg' },
+  { name: 'Miriame Yvard', role: 'Directrice Stratégie', photo: '/images/team/miriame-yvard.jpg' },
+  { name: 'Jérome Renard', role: 'Directeur Associé', photo: '/images/team/jerome-renard.jpg' },
+  { name: 'Carole Kabanda', role: 'Directrice Media', photo: '/images/team/carole-kabanda.jpg' },
+  { name: 'Thomas Courjeault', role: 'Directeur SEO / SEA / SMA', photo: '/images/team/thomas-courjeault.jpg' },
+  { name: 'Amaury Micha de Faletans', role: 'Directeur Stratégie & Innovation', photo: '/images/team/amaury-micha.jpg' },
 ]
 
 const certifications = [
@@ -317,10 +317,12 @@ export default function AgencePage() {
                   overflow: 'hidden',
                 }}
               >
-                <div style={{ width: 48, height: 48, borderRadius: '50%', background: '#0a0a0a', marginBottom: 20, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#FFF127', fontWeight: 700, fontSize: '1rem' }}>
-                    {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                  </span>
+                <div style={{ width: '100%', aspectRatio: '3/4', marginBottom: 20, overflow: 'hidden', background: '#f0f0f0' }}>
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
+                  />
                 </div>
                 <h3 style={{ fontWeight: 700, fontSize: '0.95rem', color: '#0a0a0a', marginBottom: 6, lineHeight: 1.3 }}>{member.name}</h3>
                 <p style={{ fontSize: '0.75rem', color: '#aaa', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase', margin: 0 }}>{member.role}</p>
