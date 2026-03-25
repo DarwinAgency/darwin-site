@@ -102,7 +102,7 @@ export default function AgencePage() {
         <div className="rsp-hero-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', flex: 1, minHeight: '88vh' }}>
 
           {/* LEFT — texte */}
-          <div style={{ padding: '72px 56px 72px 48px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div className="rsp-hero-text" style={{ padding: '72px 56px 72px 48px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             {/* Breadcrumb */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 36, fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#bbb' }}>
               <Link href="/" style={{ color: '#bbb', textDecoration: 'none' }}>Accueil</Link>
@@ -136,7 +136,7 @@ export default function AgencePage() {
             </div>
 
             {/* Stats row */}
-            <div style={{ display: 'flex', gap: 0, borderTop: '1px solid #eee', paddingTop: 32 }}>
+            <div className="rsp-stats-row" style={{ display: 'flex', gap: 0, borderTop: '1px solid #eee', paddingTop: 32 }}>
               {stats.map((s, i) => (
                 <div key={s.num} style={{ flex: 1, paddingRight: 24, borderRight: i < stats.length - 1 ? '1px solid #eee' : 'none', paddingLeft: i > 0 ? 24 : 0 }}>
                   <div className="font-anton" style={{ fontSize: '1.8rem', lineHeight: 1, marginBottom: 4, color: '#0a0a0a' }}>{s.num}</div>
@@ -267,7 +267,7 @@ export default function AgencePage() {
       {/* ─── ÉQUIPE ─── */}
       <section id="equipe" style={{ background: '#f4f4f4', padding: '96px 24px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 64 }}>
+          <div className="rsp-flex-col-mobile" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 64, gap: 24 }}>
             <div>
               <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 16 }}>
                 L&apos;équipe dirigeante
