@@ -37,29 +37,53 @@ const objectives = [
   },
 ]
 
+const reasonIcons = [
+  /* Union des talents — personnes connectées */
+  <svg key="talents" width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#0a0a0a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="10" r="4"/><circle cx="24" cy="10" r="4"/>
+    <path d="M4 28c0-4.4 3.6-8 8-8h4"/><path d="M20 20h4c4.4 0 8 3.6 8 8"/>
+    <line x1="18" y1="14" x2="18" y2="20"/>
+  </svg>,
+  /* Data — graphique barres */
+  <svg key="data" width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#0a0a0a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="4" y="20" width="6" height="12"/><rect x="15" y="12" width="6" height="20"/><rect x="26" y="6" width="6" height="26"/>
+    <line x1="2" y1="32" x2="34" y2="32"/>
+  </svg>,
+  /* Innovation — éclair / foudre */
+  <svg key="innovation" width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#0a0a0a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="21,4 12,20 18,20 15,32 24,16 18,16 21,4"/>
+  </svg>,
+  /* Vision 360 — œil */
+  <svg key="vision" width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#0a0a0a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M2 18s6-10 16-10 16 10 16 10-6 10-16 10S2 18 2 18z"/>
+    <circle cx="18" cy="18" r="4"/>
+  </svg>,
+  /* Certifié — médaille */
+  <svg key="certif" width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#0a0a0a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="18" cy="14" r="10"/>
+    <polyline points="12,24 10,34 18,30 26,34 24,24"/>
+    <polyline points="14,14 17,17 23,11"/>
+  </svg>,
+]
+
 const reasons = [
   {
-    icon: '⚡',
     title: 'Union des talents',
     desc: "Des experts seniors certifiés dans leurs domaines créent une synergie unique. Chaque profil apporte une expertise pointue — ensemble, ils couvrent l'intégralité des leviers digitaux.",
   },
   {
-    icon: '📊',
     title: 'La puissance de la data',
     desc: "Notre approche analytique transforme la complexité des données en opportunités concrètes. Chaque décision est fondée sur des chiffres réels, pas sur des intuitions.",
   },
   {
-    icon: '🤖',
     title: 'Innovation continue',
     desc: "Nous anticipons les évolutions du marché grâce à une veille permanente et l'intégration de l'IA dans nos processus. Vos stratégies sont toujours un temps d'avance.",
   },
   {
-    icon: '🔭',
     title: 'Vision transversale',
     desc: "Une expertise 360° qui couvre tous les leviers digitaux crée une valeur long terme. SEO, SEA, Social, Media, Data : tout est pensé ensemble, pas en silo.",
   },
   {
-    icon: '🏆',
     title: 'Expérience certifiée',
     desc: "Google Partner Premier, Meta Business Partner, Microsoft Advertising. Ces certifications ne sont pas des badges — elles garantissent un accès prioritaire aux nouvelles fonctionnalités et aux équipes des plateformes.",
   },
@@ -255,7 +279,7 @@ export default function AgencePage() {
                   color: '#0a0a0a',
                 }}
               >
-                <div style={{ fontSize: '1.8rem', marginBottom: 20 }}>{r.icon}</div>
+                <div style={{ marginBottom: 20, lineHeight: 0 }}>{reasonIcons[i]}</div>
                 <h3 className="font-anton" style={{ fontSize: '1.2rem', textTransform: 'uppercase', marginBottom: 14, lineHeight: 1.1 }}>{r.title}</h3>
                 <p style={{ fontSize: '0.82rem', lineHeight: 1.75, color: '#555', margin: 0 }}>{r.desc}</p>
               </div>
