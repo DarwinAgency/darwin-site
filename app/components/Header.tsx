@@ -3,9 +3,18 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 
+// ── Types ─────────────────────────────────────────────────────────────────────
+
+type Tab = {
+  label: string
+  desc: string
+  cta?: { label: string; href: string }
+  items: { label: string; desc: string }[]
+}
+
 // ── Data ──────────────────────────────────────────────────────────────────────
 
-const expertisesTabs = [
+const expertisesTabs: Tab[] = [
   {
     label: 'SEO',
     desc: 'Référencement naturel',
@@ -99,7 +108,7 @@ const expertisesTabs = [
   },
 ]
 
-const besoinsTabs = [
+const besoinsTabs: Tab[] = [
   {
     label: 'Développer ma visibilité',
     desc: 'SEO, SEA, Media',
