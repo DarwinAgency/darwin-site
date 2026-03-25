@@ -11,49 +11,56 @@ export default function ContactPage() {
   return (
     <main>
 
-      {/* ── HERO BLANC ────────────────────────────────────────────── */}
-      <section style={{ background: '#fff', paddingTop: 140, paddingBottom: 64, borderBottom: '1px solid #ebebeb' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 48px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 40, flexWrap: 'wrap' }}>
-          <div>
-            <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#29C5F5', marginBottom: 20 }}>
-              Contactez-nous
-            </p>
-            <h1 className="font-anton" style={{ fontSize: 'clamp(3.5rem, 9vw, 9rem)', lineHeight: 0.9, color: '#0a0a0a', textTransform: 'uppercase', marginBottom: 28 }}>
-              LET&apos;S<br />
-              <span style={{ color: 'transparent', WebkitTextStroke: '2px #0a0a0a' }}>TALK!</span>
-            </h1>
-            <p style={{ fontSize: '1rem', color: '#666', maxWidth: 480, lineHeight: 1.75, margin: 0 }}>
-              Ensemble, donnons vie à vos ambitions digitales. Les meilleures collaborations commencent par une conversation simple.
-            </p>
-          </div>
+      {/* ── HERO SPLIT ────────────────────────────────────────────── */}
+      <section style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 560 }} className="rsp-hero-split">
+
+        {/* Moitié gauche — texte */}
+        <div style={{ background: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '140px 56px 56px 48px', borderBottom: '1px solid #ebebeb' }}>
+          <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#29C5F5', marginBottom: 20 }}>
+            Contactez-nous
+          </p>
+          <h1 className="font-anton" style={{ fontSize: 'clamp(3rem, 6vw, 7rem)', lineHeight: 0.9, color: '#0a0a0a', textTransform: 'uppercase', marginBottom: 28 }}>
+            LET&apos;S<br />
+            <span style={{ color: 'transparent', WebkitTextStroke: '2px #0a0a0a' }}>TALK!</span>
+          </h1>
+          <p style={{ fontSize: '0.95rem', color: '#666', maxWidth: 420, lineHeight: 1.75, marginBottom: 36 }}>
+            Ensemble, donnons vie à vos ambitions digitales. Les meilleures collaborations commencent par une conversation simple.
+          </p>
 
           {/* CTA Rejoignez-nous */}
           <Link
             href="/recrutement"
             style={{
               display: 'inline-flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              gap: 6,
+              alignItems: 'center',
+              gap: 14,
               background: '#f5f5f5',
               border: '1px solid #e8e8e8',
               borderRadius: 6,
-              padding: '20px 28px',
+              padding: '16px 22px',
               textDecoration: 'none',
-              minWidth: 240,
-              transition: 'border-color 0.2s, background 0.2s',
+              alignSelf: 'flex-start',
             }}
           >
-            <span style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#FFF127', background: '#0a0a0a', padding: '3px 8px', borderRadius: 2 }}>
+            <span style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#FFF127', background: '#0a0a0a', padding: '3px 8px', borderRadius: 2, whiteSpace: 'nowrap' }}>
               On recrute
             </span>
-            <span className="font-anton" style={{ fontSize: '1.3rem', textTransform: 'uppercase', color: '#0a0a0a', lineHeight: 1.1 }}>
-              Rejoignez Darwin
-            </span>
-            <span style={{ fontSize: '0.8rem', color: '#888', lineHeight: 1.5 }}>
-              Découvrez nos offres d&apos;emploi →
+            <span style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+              <span className="font-anton" style={{ fontSize: '1rem', textTransform: 'uppercase', color: '#0a0a0a', lineHeight: 1 }}>Rejoignez Darwin</span>
+              <span style={{ fontSize: '0.75rem', color: '#888' }}>Découvrez nos offres →</span>
             </span>
           </Link>
+        </div>
+
+        {/* Moitié droite — carte Google Maps */}
+        <div style={{ position: 'relative', overflow: 'hidden' }}>
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=5.3717%2C43.5142%2C5.3917%2C43.5242&layer=mapnik&marker=43.5192%2C5.3817"
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
+            allowFullScreen
+            loading="lazy"
+            title="Darwin Agency — Bâtiment Le Toma, Aix-en-Provence"
+          />
         </div>
       </section>
 
