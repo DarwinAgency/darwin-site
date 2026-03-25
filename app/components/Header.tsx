@@ -197,6 +197,7 @@ export default function Header() {
   const [visible, setVisible] = useState(true)
   const [openMenu, setOpenMenu] = useState<string | null>(null)
   const [activeTab, setActiveTab] = useState<number>(0)
+  const [mobileOpen, setMobileOpen] = useState(false)
   const lastScrollY = useRef(0)
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
@@ -264,8 +265,8 @@ export default function Header() {
             />
           </a>
 
-          {/* Nav */}
-          <nav style={{ display: 'flex', gap: 0, alignItems: 'stretch', height: 68 }}>
+          {/* Nav desktop */}
+          <nav className="nav-desktop" style={{ gap: 0, alignItems: 'stretch', height: 68 }}>
             {navItems.map((item) => {
               const isOpen = openMenu === item.label
               return (
@@ -277,6 +278,7 @@ export default function Header() {
                 >
                   <a
                     href={item.href}
+                    className="nav-link"
                     style={{
                       color: '#0a0a0a',
                       textDecoration: 'none',
@@ -288,6 +290,7 @@ export default function Header() {
                       display: 'flex',
                       alignItems: 'center',
                       gap: 5,
+                      position: 'relative',
                       opacity: isOpen ? 1 : 0.7,
                       borderBottom: isOpen ? '2px solid #29C5F5' : '2px solid transparent',
                       transition: 'opacity 0.2s, border-color 0.2s',
@@ -310,12 +313,72 @@ export default function Header() {
             })}
           </nav>
 
-          {/* CTA */}
-          <a href="#contact" className="btn-yellow" style={{ padding: '10px 22px', borderRadius: 4, fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textDecoration: 'none' }}>
+          {/* CTA desktop */}
+          <a href="#contact" className="btn-yellow contact-btn-desktop" style={{ padding: '10px 22px', borderRadius: 4, fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textDecoration: 'none' }}>
             CONTACT
           </a>
+
+          {/* Burger mobile */}
+          <button
+            className="burger-btn"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+            style={{ zIndex: 300 }}
+          >
+            {mobileOpen ? (
+              /* Croix */
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" strokeWidth="2.5">
+                <path d="M18 6L6 18M6 6l12 12"/>
+              </svg>
+            ) : (
+              /* Hamburger */
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" strokeWidth="2.5">
+                <path d="M3 6h18M3 12h18M3 18h18"/>
+              </svg>
+            )}
+          </button>
         </div>
       </header>
+
+      {/* ── Menu mobile overlay ── */}
+      {mobileOpen && (
+        <div style={{
+          position: 'fixed', top: 68, left: 0, right: 0, bottom: 0,
+          background: '#fff', zIndex: 198, overflowY: 'auto',
+          borderTop: '1px solid #eee',
+        }}>
+          <div style={{ padding: '16px 24px 40px' }}>
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={() => setMobileOpen(false)}
+                style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                  padding: '18px 0', borderBottom: '1px solid #f0f0f0',
+                  textDecoration: 'none', color: '#0a0a0a',
+                  fontSize: '1rem', fontWeight: 700, letterSpacing: '0.08em',
+                }}
+              >
+                {item.label}
+                <span style={{ color: '#ccc', fontSize: '1.2rem' }}>›</span>
+              </a>
+            ))}
+            <a
+              href="#contact"
+              onClick={() => setMobileOpen(false)}
+              style={{
+                display: 'block', textAlign: 'center', marginTop: 28,
+                background: '#FFF127', color: '#0a0a0a', padding: '16px 24px',
+                borderRadius: 4, fontWeight: 700, fontSize: '0.82rem',
+                letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none',
+              }}
+            >
+              CONTACT →
+            </a>
+          </div>
+        </div>
+      )}
 
       {/* ── Mega Menu ── */}
       {tabs.length > 0 && (

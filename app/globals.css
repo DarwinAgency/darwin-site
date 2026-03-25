@@ -183,3 +183,119 @@ details summary::-webkit-details-marker {
 .btn-cyan:hover {
   background: #1ab0e0;
 }
+
+/* ════════════════════════════════════════════════════════════════════════════
+   RESPONSIVE SYSTEM
+   Breakpoints : mobile ≤ 640px | tablet ≤ 900px | desktop > 900px
+   Convention  : toujours utiliser ces classes sur les containers grille/section
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Burger / Nav mobile ── */
+.burger-btn          { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-desktop         { display: flex; }
+.contact-btn-desktop { display: inline-block; }
+
+@media (max-width: 900px) {
+  .burger-btn          { display: flex; flex-direction: column; gap: 5px; align-items: center; justify-content: center; }
+  .nav-desktop         { display: none !important; }
+  .contact-btn-desktop { display: none !important; }
+}
+
+/* ── Grid utilities ──
+   Utiliser ces classes sur le div qui a display:grid + gridTemplateColumns inline.
+   Les media queries passent avec !important pour surcharger les styles inline.   */
+
+/* 2 colonnes → 1 colonne mobile */
+.rsp-2col { }
+@media (max-width: 768px)  { .rsp-2col { grid-template-columns: 1fr !important; gap: 32px !important; } }
+
+/* 3 colonnes → 2 tablet → 1 mobile */
+.rsp-3col { }
+@media (min-width: 641px) and (max-width: 1024px) { .rsp-3col { grid-template-columns: 1fr 1fr !important; } }
+@media (max-width: 640px)  { .rsp-3col { grid-template-columns: 1fr !important; } }
+
+/* 4 colonnes → 2 tablet → 1 mobile */
+.rsp-4col { }
+@media (min-width: 641px) and (max-width: 1024px) { .rsp-4col { grid-template-columns: 1fr 1fr !important; } }
+@media (max-width: 640px)  { .rsp-4col { grid-template-columns: 1fr !important; } }
+
+/* 5 colonnes → 2 tablet → 1 mobile */
+.rsp-5col { }
+@media (min-width: 641px) and (max-width: 1024px) { .rsp-5col { grid-template-columns: 1fr 1fr !important; } }
+@media (max-width: 640px)  { .rsp-5col { grid-template-columns: 1fr !important; } }
+
+/* 6 colonnes → 3 tablet → 2 mobile */
+.rsp-6col { }
+@media (min-width: 641px) and (max-width: 1024px) { .rsp-6col { grid-template-columns: repeat(3,1fr) !important; } }
+@media (max-width: 640px)  { .rsp-6col { grid-template-columns: 1fr 1fr !important; } }
+
+/* ── Hero split (2-col avec image) ── */
+.rsp-hero-grid { }
+@media (max-width: 900px) {
+  .rsp-hero-grid { grid-template-columns: 1fr !important; min-height: auto !important; }
+  .rsp-hero-img  { display: none !important; }
+  .rsp-hero-text { padding: 48px 24px !important; }
+}
+
+/* ── Section padding ── */
+.rsp-section    { }
+.rsp-section-sm { }
+@media (max-width: 768px) {
+  .rsp-section    { padding: 56px 20px !important; }
+  .rsp-section-sm { padding: 36px 20px !important; }
+}
+
+/* ── Footer grid ── */
+.rsp-footer-grid { }
+@media (min-width: 641px) and (max-width: 1024px) { .rsp-footer-grid { grid-template-columns: 1fr 1fr 1fr !important; padding: 48px 32px !important; } }
+@media (max-width: 640px)  { .rsp-footer-grid { grid-template-columns: 1fr !important; padding: 40px 20px !important; } }
+
+/* ── CTA band footer ── */
+.rsp-cta-band { }
+@media (max-width: 768px) { .rsp-cta-band { padding: 32px 20px !important; flex-direction: column !important; align-items: flex-start !important; } }
+
+/* ── Bottom bar footer ── */
+.rsp-bottom-bar { }
+@media (max-width: 640px) { .rsp-bottom-bar { padding: 18px 20px !important; flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; } }
+
+/* ── Utilitaires généraux ── */
+.rsp-hide-mobile  { }
+.rsp-hide-desktop { display: none; }
+@media (max-width: 900px)  { .rsp-hide-mobile  { display: none !important; } }
+@media (min-width: 901px)  { .rsp-hide-desktop { display: none !important; } }
+
+/* ── Stats row (4 stat inline) ── */
+@media (max-width: 640px) {
+  .rsp-stats-row { flex-wrap: wrap !important; }
+  .rsp-stats-row > div { flex: 1 1 calc(50% - 12px) !important; border-right: none !important; border-bottom: 1px solid #eee; padding: 12px 0 !important; }
+}
+
+/* ── Flex gap mobile ── */
+@media (max-width: 640px) {
+  .rsp-flex-col-mobile { flex-direction: column !important; }
+  .rsp-text-center-mobile { text-align: center !important; }
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   FIN RESPONSIVE
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* ---- Nav items hover ---- */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+  height: 2px;
+  background: #FFF127;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+.nav-link:hover {
+  opacity: 1 !important;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}

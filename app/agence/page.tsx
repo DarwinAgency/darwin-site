@@ -99,7 +99,7 @@ export default function AgencePage() {
 
       {/* ─── HERO ─── */}
       <section style={{ background: '#fff', overflow: 'hidden', minHeight: '88vh', display: 'flex', flexDirection: 'column' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', flex: 1, minHeight: '88vh' }}>
+        <div className="rsp-hero-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', flex: 1, minHeight: '88vh' }}>
 
           {/* LEFT — texte */}
           <div style={{ padding: '72px 56px 72px 48px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -146,8 +146,8 @@ export default function AgencePage() {
             </div>
           </div>
 
-          {/* RIGHT — image gymnaste */}
-          <div style={{ position: 'relative', background: '#0a0a0a', overflow: 'hidden' }}>
+          {/* RIGHT — image gymnaste (caché mobile via rsp-hero-img) */}
+          <div className="rsp-hero-img" style={{ position: 'relative', background: '#0a0a0a', overflow: 'hidden' }}>
             <Image
               src="/images/gymnaste.jpg"
               alt="Darwin Agence — Performance & Créativité"
@@ -171,7 +171,7 @@ export default function AgencePage() {
 
       {/* ─── MISSION JAUNE ─── */}
       <section style={{ background: '#FFF127', padding: '64px 24px' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
+        <div className="rsp-2col" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
           <div>
             <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#555', marginBottom: 16 }}>
               Notre mission
@@ -203,7 +203,7 @@ export default function AgencePage() {
             </h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 2 }}>
+          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 2 }}>
             {objectives.map((obj, i) => (
               <div
                 key={obj.id}
@@ -244,7 +244,7 @@ export default function AgencePage() {
             </h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 2 }}>
+          <div className="rsp-5col" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 2 }}>
             {reasons.map((r, i) => (
               <div
                 key={r.title}
@@ -281,7 +281,7 @@ export default function AgencePage() {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 2 }}>
+          <div className="rsp-4col" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 2 }}>
             {team.map((member) => (
               <div
                 key={member.name}
@@ -327,7 +327,7 @@ export default function AgencePage() {
           <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 40 }}>
             Nos expertises
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: 2 }}>
+          <div className="rsp-6col" style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: 2 }}>
             {expertises.map((e) => (
               <Link
                 key={e.title}

@@ -19,7 +19,7 @@ export default function Footer() {
     <footer style={{ background: '#0a0a0a', color: '#fff' }}>
 
       {/* ── CTA BAND ── */}
-      <div style={{ background: '#29C5F5', padding: '40px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
+      <div className="rsp-cta-band" style={{ background: '#29C5F5', padding: '40px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
         <div>
           <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.45)', marginBottom: 10 }}>
             PRÊT À PASSER À L'ACTION ?
@@ -52,7 +52,7 @@ export default function Footer() {
       </div>
 
       {/* ── MAIN FOOTER ── */}
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '64px 48px 48px', display: 'grid', gridTemplateColumns: '1.8fr 1fr 1fr 1fr 1fr', gap: 48 }}>
+      <div className="rsp-footer-grid" style={{ maxWidth: 1280, margin: '0 auto', padding: '64px 48px 48px', display: 'grid', gridTemplateColumns: '1.8fr 1fr 1fr 1fr 1fr', gap: 48 }}>
 
         {/* Col 1 — Logo + infos + newsletter */}
         <div>
@@ -234,7 +234,7 @@ export default function Footer() {
       </div>
 
       {/* ── BOTTOM BAR ── */}
-      <div style={{ borderTop: '1px solid #1a1a1a', padding: '18px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
+      <div className="rsp-bottom-bar" style={{ borderTop: '1px solid #1a1a1a', padding: '18px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
         <span style={{ fontSize: '0.75rem', color: '#444' }}>
           DARWIN — Agence Marketing Digital &copy; 2026 — Tous droits réservés
         </span>

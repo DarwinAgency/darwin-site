@@ -33,7 +33,7 @@ export default function Home() {
 
       {/* ─── NOUS SOMMES DARWIN ─── */}
       <section style={{ background: '#fff', padding: '60px 24px 80px', borderTop: '1px solid #eee' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80 }}>
+        <div className="rsp-2col" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80 }}>
           <div>
             <h2 className="font-anton" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.6rem)', textTransform: 'uppercase', marginBottom: 24, lineHeight: 1.1 }}>
               NOUS SOMMES DARWIN
@@ -86,7 +86,7 @@ export default function Home() {
 
       {/* ─── NOTRE AGENCE / STATS ─── */}
       <section style={{ background: '#fff', overflow: 'hidden' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 560 }}>
+        <div className="rsp-hero-grid" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 560 }}>
 
           {/* Colonne gauche — texte + stats */}
           <div style={{ padding: '80px 64px 80px 24px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -119,7 +119,7 @@ export default function Home() {
             backgroundSize: 'cover',
             backgroundPosition: 'center top',
             minHeight: 560,
-          }} />
+          }} className="rsp-hero-img" />
 
         </div>
       </section>
@@ -146,7 +146,7 @@ export default function Home() {
           <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 5vw, 4.5rem)', textTransform: 'uppercase', marginBottom: 60, lineHeight: 1 }}>
             NOS MÉTIERS
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 0 }}>
+          <div className="rsp-5col" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 0 }}>
             {[
               { title: 'SEO', desc: 'Optimisation organique pour gagner en visibilité et attirer un trafic qualifié sur le long terme.', items: ['Audit technique', 'Stratégie de contenu', 'Netlinking', 'SEO local'] },
               { title: 'SEA', desc: "Campagnes payantes Google & Bing pour capter l'intention d'achat au bon moment.", items: ['Google Ads', 'Bing Ads', 'Shopping', 'Performance Max'] },
@@ -267,7 +267,7 @@ export default function Home() {
           <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 5vw, 4.5rem)', textTransform: 'uppercase', marginBottom: 48, lineHeight: 1 }}>
             NOS CAS CLIENTS
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
+          <div className="rsp-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
             {caseStudies.map((project) => (
               <a key={project.name} href="#" className="case-card" style={{ display: 'block', textDecoration: 'none', overflow: 'hidden', borderRadius: 6, position: 'relative' }}>
                 <div style={{ overflow: 'hidden', position: 'relative', height: 240 }}>
@@ -406,7 +406,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
+          <div className="rsp-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
             {[
               { title: 'Comment optimiser votre stratégie SEO en 2025', category: 'SEO', bg: '#E8F4FD', date: '15 Mars 2025' },
               { title: "L'IA au service de la performance marketing", category: 'IA & DATA', bg: '#FFF8E7', date: '8 Mars 2025' },
@@ -449,7 +449,7 @@ export default function Home() {
 
       {/* ─── CONTACT ─── */}
       <section id="contact" style={{ background: '#fff', padding: '96px 24px', borderTop: '1px solid #eee' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 80, alignItems: 'start' }}>
+        <div className="rsp-2col" style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 80, alignItems: 'start' }}>
 
           {/* Colonne gauche — accroche */}
           <div>
