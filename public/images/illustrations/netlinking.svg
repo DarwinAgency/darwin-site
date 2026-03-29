@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+
+  <!-- Grid de fond -->
+  <g opacity="0.05" stroke="#0a0a0a" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="0" y1="700" x2="1200" y2="700"/>
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+    <line x1="800" y1="0" x2="800" y2="800"/>
+    <line x1="900" y1="0" x2="900" y2="800"/>
+    <line x1="1000" y1="0" x2="1000" y2="800"/>
+    <line x1="1100" y1="0" x2="1100" y2="800"/>
+  </g>
+
+  <!-- ─── HALO CENTRAL ─── -->
+  <circle cx="600" cy="390" r="280" fill="#FFF127" opacity="0.04"/>
+  <circle cx="600" cy="390" r="200" fill="#FFF127" opacity="0.06"/>
+
+  <!-- ─── CONNECTIONS anneau 2 → centre (pointillés) ─── -->
+  <line x1="880" y1="390" x2="648" y2="390" stroke="#0a0a0a" stroke-width="1" opacity="0.12" stroke-dasharray="6 4"/>
+  <line x1="813" y1="574" x2="634" y2="430" stroke="#0a0a0a" stroke-width="1" opacity="0.1" stroke-dasharray="6 4"/>
+  <line x1="600" y1="660" x2="600" y2="442" stroke="#0a0a0a" stroke-width="1" opacity="0.08" stroke-dasharray="6 4"/>
+  <line x1="387" y1="574" x2="565" y2="430" stroke="#0a0a0a" stroke-width="1" opacity="0.1" stroke-dasharray="6 4"/>
+  <line x1="320" y1="390" x2="552" y2="390" stroke="#0a0a0a" stroke-width="1" opacity="0.12" stroke-dasharray="6 4"/>
+  <line x1="387" y1="206" x2="565" y2="350" stroke="#0a0a0a" stroke-width="1" opacity="0.1" stroke-dasharray="6 4"/>
+  <line x1="600" y1="140" x2="600" y2="338" stroke="#0a0a0a" stroke-width="1" opacity="0.08" stroke-dasharray="6 4"/>
+  <line x1="813" y1="206" x2="634" y2="350" stroke="#0a0a0a" stroke-width="1" opacity="0.1" stroke-dasharray="6 4"/>
+
+  <!-- ─── CONNECTIONS anneau 1 → centre ─── -->
+  <line x1="772" y1="390" x2="652" y2="390" stroke="#0a0a0a" stroke-width="1.5" opacity="0.2"/>
+  <line x1="706" y1="512" x2="638" y2="436" stroke="#0a0a0a" stroke-width="1.5" opacity="0.18"/>
+  <line x1="494" y1="512" x2="562" y2="436" stroke="#0a0a0a" stroke-width="1.5" opacity="0.18"/>
+  <line x1="428" y1="390" x2="548" y2="390" stroke="#0a0a0a" stroke-width="1.5" opacity="0.2"/>
+  <line x1="494" y1="268" x2="562" y2="344" stroke="#0a0a0a" stroke-width="1.5" opacity="0.18"/>
+  <line x1="706" y1="268" x2="638" y2="344" stroke="#0a0a0a" stroke-width="1.5" opacity="0.18"/>
+
+  <!-- Connexions latérales entre nœuds anneau 1 -->
+  <line x1="772" y1="390" x2="706" y2="512" stroke="#0a0a0a" stroke-width="1" opacity="0.08"/>
+  <line x1="706" y1="268" x2="772" y2="390" stroke="#0a0a0a" stroke-width="1" opacity="0.08"/>
+  <line x1="428" y1="390" x2="494" y2="512" stroke="#0a0a0a" stroke-width="1" opacity="0.07"/>
+  <line x1="494" y1="268" x2="428" y2="390" stroke="#0a0a0a" stroke-width="1" opacity="0.07"/>
+
+  <!-- ─── NŒUD CENTRAL (jaune plein) ─── -->
+  <circle cx="600" cy="390" r="52" fill="#FFF127"/>
+  <circle cx="600" cy="390" r="64" stroke="#FFF127" stroke-width="2.5" fill="none" opacity="0.4"/>
+  <circle cx="600" cy="390" r="76" stroke="#FFF127" stroke-width="1" fill="none" opacity="0.2"/>
+  <rect x="576" y="383" width="48" height="5" fill="#0a0a0a" opacity="0.5"/>
+  <rect x="582" y="394" width="36" height="4" fill="#0a0a0a" opacity="0.35"/>
+
+  <!-- ─── NŒUDS ANNEAU 1 (cyan) ─── -->
+  <circle cx="772" cy="390" r="28" fill="#29C5F5"/>
+  <circle cx="772" cy="390" r="8" fill="#0a0a0a" opacity="0.3"/>
+  <circle cx="706" cy="512" r="24" fill="#29C5F5" opacity="0.85"/>
+  <circle cx="706" cy="512" r="7" fill="#0a0a0a" opacity="0.3"/>
+  <circle cx="494" cy="512" r="22" fill="#29C5F5" opacity="0.7"/>
+  <circle cx="494" cy="512" r="7" fill="#0a0a0a" opacity="0.3"/>
+  <circle cx="428" cy="390" r="26" fill="#29C5F5" opacity="0.9"/>
+  <circle cx="428" cy="390" r="8" fill="#0a0a0a" opacity="0.3"/>
+  <circle cx="494" cy="268" r="20" fill="#29C5F5" opacity="0.6"/>
+  <circle cx="494" cy="268" r="6" fill="#0a0a0a" opacity="0.3"/>
+  <circle cx="706" cy="268" r="24" fill="#29C5F5" opacity="0.75"/>
+  <circle cx="706" cy="268" r="7" fill="#0a0a0a" opacity="0.3"/>
+
+  <!-- ─── NŒUDS ANNEAU 2 (contour sombre) ─── -->
+  <circle cx="880" cy="390" r="18" stroke="#0a0a0a" stroke-width="1.5" fill="#f0f0f0"/>
+  <circle cx="813" cy="574" r="16" stroke="#0a0a0a" stroke-width="1.5" fill="#f0f0f0"/>
+  <circle cx="387" cy="574" r="14" stroke="#0a0a0a" stroke-width="1.5" fill="#f0f0f0"/>
+  <circle cx="320" cy="390" r="18" stroke="#0a0a0a" stroke-width="1.5" fill="#f0f0f0"/>
+  <circle cx="387" cy="206" r="14" stroke="#0a0a0a" stroke-width="1.5" fill="#f0f0f0"/>
+  <circle cx="600" cy="140" r="16" stroke="#0a0a0a" stroke-width="1.5" fill="#f0f0f0"/>
+  <circle cx="813" cy="206" r="18" stroke="#0a0a0a" stroke-width="1.5" fill="#f0f0f0"/>
+
+  <!-- ─── NŒUD TOXIQUE ─── -->
+  <circle cx="600" cy="660" r="16" stroke="#FF5252" stroke-width="2" fill="#fff0f0"/>
+  <line x1="593" y1="653" x2="607" y2="667" stroke="#FF5252" stroke-width="2.5"/>
+  <line x1="607" y1="653" x2="593" y2="667" stroke="#FF5252" stroke-width="2.5"/>
+
+  <!-- ─── ÉLÉMENTS DÉCORATIFS ─── -->
+  <rect x="60" y="60" width="20" height="20" fill="#FFF127"/>
+  <rect x="88" y="60" width="8" height="8" fill="#FFF127" opacity="0.4"/>
+  <rect x="1100" y="60" width="14" height="14" stroke="#29C5F5" stroke-width="2" fill="none"/>
+  <rect x="1122" y="60" width="14" height="14" fill="#29C5F5" opacity="0.6"/>
+  <circle cx="80" cy="720" r="24" stroke="#29C5F5" stroke-width="2" fill="none" opacity="0.5"/>
+  <circle cx="80" cy="720" r="8" fill="#29C5F5" opacity="0.3"/>
+  <circle cx="1090" cy="120" r="5" fill="#FFF127" opacity="0.7"/>
+  <circle cx="1115" cy="108" r="3" fill="#0a0a0a" opacity="0.2"/>
+  <circle cx="1120" cy="700" r="5" fill="#29C5F5" opacity="0.5"/>
+  <circle cx="1100" cy="720" r="3" fill="#0a0a0a" opacity="0.2"/>
+  <rect x="100" y="748" width="240" height="3" fill="#FFF127"/>
+  <rect x="354" y="748" width="60" height="3" fill="#29C5F5"/>
+  <rect x="428" y="748" width="20" height="3" fill="#0a0a0a" opacity="0.15"/>
+
+  <!-- Icône lien/chaîne -->
+  <rect x="1080" y="160" width="64" height="64" fill="#29C5F5"/>
+  <circle cx="1100" cy="192" r="11" stroke="#0a0a0a" stroke-width="3" fill="none"/>
+  <circle cx="1124" cy="192" r="11" stroke="#0a0a0a" stroke-width="3" fill="none"/>
+  <rect x="1108" y="185" width="8" height="14" fill="#29C5F5"/>
+  <rect x="1080" y="240" width="64" height="3" fill="#0a0a0a" opacity="0.1"/>
+  <rect x="1080" y="250" width="48" height="3" fill="#0a0a0a" opacity="0.06"/>
+
+</svg>

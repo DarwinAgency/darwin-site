@@ -299,3 +299,15 @@ details summary::-webkit-details-marker {
 .nav-link:hover::after {
   transform: scaleX(1);
 }
+
+/* ---- Cas client card hover ---- */
+.cas-card-hover:hover {
+  border-color: #FFF127 !important;
+}
+
+/* ---- Paragraphes de contenu justifiés ---- */
+.body-text {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}

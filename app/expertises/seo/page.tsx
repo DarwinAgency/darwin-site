@@ -1,5 +1,18 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: "Agence SEO — Référencement naturel & GEO | DARWIN",
+  description: "DARWIN, agence SEO experte depuis 2003. Audit SEO, SEO technique, rédaction, netlinking, GEO (Generative Engine Optimization). 400+ clients accompagnés.",
+  alternates: { canonical: '/expertises/seo' },
+  openGraph: {
+    title: "Agence SEO — Référencement naturel & GEO | DARWIN",
+    description: "Expert SEO depuis 2003. Audit, technique, contenu, netlinking et GEO pour être visible dans Google et les LLMs.",
+    url: 'https://darwin-agency.fr/expertises/seo',
+    images: [{ url: 'https://darwin-agency.fr/images/og-default.jpg', width: 1200, height: 630, alt: "DARWIN Agence SEO" }],
+  },
+}
 
 /* ─── DATA ─────────────────────────────────────────── */
 
@@ -78,14 +91,14 @@ const faqs = [
   },
   {
     q: 'Quelle est la différence entre le SEO et le SEA ?',
-    a: "Le SEA génère du trafic payant immédiat — qui s'arrête dès que vous coupez le budget. Le SEO construit une visibilité organique durable, sans coût par clic. Les deux leviers se complètent : Darwin les gère ensemble pour maximiser votre ROI global.",
+    a: "Le SEA génère du trafic payant immédiat — qui s'arrête dès que vous coupez le budget. Le SEO construit une visibilité organique durable, sans coût par clic. Les deux leviers se complètent : DARWIN les gère ensemble pour maximiser votre ROI global.",
   },
   {
-    q: 'Quels secteurs Darwin accompagne-t-il en SEO ?',
+    q: 'Quels secteurs DARWIN accompagne-t-il en SEO ?',
     a: "Retail & franchise, e-commerce, tourisme & hôtellerie, services BtoC, formation. Ce sont les 5 secteurs où nous avons l'historique de données le plus dense — et des résultats que nous pouvons montrer.",
   },
   {
-    q: 'Comment Darwin mesure-t-il la performance SEO ?',
+    q: 'Comment DARWIN mesure-t-il la performance SEO ?',
     a: "KPIs définis ensemble dès le départ : trafic organique, positions sur les mots-clés cibles, leads générés, taux de conversion. Dashboard personnalisé, accessible en permanence. Pas de rapport trimestriel vague — des chiffres en temps réel, commentés par votre consultant senior.",
   },
   {
@@ -140,7 +153,7 @@ export default function SeoPage() {
 
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 48 }}>
               <Link href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#0a0a0a', color: '#fff', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-                Audit SEO gratuit →
+                Demander un audit SEO →
               </Link>
               <Link href="#methode" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, border: '1.5px solid #ddd', color: '#0a0a0a', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
                 Notre méthode
@@ -162,7 +175,7 @@ export default function SeoPage() {
           <div className="rsp-hero-img" style={{ position: 'relative', background: '#0a0a0a', overflow: 'hidden' }}>
             <Image
               src="/images/seo/seo-hero-bg.png"
-              alt="Agence SEO Darwin"
+              alt="Agence SEO DARWIN"
               fill
               style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.85 }}
               priority
@@ -190,7 +203,7 @@ export default function SeoPage() {
               L&apos;enjeu
             </p>
             <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: 0, color: '#0a0a0a' }}>
-              60 % DES CLICS GOOGLE VONT AUX 3 PREMIERS RÉSULTATS.
+              60 % DES CLICS GOOGLE<br />VONT AUX 3 PREMIERS RÉSULTATS.
             </h2>
           </div>
           <div>
@@ -219,7 +232,7 @@ export default function SeoPage() {
               Notre approche
             </p>
             <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 4rem)', textTransform: 'uppercase', lineHeight: 1, margin: 0, maxWidth: 700 }}>
-              UNE STRATÉGIE SEO COMPLÈTE, PAS UN SIMPLE AUDIT
+              UNE STRATÉGIE SEO<br />COMPLÈTE, PAS UN SIMPLE AUDIT
             </h2>
           </div>
 
@@ -260,13 +273,13 @@ export default function SeoPage() {
               Nos services SEO en détail
             </p>
             <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3.2rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: 0, color: '#fff' }}>
-              CHAQUE LEVIER SEO MÉRITE SON EXPERT
+              CHAQUE LEVIER<br />SEO MÉRITE SON EXPERT
             </h2>
           </div>
 
           <div className="rsp-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
             {[
-              { href: '/expertises/seo/audit-seo', title: 'Audit SEO', accent: '#FFF127', desc: "Photographie complète de votre présence organique : indexation, architecture, vitesse, mots-clés, backlinks et positionnement. L'audit Darwin est actionnable sous 5 jours." },
+              { href: '/expertises/seo/audit-seo', title: 'Audit SEO', accent: '#FFF127', desc: "Photographie complète de votre présence organique : indexation, architecture, vitesse, mots-clés, backlinks et positionnement. L'audit DARWIN est actionnable sous 5 jours." },
               { href: '/expertises/seo/seo-technique', title: 'SEO Technique', accent: '#FFF127', desc: "Core Web Vitals, crawl budget, canonicalisation, données structurées, migration de site. Ce que Google mesure avant vos contenus — et que vos concurrents négligent." },
               { href: '/expertises/seo/redaction-seo', title: 'Rédaction SEO', accent: '#FFF127', desc: "Cocons thématiques, pages piliers, articles de blog, fiches produit. Des contenus écrits par des rédacteurs experts, structurés pour l'intention de recherche." },
               { href: '/expertises/seo/netlinking', title: 'Netlinking', accent: '#FFF127', desc: "Acquisition de backlinks qualitatifs, audit et désaveu de liens toxiques, stratégie d'autorité de domaine. L'influence SEO qui se construit sur le long terme." },
@@ -307,7 +320,7 @@ export default function SeoPage() {
                 <span style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5' }}>NOUVEAU LEVIER SEO</span>
               </div>
               <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 3.8rem)', textTransform: 'uppercase', color: '#0a0a0a', lineHeight: 1, margin: 0 }}>
-                VOTRE MARQUE EST-ELLE<br /><span style={{ color: '#29C5F5' }}>CITÉE PAR L'IA ?</span>
+                VOTRE MARQUE<br />EST-ELLE <span style={{ color: '#29C5F5' }}>CITÉE PAR L&apos;IA ?</span>
               </h2>
             </div>
             <a href="/expertises/geo" className="btn-cyan" style={{ flexShrink: 0 }}>
@@ -321,10 +334,10 @@ export default function SeoPage() {
             {/* Gauche — texte uniquement */}
             <div>
               <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#444', marginBottom: 20 }}>
-                ChatGPT, Perplexity, Google Gemini, Claude… des millions d'utilisateurs obtiennent désormais leurs réponses directement via des LLMs — <strong>sans jamais cliquer sur un site web.</strong>
+                ChatGPT, Perplexity, Google Gemini, Claude… des millions d&apos;utilisateurs obtiennent désormais leurs réponses directement via des LLMs — <strong>sans jamais cliquer sur un site web.</strong>
               </p>
               <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#444', marginBottom: 0 }}>
-                Si votre marque n'est pas citée par ces modèles, vous êtes invisible dans le moteur de recherche de demain. Le <strong>GEO (Generative Engine Optimization)</strong> est la réponse stratégique à cet enjeu — et Darwin est parmi les premières agences françaises à le maîtriser.
+                Si votre marque n&apos;est pas citée par ces modèles, vous êtes invisible dans le moteur de recherche de demain. Le <strong>GEO (Generative Engine Optimization)</strong> est la réponse stratégique à cet enjeu — et DARWIN est parmi les premières agences françaises à le maîtriser.
               </p>
             </div>
 
@@ -362,7 +375,7 @@ export default function SeoPage() {
                 Notre méthode
               </p>
               <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 4rem)', textTransform: 'uppercase', lineHeight: 1, margin: '0 0 32px', color: '#fff' }}>
-                5 ÉTAPES POUR UNE PROGRESSION MESURABLE
+                5 ÉTAPES POUR<br />UNE PROGRESSION MESURABLE
               </h2>
               <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#666', marginBottom: 40 }}>
                 Notre approche est pragmatique et ROIste. Chaque étape s&apos;appuie sur la précédente. On ne saute pas les fondations pour aller vite — on les consolide pour aller loin.
@@ -396,7 +409,7 @@ export default function SeoPage() {
                 La preuve avant tout
               </p>
               <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 4rem)', textTransform: 'uppercase', lineHeight: 1, margin: 0 }}>
-                DES RÉSULTATS QUE NOS CLIENTS PEUVENT NOMMER
+                DES RÉSULTATS QUE<br />NOS CLIENTS PEUVENT NOMMER
               </h2>
             </div>
             <Link href="/cas-clients" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#0a0a0a', textDecoration: 'none', borderBottom: '2px solid #0a0a0a', paddingBottom: 2, whiteSpace: 'nowrap', flexShrink: 0, marginLeft: 32 }}>
@@ -446,10 +459,10 @@ export default function SeoPage() {
               Notre différence
             </p>
             <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3.4rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: '0 0 32px' }}>
-              LE SEO QUI CONVERTIT, PAS JUSTE QUI POSITIONNE
+              LE SEO QUI CONVERTIT,<br />PAS JUSTE QUI POSITIONNE
             </h2>
             <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 24 }}>
-              Darwin fait partie de la <strong>Creative Thinking Community</strong>. Nos équipes SEO ne travaillent pas en silo : elles collaborent directement avec des créatifs, des UX designers et des experts data.
+              DARWIN fait partie de la <strong>Creative Thinking Community</strong>. Nos équipes SEO ne travaillent pas en silo : elles collaborent directement avec des créatifs, des UX designers et des experts data.
             </p>
             <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 40 }}>
               Résultat : vos pages sont optimisées pour Google <em>et</em> conçues pour convertir. L&apos;autorité organique que vous construisez est amplifiée par une expérience utilisateur qui retient. C&apos;est ce que les autres agences SEO ne peuvent pas faire.
@@ -483,7 +496,7 @@ export default function SeoPage() {
             Questions fréquentes
           </p>
           <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: '0 0 56px' }}>
-            CE QUE NOS CLIENTS DEMANDENT EN PREMIER
+            CE QUE NOS CLIENTS<br />DEMANDENT EN PREMIER
           </h2>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
@@ -527,10 +540,10 @@ export default function SeoPage() {
       <section id="contact" style={{ background: '#FFF127', padding: '96px 24px' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#555', marginBottom: 24 }}>
-            Audit gratuit
+            Premier échange
           </p>
           <h2 className="font-anton" style={{ fontSize: 'clamp(2.4rem, 5vw, 5rem)', textTransform: 'uppercase', lineHeight: 1, margin: '0 0 24px', color: '#0a0a0a' }}>
-            VOTRE AUDIT SEO GRATUIT COMMENCE ICI
+            VOTRE AUDIT SEO<br />COMMENCE ICI
           </h2>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', marginBottom: 40, maxWidth: 560, margin: '0 auto 40px' }}>
             Décrivez-nous votre situation. Nous analysons votre site, vos concurrents et vos opportunités — et nous revenons vers vous sous 24h ouvrées avec un diagnostic actionnable.
@@ -545,7 +558,7 @@ export default function SeoPage() {
           </div>
 
           <p style={{ fontSize: '0.72rem', color: '#888', marginTop: 24, fontWeight: 500 }}>
-            Réponse sous 24h ouvrées · Sans engagement · Audit offert au premier échange
+            Réponse sous 24h ouvrées · Sans engagement
           </p>
         </div>
       </section>

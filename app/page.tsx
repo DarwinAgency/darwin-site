@@ -2,15 +2,9 @@ import Image from 'next/image'
 import PerformanceSlider from './components/PerformanceSlider'
 import ContactForm from './components/ContactForm'
 import HeroSection from './components/HeroSection'
+import { CAS_CLIENTS } from './data/cas-clients'
 
-const caseStudies = [
-  { name: 'Verisure', category: 'SEA & Analytics', img: '/images/cas-verisure.jpg' },
-  { name: 'Préfon', category: 'SEO & SEA', img: '/images/cas-prefon.jpg' },
-  { name: 'EBRA Médias', category: 'SEA & Media', img: '/images/cas-ebra.jpg' },
-  { name: 'JustFab', category: 'SMA & SEA', img: '/images/cas-justfab.jpg' },
-  { name: 'Acadomia', category: 'SEO & SEA', img: '/images/cas-acadomia.jpg' },
-  { name: 'Ponant', category: 'Media & Analytics', img: '/images/cas-ponant.jpg' },
-]
+const featuredCases = CAS_CLIENTS.slice(0, 6)
 
 export default function Home() {
   return (
@@ -26,7 +20,7 @@ export default function Home() {
             CONNECTER LES ESPRITS CRÉATIFS :
           </p>
           <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 4vw, 3.6rem)', lineHeight: 1.1, textTransform: 'uppercase', maxWidth: 900, color: '#0a0a0a', margin: 0 }}>
-            POUR ENGAGER LES MARQUES DANS UNE DYNAMIQUE À LONG TERME.
+            POUR ENGAGER LES MARQUES<br />DANS UNE DYNAMIQUE À LONG TERME.
           </h2>
         </div>
       </section>
@@ -39,7 +33,7 @@ export default function Home() {
               NOUS SOMMES DARWIN
             </h2>
             <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 16 }}>
-              Agence digitale indépendante fondée en 2003, Darwin réunit des experts en acquisition,
+              Agence digitale indépendante fondée en 2003, DARWIN réunit des experts en acquisition,
               performance et création de contenu. Notre conviction : le digital doit être au service
               de la stratégie de marque, pas l&apos;inverse.
             </p>
@@ -47,7 +41,7 @@ export default function Home() {
               Nous accompagnons des marques ambitieuses dans leur transformation digitale avec une
               approche hybride alliant stratégie, créativité et data.
             </p>
-            <a href="#" className="arrow-link btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '12px 24px', borderRadius: 4, textDecoration: 'none', fontSize: '0.8rem', letterSpacing: '0.1em' }}>
+            <a href="/a-propos-de-darwin" className="arrow-link btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '12px 24px', borderRadius: 4, textDecoration: 'none', fontSize: '0.8rem', letterSpacing: '0.1em' }}>
               DÉCOUVRIR DARWIN <span className="arrow">→</span>
             </a>
           </div>
@@ -91,12 +85,12 @@ export default function Home() {
           {/* Colonne gauche — texte + stats */}
           <div style={{ padding: '80px 64px 80px 24px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <h2 className="font-anton" style={{ fontSize: 'clamp(1.6rem, 2.8vw, 2.8rem)', textTransform: 'uppercase', color: '#0a0a0a', marginBottom: 28, lineHeight: 1.1 }}>
-              NOTRE AGENCE DÉDIÉE À<br />LA PERFORMANCE DEPUIS<br />22 ANS
+              NOTRE AGENCE DÉDIÉE À<br />LA PERFORMANCE DEPUIS 22 ANS
             </h2>
             <div style={{ width: 80, height: 3, background: '#0a0a0a', marginBottom: 40 }} />
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
               {[
-                { num: '2003', label: 'Année de création\nde Darwin Interactive' },
+                { num: '2003', label: 'Année de création\nde DARWIN Interactive' },
                 { num: '+400', label: 'Clients\naccompagnés' },
                 { num: '+30', label: 'Experts seniors\ndans nos équipes' },
                 { num: '+6 ANS', label: 'De collaboration moyenne\navec nos clients' },
@@ -131,11 +125,11 @@ export default function Home() {
             RÉCOMPENSÉ PAR
           </p>
           <div style={{ display: 'flex', gap: 0, alignItems: 'center', justifyContent: 'space-between', width: '100%', maxWidth: 1000, margin: '0 auto' }}>
-            <Image src="/logos/recompenses/Les-cas-dor-mod.webp" alt="Les Cas d'Or du Digital" width={90} height={72} style={{ objectFit: 'contain', width: 'auto', maxHeight: 72, flexShrink: 0 }} />
-            <Image src="/logos/recompenses/Deloitte_Logo-1.png" alt="Deloitte" width={120} height={48} style={{ objectFit: 'contain', width: 'auto', maxHeight: 48, flexShrink: 0 }} />
-            <Image src="/logos/recompenses/Selligent-by-Marigold-evergreen-1.png" alt="Selligent by Marigold" width={150} height={48} style={{ objectFit: 'contain', width: 'auto', maxHeight: 48, flexShrink: 0 }} />
-            <Image src="/logos/recompenses/logo_businessasitshouldbe_NOIR-1.png" alt="lesBigBoss" width={140} height={52} style={{ objectFit: 'contain', width: 'auto', maxHeight: 52, flexShrink: 0 }} />
-            <Image src="/logos/recompenses/nuit-des-rois-darwin.jpg" alt="La Nuit des Rois" width={160} height={68} style={{ objectFit: 'contain', width: 'auto', maxHeight: 68, flexShrink: 0 }} />
+            <Image src="/logos/recompenses/Les-cas-dor-mod.webp" alt="Les Cas d'Or du Digital" width={90} height={72} style={{ objectFit: 'contain', height: 'auto', maxHeight: 72, flexShrink: 0 }} />
+            <Image src="/logos/recompenses/Deloitte_Logo-1.png" alt="Deloitte" width={120} height={48} style={{ objectFit: 'contain', height: 'auto', maxHeight: 48, flexShrink: 0 }} />
+            <Image src="/logos/recompenses/Selligent-by-Marigold-evergreen-1.png" alt="Selligent by Marigold" width={150} height={48} style={{ objectFit: 'contain', height: 'auto', maxHeight: 48, flexShrink: 0 }} />
+            <Image src="/logos/recompenses/logo_businessasitshouldbe_NOIR-1.png" alt="lesBigBoss" width={140} height={52} style={{ objectFit: 'contain', height: 'auto', maxHeight: 52, flexShrink: 0 }} />
+            <Image src="/logos/recompenses/nuit-des-rois-darwin.jpg" alt="La Nuit des Rois" width={160} height={68} style={{ objectFit: 'contain', height: 'auto', maxHeight: 68, flexShrink: 0 }} />
           </div>
         </div>
       </section>
@@ -214,7 +208,7 @@ export default function Home() {
                   { src: '/logos/clients/smatis.png', alt: 'Smatis' },
                 ].map((logo, i) => (
                   <div key={i} style={{ flexShrink: 0, height: 56, display: 'flex', alignItems: 'center', paddingRight: 64 }}>
-                    <Image src={logo.src} alt={logo.alt} width={150} height={56} style={{ objectFit: 'contain', filter: 'grayscale(100%)', opacity: 0.6, maxHeight: 56, width: 'auto' }} />
+                    <Image src={logo.src} alt={logo.alt} width={150} height={56} style={{ objectFit: 'contain', filter: 'grayscale(100%)', opacity: 0.6, maxHeight: 56, height: 'auto' }} />
                   </div>
                 ))}
               </div>
@@ -246,7 +240,7 @@ export default function Home() {
                   { src: '/logos/clients/intermedes.png', alt: 'Intermèdes' },
                 ].map((logo, i) => (
                   <div key={i} style={{ flexShrink: 0, height: 56, display: 'flex', alignItems: 'center', paddingRight: 64 }}>
-                    <Image src={logo.src} alt={logo.alt} width={150} height={56} style={{ objectFit: 'contain', filter: 'grayscale(100%)', opacity: 0.6, maxHeight: 56, width: 'auto' }} />
+                    <Image src={logo.src} alt={logo.alt} width={150} height={56} style={{ objectFit: 'contain', filter: 'grayscale(100%)', opacity: 0.6, maxHeight: 56, height: 'auto' }} />
                   </div>
                 ))}
               </div>
@@ -268,12 +262,12 @@ export default function Home() {
             NOS CAS CLIENTS
           </h2>
           <div className="rsp-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
-            {caseStudies.map((project) => (
-              <a key={project.name} href="#" className="case-card" style={{ display: 'block', textDecoration: 'none', overflow: 'hidden', borderRadius: 6, position: 'relative' }}>
+            {featuredCases.map((cas) => (
+              <a key={cas.slug} href={`/cas-clients/${cas.slug}`} className="case-card" style={{ display: 'block', textDecoration: 'none', overflow: 'hidden', borderRadius: 6, position: 'relative' }}>
                 <div style={{ overflow: 'hidden', position: 'relative', height: 240 }}>
                   <Image
-                    src={project.img}
-                    alt={project.name}
+                    src={cas.cardImg}
+                    alt={cas.client}
                     fill
                     className="img-placeholder"
                     style={{ objectFit: 'cover', transition: 'transform 0.5s ease' }}
@@ -281,10 +275,10 @@ export default function Home() {
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%)' }} />
                   <div style={{ position: 'absolute', bottom: 20, left: 20 }}>
                     <div style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#FFF127', marginBottom: 4 }}>
-                      {project.category}
+                      {cas.leviers.join(' · ')}
                     </div>
                     <div className="font-anton" style={{ fontSize: '1.4rem', textTransform: 'uppercase', color: '#fff' }}>
-                      {project.name}
+                      {cas.client}
                     </div>
                   </div>
                 </div>
@@ -293,7 +287,7 @@ export default function Home() {
           </div>
 
           <div style={{ marginTop: 48, textAlign: 'center' }}>
-            <a href="#" className="btn-outline arrow-link" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '14px 28px', borderRadius: 4, textDecoration: 'none', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.1em' }}>
+            <a href="/cas-clients" className="btn-outline arrow-link" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '14px 28px', borderRadius: 4, textDecoration: 'none', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.1em' }}>
               VOIR TOUS NOS CAS <span className="arrow">→</span>
             </a>
           </div>
@@ -312,17 +306,17 @@ export default function Home() {
             {[
               {
                 initials: 'PB', name: 'Pascal Bouet', role: 'Directeur Marketing', company: 'Ponant',
-                quote: "Darwin Agency nous accompagne depuis plusieurs années avec une approche véritablement stratégique. Leur équipe comprend nos enjeux business et traduit cela en actions digitales concrètes qui génèrent de vrais résultats.",
+                quote: "DARWIN nous accompagne depuis plusieurs années avec une approche véritablement stratégique. Leur équipe comprend nos enjeux business et traduit cela en actions digitales concrètes qui génèrent de vrais résultats.",
                 delay: '0s',
               },
               {
                 initials: 'SL', name: 'Sophie Lacour', role: 'Responsable Digital', company: 'Arthur Bonnet',
-                quote: "En 9 mois, Darwin a propulsé nos pages produits en Top 3 sur 85 % de nos requêtes cibles. Ce qui nous a convaincus, c'est leur transparence totale sur la méthode et les résultats. Pas de promesses vagues — que des chiffres.",
+                quote: "En 9 mois, DARWIN a propulsé nos pages produits en Top 3 sur 85 % de nos requêtes cibles. Ce qui nous a convaincus, c'est leur transparence totale sur la méthode et les résultats. Pas de promesses vagues — que des chiffres.",
                 delay: '4s',
               },
               {
                 initials: 'TM', name: 'Thomas Mercier', role: 'CMO', company: 'Nordnet',
-                quote: "Nous cherchions une agence capable de tenir la distance. 7 ans plus tard, Darwin reste notre partenaire de référence. Leur combinaison SEO + SEA + Analytics nous a permis de multiplier notre trafic organique par 2,5 sur la période.",
+                quote: "Nous cherchions une agence capable de tenir la distance. 7 ans plus tard, DARWIN reste notre partenaire de référence. Leur combinaison SEO + SEA + Analytics nous a permis de multiplier notre trafic organique par 2,5 sur la période.",
                 delay: '8s',
               },
             ].map((t) => (
@@ -386,7 +380,7 @@ export default function Home() {
                   alt={cert.alt}
                   width={140}
                   height={cert.h}
-                  style={{ objectFit: 'contain', maxHeight: cert.h, width: 'auto' }}
+                  style={{ objectFit: 'contain', maxHeight: cert.h, height: 'auto' }}
                 />
               </div>
             ))}
@@ -467,7 +461,7 @@ export default function Home() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
               {[
                 { icon: '⚡', text: 'Réponse sous 24h ouvrées garantie' },
-                { icon: '🎯', text: 'Audit SEO offert au premier échange' },
+                { icon: '🎯', text: 'Diagnostic SEO au premier échange' },
                 { icon: '🤝', text: 'Sans engagement, sans frais cachés' },
               ].map(item => (
                 <div key={item.text} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>

@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+
+  <!-- Grid de fond -->
+  <g opacity="0.05" stroke="#0a0a0a" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="0" y1="700" x2="1200" y2="700"/>
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+    <line x1="800" y1="0" x2="800" y2="800"/>
+    <line x1="900" y1="0" x2="900" y2="800"/>
+    <line x1="1000" y1="0" x2="1000" y2="800"/>
+    <line x1="1100" y1="0" x2="1100" y2="800"/>
+  </g>
+
+  <!-- ─── ÉDITEUR DE CODE (gauche) ─── -->
+  <rect x="80" y="160" width="520" height="460" stroke="#0a0a0a" stroke-width="1.5" opacity="0.15" fill="#f8f8f8" fill-opacity="0.7"/>
+  <rect x="80" y="160" width="520" height="36" fill="#0a0a0a" opacity="0.06"/>
+  <circle cx="106" cy="178" r="7" fill="#0a0a0a" opacity="0.5"/>
+  <circle cx="130" cy="178" r="7" fill="#0a0a0a" opacity="0.25"/>
+  <circle cx="154" cy="178" r="7" fill="#0a0a0a" opacity="0.12"/>
+  <rect x="178" y="162" width="130" height="26" fill="#0a0a0a" opacity="0.06"/>
+  <line x1="80" y1="196" x2="600" y2="196" stroke="#0a0a0a" stroke-width="1" opacity="0.1"/>
+
+  <!-- Numéros de lignes -->
+  <rect x="80" y="197" width="38" height="423" fill="#0a0a0a" opacity="0.03"/>
+  <line x1="118" y1="196" x2="118" y2="620" stroke="#0a0a0a" stroke-width="1" opacity="0.1"/>
+
+  <!-- Ligne <html> -->
+  <rect x="130" y="214" width="52" height="5" fill="#29C5F5" opacity="0.8"/>
+  <!-- Ligne <head> -->
+  <rect x="142" y="232" width="46" height="5" fill="#29C5F5" opacity="0.65"/>
+  <!-- Ligne <title> — highlight jaune -->
+  <rect x="120" y="242" width="478" height="22" fill="#FFF127" opacity="0.15" rx="1"/>
+  <rect x="154" y="248" width="54" height="6" fill="#FFF127"/>
+  <rect x="214" y="248" width="220" height="6" fill="#0a0a0a" opacity="0.35"/>
+  <rect x="440" y="248" width="62" height="6" fill="#FFF127" opacity="0.7"/>
+  <!-- meta description -->
+  <rect x="154" y="266" width="64" height="5" fill="#29C5F5" opacity="0.6"/>
+  <rect x="224" y="266" width="260" height="5" fill="#0a0a0a" opacity="0.18"/>
+  <!-- </head> -->
+  <rect x="142" y="284" width="54" height="5" fill="#29C5F5" opacity="0.5"/>
+  <!-- <body> -->
+  <rect x="142" y="302" width="46" height="5" fill="#29C5F5" opacity="0.6"/>
+  <!-- <h1> — highlight jaune -->
+  <rect x="120" y="312" width="478" height="22" fill="#FFF127" opacity="0.1" rx="1"/>
+  <rect x="154" y="318" width="36" height="6" fill="#FFF127"/>
+  <rect x="196" y="318" width="240" height="6" fill="#0a0a0a" opacity="0.28"/>
+  <rect x="442" y="318" width="44" height="6" fill="#FFF127" opacity="0.6"/>
+  <!-- Contenu paragraphe -->
+  <rect x="154" y="336" width="310" height="5" fill="#0a0a0a" opacity="0.15"/>
+  <rect x="154" y="352" width="270" height="5" fill="#0a0a0a" opacity="0.12"/>
+  <!-- <img alt> -->
+  <rect x="154" y="368" width="46" height="5" fill="#29C5F5" opacity="0.6"/>
+  <rect x="206" y="368" width="200" height="5" fill="#0a0a0a" opacity="0.2"/>
+  <!-- Séparateur -->
+  <line x1="130" y1="386" x2="590" y2="386" stroke="#0a0a0a" stroke-width="1" opacity="0.07"/>
+  <!-- Schema.org / Structured data -->
+  <rect x="154" y="394" width="110" height="5" fill="#29C5F5" opacity="0.7"/>
+  <rect x="270" y="394" width="60" height="5" fill="#FFF127" opacity="0.6"/>
+  <rect x="154" y="410" width="240" height="5" fill="#29C5F5" opacity="0.35"/>
+  <rect x="154" y="426" width="200" height="5" fill="#0a0a0a" opacity="0.15"/>
+  <rect x="154" y="442" width="280" height="5" fill="#29C5F5" opacity="0.28"/>
+  <rect x="154" y="458" width="180" height="5" fill="#FFF127" opacity="0.4"/>
+  <rect x="154" y="474" width="110" height="5" fill="#29C5F5" opacity="0.55"/>
+  <!-- </body> </html> -->
+  <rect x="142" y="494" width="46" height="5" fill="#29C5F5" opacity="0.45"/>
+  <rect x="130" y="510" width="52" height="5" fill="#29C5F5" opacity="0.55"/>
+  <!-- Curseur -->
+  <rect x="130" y="528" width="2" height="18" fill="#FFF127" opacity="0.9"/>
+
+  <!-- ─── ARBORESCENCE DU SITE (droite) ─── -->
+  <!-- Nœud racine : page d'accueil (jaune) -->
+  <circle cx="900" cy="268" r="34" fill="#FFF127"/>
+  <polyline points="884,264 900,248 916,264" stroke="#0a0a0a" stroke-width="3" stroke-linejoin="miter" fill="none"/>
+  <rect x="888" y="264" width="24" height="18" stroke="#0a0a0a" stroke-width="3" fill="none"/>
+
+  <!-- Branches niveau 1 -->
+  <line x1="872" y1="294" x2="780" y2="380" stroke="#0a0a0a" stroke-width="1.5" opacity="0.2"/>
+  <line x1="900" y1="302" x2="900" y2="380" stroke="#0a0a0a" stroke-width="1.5" opacity="0.2"/>
+  <line x1="928" y1="294" x2="1020" y2="380" stroke="#0a0a0a" stroke-width="1.5" opacity="0.2"/>
+
+  <!-- Nœuds catégorie (cyan) -->
+  <circle cx="766" cy="396" r="24" stroke="#29C5F5" stroke-width="2.5" fill="#e8f8fd"/>
+  <circle cx="900" cy="396" r="24" stroke="#29C5F5" stroke-width="2.5" fill="#e8f8fd"/>
+  <circle cx="1034" cy="396" r="24" stroke="#29C5F5" stroke-width="2.5" fill="#e8f8fd"/>
+  <circle cx="766" cy="396" r="7" fill="#29C5F5" opacity="0.6"/>
+  <circle cx="900" cy="396" r="7" fill="#29C5F5" opacity="0.6"/>
+  <circle cx="1034" cy="396" r="7" fill="#29C5F5" opacity="0.6"/>
+
+  <!-- Branches niveau 2 depuis catégorie gauche -->
+  <line x1="756" y1="420" x2="720" y2="490" stroke="#0a0a0a" stroke-width="1" opacity="0.15"/>
+  <line x1="766" y1="420" x2="766" y2="490" stroke="#0a0a0a" stroke-width="1" opacity="0.15"/>
+  <line x1="776" y1="420" x2="812" y2="490" stroke="#0a0a0a" stroke-width="1" opacity="0.15"/>
+  <circle cx="710" cy="504" r="15" stroke="#0a0a0a" stroke-width="1.5" fill="#f0f0f0" opacity="0.9"/>
+  <circle cx="766" cy="504" r="15" stroke="#0a0a0a" stroke-width="1.5" fill="#f0f0f0" opacity="0.9"/>
+  <!-- Nœud erreur -->
+  <circle cx="822" cy="504" r="15" stroke="#FF5252" stroke-width="2" fill="#fff0f0"/>
+  <line x1="815" y1="497" x2="829" y2="511" stroke="#FF5252" stroke-width="2.5"/>
+  <line x1="829" y1="497" x2="815" y2="511" stroke="#FF5252" stroke-width="2.5"/>
+
+  <!-- Branches niveau 2 depuis catégorie centre -->
+  <line x1="888" y1="420" x2="856" y2="490" stroke="#0a0a0a" stroke-width="1" opacity="0.15"/>
+  <line x1="900" y1="420" x2="900" y2="490" stroke="#0a0a0a" stroke-width="1" opacity="0.15"/>
+  <line x1="912" y1="420" x2="944" y2="490" stroke="#0a0a0a" stroke-width="1" opacity="0.15"/>
+  <circle cx="846" cy="504" r="15" stroke="#0a0a0a" stroke-width="1.5" fill="#f0f0f0" opacity="0.9"/>
+  <circle cx="900" cy="504" r="15" stroke="#0a0a0a" stroke-width="1.5" fill="#f0f0f0" opacity="0.9"/>
+  <circle cx="954" cy="504" r="15" stroke="#0a0a0a" stroke-width="1.5" fill="#f0f0f0" opacity="0.9"/>
+
+  <!-- Branches niveau 2 depuis catégorie droite -->
+  <line x1="1022" y1="420" x2="996" y2="490" stroke="#0a0a0a" stroke-width="1" opacity="0.15"/>
+  <line x1="1046" y1="420" x2="1074" y2="490" stroke="#0a0a0a" stroke-width="1" opacity="0.15"/>
+  <circle cx="986" cy="504" r="15" stroke="#0a0a0a" stroke-width="1.5" fill="#f0f0f0" opacity="0.9"/>
+  <!-- Nouvelle page (opportunité jaune) -->
+  <circle cx="1084" cy="504" r="15" stroke="#FFF127" stroke-width="2.5" fill="#fffde0"/>
+  <line x1="1077" y1="497" x2="1077" y2="511" stroke="#0a0a0a" stroke-width="2.5"/>
+  <line x1="1070" y1="504" x2="1091" y2="504" stroke="#0a0a0a" stroke-width="2.5"/>
+
+  <!-- Séparateur vertical -->
+  <line x1="650" y1="160" x2="650" y2="630" stroke="#0a0a0a" stroke-width="1" opacity="0.08"/>
+
+  <!-- ─── ÉLÉMENTS DÉCORATIFS ─── -->
+  <rect x="60" y="60" width="20" height="20" fill="#FFF127"/>
+  <rect x="88" y="60" width="8" height="8" fill="#FFF127" opacity="0.4"/>
+  <rect x="1100" y="60" width="14" height="14" stroke="#29C5F5" stroke-width="2" fill="none"/>
+  <rect x="1122" y="60" width="14" height="14" fill="#29C5F5" opacity="0.6"/>
+  <circle cx="80" cy="720" r="24" stroke="#29C5F5" stroke-width="2" fill="none" opacity="0.5"/>
+  <circle cx="80" cy="720" r="8" fill="#29C5F5" opacity="0.3"/>
+  <circle cx="660" cy="120" r="5" fill="#FFF127" opacity="0.7"/>
+  <circle cx="685" cy="108" r="3" fill="#0a0a0a" opacity="0.2"/>
+  <circle cx="1120" cy="700" r="5" fill="#29C5F5" opacity="0.5"/>
+  <circle cx="1100" cy="720" r="3" fill="#0a0a0a" opacity="0.2"/>
+  <rect x="100" y="748" width="240" height="3" fill="#FFF127"/>
+  <rect x="354" y="748" width="60" height="3" fill="#29C5F5"/>
+  <rect x="428" y="748" width="20" height="3" fill="#0a0a0a" opacity="0.15"/>
+
+  <!-- Icône </> code -->
+  <rect x="1080" y="160" width="64" height="64" fill="#29C5F5"/>
+  <text x="1112" y="200" font-family="monospace" font-size="22" font-weight="700" fill="#0a0a0a" text-anchor="middle">&lt;/&gt;</text>
+  <rect x="1080" y="240" width="64" height="3" fill="#0a0a0a" opacity="0.1"/>
+  <rect x="1080" y="250" width="48" height="3" fill="#0a0a0a" opacity="0.06"/>
+
+</svg>

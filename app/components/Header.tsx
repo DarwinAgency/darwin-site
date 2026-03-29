@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -9,7 +10,7 @@ type Tab = {
   label: string
   desc: string
   cta?: { label: string; href: string }
-  items: { label: string; desc: string }[]
+  items: { label: string; desc: string; href?: string }[]
 }
 
 // ── Data ──────────────────────────────────────────────────────────────────────
@@ -20,11 +21,11 @@ const expertisesTabs: Tab[] = [
     desc: 'Référencement naturel',
     cta: { label: 'Découvrir notre agence SEO', href: '/expertises/seo' },
     items: [
-      { label: 'Audit SEO', desc: 'Identifiez vos forces et axes de progression' },
-      { label: 'Stratégie de contenu', desc: 'Structurez vos cocons sémantiques' },
-      { label: 'GEO', desc: 'Generative Engine Optimization' },
-      { label: 'Netlinking', desc: 'Renforcez votre autorité de domaine' },
-      { label: 'SEO Technique', desc: 'Corrigez les blocages qui freinent vos rankings' },
+      { label: 'Audit SEO', desc: 'Identifiez vos forces et axes de progression', href: '/expertises/seo/audit-seo' },
+      { label: 'Stratégie de contenu', desc: 'Structurez vos cocons sémantiques', href: '/expertises/seo/strategie-contenu' },
+      { label: 'GEO', desc: 'Generative Engine Optimization', href: '/expertises/seo/geo-visibilite-ia' },
+      { label: 'Netlinking', desc: 'Renforcez votre autorité de domaine', href: '/expertises/seo/netlinking' },
+      { label: 'SEO Technique', desc: 'Corrigez les blocages qui freinent vos rankings', href: '/expertises/seo/seo-technique' },
       { label: 'SEO E-commerce', desc: 'Optimisez vos fiches produits et catégories' },
     ],
   },
@@ -184,9 +185,9 @@ const besoinsTabs: Tab[] = [
 ]
 
 const navItems = [
-  { label: "L'AGENCE", href: '/agence' },
+  { label: "L'AGENCE", href: '/a-propos-de-darwin' },
   { label: 'EXPERTISES', href: '#', tabs: expertisesTabs },
-  { label: 'CAS CLIENTS', href: '#' },
+  { label: 'CAS CLIENTS', href: '/cas-clients' },
   { label: 'VOS BESOINS', href: '#', tabs: besoinsTabs },
   { label: 'BLOG', href: '#' },
 ]
@@ -256,16 +257,16 @@ export default function Header() {
         <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 68 }}>
 
           {/* Logo */}
-          <a href="#" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', padding: '6px 0', zIndex: 1 }}>
+          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', padding: '6px 0', zIndex: 1 }}>
             <Image
               src="/images/logo-darwin.png"
-              alt="Darwin Agency"
+              alt="DARWIN"
               width={780}
               height={439}
               style={{ filter: 'brightness(0)', height: 38, width: 'auto', objectFit: 'contain' }}
               priority
             />
-          </a>
+          </Link>
 
           {/* Nav desktop */}
           <nav className="nav-desktop" style={{ gap: 0, alignItems: 'stretch', height: 68 }}>
@@ -417,7 +418,7 @@ export default function Header() {
                         {expandedTabs[mobileSubTab]?.items.map((subItem) => (
                           <a
                             key={subItem.label}
-                            href="#"
+                            href={subItem.href ?? '#'}
                             onClick={() => setMobileOpen(false)}
                             style={{
                               display: 'flex', flexDirection: 'column', padding: '12px 24px',
@@ -551,7 +552,7 @@ export default function Header() {
                 {currentItems.map((item) => (
                   <a
                     key={item.label}
-                    href="#"
+                    href={item.href ?? '#'}
                     style={{
                       display: 'block',
                       padding: '14px 0',

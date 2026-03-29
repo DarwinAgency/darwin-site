@@ -22,11 +22,11 @@ export default function Footer() {
       <div className="rsp-cta-band" style={{ background: '#29C5F5', padding: '40px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
         <div>
           <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.45)', marginBottom: 10 }}>
-            PRÊT À PASSER À L'ACTION ?
+            PRÊT À PASSER À L&apos;ACTION ?
           </p>
-          <h2 className="font-anton" style={{ fontSize: 'clamp(1.4rem, 3vw, 2.6rem)', textTransform: 'uppercase', color: '#0a0a0a', margin: 0, lineHeight: 1 }}>
+          <p className="font-anton" style={{ fontSize: 'clamp(1.4rem, 3vw, 2.6rem)', textTransform: 'uppercase', color: '#0a0a0a', margin: 0, lineHeight: 1 }}>
             BOOSTONS VOTRE PERFORMANCE DIGITALE
-          </h2>
+          </p>
         </div>
         <Link
           href="/contact"
@@ -57,7 +57,7 @@ export default function Footer() {
         {/* Col 1 — Logo + infos + newsletter */}
         <div>
           <div style={{ marginBottom: 28 }}>
-            <Image src="/images/logo-darwin.png" alt="Darwin Agency" width={140} height={40} style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+            <Image src="/images/logo-darwin.png" alt="DARWIN" width={140} height={40} style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
           </div>
           <p style={{ fontSize: '0.82rem', color: '#888', lineHeight: 1.7, marginBottom: 28, maxWidth: 280 }}>
             Agence digitale indépendante fondée en 2003. Experts en acquisition, SEO, SEA, SMA, Media et Data au service de vos performances.
@@ -83,7 +83,7 @@ export default function Footer() {
 
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/company/darwin-agency"
+            href="https://www.linkedin.com/company/darwin-interactive"
             target="_blank"
             rel="noopener noreferrer"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: '#888', textDecoration: 'none', fontSize: '0.78rem', fontWeight: 600, letterSpacing: '0.06em', border: '1px solid #333', padding: '8px 16px', borderRadius: 4, transition: 'border-color 0.2s, color 0.2s' }}
@@ -100,13 +100,13 @@ export default function Footer() {
         {/* Col 2 — L'Agence */}
         <div>
           <h3 style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#555', marginBottom: 24 }}>
-            L'AGENCE
+            L&apos;AGENCE
           </h3>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
             {[
-              { label: 'Notre histoire', href: '/agence' },
-              { label: 'Notre équipe', href: '/agence#equipe' },
-              { label: 'Notre méthode', href: '/agence#methode' },
+              { label: 'Notre histoire', href: '/a-propos-de-darwin' },
+              { label: 'Notre équipe', href: '/a-propos-de-darwin#equipe' },
+              { label: 'Notre méthode', href: '/a-propos-de-darwin#methode' },
               { label: 'Rejoindre Darwin', href: '/recrutement' },
               { label: 'Contact', href: '/contact' },
             ].map(link => (
@@ -159,7 +159,7 @@ export default function Footer() {
               { label: 'Guides & Livres blancs', href: '/ressources' },
               { label: 'Webinaires', href: '/webinaires' },
               { label: 'Glossaire SEO', href: '/glossaire' },
-              { label: 'Audit gratuit', href: '/contact' },
+              { label: 'Demander un audit', href: '/contact' },
             ].map(link => (
               <li key={link.href}>
                 <Link href={link.href} style={{ color: '#888', textDecoration: 'none', fontSize: '0.84rem', transition: 'color 0.15s' }}
@@ -225,7 +225,7 @@ export default function Footer() {
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e8d800' }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#FFF127' }}
               >
-                S'ABONNER
+                S&apos;ABONNER
               </button>
             </form>
           )}

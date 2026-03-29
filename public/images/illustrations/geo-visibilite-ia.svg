@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+
+  <!-- Grid de fond -->
+  <g opacity="0.05" stroke="#0a0a0a" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="0" y1="700" x2="1200" y2="700"/>
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+    <line x1="800" y1="0" x2="800" y2="800"/>
+    <line x1="900" y1="0" x2="900" y2="800"/>
+    <line x1="1000" y1="0" x2="1000" y2="800"/>
+    <line x1="1100" y1="0" x2="1100" y2="800"/>
+  </g>
+
+  <!-- ─── INTERFACE IA / CHAT (gauche) ─── -->
+  <rect x="80" y="160" width="520" height="480" stroke="#0a0a0a" stroke-width="1.5" opacity="0.15" fill="#f8f8f8" fill-opacity="0.7"/>
+  <rect x="80" y="160" width="520" height="44" fill="#0a0a0a" opacity="0.06"/>
+  <circle cx="108" cy="182" r="7" fill="#0a0a0a" opacity="0.5"/>
+  <circle cx="132" cy="182" r="7" fill="#0a0a0a" opacity="0.25"/>
+  <circle cx="156" cy="182" r="7" fill="#0a0a0a" opacity="0.12"/>
+  <rect x="220" y="172" width="120" height="8" fill="#29C5F5" opacity="0.25" rx="4"/>
+  <rect x="232" y="174" width="96" height="4" fill="#29C5F5" opacity="0.7"/>
+
+  <!-- Message utilisateur (bulle droite) -->
+  <rect x="310" y="224" width="256" height="52" rx="4" stroke="#0a0a0a" stroke-width="1" opacity="0.1" fill="#0a0a0a" fill-opacity="0.04"/>
+  <rect x="322" y="236" width="232" height="5" fill="#0a0a0a" opacity="0.28"/>
+  <rect x="322" y="250" width="180" height="5" fill="#0a0a0a" opacity="0.2"/>
+  <rect x="322" y="264" width="100" height="5" fill="#0a0a0a" opacity="0.15"/>
+
+  <line x1="100" y1="292" x2="580" y2="292" stroke="#0a0a0a" stroke-width="1" opacity="0.07"/>
+
+  <!-- Avatar IA (pastille cyan) -->
+  <circle cx="108" cy="320" r="16" fill="#29C5F5" opacity="0.85"/>
+  <rect x="102" y="316" width="12" height="3" fill="#0a0a0a" opacity="0.5"/>
+  <rect x="100" y="322" width="16" height="3" fill="#0a0a0a" opacity="0.5"/>
+  <rect x="102" y="328" width="12" height="3" fill="#0a0a0a" opacity="0.5"/>
+
+  <!-- Réponse IA -->
+  <rect x="136" y="300" width="434" height="180" rx="4" stroke="#0a0a0a" stroke-width="1" opacity="0.08" fill="#0a0a0a" fill-opacity="0.02"/>
+  <rect x="152" y="320" width="380" height="5" fill="#0a0a0a" opacity="0.22"/>
+  <rect x="152" y="336" width="360" height="5" fill="#0a0a0a" opacity="0.18"/>
+  <!-- Mention marque HIGHLIGHT JAUNE -->
+  <rect x="148" y="350" width="240" height="20" fill="#FFF127" opacity="0.6" rx="1"/>
+  <rect x="152" y="355" width="180" height="6" fill="#0a0a0a" opacity="0.6"/>
+  <rect x="338" y="355" width="140" height="5" fill="#0a0a0a" opacity="0.16"/>
+  <rect x="152" y="378" width="400" height="5" fill="#0a0a0a" opacity="0.17"/>
+  <rect x="152" y="394" width="340" height="5" fill="#0a0a0a" opacity="0.14"/>
+  <rect x="152" y="410" width="380" height="5" fill="#0a0a0a" opacity="0.12"/>
+  <rect x="152" y="426" width="220" height="5" fill="#0a0a0a" opacity="0.1"/>
+  <!-- Sources citées -->
+  <rect x="152" y="452" width="60" height="5" fill="#29C5F5" opacity="0.7"/>
+  <rect x="232" y="452" width="80" height="5" fill="#29C5F5" opacity="0.55"/>
+  <rect x="332" y="452" width="70" height="5" fill="#29C5F5" opacity="0.45"/>
+  <rect x="422" y="452" width="80" height="5" fill="#FFF127" opacity="0.8"/>
+
+  <line x1="100" y1="500" x2="580" y2="500" stroke="#0a0a0a" stroke-width="1" opacity="0.07"/>
+
+  <!-- Logos moteurs IA -->
+  <rect x="100" y="520" width="40" height="26" rx="2" stroke="#0a0a0a" stroke-width="1" opacity="0.18" fill="#f0f0f0"/>
+  <rect x="110" y="529" width="20" height="6" fill="#0a0a0a" opacity="0.2"/>
+  <rect x="148" y="520" width="40" height="26" rx="2" stroke="#29C5F5" stroke-width="1.5" opacity="0.6" fill="#e8f8fd"/>
+  <rect x="158" y="529" width="20" height="6" fill="#29C5F5" opacity="0.5"/>
+  <rect x="196" y="520" width="40" height="26" rx="2" stroke="#0a0a0a" stroke-width="1" opacity="0.15" fill="#f0f0f0"/>
+  <rect x="206" y="529" width="20" height="6" fill="#0a0a0a" opacity="0.18"/>
+  <rect x="244" y="520" width="40" height="26" rx="2" stroke="#FFF127" stroke-width="1.5" opacity="0.8" fill="#fffde0"/>
+  <rect x="254" y="529" width="20" height="6" fill="#0a0a0a" opacity="0.35"/>
+
+  <!-- ─── GLOBE / SIGNAL (droite) ─── -->
+  <circle cx="920" cy="390" r="200" stroke="#0a0a0a" stroke-width="1" opacity="0.12"/>
+  <circle cx="920" cy="390" r="200" stroke="#29C5F5" stroke-width="1.5" opacity="0.25"/>
+  <ellipse cx="920" cy="390" rx="200" ry="60" stroke="#0a0a0a" stroke-width="1" opacity="0.1"/>
+  <ellipse cx="920" cy="390" rx="200" ry="120" stroke="#0a0a0a" stroke-width="1" opacity="0.07"/>
+  <line x1="920" y1="190" x2="920" y2="590" stroke="#0a0a0a" stroke-width="1" opacity="0.1"/>
+  <ellipse cx="920" cy="390" rx="60" ry="200" stroke="#0a0a0a" stroke-width="1" opacity="0.1"/>
+  <ellipse cx="920" cy="390" rx="120" ry="200" stroke="#0a0a0a" stroke-width="1" opacity="0.07"/>
+
+  <!-- Ondes signal (jaune) -->
+  <circle cx="920" cy="390" r="220" stroke="#FFF127" stroke-width="1.5" opacity="0.3"/>
+  <circle cx="920" cy="390" r="244" stroke="#FFF127" stroke-width="1" opacity="0.18"/>
+  <circle cx="920" cy="390" r="268" stroke="#FFF127" stroke-width="1" opacity="0.09"/>
+
+  <!-- Points de présence IA sur le globe -->
+  <circle cx="980" cy="330" r="12" fill="#29C5F5"/>
+  <circle cx="980" cy="330" r="18" stroke="#29C5F5" stroke-width="2" fill="none" opacity="0.4"/>
+  <circle cx="860" cy="310" r="10" fill="#FFF127"/>
+  <circle cx="860" cy="310" r="16" stroke="#FFF127" stroke-width="2" fill="none" opacity="0.35"/>
+  <circle cx="1010" cy="450" r="8" fill="#29C5F5" opacity="0.7"/>
+  <circle cx="840" cy="460" r="8" stroke="#0a0a0a" stroke-width="1.5" fill="#f0f0f0"/>
+  <circle cx="930" cy="480" r="10" fill="#29C5F5" opacity="0.6"/>
+  <!-- Votre marque (nœud jaune central) -->
+  <circle cx="920" cy="390" r="18" fill="#FFF127"/>
+  <circle cx="920" cy="390" r="26" stroke="#FFF127" stroke-width="2.5" fill="none" opacity="0.4"/>
+
+  <!-- Lignes depuis votre marque -->
+  <line x1="932" y1="378" x2="970" y2="336" stroke="#FFF127" stroke-width="2" opacity="0.6"/>
+  <line x1="908" y1="380" x2="870" y2="316" stroke="#FFF127" stroke-width="2" opacity="0.55"/>
+  <line x1="934" y1="400" x2="1006" y2="450" stroke="#29C5F5" stroke-width="1.5" opacity="0.45"/>
+  <line x1="906" y1="400" x2="846" y2="456" stroke="#0a0a0a" stroke-width="1" opacity="0.2"/>
+  <line x1="920" y1="406" x2="928" y2="472" stroke="#29C5F5" stroke-width="1.5" opacity="0.35"/>
+
+  <!-- Séparateur vertical -->
+  <line x1="650" y1="160" x2="650" y2="640" stroke="#0a0a0a" stroke-width="1" opacity="0.08"/>
+
+  <!-- ─── ÉLÉMENTS DÉCORATIFS ─── -->
+  <rect x="60" y="60" width="20" height="20" fill="#FFF127"/>
+  <rect x="88" y="60" width="8" height="8" fill="#FFF127" opacity="0.4"/>
+  <rect x="1100" y="60" width="14" height="14" stroke="#29C5F5" stroke-width="2" fill="none"/>
+  <rect x="1122" y="60" width="14" height="14" fill="#29C5F5" opacity="0.6"/>
+  <circle cx="80" cy="720" r="24" stroke="#29C5F5" stroke-width="2" fill="none" opacity="0.5"/>
+  <circle cx="80" cy="720" r="8" fill="#29C5F5" opacity="0.3"/>
+  <circle cx="660" cy="120" r="5" fill="#FFF127" opacity="0.7"/>
+  <circle cx="685" cy="108" r="3" fill="#0a0a0a" opacity="0.2"/>
+  <circle cx="1120" cy="700" r="5" fill="#29C5F5" opacity="0.5"/>
+  <circle cx="1100" cy="720" r="3" fill="#0a0a0a" opacity="0.2"/>
+  <rect x="100" y="748" width="240" height="3" fill="#FFF127"/>
+  <rect x="354" y="748" width="60" height="3" fill="#29C5F5"/>
+  <rect x="428" y="748" width="20" height="3" fill="#0a0a0a" opacity="0.15"/>
+
+  <!-- Icône étoile IA -->
+  <rect x="1080" y="160" width="64" height="64" fill="#FFF127"/>
+  <polygon points="1112,168 1116,188 1136,192 1116,196 1112,216 1108,196 1088,192 1108,188" fill="#0a0a0a" opacity="0.7"/>
+  <rect x="1080" y="240" width="64" height="3" fill="#0a0a0a" opacity="0.1"/>
+  <rect x="1080" y="250" width="48" height="3" fill="#0a0a0a" opacity="0.06"/>
+
+</svg>

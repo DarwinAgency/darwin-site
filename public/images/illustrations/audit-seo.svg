@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+
+  <!-- Grid de fond -->
+  <g opacity="0.05" stroke="#0a0a0a" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="0" y1="700" x2="1200" y2="700"/>
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+    <line x1="800" y1="0" x2="800" y2="800"/>
+    <line x1="900" y1="0" x2="900" y2="800"/>
+    <line x1="1000" y1="0" x2="1000" y2="800"/>
+    <line x1="1100" y1="0" x2="1100" y2="800"/>
+  </g>
+
+  <!-- ─── FENÊTRE NAVIGATEUR (gauche) ─── -->
+  <rect x="100" y="160" width="580" height="420" stroke="#0a0a0a" stroke-width="1.5" opacity="0.15" fill="#f8f8f8" fill-opacity="0.6"/>
+  <!-- Barre navigateur -->
+  <rect x="100" y="160" width="580" height="40" fill="#0a0a0a" opacity="0.06"/>
+  <!-- Points navigateur -->
+  <circle cx="128" cy="180" r="7" fill="#0a0a0a" opacity="0.5"/>
+  <circle cx="152" cy="180" r="7" fill="#0a0a0a" opacity="0.25"/>
+  <circle cx="176" cy="180" r="7" fill="#0a0a0a" opacity="0.12"/>
+  <!-- Barre URL -->
+  <rect x="200" y="169" width="280" height="22" rx="0" stroke="#0a0a0a" stroke-width="1" opacity="0.15"/>
+
+  <!-- Lignes de contenu (texte simulé) -->
+  <rect x="140" y="230" width="200" height="6" fill="#0a0a0a" opacity="0.35"/>
+  <rect x="140" y="248" width="300" height="4" fill="#0a0a0a" opacity="0.18"/>
+  <rect x="140" y="263" width="260" height="4" fill="#0a0a0a" opacity="0.13"/>
+
+  <!-- Séparateur -->
+  <line x1="140" y1="290" x2="640" y2="290" stroke="#0a0a0a" stroke-width="1" opacity="0.1"/>
+
+  <!-- Graphique en barres (données SEO) -->
+  <rect x="160" y="430" width="52" height="90"  fill="#29C5F5" opacity="0.5"/>
+  <rect x="226" y="390" width="52" height="130" fill="#29C5F5" opacity="0.65"/>
+  <rect x="292" y="340" width="52" height="180" fill="#29C5F5" opacity="0.8"/>
+  <rect x="358" y="370" width="52" height="150" fill="#29C5F5" opacity="0.6"/>
+  <rect x="424" y="310" width="52" height="210" fill="#FFF127"/>
+  <rect x="490" y="360" width="52" height="160" fill="#29C5F5" opacity="0.7"/>
+  <!-- Axe bas du graphique -->
+  <line x1="140" y1="524" x2="580" y2="524" stroke="#0a0a0a" stroke-width="1.5" opacity="0.2"/>
+
+  <!-- ─── LOUPE (centre-droite) ─── -->
+  <circle cx="820" cy="390" r="220" stroke="#FFF127" stroke-width="10" fill="none" opacity="0.15"/>
+  <circle cx="820" cy="390" r="190" stroke="#FFF127" stroke-width="14"/>
+  <circle cx="820" cy="390" r="176" fill="#f5f5f5"/>
+
+  <!-- Contenu dans la loupe -->
+  <clipPath id="lens-clip">
+    <circle cx="820" cy="390" r="174"/>
+  </clipPath>
+  <g clip-path="url(#lens-clip)">
+    <!-- Grid intérieur loupe -->
+    <g opacity="0.08" stroke="#29C5F5" stroke-width="1">
+      <line x1="646" y1="310" x2="994" y2="310"/>
+      <line x1="646" y1="370" x2="994" y2="370"/>
+      <line x1="646" y1="430" x2="994" y2="430"/>
+      <line x1="646" y1="490" x2="994" y2="490"/>
+      <line x1="720" y1="216" x2="720" y2="564"/>
+      <line x1="780" y1="216" x2="780" y2="564"/>
+      <line x1="840" y1="216" x2="840" y2="564"/>
+      <line x1="900" y1="216" x2="900" y2="564"/>
+    </g>
+    <!-- Barres analysées dans la loupe -->
+    <rect x="690" y="400" width="40" height="110" fill="#29C5F5" opacity="0.6"/>
+    <rect x="748" y="360" width="40" height="150" fill="#29C5F5" opacity="0.8"/>
+    <rect x="806" y="300" width="40" height="210" fill="#FFF127"/>
+    <rect x="864" y="340" width="40" height="170" fill="#29C5F5" opacity="0.7"/>
+    <rect x="922" y="380" width="40" height="130" fill="#29C5F5" opacity="0.5"/>
+    <!-- Ligne de scan horizontale -->
+    <rect x="646" y="332" width="348" height="2" fill="#FFF127" opacity="0.8"/>
+    <!-- Point de diagnostic -->
+    <circle cx="826" cy="302" r="8" fill="#FFF127"/>
+    <circle cx="826" cy="302" r="14" stroke="#FFF127" stroke-width="2" fill="none" opacity="0.5"/>
+    <!-- Axe bas loupe -->
+    <line x1="646" y1="514" x2="994" y2="514" stroke="#0a0a0a" stroke-width="1.5" opacity="0.2"/>
+  </g>
+
+  <!-- Manche de la loupe -->
+  <line x1="960" y1="528" x2="1060" y2="628" stroke="#FFF127" stroke-width="18" stroke-linecap="square"/>
+  <rect x="1048" y="616" width="28" height="28" fill="#FFF127" transform="rotate(45 1062 630)"/>
+
+  <!-- ─── ÉLÉMENTS DÉCORATIFS ─── -->
+  <rect x="60" y="60" width="20" height="20" fill="#FFF127"/>
+  <rect x="88" y="60" width="8" height="8" fill="#FFF127" opacity="0.4"/>
+
+  <rect x="1100" y="60" width="14" height="14" stroke="#29C5F5" stroke-width="2" fill="none"/>
+  <rect x="1122" y="60" width="14" height="14" fill="#29C5F5" opacity="0.6"/>
+
+  <circle cx="80" cy="720" r="24" stroke="#29C5F5" stroke-width="2" fill="none" opacity="0.5"/>
+  <circle cx="80" cy="720" r="8" fill="#29C5F5" opacity="0.3"/>
+
+  <circle cx="620" cy="120" r="5" fill="#FFF127" opacity="0.7"/>
+  <circle cx="645" cy="108" r="3" fill="#0a0a0a" opacity="0.2"/>
+  <circle cx="1120" cy="700" r="5" fill="#29C5F5" opacity="0.5"/>
+  <circle cx="1100" cy="720" r="3" fill="#0a0a0a" opacity="0.2"/>
+
+  <!-- Ligne accent bas -->
+  <rect x="100" y="748" width="240" height="3" fill="#FFF127"/>
+  <rect x="354" y="748" width="60" height="3" fill="#29C5F5"/>
+  <rect x="428" y="748" width="20" height="3" fill="#0a0a0a" opacity="0.2"/>
+
+  <!-- Icône check -->
+  <rect x="1080" y="160" width="64" height="64" fill="#FFF127"/>
+  <polyline points="1096,192 1112,208 1136,176" stroke="#0a0a0a" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+
+  <rect x="1080" y="240" width="64" height="3" fill="#0a0a0a" opacity="0.1"/>
+  <rect x="1080" y="250" width="48" height="3" fill="#0a0a0a" opacity="0.06"/>
+
+</svg>

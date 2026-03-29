@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+
+  <!-- Grid de fond -->
+  <g opacity="0.05" stroke="#0a0a0a" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="0" y1="700" x2="1200" y2="700"/>
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+    <line x1="800" y1="0" x2="800" y2="800"/>
+    <line x1="900" y1="0" x2="900" y2="800"/>
+    <line x1="1000" y1="0" x2="1000" y2="800"/>
+    <line x1="1100" y1="0" x2="1100" y2="800"/>
+  </g>
+
+  <!-- ─── DOCUMENT / ARTICLE (gauche) ─── -->
+  <rect x="100" y="150" width="480" height="500" stroke="#0a0a0a" stroke-width="1.5" opacity="0.15" fill="#f8f8f8" fill-opacity="0.7"/>
+  <rect x="100" y="150" width="480" height="40" fill="#0a0a0a" opacity="0.06"/>
+  <circle cx="126" cy="170" r="7" fill="#0a0a0a" opacity="0.5"/>
+  <circle cx="150" cy="170" r="7" fill="#0a0a0a" opacity="0.25"/>
+  <circle cx="174" cy="170" r="7" fill="#0a0a0a" opacity="0.12"/>
+  <rect x="196" y="158" width="240" height="24" rx="0" stroke="#0a0a0a" stroke-width="1" opacity="0.12"/>
+
+  <!-- Tag catégorie -->
+  <rect x="130" y="212" width="80" height="18" fill="#29C5F5" opacity="0.2" rx="2"/>
+  <rect x="134" y="219" width="72" height="5" fill="#29C5F5" opacity="0.8"/>
+
+  <!-- H1 (jaune) -->
+  <rect x="130" y="244" width="380" height="13" fill="#FFF127"/>
+  <rect x="130" y="263" width="260" height="13" fill="#FFF127" opacity="0.7"/>
+
+  <!-- Ligne auteur / date -->
+  <rect x="130" y="292" width="60" height="5" fill="#0a0a0a" opacity="0.25"/>
+  <rect x="198" y="292" width="4" height="5" fill="#0a0a0a" opacity="0.12"/>
+  <rect x="208" y="292" width="80" height="5" fill="#0a0a0a" opacity="0.18"/>
+
+  <!-- Séparateur -->
+  <line x1="130" y1="312" x2="560" y2="312" stroke="#0a0a0a" stroke-width="1" opacity="0.1"/>
+
+  <!-- H2 section 1 -->
+  <rect x="130" y="328" width="240" height="8" fill="#0a0a0a" opacity="0.6"/>
+  <!-- Paragraphe 1 -->
+  <rect x="130" y="348" width="410" height="5" fill="#0a0a0a" opacity="0.16"/>
+  <rect x="130" y="360" width="390" height="5" fill="#0a0a0a" opacity="0.13"/>
+  <rect x="130" y="372" width="360" height="5" fill="#0a0a0a" opacity="0.11"/>
+  <rect x="130" y="384" width="200" height="5" fill="#0a0a0a" opacity="0.09"/>
+
+  <!-- Image placeholder -->
+  <rect x="130" y="404" width="410" height="80" stroke="#0a0a0a" stroke-width="1" opacity="0.12" fill="#0a0a0a" fill-opacity="0.03"/>
+  <line x1="130" y1="404" x2="540" y2="484" stroke="#0a0a0a" stroke-width="1" opacity="0.08"/>
+  <line x1="540" y1="404" x2="130" y2="484" stroke="#0a0a0a" stroke-width="1" opacity="0.08"/>
+
+  <!-- H2 section 2 -->
+  <rect x="130" y="502" width="200" height="8" fill="#0a0a0a" opacity="0.5"/>
+  <!-- Paragraphe 2 -->
+  <rect x="130" y="522" width="420" height="5" fill="#0a0a0a" opacity="0.14"/>
+  <rect x="130" y="534" width="380" height="5" fill="#0a0a0a" opacity="0.12"/>
+  <rect x="130" y="546" width="340" height="5" fill="#0a0a0a" opacity="0.1"/>
+
+  <!-- Mot-clé en surbrillance dans le texte -->
+  <rect x="130" y="564" width="110" height="18" fill="#FFF127" opacity="0.5" rx="1"/>
+  <rect x="134" y="569" width="102" height="5" fill="#0a0a0a" opacity="0.6"/>
+  <rect x="248" y="569" width="180" height="5" fill="#0a0a0a" opacity="0.1"/>
+
+  <!-- ─── CLUSTER DE MOTS-CLÉS (droite) ─── -->
+
+  <!-- Mot-clé principal (jaune plein) -->
+  <rect x="700" y="220" width="220" height="42" rx="3" fill="#FFF127"/>
+  <rect x="716" y="233" width="188" height="14" fill="#0a0a0a" opacity="0.5"/>
+
+  <!-- Mots-clés secondaires (cyan) -->
+  <rect x="700" y="284" width="160" height="34" rx="2" stroke="#29C5F5" stroke-width="2" fill="#e8f8fd"/>
+  <rect x="712" y="295" width="136" height="12" fill="#29C5F5" opacity="0.6"/>
+
+  <rect x="876" y="284" width="180" height="34" rx="2" stroke="#29C5F5" stroke-width="2" fill="#e8f8fd"/>
+  <rect x="888" y="295" width="156" height="12" fill="#29C5F5" opacity="0.55"/>
+
+  <rect x="700" y="336" width="140" height="34" rx="2" stroke="#29C5F5" stroke-width="2" fill="#e8f8fd"/>
+  <rect x="712" y="347" width="116" height="12" fill="#29C5F5" opacity="0.5"/>
+
+  <rect x="856" y="336" width="200" height="34" rx="2" stroke="#29C5F5" stroke-width="2" fill="#e8f8fd"/>
+  <rect x="868" y="347" width="176" height="12" fill="#29C5F5" opacity="0.45"/>
+
+  <!-- Longue traîne (petits, contour sombre) -->
+  <rect x="700" y="392" width="180" height="26" rx="2" stroke="#0a0a0a" stroke-width="1" opacity="0.2" fill="#f5f5f5"/>
+  <rect x="710" y="399" width="160" height="10" fill="#0a0a0a" opacity="0.2"/>
+
+  <rect x="896" y="392" width="160" height="26" rx="2" stroke="#0a0a0a" stroke-width="1" opacity="0.18" fill="#f5f5f5"/>
+  <rect x="906" y="399" width="140" height="10" fill="#0a0a0a" opacity="0.18"/>
+
+  <rect x="700" y="430" width="200" height="26" rx="2" stroke="#0a0a0a" stroke-width="1" opacity="0.16" fill="#f5f5f5"/>
+  <rect x="710" y="437" width="180" height="10" fill="#0a0a0a" opacity="0.16"/>
+
+  <rect x="916" y="430" width="140" height="26" rx="2" stroke="#0a0a0a" stroke-width="1" opacity="0.14" fill="#f5f5f5"/>
+  <rect x="926" y="437" width="120" height="10" fill="#0a0a0a" opacity="0.14"/>
+
+  <rect x="700" y="468" width="160" height="26" rx="2" stroke="#0a0a0a" stroke-width="1" opacity="0.12" fill="#f5f5f5"/>
+  <rect x="710" y="475" width="140" height="10" fill="#0a0a0a" opacity="0.12"/>
+
+  <rect x="876" y="468" width="180" height="26" rx="2" stroke="#0a0a0a" stroke-width="1" opacity="0.1" fill="#f5f5f5"/>
+  <rect x="886" y="475" width="160" height="10" fill="#0a0a0a" opacity="0.1"/>
+
+  <rect x="700" y="506" width="120" height="26" rx="2" stroke="#0a0a0a" stroke-width="1" opacity="0.09" fill="#f5f5f5"/>
+  <rect x="836" y="506" width="200" height="26" rx="2" stroke="#0a0a0a" stroke-width="1" opacity="0.08" fill="#f5f5f5"/>
+
+  <!-- Label -->
+  <rect x="700" y="180" width="160" height="5" fill="#0a0a0a" opacity="0.1"/>
+  <rect x="700" y="192" width="120" height="4" fill="#29C5F5" opacity="0.6"/>
+
+  <!-- Lignes de connexion document → mots-clés -->
+  <line x1="580" y1="400" x2="695" y2="340" stroke="#0a0a0a" stroke-width="1" opacity="0.06" stroke-dasharray="4 4"/>
+  <line x1="580" y1="450" x2="695" y2="450" stroke="#0a0a0a" stroke-width="1" opacity="0.05" stroke-dasharray="4 4"/>
+
+  <!-- ─── ÉLÉMENTS DÉCORATIFS ─── -->
+  <rect x="60" y="60" width="20" height="20" fill="#FFF127"/>
+  <rect x="88" y="60" width="8" height="8" fill="#FFF127" opacity="0.4"/>
+  <rect x="1100" y="60" width="14" height="14" stroke="#29C5F5" stroke-width="2" fill="none"/>
+  <rect x="1122" y="60" width="14" height="14" fill="#29C5F5" opacity="0.6"/>
+  <circle cx="80" cy="720" r="24" stroke="#29C5F5" stroke-width="2" fill="none" opacity="0.5"/>
+  <circle cx="80" cy="720" r="8" fill="#29C5F5" opacity="0.3"/>
+  <circle cx="600" cy="120" r="5" fill="#FFF127" opacity="0.7"/>
+  <circle cx="625" cy="108" r="3" fill="#0a0a0a" opacity="0.2"/>
+  <circle cx="1120" cy="700" r="5" fill="#29C5F5" opacity="0.5"/>
+  <circle cx="1100" cy="720" r="3" fill="#0a0a0a" opacity="0.2"/>
+  <rect x="100" y="748" width="240" height="3" fill="#FFF127"/>
+  <rect x="354" y="748" width="60" height="3" fill="#29C5F5"/>
+  <rect x="428" y="748" width="20" height="3" fill="#0a0a0a" opacity="0.15"/>
+
+  <!-- Icône crayon -->
+  <rect x="1080" y="160" width="64" height="64" fill="#FFF127"/>
+  <rect x="1104" y="172" width="10" height="32" rx="1" fill="#0a0a0a" transform="rotate(15 1109 188)"/>
+  <polygon points="1102,206 1112,208 1107,218" fill="#0a0a0a"/>
+  <rect x="1104" y="170" width="10" height="8" fill="#0a0a0a" opacity="0.5" transform="rotate(15 1109 174)"/>
+  <rect x="1080" y="240" width="64" height="3" fill="#0a0a0a" opacity="0.1"/>
+  <rect x="1080" y="250" width="48" height="3" fill="#0a0a0a" opacity="0.06"/>
+
+</svg>
