@@ -38,10 +38,12 @@ function CasCard({ cas }: CardProps) {
       >
         {/* ── Image ── */}
         <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9', background: '#0a0a0a', overflow: 'hidden' }}>
+          {/* unoptimized : images hébergées sur WP darwin-agency.com, hotlink protection côté serveur */}
           <Image
             src={cas.cardImg}
             alt={`Cas client ${cas.client} — DARWIN`}
             fill
+            unoptimized
             style={{ objectFit: 'cover', opacity: 0.85 }}
           />
           <span style={{
