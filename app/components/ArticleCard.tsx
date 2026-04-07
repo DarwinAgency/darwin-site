@@ -1,10 +1,12 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { BlogArticle, formatDate } from '../data/blog'
 
-type Props = { article: BlogArticle }
+type Props = { article: BlogArticle; showExcerpt?: boolean }
 
-export default function ArticleCard({ article }: Props) {
+export default function ArticleCard({ article, showExcerpt = true }: Props) {
   return (
     <Link href={`/blog/${article.slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column' }}>
       <article style={{ border: '1px solid #ebebeb', background: '#fff', display: 'flex', flexDirection: 'column', height: '100%', transition: 'border-color 0.2s' }}
@@ -65,19 +67,21 @@ export default function ArticleCard({ article }: Props) {
           </h2>
 
           {/* Excerpt */}
-          <p style={{
-            fontSize: '0.85rem',
-            lineHeight: 1.65,
-            color: '#666',
-            margin: '0 0 20px',
-            display: '-webkit-box',
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: 'vertical',
-            overflow: 'hidden',
-            flex: 1,
-          }}>
-            {article.excerpt}
-          </p>
+          {showExcerpt && (
+            <p style={{
+              fontSize: '0.85rem',
+              lineHeight: 1.65,
+              color: '#666',
+              margin: '0 0 20px',
+              display: '-webkit-box',
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
+              flex: 1,
+            }}>
+              {article.excerpt}
+            </p>
+          )}
 
           {/* Footer : auteur + date */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid #f0f0f0', paddingTop: 16 }}>

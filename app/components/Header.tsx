@@ -190,6 +190,7 @@ const navItems = [
   { label: 'CAS CLIENTS', href: '/cas-clients' },
   { label: 'VOS BESOINS', href: '#', tabs: besoinsTabs },
   { label: 'BLOG', href: '/blog' },
+  { label: 'ON RECRUTE', href: '/recrutement' },
 ]
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -548,35 +549,58 @@ export default function Header() {
               <div style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 24 }}>
                 {tabs[activeTab]?.label} — {openMenu}
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '4px 32px', flex: 1 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px', flex: 1, alignContent: 'start' }}>
                 {currentItems.map((item) => (
                   <a
                     key={item.label}
                     href={item.href ?? '#'}
                     style={{
-                      display: 'block',
-                      padding: '14px 0',
-                      borderBottom: '1px solid #f0f0f0',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      position: 'relative',
+                      padding: '14px 16px',
+                      border: '1px solid #ebebeb',
                       textDecoration: 'none',
-                      transition: 'border-color 0.15s',
+                      transition: 'border-color 0.2s',
                     }}
                     onMouseEnter={e => {
-                      const el = e.currentTarget
-                      el.style.borderBottomColor = '#29C5F5'
-                      const title = el.querySelector('.mega-title') as HTMLElement | null
-                      if (title) title.style.color = '#0a0a0a'
+                      const el = e.currentTarget as HTMLElement
+                      el.style.borderColor = '#0a0a0a'
+                      const box = el.querySelector('.mega-arrow-box') as HTMLElement | null
+                      const arrow = el.querySelector('.mega-arrow') as HTMLElement | null
+                      if (box) box.style.background = '#FFF127'
+                      if (arrow) { arrow.style.color = '#0a0a0a'; arrow.style.transform = 'rotate(0deg)' }
                     }}
                     onMouseLeave={e => {
-                      const el = e.currentTarget
-                      el.style.borderBottomColor = '#f0f0f0'
+                      const el = e.currentTarget as HTMLElement
+                      el.style.borderColor = '#ebebeb'
+                      const box = el.querySelector('.mega-arrow-box') as HTMLElement | null
+                      const arrow = el.querySelector('.mega-arrow') as HTMLElement | null
+                      if (box) box.style.background = '#f0f0f0'
+                      if (arrow) { arrow.style.color = '#0a0a0a'; arrow.style.transform = 'rotate(-45deg)' }
                     }}
                   >
-                    <div className="mega-title" style={{ fontSize: '0.82rem', fontWeight: 700, color: '#0a0a0a', marginBottom: 3, transition: 'color 0.15s' }}>
+                    <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#0a0a0a', marginBottom: 4, paddingRight: 24 }}>
                       {item.label}
                     </div>
                     <div style={{ fontSize: '0.72rem', color: '#888', lineHeight: 1.5 }}>
                       {item.desc}
                     </div>
+                    <span className="mega-arrow-box" style={{
+                      position: 'absolute', top: 10, right: 10,
+                      width: 26, height: 26,
+                      background: '#f0f0f0',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      flexShrink: 0,
+                      transition: 'background 0.2s',
+                    }}>
+                      <span className="mega-arrow" style={{
+                        fontSize: '0.78rem', fontWeight: 700, color: '#0a0a0a',
+                        display: 'inline-block',
+                        transform: 'rotate(-45deg)',
+                        transition: 'transform 0.2s',
+                      }}>→</span>
+                    </span>
                   </a>
                 ))}
               </div>

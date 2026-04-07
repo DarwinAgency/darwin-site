@@ -3,9 +3,15 @@ import PerformanceSlider from './components/PerformanceSlider'
 import ContactForm from './components/ContactForm'
 import HeroSection from './components/HeroSection'
 import BesoinsAccordion from './components/BesoinsAccordion'
+import Link from 'next/link'
+import ArticleCard from './components/ArticleCard'
 import { CAS_CLIENTS } from './data/cas-clients'
+import { BLOG_ARTICLES } from './data/blog'
 
 const featuredCases = CAS_CLIENTS.slice(0, 6)
+const latestArticles = [...BLOG_ARTICLES]
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 3)
 
 export default function Home() {
   return (
@@ -393,35 +399,14 @@ export default function Home() {
             <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 5vw, 4.5rem)', textTransform: 'uppercase', lineHeight: 1, margin: 0 }}>
               NOTRE BLOG
             </h2>
-            <a href="#" className="arrow-link" style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#0a0a0a', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8, paddingBottom: 4 }}>
+            <Link href="/blog" className="arrow-link" style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#0a0a0a', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8, paddingBottom: 4 }}>
               VOIR TOUS LES ARTICLES <span className="arrow">→</span>
-            </a>
+            </Link>
           </div>
 
           <div className="rsp-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
-            {[
-              { title: 'Comment optimiser votre stratégie SEO en 2025', category: 'SEO', bg: '#E8F4FD', date: '15 Mars 2025' },
-              { title: "L'IA au service de la performance marketing", category: 'IA & DATA', bg: '#FFF8E7', date: '8 Mars 2025' },
-              { title: 'SMA : les meilleures pratiques Meta Ads', category: 'SMA', bg: '#F0FFF4', date: '1 Mars 2025' },
-            ].map((article) => (
-              <a key={article.title} href="#" className="blog-card" style={{ display: 'block', textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
-                <div style={{ overflow: 'hidden', borderRadius: 6, marginBottom: 16 }}>
-                  <div
-                    className="img-placeholder"
-                    style={{ height: 190, background: article.bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                  >
-                    <span style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#999' }}>
-                      {article.category}
-                    </span>
-                  </div>
-                </div>
-                <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#aaa', marginBottom: 8 }}>
-                  {article.category} — {article.date}
-                </p>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, lineHeight: 1.45, margin: 0, color: '#0a0a0a' }}>
-                  {article.title}
-                </h3>
-              </a>
+            {latestArticles.map((article) => (
+              <ArticleCard key={article.slug} article={article} showExcerpt={false} />
             ))}
           </div>
         </div>
