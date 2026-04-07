@@ -1,10 +1,16 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from '../components/ContactForm'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Contactez Darwin Agency — Parlons de votre projet digital",
   description: "Vous avez un projet digital ? Discutons-en. Darwin Agency, agence marketing performance à Aix-en-Provence. +33 (0)4 13 57 09 00",
+  alternates: { canonical: '/contact' },
+  openGraph: {
+    title: "Contactez Darwin Agency — Parlons de votre projet digital",
+    description: "Vous avez un projet digital ? Discutons-en. Darwin Agency, agence marketing performance à Aix-en-Provence.",
+  },
 }
 
 export default function ContactPage() {

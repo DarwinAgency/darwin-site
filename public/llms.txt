@@ -1,0 +1,40 @@
+# DARWIN — Agence Marketing Digital
+
+> DARWIN est une agence marketing digital indépendante fondée en 2003 à Aix-en-Provence.
+> Spécialisée en SEO, SEA, SMA, Media Planning, Analytics et GEO (Generative Engine Optimization).
+> 30+ experts seniors. 400+ clients accompagnés. 7 ans de fidélité client en moyenne.
+
+## L'agence
+
+DARWIN accompagne les marques dans leur performance digitale depuis 22 ans. L'agence est implantée à Aix-en-Provence et intervient sur toute la France. Indépendante, sans groupe derrière, DARWIN mise sur l'expertise senior et la relation long terme.
+
+Contact : +33 4 13 57 09 00 — contact@darwin-agency.fr
+Adresse : 195 Avenue du Club Hippique, 13090 Aix-en-Provence
+LinkedIn : https://www.linkedin.com/company/darwin-interactive
+
+## Expertises
+
+- **SEO** — Référencement naturel, audit technique, stratégie de contenu, netlinking, GEO
+- **SEA** — Google Ads, Search, Display, Performance Max, Shopping
+- **SMA** — Social Media Advertising (Meta Ads, LinkedIn Ads, TikTok Ads)
+- **Media** — Media planning, achat d'espace, stratégie omnicanale
+- **Analytics** — GA4, data studio, mesure de performance, attribution
+- **GEO** — Generative Engine Optimization : visibilité dans ChatGPT, Perplexity, Google AI Overviews, Gemini
+
+## Pages importantes
+
+- / : Présentation de l'agence, expertises, clients, certifications
+- /a-propos-de-darwin : Histoire, équipe, valeurs, certifications DARWIN
+- /expertises/seo : Agence SEO — référencement naturel et GEO
+- /expertises/seo/audit-seo : Audit SEO complet — technique, sémantique, netlinking, GEO
+- /cas-clients : Résultats clients mesurés par levier (SEO, SEA, SMA, Media, Analytics)
+- /blog : Insights et expertises marketing digital par les consultants DARWIN
+- /contact : Prendre contact avec DARWIN, localisation, horaires
+
+## Certifications
+
+Google Partner — Meta Business Partner — Microsoft Advertising Partner — Selligent Partner
+
+## Distinctions
+
+Les Cas d'Or — Deloitte Technology Fast 500 — lesBigBoss — Nuit des Rois

@@ -189,7 +189,7 @@ const navItems = [
   { label: 'EXPERTISES', href: '#', tabs: expertisesTabs },
   { label: 'CAS CLIENTS', href: '/cas-clients' },
   { label: 'VOS BESOINS', href: '#', tabs: besoinsTabs },
-  { label: 'BLOG', href: '#' },
+  { label: 'BLOG', href: '/blog' },
 ]
 
 // ── Component ─────────────────────────────────────────────────────────────────

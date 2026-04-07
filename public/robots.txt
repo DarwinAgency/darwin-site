@@ -1,0 +1,3 @@
+# Environnement de pré-production — indexation désactivée
+User-agent: *
+Disallow: /

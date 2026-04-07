@@ -354,25 +354,32 @@ export default function Home() {
           <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 48, textAlign: 'center' }}>
             NOS CERTIFICATIONS
           </p>
-          <div style={{ display: 'flex', gap: 56, alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 40, alignItems: 'center' }}>
             {[
-              { src: '/logos/certifications/google-partner.jpg', alt: 'Google Partner Premier', h: 70 },
-              { src: '/logos/certifications/meta-partner.jpg', alt: 'Meta Business Partner', h: 70 },
-              { src: '/logos/certifications/bing-ads.jpg', alt: 'Bing Ads', h: 70 },
-              { src: '/logos/certifications/google-analytics.png', alt: 'Google Analytics', h: 70 },
-              { src: '/logos/certifications/vi.jpg', alt: 'VI', h: 70 },
-              { src: '/logos/certifications/doubleclick.png', alt: 'DoubleClick Bid Manager', h: 36 },
-              { src: '/logos/certifications/apple-search-ads.png', alt: 'Apple Search Ads', h: 70 },
-              { src: '/logos/certifications/trackad.svg', alt: 'Trackad', h: 70 },
-            ].map((cert) => (
-              <div key={cert.alt} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 70 }}>
-                <Image
-                  src={cert.src}
-                  alt={cert.alt}
-                  width={140}
-                  height={cert.h}
-                  style={{ objectFit: 'contain', maxHeight: cert.h, height: 'auto' }}
-                />
+              [
+                { src: '/logos/certifications/google-partner.jpg', alt: 'Google Partner Premier', h: 70 },
+                { src: '/logos/certifications/meta-partner.jpg', alt: 'Meta Business Partner', h: 70 },
+                { src: '/logos/certifications/bing-ads.jpg', alt: 'Bing Ads', h: 70 },
+                { src: '/logos/certifications/google-analytics.png', alt: 'Google Analytics', h: 70 },
+              ],
+              [
+                { src: '/logos/certifications/doubleclick.png', alt: 'DoubleClick Bid Manager', h: 36 },
+                { src: '/logos/certifications/apple-search-ads.png', alt: 'Apple Search Ads', h: 70 },
+                { src: '/logos/certifications/trackad.svg', alt: 'Trackad', h: 70 },
+              ],
+            ].map((row, rowIndex) => (
+              <div key={rowIndex} style={{ display: 'flex', gap: 56, alignItems: 'center', justifyContent: 'center' }}>
+                {row.map((cert) => (
+                  <div key={cert.alt} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 70, width: 140 }}>
+                    <Image
+                      src={cert.src}
+                      alt={cert.alt}
+                      width={140}
+                      height={cert.h}
+                      style={{ objectFit: 'contain', maxHeight: cert.h, height: 'auto' }}
+                    />
+                  </div>
+                ))}
               </div>
             ))}
           </div>

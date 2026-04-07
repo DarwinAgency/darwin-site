@@ -254,19 +254,19 @@
 
 ---
 
-## Tâches Blog à venir
+## Tâches Blog
 
-> Page `/blog` — apparence de blog, contenu statique, pas de CMS. Estimation : 1 session.
+> Page `/blog` — contenu statique, pas de CMS.
 
 | # | Étape | Détail | Statut |
 |---|---|---|---|
-| B1 | Fichier de données `app/data/articles.ts` | Structure : slug, titre, date, catégorie, extrait, image, contenu | ⏳ À faire |
-| B2 | Composant `ArticleCard.tsx` | Image, catégorie, titre, date, extrait, lien vers l'article | ⏳ À faire |
-| B3 | Page `/blog` | Grille d'articles + filtre catégories + pagination (côté client) | ⏳ À faire |
-| B4 | Page `/blog/[slug]` | Affichage article complet (contenu, date, catégorie, retour) | ⏳ À faire |
-| B5 | Header + Footer | Ajouter le lien `/blog` dans la navigation | ⏳ À faire |
-| B6 | Sitemap | Ajouter `/blog` et `/blog/[slug]` dans `sitemap.ts` | ⏳ À faire |
-| B7 | SEO dynamique | `metadata` par article : title, description, OG, canonical | ⏳ À faire |
+| B1 | Fichier de données `app/data/blog.ts` | Structure : slug, titre, date, catégorie, extrait, image, contenu, sections | ✅ Fait |
+| B2 | Composant `ArticleCard.tsx` | Image 16/9, badge catégorie, titre, excerpt, auteur, date | ✅ Fait |
+| B3 | Page `/blog` | Listing client avec filtres catégories + pagination 12 articles/page | ✅ Fait |
+| B4 | Page `/blog/[slug]` | Template 2 colonnes : article + sidebar (newsletter / auteur / contact) | ✅ Fait |
+| B5 | Header + Footer | Lien `/blog` dans la navigation | ✅ Fait |
+| B6 | Sitemap | `/blog` et `/blog/[slug]` dans `sitemap.ts` | ✅ Fait |
+| B7 | SEO dynamique | `generateMetadata()` par article : title, description, OG, canonical | ✅ Fait |
 
 ---
 
@@ -285,9 +285,105 @@
 | C5 | Page `/cas-clients` | Grille de cas + filtre par levier (7 filtres) + état "aucun résultat" | ✅ Fait |
 | C6 | Page `/cas-clients/[slug]` | Cas complet : contexte, défi, solution DARWIN, résultats chiffrés | ✅ Fait |
 | C7 | Injection dans les pages expertises | Chiffres clés issus de `stats.ts` → section résultats dans `/expertises/seo`, `/sea`, etc. | ⏳ À faire |
-| C8 | Header + Footer | Ajouter `/cas-clients` dans la navigation | ⏳ À faire |
-| C9 | Sitemap | Ajouter `/cas-clients` et `/cas-clients/[slug]` dans `sitemap.ts` | ⏳ À faire |
+| C8 | Header + Footer | Ajouter `/cas-clients` dans la navigation | ✅ Fait |
+| C9 | Sitemap | Ajouter `/cas-clients` et `/cas-clients/[slug]` dans `sitemap.ts` | ✅ Fait |
 | C10 | SEO dynamique | `metadata` par cas : title, description, OG, canonical + JSON-LD schema `CaseStudy` | ⏳ À faire |
+
+---
+
+## [Session 9] — GEO site-wide : helpers JSON-LD, llms.txt & conventions AEO
+
+> GEO (Generative Engine Optimization) intégré comme standard sur **toutes les pages**, pas uniquement les pages expertise.
+> Objectif : que DARWIN soit cité dans ChatGPT, Perplexity, Google AI Overviews, Gemini sur l'ensemble de ses expertises.
+
+### `app/lib/jsonld.ts` — helpers JSON-LD centralisés
+
+Fichier utilitaire avec 7 fonctions réutilisables :
+
+| Fonction | Schema | Utilisée sur |
+|---|---|---|
+| `faqJsonLd(items)` | FAQPage | Toutes les pages (min. 3 Q&A) |
+| `serviceJsonLd({name, description, url})` | Service | Chaque page expertise |
+| `breadcrumbJsonLd(items)` | BreadcrumbList | Sous-pages /expertises/* |
+| `articleJsonLd({...})` | Article | /blog/[slug] |
+| `localBusinessJsonLd()` | LocalBusiness | /contact |
+| `webPageJsonLd(name, desc, url)` | WebPage | Pages simples |
+| `caseStudyJsonLd({...})` | Article (CaseStudy) | /cas-clients/[slug] |
+
+**Usage :**
+```tsx
+import { faqJsonLd, serviceJsonLd } from '@/lib/jsonld'
+// Dans le JSX (Server Component) :
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }} />
+```
+
+### `public/llms.txt`
+
+Fichier standard émergent (équivalent `robots.txt` pour les LLMs).
+Contenu : présentation DARWIN, expertises, pages clés, certifications, distinctions.
+**À mettre à jour** à chaque nouvelle page ou expertise ajoutée.
+
+### Conventions AEO — règles rédactionnelles obligatoires
+
+Appliquées à **chaque page et chaque article** :
+- Réponse directe dès la 1ère phrase (pas d'intro générique)
+- FAQ minimum : 3 Q&A/page, 5+ sur expertises, 10+ sur pages GEO
+- Réponses FAQ : 40–300 mots, chiffres datés
+- Mention DARWIN + Aix-en-Provence dans au moins 1 réponse sur 3
+- Définitions en début de section pour les termes techniques
+
+### Checklist création de page (7 points)
+
+Avant d'écrire le JSX :
+1. `metadata` : title, description, canonical, openGraph
+2. JSON-LD adapté au type de page (via `app/lib/jsonld.ts`)
+3. `faqJsonLd` : min. 3 Q&A
+4. Premier paragraphe : réponse directe à l'intention
+5. Chiffres datés dans le contenu
+6. Route dans `app/sitemap.ts`
+7. `public/llms.txt` mis à jour si page importante
+
+### Statut JSON-LD sur les pages existantes
+
+Pages à mettre à jour (prochaines sessions) :
+
+| Route | À ajouter |
+|---|---|
+| `/contact` | `localBusinessJsonLd` + `faqJsonLd` |
+| `/a-propos-de-darwin` | `faqJsonLd` + `webPageJsonLd` |
+| `/expertises/seo` | `serviceJsonLd` + `faqJsonLd` + `breadcrumbJsonLd` |
+| `/expertises/seo/audit-seo` | `serviceJsonLd` + `breadcrumbJsonLd` (FAQ ✅ déjà 7 Q&A) |
+| `/blog/[slug]` | `articleJsonLd` |
+| `/cas-clients/[slug]` | `caseStudyJsonLd` |
+
+---
+
+## [Session 8] — Blog, Cas Clients, Page À Propos & nouveaux composants
+
+### Page À Propos (`app/a-propos-de-darwin/page.tsx`)
+- Nouvelle URL SEO-friendly pour "L'Agence" — remplace `/agence` dans la navigation Header
+- Canonical `/a-propos-de-darwin`, metadata complètes, OG par défaut
+- Même contenu que `/agence` : stats, équipe, certifications, expertises
+
+### Blog (`app/blog/`)
+- **`app/data/blog.ts`** — type `BlogArticle` avec sections/blocks (paragraph | list | callout | subtitle)
+- **`app/data/team.ts`** — données auteurs réutilisées dans les cards et sidebar
+- **`app/components/ArticleCard.tsx`** — image 16/9, badge catégorie éditoriale, auteur, date
+- **`app/blog/BlogListing.tsx`** — listing client : filtres 6 catégories + pagination 12 articles/page
+- **`app/blog/page.tsx`** — page serveur avec metadata statiques
+- **`app/blog/[slug]/page.tsx`** — template article 2 colonnes : article + sidebar (newsletter / auteur / CTA contact)
+- **6 catégories éditoriales** : La preuve avant tout · Le praticien qui parle · L'horizon qui avance · La complexité rendue simple · Le partenaire de la durée · L'avis qui dérange
+- **Script d'import** `scripts/import-article.mjs` — Puppeteer, sélecteur `.swm-post-single-content`, génère `scripts/_last-import.ts`
+- Header + Sitemap branchés (B5, B6 ✅)
+
+### Cas Clients — finalisation navigation
+- Header : lien `CAS CLIENTS → /cas-clients` ajouté dans la nav principale (C8 ✅)
+- Sitemap : routes `/cas-clients` + `/cas-clients/[slug]` dynamiques (C9 ✅)
+
+### Nouveaux composants
+- **`PageHero.tsx`** — hero sobre réutilisable (eyebrow, title, description, breadcrumbs)
+- **`BesoinsAccordion.tsx`** — accordéon animé "Nous répondons à vos besoins" (homepage)
+- **`PerformanceSlider.tsx`** — slider méthodologie AUDIT → STRATÉGIE → ACTION → REPORTING (homepage)
 
 ---
 
@@ -295,29 +391,51 @@
 
 ```
 app/
-├── layout.tsx              ← Header, Footer, JSON-LD, OG globaux, canonical base
-├── page.tsx                ← Homepage
-├── robots.ts               ← Bloque l'indexation en production
-├── sitemap.ts              ← Génère /sitemap.xml
-├── agence/page.tsx         ← Page L'Agence
-├── contact/page.tsx        ← Page Contact
+├── layout.tsx                      ← Header, Footer, JSON-LD, OG globaux, canonical base
+├── page.tsx                        ← Homepage
+├── robots.ts                       ← Bloque l'indexation en production
+├── sitemap.ts                      ← Génère /sitemap.xml (statique + blog + cas-clients)
+├── not-found.tsx                   ← 404 fond jaune
+├── a-propos-de-darwin/page.tsx     ← Page L'Agence (URL dans la nav)
+├── agence/page.tsx                 ← Ancienne URL (peut rediriger)
+├── contact/page.tsx                ← Page Contact
+├── blog/
+│   ├── page.tsx                    ← Listing blog
+│   ├── BlogListing.tsx             ← Listing client (filtres + pagination)
+│   └── [slug]/page.tsx             ← Article complet
+├── cas-clients/
+│   ├── page.tsx                    ← Grille + filtres leviers
+│   └── [slug]/page.tsx             ← Cas complet
 ├── expertises/
-│   └── seo/page.tsx        ← Page Agence SEO (template pour les autres)
-└── components/
-    ├── Header.tsx          ← Navigation avec sous-menus
-    ├── Footer.tsx          ← Footer SEO
-    ├── HeroSection.tsx     ← Hero parallax homepage
-    └── ContactForm.jsx     ← Formulaire de contact
+│   └── seo/
+│       ├── page.tsx                ← Page Agence SEO
+│       └── audit-seo/page.tsx      ← Page Audit SEO spoke
+├── components/
+│   ├── Header.tsx                  ← Navigation avec sous-menus
+│   ├── Footer.tsx                  ← Footer SEO
+│   ├── HeroSection.tsx             ← Hero parallax homepage
+│   ├── ContactForm.jsx             ← Formulaire de contact
+│   ├── PageHero.tsx                ← Hero sobre réutilisable
+│   ├── ArticleCard.tsx             ← Carte article blog
+│   ├── CasClientsGrid.tsx          ← Grille cas clients
+│   ├── BesoinsAccordion.tsx        ← Accordéon besoins homepage
+│   └── PerformanceSlider.tsx       ← Slider méthodologie homepage
+└── data/
+    ├── blog.ts                     ← Articles (BlogArticle, BlogSection, BlogBlock)
+    ├── cas-clients.ts              ← Cas clients
+    └── team.ts                     ← Données auteurs/équipe
 
 public/
 ├── images/
-│   ├── gymnaste.jpg        ← Photo hero section Notre Agence
-│   ├── og-default.jpg      ← Image Open Graph 1200×630px
-│   ├── team/               ← Photos équipe dirigeante
-│   ├── contact/            ← Photos page contact (plan, équipe, Le Toma)
-│   └── seo/                ← Visuels page Agence SEO
+│   ├── gymnaste.jpg                ← Photo hero section Notre Agence
+│   ├── og-default.jpg              ← Image Open Graph 1200×630px
+│   ├── team/                       ← Photos équipe dirigeante
+│   ├── contact/                    ← Photos page contact
+│   ├── blog/                       ← Images hero articles
+│   ├── illustrations/              ← 5 SVG DARWIN (audit-seo, seo-technique, etc.)
+│   └── seo/                        ← Visuels page Agence SEO
 ├── logos/
-│   ├── certifications/     ← Google Partner, Meta, Microsoft, etc.
-│   ├── clients/            ← Logos clients
-│   └── recompenses/        ← Logos prix & récompenses
+│   ├── certifications/             ← Google Partner, Meta, Microsoft, etc.
+│   ├── clients/                    ← Logos clients
+│   └── recompenses/                ← Logos prix & récompenses
 ```
