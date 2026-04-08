@@ -190,7 +190,6 @@ const navItems = [
   { label: 'CAS CLIENTS', href: '/cas-clients' },
   { label: 'VOS BESOINS', href: '#', tabs: besoinsTabs },
   { label: 'BLOG', href: '/blog' },
-  { label: 'ON RECRUTE', href: '/recrutement' },
 ]
 
 // ── Component ─────────────────────────────────────────────────────────────────

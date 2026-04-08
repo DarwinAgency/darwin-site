@@ -32,9 +32,8 @@ export default function Footer() {
           href="/contact"
           style={{
             background: '#0a0a0a',
-            color: '#FFF127',
+            color: '#fff',
             padding: '16px 36px',
-            borderRadius: 4,
             fontWeight: 700,
             fontSize: '0.82rem',
             letterSpacing: '0.1em',
@@ -42,10 +41,10 @@ export default function Footer() {
             textDecoration: 'none',
             whiteSpace: 'nowrap',
             display: 'inline-block',
-            transition: 'background 0.2s, color 0.2s',
+            transition: 'background 0.2s',
           }}
-          onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#FFF127'; el.style.color = '#0a0a0a' }}
-          onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#0a0a0a'; el.style.color = '#FFF127' }}
+          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#1a1a1a' }}
+          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#0a0a0a' }}
         >
           DÉMARRER UN PROJET →
         </Link>
@@ -109,6 +108,7 @@ export default function Footer() {
               { label: 'Notre méthode', href: '/a-propos-de-darwin#methode' },
               { label: 'Rejoindre Darwin', href: '/recrutement' },
               { label: 'Contact', href: '/contact' },
+              { label: 'Creative Thinking Community', href: '/creative-thinking-community' },
             ].map(link => (
               <li key={link.href}>
                 <Link href={link.href} style={{ color: '#888', textDecoration: 'none', fontSize: '0.84rem', transition: 'color 0.15s' }}

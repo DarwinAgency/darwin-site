@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/expertises/seo`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/expertises/seo/audit-seo`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/recrutement`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 },
+    { url: `${BASE}/creative-thinking-community`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   ]
 
   const blogPages: MetadataRoute.Sitemap = BLOG_ARTICLES.map(article => ({
