@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { DARWIN_YEARS } from '../lib/darwin'
 
 export const metadata: Metadata = {
   title: "DARWIN — L'agence marketing digital depuis 2003",
-  description: "Découvrez DARWIN : 30+ experts seniors, 400+ clients accompagnés, 22 ans de performance digitale à Aix-en-Provence.",
+  description: `Découvrez DARWIN : 30+ experts seniors, 400+ clients accompagnés, ${DARWIN_YEARS} ans de performance digitale à Aix-en-Provence.`,
   alternates: { canonical: '/a-propos-de-darwin' },
   openGraph: {
     title: "DARWIN — L'agence marketing digital depuis 2003",
-    description: "30+ experts seniors, 400+ clients accompagnés, 22 ans de performance digitale.",
+    description: `30+ experts seniors, 400+ clients accompagnés, ${DARWIN_YEARS} ans de performance digitale.`,
     url: 'https://darwin-agency.fr/a-propos-de-darwin',
     images: [{ url: 'https://darwin-agency.fr/images/og-default.jpg', width: 1200, height: 630, alt: "DARWIN — L'agence" }],
   },
@@ -40,7 +41,7 @@ const objectives = [
     id: '03',
     title: 'Convertir en leads',
     desc: "Attirer les bonnes audiences et les transformer en opportunités concrètes. Nous optimisons chaque point de contact pour réduire le coût d'acquisition et augmenter le taux de conversion.",
-    items: ['Landing pages optimisées', 'Retargeting', 'Emails & automation', 'A/B testing'],
+    items: ['Landing pages optimisées', 'Retargeting', 'Emails & SMS', 'A/B testing'],
   },
   {
     id: '04',
@@ -82,23 +83,23 @@ const reasonIcons = [
 const reasons = [
   {
     title: 'Union des talents',
-    desc: "Des experts seniors certifiés dans leurs domaines créent une synergie unique. Chaque profil apporte une expertise pointue — ensemble, ils couvrent l'intégralité des leviers digitaux.",
+    desc: "Notre agence réunit les meilleurs experts en acquisition digitale. Chaque profil senior, certifié dans son domaine, apporte sa vision pour enrichir votre stratégie. Cette diversité d'expertises crée une synergie créative qui fait notre force.",
   },
   {
-    title: 'La puissance de la data',
-    desc: "Notre approche analytique transforme la complexité des données en opportunités concrètes. Chaque décision est fondée sur des chiffres réels, pas sur des intuitions.",
+    title: 'La puissance des données',
+    desc: "À chaque prise de décision, notre approche data-driven éclaire votre stratégie. Notre équipe Analytics & Tracking transforme la complexité des données en opportunités à saisir, pour une performance optimisée et mesurable dans le temps.",
   },
   {
-    title: 'Innovation continue',
-    desc: "Nous anticipons les évolutions du marché grâce à une veille permanente et l'intégration de l'IA dans nos processus. Vos stratégies sont toujours un temps d'avance.",
+    title: "L'innovation continue",
+    desc: "Notre pôle s'appuie sur l'IA pour explorer les nouvelles frontières du digital. Cette veille active nous permet d'anticiper les évolutions de votre marché et d'adapter vos stratégies aux comportements émergents.",
   },
   {
-    title: 'Vision transversale',
-    desc: "Une expertise 360° qui couvre tous les leviers digitaux crée une valeur long terme. SEO, SEA, Social, Media, Data : tout est pensé ensemble, pas en silo.",
+    title: 'La vision transverse',
+    desc: "De l'acquisition à la conversion, notre expertise couvre l'ensemble des leviers digitaux. Cette vision à 360° nous permet de déployer des stratégies cohérentes qui créent de la valeur sur le long terme.",
   },
   {
-    title: 'Expérience certifiée',
-    desc: "Google Partner Premier, Meta Business Partner, Microsoft Advertising. Ces certifications ne sont pas des badges — elles garantissent un accès prioritaire aux nouvelles fonctionnalités et aux équipes des plateformes.",
+    title: "L'expérience certifiée",
+    desc: "Nos partenariats privilégiés avec les leaders du digital (Google, Meta...) témoignent de notre expertise. Nous sommes certifiés Google Partner, Facebook Marketing Partner, et Microsoft Partner.",
   },
 ]
 
@@ -157,7 +158,7 @@ export default function AgencePage() {
               <span style={{ display: 'block' }}>NOTRE AGENCE</span>
               <span style={{ display: 'block' }}>DÉDIÉE À LA</span>
               <span style={{ display: 'inline-block', background: '#FFF127', padding: '0 8px', marginBottom: 4 }}>PERFORMANCE</span>
-              <span style={{ display: 'block' }}>DEPUIS 22 ANS.</span>
+              <span style={{ display: 'block' }}>DEPUIS {DARWIN_YEARS} ANS.</span>
             </h1>
 
             <p style={{ fontSize: '1rem', lineHeight: 1.75, color: '#555', marginBottom: 40, maxWidth: 460 }}>
@@ -198,10 +199,6 @@ export default function AgencePage() {
             <div style={{ position: 'absolute', top: 40, left: 32, background: '#FFF127', padding: '16px 20px', borderRadius: 4 }}>
               <div className="font-anton" style={{ fontSize: '1.6rem', lineHeight: 1, color: '#0a0a0a' }}>+400</div>
               <div style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#555', marginTop: 4 }}>clients accompagnés</div>
-            </div>
-            {/* Certif badge */}
-            <div style={{ position: 'absolute', bottom: 32, right: 32, background: '#fff', padding: '12px 20px', borderRadius: 6, boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}>
-              <Image src="/logos/certifications/google-partner.jpg" alt="Google Partner Premier" width={130} height={52} style={{ objectFit: 'contain', display: 'block' }} />
             </div>
           </div>
         </div>
@@ -271,13 +268,13 @@ export default function AgencePage() {
       </section>
 
       {/* ─── POURQUOI DARWIN ─── */}
-      <section style={{ background: '#0a0a0a', padding: '96px 24px', color: '#fff' }}>
+      <section style={{ background: 'linear-gradient(135deg, #FFF127 0%, #29C5F5 100%)', padding: '96px 24px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ marginBottom: 64 }}>
-            <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#ffffff', marginBottom: 16 }}>
+            <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#0a0a0a', marginBottom: 16 }}>
               Notre différence
             </p>
-            <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 4rem)', textTransform: 'uppercase', lineHeight: 1, margin: 0, color: '#fff', maxWidth: 700 }}>
+            <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 4rem)', textTransform: 'uppercase', lineHeight: 1, margin: 0, color: '#0a0a0a', maxWidth: 700 }}>
               5 RAISONS<br />DE CHOISIR DARWIN
             </h2>
           </div>
@@ -289,7 +286,6 @@ export default function AgencePage() {
                 style={{
                   padding: '36px 28px',
                   background: '#fff',
-                  borderTop: `4px solid ${i % 2 === 0 ? '#FFF127' : '#29C5F5'}`,
                   color: '#0a0a0a',
                 }}
               >
@@ -345,6 +341,79 @@ export default function AgencePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ─── CTC & RECRUTEMENT ─── */}
+      <section style={{ background: '#0a0a0a', padding: '0 0', overflow: 'hidden' }}>
+        <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+
+          {/* CTC */}
+          <Link
+            href="/creative-thinking-community"
+            style={{ display: 'block', textDecoration: 'none', position: 'relative', overflow: 'hidden', minHeight: 420, background: '#FFF127' }}
+          >
+            {/* Motif grille en arrière-plan */}
+            <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px)', backgroundSize: '40px 40px', pointerEvents: 'none' }} />
+            {/* Numéro décoratif */}
+            <div className="font-anton" style={{ position: 'absolute', bottom: -20, right: -10, fontSize: '14rem', lineHeight: 1, color: 'rgba(0,0,0,0.07)', userSelect: 'none', pointerEvents: 'none' }}>01</div>
+
+            <div style={{ position: 'relative', padding: '64px 56px', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <span style={{ display: 'inline-block', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#0a0a0a', background: 'rgba(0,0,0,0.1)', padding: '5px 12px', borderRadius: 2, marginBottom: 40 }}>
+                  Communauté
+                </span>
+                <h3 className="font-anton" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.2rem)', textTransform: 'uppercase', lineHeight: 0.95, color: '#0a0a0a', margin: '0 0 20px' }}>
+                  Creative<br />Thinking<br />Community
+                </h3>
+                <p style={{ fontSize: '0.9rem', lineHeight: 1.75, color: '#333', maxWidth: 360, margin: 0 }}>
+                  Le collectif qui réunit marques, agences et créatifs autour d&apos;une conviction : la performance naît de la pensée créative.
+                </p>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 48, paddingTop: 24, borderTop: '1px solid rgba(0,0,0,0.15)' }}>
+                <span style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#0a0a0a' }}>
+                  Découvrir la CTC
+                </span>
+                <div style={{ width: 44, height: 44, borderRadius: '50%', background: '#0a0a0a', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <span style={{ color: '#FFF127', fontSize: '1.1rem', lineHeight: 1 }}>→</span>
+                </div>
+              </div>
+            </div>
+          </Link>
+
+          {/* RECRUTEMENT */}
+          <Link
+            href="/recrutement"
+            style={{ display: 'block', textDecoration: 'none', position: 'relative', overflow: 'hidden', minHeight: 420, background: '#29C5F5' }}
+          >
+            {/* Motif grille */}
+            <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px)', backgroundSize: '40px 40px', pointerEvents: 'none' }} />
+            {/* Numéro décoratif */}
+            <div className="font-anton" style={{ position: 'absolute', bottom: -20, right: -10, fontSize: '14rem', lineHeight: 1, color: 'rgba(0,0,0,0.07)', userSelect: 'none', pointerEvents: 'none' }}>02</div>
+
+            <div style={{ position: 'relative', padding: '64px 56px', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <span style={{ display: 'inline-block', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#0a0a0a', background: 'rgba(0,0,0,0.1)', padding: '5px 12px', borderRadius: 2, marginBottom: 40 }}>
+                  Carrières
+                </span>
+                <h3 className="font-anton" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.2rem)', textTransform: 'uppercase', lineHeight: 0.95, color: '#0a0a0a', margin: '0 0 20px' }}>
+                  On recrute<br />des talents<br />ambitieux
+                </h3>
+                <p style={{ fontSize: '0.9rem', lineHeight: 1.75, color: '#0a0a0a99', maxWidth: 360, margin: 0 }}>
+                  Experts seniors, profils curieux, esprits analytiques. Si vous voulez évoluer dans une agence qui fait la différence depuis {DARWIN_YEARS} ans — c&apos;est ici.
+                </p>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 48, paddingTop: 24, borderTop: '1px solid rgba(0,0,0,0.15)' }}>
+                <span style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#0a0a0a' }}>
+                  Voir les offres
+                </span>
+                <div style={{ width: 44, height: 44, borderRadius: '50%', background: '#0a0a0a', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <span style={{ color: '#29C5F5', fontSize: '1.1rem', lineHeight: 1 }}>→</span>
+                </div>
+              </div>
+            </div>
+          </Link>
+
         </div>
       </section>
 

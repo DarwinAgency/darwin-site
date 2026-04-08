@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { faqJsonLd, webPageJsonLd, breadcrumbJsonLd } from '@/app/lib/jsonld'
+import { DARWIN_YEARS } from '@/app/lib/darwin'
 
 export const metadata: Metadata = {
   title: "Creative Thinking Community — Collectif d'agences expertes | DARWIN",
@@ -34,11 +35,11 @@ const agencies = [
     eyebrow: 'Performance & Croissance',
     name: 'DARWIN',
     tagline: 'Générez du CA',
-    desc: "DARWIN orchestre les leviers digitaux pour transformer la data en performance et accélérer la croissance des marques. SEO, SEA, SMA, Media programmatique et Analytics — une expertise de 23 ans au service de votre acquisition.",
+    desc: `DARWIN orchestre les leviers digitaux pour transformer la data en performance et accélérer la croissance des marques. SEO, SEA, SMA, Media programmatique et Analytics — une expertise de ${DARWIN_YEARS} ans au service de votre acquisition.`,
     services: ['SEO & GEO', 'SEA (Google & Bing)', 'Social Media Ads', 'RTB & Display', 'Email & SMS', 'Data & Analytics'],
     cta: { label: 'Contacter un expert', href: '/contact', external: false },
-    img: null,
-    imgAlt: null,
+    img: '/images/ctc/darwin-ctc.jpg',
+    imgAlt: 'DARWIN — Agence performance digitale',
     dark: true,
   },
   {
@@ -49,8 +50,8 @@ const agencies = [
     desc: "TBD Group conçoit et développe des sites internet sur-mesure, pensés pour convertir. Du site vitrine au e-commerce, chaque projet est construit avec une exigence technique et une vision UX centrée sur l'expérience utilisateur et la performance.",
     services: ['Création de site internet', 'E-commerce', 'Sites sur-mesure', 'Maintenance & évolution'],
     cta: { label: 'Découvrir TBD Group', href: '#', external: true },
-    img: null,
-    imgAlt: null,
+    img: '/images/ctc/ctc-tbdgroup.jpeg',
+    imgAlt: 'TBD Group — Création & Développement web',
     dark: false,
   },
   {
@@ -61,7 +62,7 @@ const agencies = [
     desc: "L'Atelier Imagescence conçoit des expériences digitales exigeantes : stratégie, UX-UI, identité visuelle. Leur promesse : rendre simple une complexité potentielle, en questionnant les briefs pour proposer des solutions pertinentes — pas seulement attendues.",
     services: ['Conception UX-UI', 'Direction artistique', 'Identité visuelle', 'Photographie corporate'],
     cta: { label: 'Découvrir Imagescence', href: 'https://jean-philippe-heurtier.webflow.io/home-2', external: true },
-    img: '/images/ctc/imagescence-hero.jpg',
+    img: '/images/ctc/ctc-imaginescence.jpg',
     imgAlt: 'Atelier Imagescence — UX/UI & Direction artistique',
     dark: true,
   },
@@ -186,7 +187,7 @@ export default function CreativeThinkingCommunityPage() {
             </p>
             <div style={{ marginTop: 24, display: 'flex', gap: 24 }}>
               <div style={{ borderLeft: '3px solid #0a0a0a', paddingLeft: 16 }}>
-                <div className="font-anton" style={{ fontSize: '1.8rem' }}>23 ans</div>
+                <div className="font-anton" style={{ fontSize: '1.8rem' }}>{DARWIN_YEARS} ans</div>
                 <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#555' }}>d&apos;expertise digitale</div>
               </div>
               <div style={{ borderLeft: '3px solid #0a0a0a', paddingLeft: 16 }}>

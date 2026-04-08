@@ -3,10 +3,12 @@ import PerformanceSlider from './components/PerformanceSlider'
 import ContactForm from './components/ContactForm'
 import HeroSection from './components/HeroSection'
 import BesoinsAccordion from './components/BesoinsAccordion'
+import Testimonials from './components/Testimonials'
 import Link from 'next/link'
 import ArticleCard from './components/ArticleCard'
 import { CAS_CLIENTS } from './data/cas-clients'
 import { BLOG_ARTICLES } from './data/blog'
+import { DARWIN_YEARS } from './lib/darwin'
 
 const featuredCases = CAS_CLIENTS.slice(0, 6)
 const latestArticles = [...BLOG_ARTICLES]
@@ -82,7 +84,7 @@ export default function Home() {
           {/* Colonne gauche — texte + stats */}
           <div style={{ padding: '80px 64px 80px 24px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <h2 className="font-anton" style={{ fontSize: 'clamp(1.6rem, 2.8vw, 2.8rem)', textTransform: 'uppercase', color: '#0a0a0a', marginBottom: 28, lineHeight: 1.1 }}>
-              NOTRE AGENCE DÉDIÉE À<br />LA PERFORMANCE DEPUIS 22 ANS
+              NOTRE AGENCE DÉDIÉE À<br />LA PERFORMANCE DEPUIS {DARWIN_YEARS} ANS
             </h2>
             <div style={{ width: 80, height: 3, background: '#0a0a0a', marginBottom: 40 }} />
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
@@ -292,67 +294,7 @@ export default function Home() {
       </section>
 
       {/* ─── TESTIMONIALS ─── */}
-      <section style={{ background: '#0a0a0a', padding: '96px 24px', color: '#fff', overflow: 'hidden' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#555', marginBottom: 56 }}>
-            Ce que disent nos clients
-          </p>
-          {/* Carousel CSS-only — 3 items animés */}
-          <div style={{ position: 'relative', minHeight: 320 }}>
-
-            {[
-              {
-                initials: 'PB', name: 'Pascal Bouet', role: 'Directeur Marketing', company: 'Ponant',
-                quote: "DARWIN nous accompagne depuis plusieurs années avec une approche véritablement stratégique. Leur équipe comprend nos enjeux business et traduit cela en actions digitales concrètes qui génèrent de vrais résultats.",
-                delay: '0s',
-              },
-              {
-                initials: 'SL', name: 'Sophie Lacour', role: 'Responsable Digital', company: 'Arthur Bonnet',
-                quote: "En 9 mois, DARWIN a propulsé nos pages produits en Top 3 sur 85 % de nos requêtes cibles. Ce qui nous a convaincus, c'est leur transparence totale sur la méthode et les résultats. Pas de promesses vagues — que des chiffres.",
-                delay: '4s',
-              },
-              {
-                initials: 'TM', name: 'Thomas Mercier', role: 'CMO', company: 'Nordnet',
-                quote: "Nous cherchions une agence capable de tenir la distance. 7 ans plus tard, DARWIN reste notre partenaire de référence. Leur combinaison SEO + SEA + Analytics nous a permis de multiplier notre trafic organique par 2,5 sur la période.",
-                delay: '8s',
-              },
-            ].map((t) => (
-              <div
-                key={t.initials}
-                style={{
-                  position: 'absolute', inset: 0,
-                  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                  opacity: 0,
-                  animation: 'testimonial-in 12s ease-in-out infinite',
-                  animationDelay: t.delay,
-                }}
-              >
-                <span style={{ fontSize: '3.5rem', color: '#FFF127', lineHeight: 1, display: 'block', marginBottom: 20, fontFamily: 'Georgia, serif' }}>&ldquo;</span>
-                <blockquote style={{ fontSize: 'clamp(0.95rem, 2vw, 1.2rem)', lineHeight: 1.9, color: '#ccc', margin: '0 0 36px', fontStyle: 'italic', maxWidth: 780 }}>
-                  {t.quote}
-                </blockquote>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
-                  <div style={{ width: 46, height: 46, background: '#1a1a1a', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 700, color: '#FFF127', border: '2px solid #333', flexShrink: 0 }}>
-                    {t.initials}
-                  </div>
-                  <div style={{ textAlign: 'left' }}>
-                    <div style={{ fontWeight: 700, fontSize: '0.82rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#fff' }}>{t.name}</div>
-                    <div style={{ fontSize: '0.72rem', color: '#666', marginTop: 3 }}>{t.role} · <span style={{ color: '#FFF127' }}>{t.company}</span></div>
-                  </div>
-                </div>
-              </div>
-            ))}
-
-          </div>
-
-          {/* Dots indicateurs */}
-          <div style={{ display: 'flex', gap: 8, justifyContent: 'center', marginTop: 16 }}>
-            {[0, 1, 2].map((i) => (
-              <div key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: '#2a2a2a' }} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <Testimonials />
 
       {/* ─── NOS CERTIFICATIONS ─── */}
       <section style={{ background: '#fff', padding: '64px 24px' }}>

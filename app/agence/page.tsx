@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { DARWIN_YEARS } from '../lib/darwin'
 
 export const metadata: Metadata = {
   title: "L'Agence Darwin — Expertise digitale depuis 2003 | Darwin Agency",
-  description: "Découvrez Darwin Agency : 22 ans d'expertise en performance digitale, +400 clients accompagnés, 30+ experts seniors. Google Partner Premier, Meta Business Partner.",
+  description: `Découvrez Darwin Agency : ${DARWIN_YEARS} ans d'expertise en performance digitale, +400 clients accompagnés, 30+ experts seniors. Google Partner Premier, Meta Business Partner.`,
   alternates: { canonical: '/agence' },
   openGraph: {
     title: "L'Agence Darwin — Expertise digitale depuis 2003",
-    description: "Découvrez Darwin Agency : 22 ans d'expertise en performance digitale, +400 clients accompagnés, 30+ experts seniors.",
+    description: `Découvrez Darwin Agency : ${DARWIN_YEARS} ans d'expertise en performance digitale, +400 clients accompagnés, 30+ experts seniors.`,
     images: [{ url: '/images/agence-hero.jpg', width: 1200, height: 630, alt: "Darwin Agency — L'équipe" }],
   },
 }
@@ -156,7 +157,7 @@ export default function AgencePage() {
               <span style={{ display: 'block' }}>NOTRE AGENCE</span>
               <span style={{ display: 'block' }}>DÉDIÉE À LA</span>
               <span style={{ display: 'inline-block', background: '#FFF127', padding: '0 8px', marginBottom: 4 }}>PERFORMANCE</span>
-              <span style={{ display: 'block' }}>DEPUIS 22 ANS.</span>
+              <span style={{ display: 'block' }}>DEPUIS {DARWIN_YEARS} ANS.</span>
             </h1>
 
             <p style={{ fontSize: '1rem', lineHeight: 1.75, color: '#555', marginBottom: 40, maxWidth: 460 }}>

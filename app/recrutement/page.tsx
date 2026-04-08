@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import OffreCard from './OffreCard'
+import { DARWIN_YEARS } from '../lib/darwin'
 
 export const metadata: Metadata = {
   title: "Rejoindre DARWIN — Offres d'emploi à Aix-en-Provence",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 
 const stats = [
   { num: '30+', label: 'experts seniors' },
-  { num: '22 ans', label: "d'existence" },
+  { num: `${DARWIN_YEARS} ans`, label: "d'existence" },
   { num: '7 ans', label: 'de fidélité client' },
 ]
 
@@ -92,7 +93,7 @@ const valeurs = [
   {
     id: '01',
     titre: 'Performance',
-    desc: "22 ans d'expertise au service des résultats. Chaque décision est orientée impact mesurable — pas de promesses sans données derrière.",
+    desc: `${DARWIN_YEARS} ans d'expertise au service des résultats. Chaque décision est orientée impact mesurable — pas de promesses sans données derrière.`,
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#0a0a0a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="4,28 12,18 18,22 28,8" />

@@ -49,30 +49,24 @@ body {
   animation: marquee-reverse 30s linear infinite;
 }
 
-/* ---- Testimonial carousel ---- */
-/* Cycle 12s : visible 4s, invisible 8s, relais parfait entre les 3 */
-@keyframes testimonial-in {
-  0%          { opacity: 0; transform: translateY(10px); }
-  6%          { opacity: 1; transform: translateY(0); }
-  27%         { opacity: 1; transform: translateY(0); }
-  33%         { opacity: 0; transform: translateY(-8px); }
-  33.01%, 100%{ opacity: 0; transform: translateY(0); }
-}
 
-.testimonial-item {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  animation: testimonial-in 12s ease-in-out infinite;
+/* ---- RGPD anchor nav ---- */
+.rgpd-anchor-link {
+  display: inline-block;
+  padding: 14px 24px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #555;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
 }
-
-.testimonial-item:nth-child(1) { animation-delay: 0s; }
-.testimonial-item:nth-child(2) { animation-delay: 4s; }
-.testimonial-item:nth-child(3) { animation-delay: 8s; }
+.rgpd-anchor-link:hover {
+  color: #0a0a0a;
+  border-bottom-color: #FFF127;
+}
 
 /* ---- Hover arrow rotate ---- */
 .arrow-link .arrow {

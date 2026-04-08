@@ -6,6 +6,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { DARWIN_YEARS } from '../../../lib/darwin'
 
 // ─── METADATA ───────────────────────────────────────────
 
@@ -430,7 +431,7 @@ export default function AuditSeoPage() {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2 }}>
             {[
-              { title: 'Experts seniors uniquement', desc: "Votre audit est réalisé par un consultant SEO senior, pas sous-traité à un junior. 23 ans d'expertise, ça se sent dans la qualité du diagnostic." },
+              { title: 'Experts seniors uniquement', desc: `Votre audit est réalisé par un consultant SEO senior, pas sous-traité à un junior. ${DARWIN_YEARS} ans d'expertise, ça se sent dans la qualité du diagnostic.` },
               { title: 'GEO intégré en standard', desc: "On n'a pas attendu que tout le monde parle de ChatGPT pour s'y intéresser. La visibilité dans les moteurs génératifs est incluse dans chaque audit, pas vendue en option." },
               { title: "Données réelles, pas d'estimations", desc: "On travaille sur vos données Search Console, vos logs serveur, votre GA4. Pas sur des outils tiers qui approximent votre trafic et vous donnent l'illusion d'un diagnostic." },
               { title: 'Rapport livré en 10 jours', desc: "Pas de délai flottant. On s'engage sur une date de rendu dès le début de la mission. Votre planning mérite d'être respecté." },

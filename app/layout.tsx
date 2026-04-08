@@ -3,6 +3,7 @@ import { Anton, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { DARWIN_YEARS } from "./lib/darwin";
 
 const anton = Anton({
   variable: "--font-anton",
@@ -18,7 +19,7 @@ const sourceSans = Source_Sans_3({
 
 export const metadata: Metadata = {
   title: "Darwin Agency — Creative Thinking au service des marques",
-  description: "Agence digitale dédiée à la performance depuis 23 ans. SEO, SEA, SMA, MEDIA, Analytics.",
+  description: `Agence digitale dédiée à la performance depuis ${DARWIN_YEARS} ans. SEO, SEA, SMA, MEDIA, Analytics.`,
   metadataBase: new URL('https://www.darwin-agency.fr'),
   alternates: { canonical: '/' },
   openGraph: {
@@ -36,7 +37,7 @@ const jsonLd = {
   name: 'Darwin Agency',
   url: 'https://www.darwin-agency.fr',
   logo: 'https://www.darwin-agency.fr/images/logo-darwin.png',
-  description: 'Agence digitale dédiée à la performance depuis 23 ans. SEO, SEA, SMA, MEDIA, Analytics.',
+  description: `Agence digitale dédiée à la performance depuis ${DARWIN_YEARS} ans. SEO, SEA, SMA, MEDIA, Analytics.`,
   foundingDate: '2003',
   address: {
     '@type': 'PostalAddress',

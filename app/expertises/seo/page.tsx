@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { DARWIN_YEARS } from '../../lib/darwin'
 
 export const metadata: Metadata = {
   title: "Agence SEO — Référencement naturel & GEO | DARWIN",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 /* ─── DATA ─────────────────────────────────────────── */
 
 const stats = [
-  { num: '23 ans', label: "d'expertise SEO" },
+  { num: `${DARWIN_YEARS} ans`, label: "d'expertise SEO" },
   { num: '400+', label: 'clients accompagnés' },
   { num: '7 ans', label: 'de fidélité moyenne' },
 ]
@@ -148,7 +149,7 @@ export default function SeoPage() {
             </h1>
 
             <p style={{ fontSize: '1rem', lineHeight: 1.75, color: '#555', marginBottom: 40, maxWidth: 460 }}>
-              Nous construisons des stratégies SEO fondées sur la data et l&apos;expertise terrain — pas sur des promesses. Depuis 23 ans, nos clients gagnent en visibilité organique et y restent.
+              Nous construisons des stratégies SEO fondées sur la data et l&apos;expertise terrain — pas sur des promesses. Depuis {DARWIN_YEARS} ans, nos clients gagnent en visibilité organique et y restent.
             </p>
 
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 48 }}>

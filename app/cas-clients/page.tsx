@@ -7,6 +7,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import CasClientsGrid from '../components/CasClientsGrid'
+import { DARWIN_YEARS } from '../lib/darwin'
 
 // ─── METADATA ───────────────────────────────────────────
 
@@ -49,7 +50,7 @@ export default function CasClientsPage() {
         <div style={{ maxWidth: 1280, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 64, flexWrap: 'wrap' }}>
           {[
             { num: '400+', label: 'clients accompagnés' },
-            { num: '23 ans', label: "d'expertise digitale" },
+            { num: `${DARWIN_YEARS} ans`, label: "d'expertise digitale" },
             { num: '7 ans', label: 'de fidélité moyenne' },
           ].map(s => (
             <div key={s.label} style={{ textAlign: 'center' }}>
