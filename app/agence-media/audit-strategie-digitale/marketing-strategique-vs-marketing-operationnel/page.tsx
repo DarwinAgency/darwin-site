@@ -111,7 +111,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
             </h1>
 
             <p className="body-text" style={{ fontSize: '1rem', color: '#555', lineHeight: 1.8, marginBottom: 40, maxWidth: 460 }}>
-              On lance des campagnes. On publie, on teste, on optimise. Et pourtant, <strong>quelque chose coince</strong>. Les résultats arrivent, mais ils <strong>ne s'accumulent pas</strong>. Chaque trimestre repart de zéro.
+              On lance des campagnes. On publie, on teste, on optimise. Et pourtant, <strong>quelque chose coince</strong>. Les résultats arrivent, mais ils <strong>ne s'accumulent pas</strong>. Chaque trimestre repart de zéro. Ce sentiment, la plupart des responsables marketing le connaissent. Il cache presque toujours le même problème : on a confondu <strong>faire du marketing</strong> et <strong>savoir où on va</strong>.
             </p>
 
             <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
@@ -133,88 +133,81 @@ export default function MarketingStrategiqueVsOperationnelPage() {
             </div>
           </div>
 
-          {/* Colonne droite — illustration visuelle deux niveaux */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '48px 32px 48px 0', background: '#f5f5f5' }}>
-            <div style={{ width: '100%', maxWidth: 460, position: 'relative' }}>
+          {/* Colonne droite — illustration géométrique */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px' }}>
+            <div style={{
+              background: '#f5f5f5',
+              borderRadius: 2,
+              border: '1px solid #e8e8e8',
+              boxShadow: '0 8px 40px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06)',
+              overflow: 'hidden',
+              width: '100%',
+              maxWidth: 520,
+            }}>
+              <svg viewBox="0 0 460 300" width="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style={{ display: 'block' }}>
 
-              {/* Niveau 1 — Stratégique */}
-              <div style={{
-                background: '#0a0a0a',
-                padding: '36px 40px',
-                position: 'relative',
-                zIndex: 2,
-                borderLeft: '4px solid #FFF127',
-              }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 20 }}>
-                  <div>
-                    <p style={{ fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', margin: '0 0 6px' }}>NIVEAU 01</p>
-                    <p className="font-anton" style={{ fontSize: '1.6rem', textTransform: 'uppercase', color: '#fff', margin: 0, lineHeight: 1 }}>STRATÉGIQUE</p>
-                  </div>
-                  <span style={{ background: '#FFF127', color: '#0a0a0a', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.12em', padding: '4px 10px', whiteSpace: 'nowrap', marginTop: 4 }}>
-                    1 — 3 ANS
-                  </span>
-                </div>
-                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 20 }}>
-                  {['SWOT', 'SEGMENTATION', 'POSITIONNEMENT', 'OBJECTIFS'].map(tag => (
-                    <span key={tag} style={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.12em', color: 'rgba(255,255,255,0.4)', border: '1px solid rgba(255,255,255,0.12)', padding: '3px 8px' }}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.45)', margin: 0, fontStyle: 'italic', lineHeight: 1.5 }}>
-                  Où allons-nous, et pourquoi ?
-                </p>
-              </div>
+                {/* ── COMPASS — stratégie / direction ─────────────── */}
+                <g transform="translate(115,145)">
+                  {/* Outer decorative ring */}
+                  <circle r="58" fill="none" stroke="rgba(0,0,0,0.06)" strokeWidth="1"/>
+                  {/* Main ring */}
+                  <circle r="49" fill="none" stroke="#0a0a0a" strokeWidth="1.5"/>
 
-              {/* Flèche connecteur */}
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '0 40px', background: '#e8e8e8', position: 'relative', zIndex: 1 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-around', width: '100%', padding: '12px 0 8px' }}>
-                  <div style={{ textAlign: 'center' }}>
-                    <div style={{ width: 1, height: 20, background: '#aaa', margin: '0 auto 4px' }} />
-                    <p style={{ fontSize: '0.55rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#aaa', margin: 0 }}>TRADUIT EN OBJECTIFS</p>
-                    <div style={{ width: 1, height: 20, background: '#aaa', margin: '4px auto 0' }} />
-                    <svg width="8" height="8" style={{ display: 'block', margin: '0 auto' }}><polygon points="4,8 0,0 8,0" fill="#aaa"/></svg>
-                  </div>
-                  <div style={{ textAlign: 'center' }}>
-                    <svg width="8" height="8" style={{ display: 'block', margin: '0 auto' }}><polygon points="4,0 0,8 8,8" fill="#aaa"/></svg>
-                    <div style={{ width: 1, height: 20, background: '#aaa', margin: '4px auto 0' }} />
-                    <p style={{ fontSize: '0.55rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#aaa', margin: 0 }}>REMONTE EN DONNÉES</p>
-                    <div style={{ width: 1, height: 20, background: '#aaa', margin: '4px auto 0' }} />
-                  </div>
-                </div>
-              </div>
+                  {/* Cardinal ticks */}
+                  <line x1="0" y1="-49" x2="0" y2="-62" stroke="#0a0a0a" strokeWidth="2"/>
+                  <line x1="49" y1="0" x2="62" y2="0" stroke="rgba(0,0,0,0.5)" strokeWidth="1.5"/>
+                  <line x1="0" y1="49" x2="0" y2="62" stroke="rgba(0,0,0,0.5)" strokeWidth="1.5"/>
+                  <line x1="-49" y1="0" x2="-62" y2="0" stroke="rgba(0,0,0,0.5)" strokeWidth="1.5"/>
 
-              {/* Niveau 2 — Opérationnel */}
-              <div style={{
-                background: '#fff',
-                padding: '36px 40px',
-                border: '1px solid #ddd',
-                borderTop: 'none',
-                position: 'relative',
-                zIndex: 2,
-                borderLeft: '4px solid #0a0a0a',
-              }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 20 }}>
-                  <div>
-                    <p style={{ fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.3)', margin: '0 0 6px' }}>NIVEAU 02</p>
-                    <p className="font-anton" style={{ fontSize: '1.6rem', textTransform: 'uppercase', color: '#0a0a0a', margin: 0, lineHeight: 1 }}>OPÉRATIONNEL</p>
-                  </div>
-                  <span style={{ background: '#f0f0f0', color: '#555', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.12em', padding: '4px 10px', whiteSpace: 'nowrap', marginTop: 4 }}>
-                    SEMAINE · MOIS
-                  </span>
-                </div>
-                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 20 }}>
-                  {['SEO', 'SEA', 'EMAILING', 'CONTENUS'].map(tag => (
-                    <span key={tag} style={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.12em', color: 'rgba(0,0,0,0.4)', border: '1px solid rgba(0,0,0,0.12)', padding: '3px 8px' }}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <p style={{ fontSize: '0.8rem', color: 'rgba(0,0,0,0.4)', margin: 0, fontStyle: 'italic', lineHeight: 1.5 }}>
-                  Comment y allons-nous ?
-                </p>
-              </div>
+                  {/* Intermediate ticks */}
+                  <line x1="34.6" y1="-34.6" x2="41.0" y2="-41.0" stroke="rgba(0,0,0,0.18)" strokeWidth="1"/>
+                  <line x1="34.6" y1="34.6" x2="41.0" y2="41.0" stroke="rgba(0,0,0,0.18)" strokeWidth="1"/>
+                  <line x1="-34.6" y1="34.6" x2="-41.0" y2="41.0" stroke="rgba(0,0,0,0.18)" strokeWidth="1"/>
+                  <line x1="-34.6" y1="-34.6" x2="-41.0" y2="-41.0" stroke="rgba(0,0,0,0.18)" strokeWidth="1"/>
 
+                  {/* Needle — North (electric blue) */}
+                  <polygon points="0,-40 6,2 -6,2" fill="#29C5F5"/>
+                  {/* Needle — South (dark, dim) */}
+                  <polygon points="0,28 5,2 -5,2" fill="rgba(0,0,0,0.2)"/>
+
+                  {/* Center dot */}
+                  <circle r="5" fill="#f5f5f5" stroke="#0a0a0a" strokeWidth="1.5"/>
+
+                  {/* N label */}
+                  <text x="0" y="-68" textAnchor="middle" fill="#0a0a0a" fontSize="9" fontWeight="700" fontFamily="system-ui,sans-serif" letterSpacing="0.05em">N</text>
+                </g>
+
+                {/* ── CONNECTING LINE ──────────────────────────────── */}
+                <line x1="180" y1="145" x2="275" y2="145" stroke="#29C5F5" strokeWidth="1" strokeOpacity="0.5"/>
+                <circle cx="180" cy="145" r="2.5" fill="#29C5F5" fillOpacity="0.6"/>
+                <polygon points="275,141 275,149 282,145" fill="#29C5F5" fillOpacity="0.6"/>
+
+                {/* ── GEAR — opérationnel / exécution ──────────────── */}
+                <g transform="translate(345,145)">
+                  {/* Gear teeth — 8 dents, r_outer=52, r_inner=40 */}
+                  <path
+                    d="M 34.48,-20.27
+                       A 40,40 0 0 1 38.73,-10.02 L 51.48,-7.24 L 51.48,7.24 L 38.73,10.02
+                       A 40,40 0 0 1 34.48,20.27  L 41.52,31.29 L 31.29,41.52 L 20.27,34.48
+                       A 40,40 0 0 1 10.02,38.73  L 7.24,51.48  L -7.24,51.48 L -10.02,38.73
+                       A 40,40 0 0 1 -20.27,34.48 L -31.29,41.52 L -41.52,31.29 L -34.48,20.27
+                       A 40,40 0 0 1 -38.73,10.02 L -51.48,7.24  L -51.48,-7.24 L -38.73,-10.02
+                       A 40,40 0 0 1 -34.48,-20.27 L -41.52,-31.29 L -31.29,-41.52 L -20.27,-34.48
+                       A 40,40 0 0 1 -10.02,-38.73 L -7.24,-51.48 L 7.24,-51.48  L 10.02,-38.73
+                       A 40,40 0 0 1 20.27,-34.48  L 31.29,-41.52 L 41.52,-31.29 L 34.48,-20.27 Z"
+                    fill="#0a0a0a"
+                  />
+                  {/* Center hole */}
+                  <circle r="17" fill="#f5f5f5"/>
+                  <circle r="17" fill="none" stroke="rgba(0,0,0,0.18)" strokeWidth="1.5"/>
+                  <circle r="4" fill="none" stroke="rgba(0,0,0,0.3)" strokeWidth="1"/>
+                </g>
+
+                {/* ── LABELS ───────────────────────────────────────── */}
+                <text x="115" y="232" textAnchor="middle" fill="rgba(0,0,0,0.35)" fontSize="8" fontWeight="700" fontFamily="system-ui,sans-serif" letterSpacing="0.18em">STRATÉGIE</text>
+                <text x="345" y="232" textAnchor="middle" fill="rgba(0,0,0,0.35)" fontSize="8" fontWeight="700" fontFamily="system-ui,sans-serif" letterSpacing="0.18em">EXÉCUTION</text>
+
+              </svg>
             </div>
           </div>
         </div>
@@ -246,9 +239,9 @@ export default function MarketingStrategiqueVsOperationnelPage() {
 
           <div>
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le marketing stratégique, c'est la partie que personne ne voit — et qu'on a pourtant tendance à sauter. Il intervient <strong>en amont de toute action</strong> : avant de choisir un canal, avant de rédiger un message, avant de définir un budget. Son rôle est de répondre à des questions que beaucoup d'équipes n'ont jamais vraiment posées à plat. Dans quel marché évoluez-vous réellement ? À qui vous adressez-vous en priorité ? <strong>Pourquoi un client devrait-il vous préférer à votre concurrent direct ?</strong>" }} />
+            <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le marketing stratégique, c'est la partie que personne ne voit — et qu'on a pourtant tendance à sauter. Il intervient <strong>en amont de toute action marketing et de toute décision structurante</strong> : avant de choisir un canal, avant de rédiger un message, avant de définir un budget. Son rôle est de répondre à des questions que beaucoup d'équipes n'ont jamais vraiment posées à plat. Dans quel marché évoluez-vous réellement ? À qui vous adressez-vous en priorité ? <strong>Pourquoi un client devrait-il vous préférer à votre concurrent direct ?</strong>" }} />
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Concrètement, cela passe par une <strong>analyse de votre environnement concurrentiel</strong>, une <strong>segmentation rigoureuse</strong> de vos cibles et la définition d'un <strong>positionnement clair</strong>. C'est un travail de fond, souvent peu spectaculaire. Mais c'est lui qui donne du sens à tout ce qui vient ensuite." }} />
+            <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Concrètement, cela passe par une <strong>analyse approfondie du marché et de votre environnement concurrentiel</strong>, une <strong>segmentation rigoureuse</strong> de vos cibles et la définition d'un <strong>positionnement clair</strong>. C'est un travail de fond, sur le long terme, souvent peu spectaculaire pour l'entreprise. Mais c'est lui qui donne du sens à tout ce qui vient ensuite." }} />
             <div style={{ background: '#f5f5f5', borderLeft: '3px solid #0a0a0a', padding: '24px 28px' }}>
               {/* eslint-disable-next-line react/no-danger */}
               <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "Sans cette base, on peut affiner une campagne Google Ads pendant des semaines sur un segment qui ne convertira jamais. Le problème n'est pas l'exécution. C'est qu'on s'adressait aux <strong>mauvaises personnes, avec le mauvais message</strong>." }} />
@@ -265,12 +258,12 @@ export default function MarketingStrategiqueVsOperationnelPage() {
 
           <div>
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le marketing opérationnel, c'est ce qu'on voit. Les campagnes, les contenus, les emails, les annonces. C'est l'ensemble des actions déployées pour atteindre les objectifs fixés en amont — <strong>SEO, SEA, social ads, emailing</strong>, événements, promotions. Il est rythmé par des plannings, des budgets, des <strong>indicateurs de performance</strong>." }} />
+            <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le marketing opérationnel, c'est ce qu'on voit. Les campagnes, les contenus, les emails, les annonces. C'est l'ensemble des actions déployées pour atteindre les objectifs fixés en amont — <strong>SEO, SEA, social ads, emailing</strong>, événements, promotions. Il est rythmé par un <strong>plan d'actions</strong>, des budgets, des <strong>indicateurs de performance</strong> et des outils de pilotage." }} />
             {/* eslint-disable-next-line react/no-danger */}
             <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Il répond à des questions très pratiques : quels canaux activer en priorité ? Quel message pour quelle cible, à quelle étape du <strong>parcours d'achat</strong> ? À quelle fréquence communiquer sans saturer ? C'est là que <strong>la créativité doit servir la performance</strong>, pas l'inverse." }} />
             <div style={{ borderLeft: '3px solid #FFF127', padding: '24px 28px', background: 'rgba(255,255,255,0.06)' }}>
               {/* eslint-disable-next-line react/no-danger */}
-              <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "Un bon marketing opérationnel ne s'improvise pas. Il <strong>s'appuie sur des données</strong>, il ajuste en continu, et il délivre des <strong>résultats mesurables</strong>. Mais il ne peut bien fonctionner que si <strong>la direction stratégique est posée</strong>." }} />
+              <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "Un bon marketing opérationnel ne s'improvise pas. Il <strong>s'appuie sur la donnée issue du terrain</strong>, il ajuste en continu, et il délivre des <strong>résultats mesurables en termes de performance et de vente</strong>. Mais il ne peut bien fonctionner que si <strong>la direction stratégique est posée</strong>." }} />
             </div>
           </div>
 
@@ -437,7 +430,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
             {/* eslint-disable-next-line react/no-danger */}
             <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: '0 0 36px', borderLeft: '3px solid #FFF127', paddingLeft: 24 }} dangerouslySetInnerHTML={{ __html: "C'est là que beaucoup d'organisations perdent du <strong>temps — et de l'argent</strong>." }} />
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le premier écueil est classique : la stratégie existe, elle est bien construite sur le papier, mais <strong>elle ne descend pas</strong>. Les équipes opérationnelles <strong>naviguent à vue</strong> parce que les orientations restent trop abstraites pour guider leurs choix du quotidien. Résultat : chacun fait de son mieux dans son couloir, mais <strong>personne ne tire vraiment dans la même direction</strong>." }} />
+            <p className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le premier écueil est classique : la stratégie existe, elle est bien construite sur le papier, mais <strong>elle ne descend pas</strong>. Les équipes opérationnelles et chaque équipe terrain <strong>naviguent à vue</strong> parce que les orientations restent trop abstraites pour guider leurs choix du quotidien. Résultat : chacun fait de son mieux dans son couloir, mais <strong>personne ne tire vraiment dans la même direction</strong>." }} />
             {/* eslint-disable-next-line react/no-danger */}
             <p className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le deuxième est tout aussi fréquent, et plus insidieux : des actions bien exécutées, techniquement solides, <strong>complètement déconnectées d'une vision d'ensemble</strong>. On optimise un CPA sans vraiment savoir si on parle aux bonnes personnes. On publie du contenu régulièrement, mais sans objectif de conversion clair. <strong>On est occupé. Pas efficace.</strong>" }} />
             <div style={{ background: '#f5f5f5', padding: '32px 36px', borderLeft: '3px solid #0a0a0a' }}>
@@ -467,7 +460,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
             {[
               {
                 num: '01',
-                text: "La confusion entre les deux niveaux est de loin l'erreur la plus répandue. On croit faire de la stratégie parce qu'on a planifié ses publications LinkedIn pour le trimestre. <strong>Planifier, c'est de l'opérationnel. Décider à qui on s'adresse et pourquoi, c'est stratégique.</strong> Ce n'est pas le même travail, et ce n'est pas la même posture.",
+                text: "La confusion entre les deux niveaux est de loin l'erreur la plus répandue. On croit faire de la stratégie parce qu'on a planifié ses publications LinkedIn pour le trimestre. <strong>Planifier une campagne ou un plan de communication, c'est de l'opérationnel. Décider à qui on s'adresse et pourquoi, c'est stratégique.</strong> Ce n'est pas le même travail, et ce n'est pas la même posture.",
               },
               {
                 num: '02',
@@ -496,6 +489,34 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════
+          DE LA THÉORIE À L'ACTION
+      ═══════════════════════════════════════════════════════════════════ */}
+      <section style={{ background: '#fff', padding: '80px 32px' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '320px 1fr', gap: 96, alignItems: 'start' }}>
+
+          <div style={{ position: 'sticky', top: 120 }}>
+            <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', margin: '0 0 20px' }}>
+              MISE EN PRATIQUE
+            </p>
+            <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 2.8vw, 2.6rem)', textTransform: 'uppercase', color: '#0a0a0a', lineHeight: 1.15, margin: 0 }}>
+              DE LA<br />THÉORIE<br />À<br />L&apos;ACTION
+            </h2>
+          </div>
+
+          <div>
+            {/* eslint-disable-next-line react/no-danger */}
+            <p className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le marketing stratégique se construit en plusieurs temps. D'abord, une <strong>analyse du marché</strong> sérieuse : <strong>étude de marché</strong>, analyse de la concurrence, identification des <strong>parts de marché</strong> sur votre secteur. Ensuite, l'analyse interne — forces et faiblesses de votre organisation, ressources disponibles, positionnement réel versus perçu. C'est là qu'intervient la <strong>matrice SWOT</strong> : mettre en face-à-face votre réalité interne et les opportunités ou menaces de votre environnement. Sur cette base, vous définissez vos <strong>segments prioritaires</strong>, votre <strong>marché cible</strong>, et la <strong>stratégie commerciale</strong> adaptée — qu'il s'agisse de développer votre notoriété, de prospecter de nouveaux clients en B2B ou en e-commerce, ou de fidéliser votre base existante par une stratégie relationnelle plus structurée." }} />
+            {/* eslint-disable-next-line react/no-danger */}
+            <p className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le marketing opérationnel prend le relais avec un <strong>plan d'action marketing</strong> concret : le <strong>marketing mix</strong> décline les leviers (produit, prix, canaux de distribution, communication), le <strong>plan de communication</strong> fixe les messages et les formats par cible, et le <strong>budget marketing</strong> alloue les ressources levier par levier. Sur le terrain, cela se traduit par des campagnes multicanal, de l'<strong>inbound marketing</strong>, du <strong>marketing automation</strong>, une <strong>stratégie CRM</strong> pour gérer la relation client tout au long du parcours — et des <strong>tableaux de bord</strong> pour piloter la performance commerciale en temps réel." }} />
+            <div style={{ background: '#f5f5f5', padding: '32px 36px', borderLeft: '3px solid #0a0a0a' }}>
+              {/* eslint-disable-next-line react/no-danger */}
+              <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "Ce que les deux ont en commun, c'est la nécessité de fixer des <strong>objectifs précis</strong> dès le départ. Objectifs commerciaux, de notoriété, de développement commercial, de retour sur investissement : chaque action de votre <strong>plan d'actions</strong> doit pouvoir se relier à un <strong>cap stratégique</strong>. Un responsable marketing qui ne peut pas faire ce lien court un risque bien précis — dépenser beaucoup d'énergie pour des résultats qui ne s'accumulent pas. C'est exactement le symptôme décrit en introduction. Et c'est ce qu'un <strong>audit stratégique</strong> permet de corriger avant d'élaborer le prochain plan." }} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════════
           CTA — PRENEZ DU RECUL AVANT D'ACCÉLÉRER
       ═══════════════════════════════════════════════════════════════════ */}
       <section style={{ background: '#0a0a0a', padding: '96px 32px' }}>
@@ -509,7 +530,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
           </h2>
 
           {/* eslint-disable-next-line react/no-danger */}
-          <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "La distinction entre marketing stratégique et opérationnel n'est pas une question de vocabulaire. Elle structure la façon dont vous investissez votre <strong>énergie et vos budgets</strong>. Une agence qui se contente d'exécuter sans comprendre votre positionnement ne peut pas vous aider à progresser durablement. <strong>Elle peut vous faire avancer. Pas dans la bonne direction.</strong>" }} />
+          <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "La distinction entre marketing stratégique et marketing opérationnel n'est pas une question de vocabulaire ni une simple approche théorique enseignée en master ou en formation professionnelle. Elle structure la façon dont vous investissez votre <strong>énergie et vos budgets</strong>. Une agence qui se contente d'exécuter sans comprendre le positionnement de votre marque, votre produit et votre vision ne peut pas vous aider à progresser durablement. <strong>Elle peut vous faire avancer. Pas dans la bonne direction.</strong>" }} />
 
           <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.9, margin: '0 0 48px' }}>
             Chez DARWIN, chaque mission commence par un{' '}
@@ -524,7 +545,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
             <Link href="/agence-media/audit-strategie-digitale/indicateurs-de-performance-mix-marketing" style={{ color: '#fff', textDecoration: 'underline', textUnderlineOffset: 3 }}>
               indicateurs de performance
             </Link>{' '}
-            sur ce qui compte vraiment pour votre activité. Parce qu&apos;optimiser des actions sans avoir posé les bonnes questions, c&apos;est courir plus vite dans la mauvaise direction.
+            sur ce qui compte vraiment pour votre activité. Parce qu&apos;optimiser chaque action sans avoir défini le bon objectif ni fait les bons choix stratégiques, c&apos;est courir plus vite dans la mauvaise direction.
           </p>
 
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
