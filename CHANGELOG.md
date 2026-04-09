@@ -291,6 +291,19 @@
 
 ---
 
+## [Session 10] — Section agence-media, newsletter Brevo & template niveau 3
+
+### Brevo — ✅ connecté (aucune variable d'environnement requise)
+- La route `app/api/newsletter/route.js` poste directement vers l'endpoint Brevo fourni (`sibforms.com/serve/...`), côté serveur pour éviter les CORS. Champs : `EMAIL`, `PRENOM`, `locale=fr`, honeypot `email_address_check`.
+
+### Ajouté
+- `app/agence-media/audit-strategie-digitale/marketing-strategique-vs-marketing-operationnel/page.tsx` — **template page conseil niveau 3** pour la section agence-media : hero split 50/50, tableau comparatif, schéma d'articulation, sections prose éditoriales, CTA, liens internes. À dupliquer pour les futures pages de cette section.
+- `app/components/NewsletterCTA.tsx` — composant newsletter réutilisable (fond noir, formulaire prénom + email, états loading/success/error, event GA4)
+- `app/api/newsletter/route.js` — route API Brevo : POST `/api/newsletter`, `updateEnabled: true`, gestion `duplicate_parameter`
+- Route `agence-media/audit-strategie-digitale/marketing-strategique-vs-marketing-operationnel` ajoutée dans `app/sitemap.ts`
+
+---
+
 ## [Session 9] — GEO site-wide : helpers JSON-LD, llms.txt & conventions AEO
 
 > GEO (Generative Engine Optimization) intégré comme standard sur **toutes les pages**, pas uniquement les pages expertise.

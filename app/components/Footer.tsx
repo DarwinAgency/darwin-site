@@ -7,12 +7,29 @@ import Image from 'next/image'
 export default function Footer() {
   const [email, setEmail] = useState('')
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
-  const handleNewsletter = (e: React.FormEvent) => {
+  const handleNewsletter = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (email.trim()) { setSent(true); setEmail('') }
+    if (!email.trim() || sending) return
+    setSending(true)
+    try {
+      const res = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email.trim() }),
+      })
+      if (res.ok) {
+        setSent(true)
+        setEmail('')
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'newsletter_signup', { event_category: 'engagement', event_label: 'footer' })
+        }
+      }
+    } catch { /* silencieux — l'UX ne doit pas planter */ }
+    finally { setSending(false) }
   }
 
   return (
@@ -208,9 +225,10 @@ export default function Footer() {
               />
               <button
                 type="submit"
+                disabled={sending}
                 style={{
                   width: '100%',
-                  background: '#FFF127',
+                  background: sending ? '#555' : '#FFF127',
                   color: '#0a0a0a',
                   border: 'none',
                   borderRadius: 4,
@@ -219,13 +237,13 @@ export default function Footer() {
                   fontWeight: 700,
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  cursor: 'pointer',
+                  cursor: sending ? 'not-allowed' : 'pointer',
                   transition: 'background 0.2s',
                 }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e8d800' }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#FFF127' }}
+                onMouseEnter={e => { if (!sending) (e.currentTarget as HTMLElement).style.background = '#e8d800' }}
+                onMouseLeave={e => { if (!sending) (e.currentTarget as HTMLElement).style.background = '#FFF127' }}
               >
-                S&apos;ABONNER
+                {sending ? '…' : 'S\'ABONNER'}
               </button>
             </form>
           )}

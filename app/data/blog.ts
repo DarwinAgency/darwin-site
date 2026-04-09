@@ -1646,9 +1646,9 @@ const RAW_ARTICLES: RawArticle[] = [
     categories: ["La preuve avant tout"],
     tags: ['Marketing luxe', 'Strat\u00e9gie luxe', 'Branding', 'Exclusivit\u00e9', 'Digital luxe'],
     author: {
-      name: 'DARWIN Agency',
-      role: 'Agence digitale',
-      photo: '/images/team/darwin-agency.jpg',
+      name: 'Julia Sanchez',
+      role: 'Head of Brand Strategy',
+      photo: '/images/team/julia-sanchez.jpg',
     },
     date: '2026-02-02',
     heroImg: '/images/blog/definition-marketing-du-luxe.jpg',

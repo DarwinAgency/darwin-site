@@ -9,6 +9,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { BLOG_ARTICLES, getArticleBySlug, formatDate } from '../../data/blog'
+import NewsletterSidebar from '../../components/NewsletterSidebar'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -360,51 +361,7 @@ export default async function BlogArticlePage({ params }: Props) {
         <aside style={{ position: 'sticky', top: 88, display: 'flex', flexDirection: 'column', gap: 32 }}>
 
           {/* CTA Newsletter */}
-          <div style={{ background: '#0a0a0a', padding: '32px 28px' }}>
-            <span style={{ display: 'inline-block', width: 32, height: 3, background: '#FFF127', marginBottom: 20 }} />
-            <h3 className="font-anton" style={{ fontSize: '1.4rem', textTransform: 'uppercase', color: '#fff', lineHeight: 1.1, marginBottom: 12 }}>
-              LA NEWSLETTER PERFORMANCE
-            </h3>
-            <p style={{ fontSize: '0.82rem', lineHeight: 1.7, color: 'rgba(255,255,255,0.55)', marginBottom: 24 }}>
-              Chaque mois, les insights SEA, SEO et IA qui font la différence — directement dans votre boîte.
-            </p>
-            <form style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              <input
-                type="email"
-                placeholder="votre@email.com"
-                style={{
-                  background: 'rgba(255,255,255,0.08)',
-                  border: '1px solid rgba(255,255,255,0.15)',
-                  padding: '12px 16px',
-                  fontSize: '0.85rem',
-                  color: '#fff',
-                  outline: 'none',
-                  width: '100%',
-                  boxSizing: 'border-box',
-                }}
-              />
-              <button
-                type="submit"
-                style={{
-                  background: '#FFF127',
-                  border: 'none',
-                  padding: '13px 20px',
-                  fontSize: '0.75rem',
-                  fontWeight: 700,
-                  letterSpacing: '0.12em',
-                  textTransform: 'uppercase',
-                  color: '#0a0a0a',
-                  cursor: 'pointer',
-                  width: '100%',
-                }}
-              >
-                Je m&apos;abonne →
-              </button>
-            </form>
-            <p style={{ fontSize: '0.68rem', color: 'rgba(255,255,255,0.3)', marginTop: 12, textAlign: 'center' }}>
-              Sans spam. Désinscription en 1 clic.
-            </p>
-          </div>
+          <NewsletterSidebar />
 
           {/* À propos de l'auteur */}
           <div style={{ border: '1px solid #ebebeb', padding: '24px 28px' }}>
