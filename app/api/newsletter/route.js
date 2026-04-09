@@ -1,20 +1,18 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// API Route — Inscription newsletter via Brevo (form action directe)
+// API Route — Inscription newsletter via Brevo API v3
 //
-// Aucune variable d'environnement requise.
-// La route soumet le formulaire côté serveur vers l'endpoint Brevo
-// pour éviter les problèmes CORS en soumission directe depuis le navigateur.
+// Variable d'environnement requise : BREVO_API_KEY
+// Liste cible : #8
 // ─────────────────────────────────────────────────────────────────────────────
 
-const BREVO_FORM_URL =
-  'https://53e9d84d.sibforms.com/serve/MUIFAJYWLwzH3yyxpDu4lx0c1kOIS8x1Y4BOJ7rwjnhNI_UjEjRqJd4JVtvEec3e6KjWaFlACCvDeyq84TORM7N983M7MAMX74lwj4r-3wY_GWQuqWena3YAPZeeh6xhsthE8jQ8CjEVvjwTI6KSIvZABAZoL_3zO-rypFhmApr5rLalDlxa-LM8Jlvy8khs4_wTiSsr4To8iSsH-w=='
+const BREVO_API_URL = 'https://api.brevo.com/v3/contacts'
+const BREVO_LIST_ID = 8
 
 export async function POST(request) {
   try {
     const body = await request.json()
     const { email, prenom } = body
 
-    // Validation serveur
     if (!email) {
       return Response.json({ error: 'Email requis.' }, { status: 400 })
     }
@@ -23,26 +21,35 @@ export async function POST(request) {
       return Response.json({ error: 'Email invalide.' }, { status: 400 })
     }
 
-    // Soumission vers Brevo via FormData (même format que le formulaire natif)
-    const formData = new URLSearchParams()
-    formData.append('EMAIL', email.trim())
-    if (prenom) formData.append('PRENOM', prenom.trim())
-    formData.append('email_address_check', '') // honeypot anti-spam Brevo
-    formData.append('locale', 'fr')
+    const apiKey = process.env.BREVO_API_KEY
+    if (!apiKey) {
+      console.error('BREVO_API_KEY manquante')
+      return Response.json({ error: 'Configuration serveur manquante.' }, { status: 500 })
+    }
 
-    const res = await fetch(BREVO_FORM_URL, {
+    const payload = {
+      email: email.trim(),
+      listIds: [BREVO_LIST_ID],
+      updateEnabled: true,
+      ...(prenom ? { attributes: { PRENOM: prenom.trim() } } : {}),
+    }
+
+    const res = await fetch(BREVO_API_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: formData.toString(),
+      headers: {
+        'Content-Type': 'application/json',
+        'api-key': apiKey,
+      },
+      body: JSON.stringify(payload),
     })
 
-    // Brevo renvoie du HTML (sa page de confirmation) — pas de JSON.
-    // Un statut 2xx suffit à confirmer l'inscription.
-    if (res.ok) {
+    // 201 = nouveau contact, 204 = contact existant mis à jour
+    if (res.status === 201 || res.status === 204) {
       return Response.json({ success: true }, { status: 200 })
     }
 
-    console.error('Erreur Brevo — statut :', res.status)
+    const error = await res.json().catch(() => ({}))
+    console.error('Erreur Brevo :', res.status, error)
     return Response.json({ error: 'Inscription impossible. Réessayez.' }, { status: 500 })
 
   } catch (err) {
