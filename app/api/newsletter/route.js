@@ -21,7 +21,7 @@ export async function POST(request) {
       return Response.json({ error: 'Email invalide.' }, { status: 400 })
     }
 
-    const apiKey = process.env.BREVO_API_KEY
+    const apiKey = (process.env.BREVO_API_KEY || '').trim()
     if (!apiKey) {
       console.error('BREVO_API_KEY manquante')
       return Response.json({ error: 'Configuration serveur manquante.' }, { status: 500 })
@@ -48,9 +48,9 @@ export async function POST(request) {
       return Response.json({ success: true }, { status: 200 })
     }
 
-    const error = await res.json().catch(() => ({}))
-    console.error('Erreur Brevo :', res.status, error)
-    return Response.json({ error: 'Inscription impossible. Réessayez.' }, { status: 500 })
+    const errorBody = await res.text().catch(() => '')
+    console.error('Erreur Brevo — statut:', res.status, '— réponse:', errorBody)
+    return Response.json({ error: `Brevo ${res.status}: ${errorBody}` }, { status: 500 })
 
   } catch (err) {
     console.error('Erreur API newsletter :', err)
