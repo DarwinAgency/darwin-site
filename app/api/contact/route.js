@@ -21,7 +21,7 @@ export async function POST(request) {
     // Email à l'équipe Darwin
     await resend.emails.send({
       from: 'contact@darwin-agency.com',
-      to: ['eleonore@darwin-agency.com'],
+      to: ['eleonore.g@darwin-agency.com'],
       subject: `Nouveau lead — ${prenom} ${nom} (${typeEntreprise || 'N/A'})`,
       html: `
         <h2>Nouveau contact via darwin-agency.com</h2>
