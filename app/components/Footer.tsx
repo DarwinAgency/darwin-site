@@ -8,6 +8,7 @@ export default function Footer() {
   const [email, setEmail] = useState('')
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
+  const [error, setError] = useState(false)
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
@@ -15,6 +16,7 @@ export default function Footer() {
     e.preventDefault()
     if (!email.trim() || sending) return
     setSending(true)
+    setError(false)
     try {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
@@ -27,8 +29,10 @@ export default function Footer() {
         if (typeof window !== 'undefined' && (window as any).gtag) {
           (window as any).gtag('event', 'newsletter_signup', { event_category: 'engagement', event_label: 'footer' })
         }
+      } else {
+        setError(true)
       }
-    } catch { /* silencieux — l'UX ne doit pas planter */ }
+    } catch { setError(true) }
     finally { setSending(false) }
   }
 
@@ -245,6 +249,11 @@ export default function Footer() {
               >
                 {sending ? '…' : 'S\'ABONNER'}
               </button>
+              {error && (
+                <p style={{ fontSize: '0.72rem', color: '#fc8181', margin: '8px 0 0' }}>
+                  Une erreur est survenue. Réessayez.
+                </p>
+              )}
             </form>
           )}
 
