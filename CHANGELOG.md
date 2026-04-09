@@ -295,12 +295,18 @@
 
 ### Brevo — ✅ connecté (aucune variable d'environnement requise)
 - La route `app/api/newsletter/route.js` poste directement vers l'endpoint Brevo fourni (`sibforms.com/serve/...`), côté serveur pour éviter les CORS. Champs : `EMAIL`, `PRENOM`, `locale=fr`, honeypot `email_address_check`.
+- Tous les formulaires newsletter du site sont désormais fonctionnels et reliés à Brevo.
 
 ### Ajouté
 - `app/agence-media/audit-strategie-digitale/marketing-strategique-vs-marketing-operationnel/page.tsx` — **template page conseil niveau 3** pour la section agence-media : hero split 50/50, tableau comparatif, schéma d'articulation, sections prose éditoriales, CTA, liens internes. À dupliquer pour les futures pages de cette section.
-- `app/components/NewsletterCTA.tsx` — composant newsletter réutilisable (fond noir, formulaire prénom + email, états loading/success/error, event GA4)
-- `app/api/newsletter/route.js` — route API Brevo : POST `/api/newsletter`, `updateEnabled: true`, gestion `duplicate_parameter`
+- `app/components/NewsletterCTA.tsx` — composant newsletter réutilisable (fond jaune/noir, formulaire prénom + email, spinner loading, états loading/success/error, event GA4 label `darwin_newsletter`)
+- `app/components/NewsletterSidebar.tsx` — composant newsletter compact pour la sidebar blog (fond noir, event GA4 label `blog_sidebar`)
+- `app/api/newsletter/route.js` — route API Brevo : POST vers `sibforms.com/serve/...`, URLSearchParams, vérifie `res.ok` (Brevo retourne du HTML, pas du JSON)
 - Route `agence-media/audit-strategie-digitale/marketing-strategique-vs-marketing-operationnel` ajoutée dans `app/sitemap.ts`
+
+### Corrigé / mis à jour
+- `app/components/Footer.tsx` — formulaire newsletter était non-fonctionnel (setSent direct). Remplacé par fetch `/api/newsletter` avec état loading/sending, event GA4 label `footer`.
+- `app/blog/[slug]/page.tsx` — formulaire newsletter statique (sans onSubmit) remplacé par `<NewsletterSidebar />` (client component connecté à Brevo).
 
 ---
 
