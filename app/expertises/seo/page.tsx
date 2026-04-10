@@ -50,13 +50,6 @@ const pillars = [
   },
 ]
 
-const steps = [
-  { num: '1', title: 'Audit SEO complet', desc: "Analyse technique, sémantique et concurrentielle : on sait exactement où vous en êtes avant d'agir." },
-  { num: '2', title: 'Stratégie sur-mesure', desc: "Plan d'action priorisé selon vos KPIs business et le potentiel réel de votre secteur." },
-  { num: '3', title: 'Quick wins', desc: "Gains rapides sur les leviers existants pour des résultats visibles dès les premières semaines." },
-  { num: '4', title: 'Déploiement méthodique', desc: "Exécution progressive et rigoureuse, avec suivi continu des performances." },
-  { num: '5', title: 'Reporting en temps réel', desc: "Tableaux de bord personnalisés, KPIs définis ensemble, itérations basées sur la data — pas sur des intuitions." },
-]
 
 const caseStudies = [
   {
@@ -368,35 +361,78 @@ export default function SeoPage() {
       </section>
 
       {/* ─── MÉTHODE ─── */}
-      <section id="methode" style={{ background: '#0a0a0a', padding: '96px 24px', color: '#fff' }}>
+      <section id="methode" style={{ background: '#0a0a0a', padding: '80px 24px', color: '#fff' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 80, alignItems: 'start' }}>
+
+          {/* Header row */}
+          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40, alignItems: 'end', marginBottom: 48 }}>
             <div>
               <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#555', marginBottom: 16 }}>
                 Notre méthode
               </p>
-              <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 4rem)', textTransform: 'uppercase', lineHeight: 1, margin: '0 0 32px', color: '#fff' }}>
+              <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 3.6rem)', textTransform: 'uppercase', lineHeight: 1, margin: 0, color: '#fff' }}>
                 5 ÉTAPES POUR<br />UNE PROGRESSION MESURABLE
               </h2>
-              <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#666', marginBottom: 40 }}>
-                Notre approche est pragmatique et ROIste. Chaque étape s&apos;appuie sur la précédente. On ne saute pas les fondations pour aller vite — on les consolide pour aller loin.
-              </p>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
               <Link href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#FFF127', color: '#0a0a0a', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
                 Parler à un expert SEO →
               </Link>
             </div>
+          </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
-              {steps.map((step, i) => (
-                <div key={step.num} style={{ display: 'flex', gap: 24, padding: '28px 0', borderBottom: i < steps.length - 1 ? '1px solid #1a1a1a' : 'none', alignItems: 'flex-start' }}>
-                  <div className="font-anton" style={{ fontSize: '2.8rem', color: '#FFF127', lineHeight: 1, flexShrink: 0, minWidth: 48 }}>{step.num}</div>
-                  <div>
-                    <h3 style={{ fontWeight: 700, fontSize: '0.95rem', letterSpacing: '0.06em', textTransform: 'uppercase', color: '#fff', marginBottom: 8 }}>{step.title}</h3>
-                    <p style={{ fontSize: '0.85rem', lineHeight: 1.7, color: '#666', margin: 0 }}>{step.desc}</p>
-                  </div>
+          {/* 5 steps — horizontal timeline cards */}
+          <div className="rsp-5col" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 0 }}>
+            {[
+              {
+                num: '01', title: 'Audit SEO', subtitle: 'complet',
+                desc: "Technique, sémantique, concurrence : on sait où vous en êtes.",
+                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>,
+              },
+              {
+                num: '02', title: 'Stratégie', subtitle: 'sur-mesure',
+                desc: "Plan d'action priorisé selon vos KPIs business.",
+                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>,
+              },
+              {
+                num: '03', title: 'Quick wins', subtitle: 'immédiats',
+                desc: "Gains rapides, résultats visibles dès les premières semaines.",
+                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>,
+              },
+              {
+                num: '04', title: 'Déploiement', subtitle: 'méthodique',
+                desc: "Exécution progressive, suivi continu des performances.",
+                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20V10" /><path d="M18 20V4" /><path d="M6 20v-4" /></svg>,
+              },
+              {
+                num: '05', title: 'Reporting', subtitle: 'temps réel',
+                desc: "Dashboards personnalisés, itérations basées sur la data.",
+                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>,
+              },
+            ].map((step, i) => (
+              <div key={step.num} style={{ position: 'relative', padding: '32px 24px', borderLeft: i > 0 ? '1px solid #1a1a1a' : 'none' }}>
+                {/* Yellow top bar */}
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: '#FFF127' }} />
+
+                {/* Connector dot */}
+                <div style={{ position: 'absolute', top: -5, left: '50%', transform: 'translateX(-50%)', width: 10, height: 10, borderRadius: '50%', background: '#FFF127', border: '2px solid #0a0a0a' }} />
+
+                {/* Icon */}
+                <div style={{ marginBottom: 20 }}>
+                  {step.icon}
                 </div>
-              ))}
-            </div>
+
+                {/* Number */}
+                <div className="font-anton" style={{ fontSize: '2.4rem', lineHeight: 1, color: '#fff', marginBottom: 12 }}>{step.num}</div>
+
+                {/* Title */}
+                <h3 className="font-anton" style={{ fontSize: '1.3rem', textTransform: 'uppercase', color: '#fff', lineHeight: 1.1, marginBottom: 4 }}>{step.title}</h3>
+                <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#555', marginBottom: 16 }}>{step.subtitle}</div>
+
+                {/* Desc */}
+                <p style={{ fontSize: '0.82rem', lineHeight: 1.7, color: '#666', margin: 0 }}>{step.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -454,7 +490,9 @@ export default function SeoPage() {
 
       {/* ─── DARWIN DIFFÉRENT ─── */}
       <section style={{ background: '#fff', padding: '96px 24px', borderTop: '1px solid #eee' }}>
-        <div className="rsp-2col" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
+        <div className="rsp-2col" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 64, alignItems: 'start' }}>
+
+          {/* LEFT — text */}
           <div>
             <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 16 }}>
               Notre différence
@@ -462,10 +500,10 @@ export default function SeoPage() {
             <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3.4rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: '0 0 32px' }}>
               LE SEO QUI CONVERTIT,<br />PAS JUSTE QUI POSITIONNE
             </h2>
-            <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 24 }}>
+            <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 24, textAlign: 'justify' }}>
               DARWIN fait partie de la <strong>Creative Thinking Community</strong>. Nos équipes SEO ne travaillent pas en silo : elles collaborent directement avec des créatifs, des UX designers et des experts data.
             </p>
-            <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 40 }}>
+            <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 40, textAlign: 'justify' }}>
               Résultat : vos pages sont optimisées pour Google <em>et</em> conçues pour convertir. L&apos;autorité organique que vous construisez est amplifiée par une expérience utilisateur qui retient. C&apos;est ce que les autres agences SEO ne peuvent pas faire.
             </p>
             <Link href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#0a0a0a', color: '#fff', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
@@ -473,20 +511,24 @@ export default function SeoPage() {
             </Link>
           </div>
 
-          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-            {[
-              { num: '30+', label: 'Experts seniors', sub: '6+ ans d\'ancienneté moyenne' },
-              { num: 'Google', label: 'Partner Premier', sub: 'Certification officielle' },
-              { num: '4', label: 'Entités créatives', sub: 'Creative Thinking Community' },
-              { num: '7 ans', label: 'Fidélité client', sub: 'Durée moyenne de collaboration' },
-            ].map((item) => (
-              <div key={item.num} style={{ padding: '28px 24px', background: '#fafafa', border: '1px solid #ebebeb' }}>
-                <div className="font-anton" style={{ fontSize: '2.2rem', lineHeight: 1, marginBottom: 6, color: '#0a0a0a' }}>{item.num}</div>
-                <div style={{ fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.06em', textTransform: 'uppercase', color: '#0a0a0a', marginBottom: 4 }}>{item.label}</div>
-                <div style={{ fontSize: '0.72rem', color: '#aaa', fontWeight: 500 }}>{item.sub}</div>
-              </div>
-            ))}
+          {/* RIGHT — photo with editorial framing */}
+          <div style={{ position: 'sticky', top: 100 }}>
+            <div style={{ position: 'relative' }}>
+              <div style={{ position: 'absolute', top: 12, left: 12, right: -12, bottom: -12, border: '1px solid #ebebeb', borderRadius: 4, pointerEvents: 'none' }} />
+              <Image
+                src="/images/seo/seo-equipe.jpg"
+                alt="L'équipe SEO DARWIN en session de travail"
+                width={900}
+                height={900}
+                style={{ width: '100%', maxWidth: 480, height: 'auto', display: 'block', borderRadius: 4, position: 'relative', zIndex: 1 }}
+              />
+              <div style={{ position: 'absolute', bottom: -12, left: 0, width: 48, height: 3, background: '#FFF127', zIndex: 2 }} />
+            </div>
+            <p style={{ fontSize: '0.75rem', color: '#aaa', marginTop: 24, lineHeight: 1.6, fontWeight: 500 }}>
+              L&apos;équipe DARWIN en session de travail — Aix-en-Provence
+            </p>
           </div>
+
         </div>
       </section>
 

@@ -27,6 +27,7 @@ LinkedIn : https://www.linkedin.com/company/darwin-interactive
 - /a-propos-de-darwin : Histoire, équipe, valeurs, certifications DARWIN
 - /expertises/seo : Agence SEO — référencement naturel et GEO
 - /expertises/seo/audit-seo : Audit SEO complet — technique, sémantique, netlinking, GEO
+- /agence-media : Agence Média — stratégie, planification et achat d'espaces publicitaires (programmatique, TV segmentée, DOOH, emailing, SMS/RCS, audio digital, génération de leads)
 - /cas-clients : Résultats clients mesurés par levier (SEO, SEA, SMA, Media, Analytics)
 - /blog : Insights et expertises marketing digital par les consultants DARWIN
 - /contact : Prendre contact avec DARWIN, localisation, horaires

@@ -152,7 +152,7 @@ export default function Footer() {
               { label: 'Agence SEO', href: '/expertises/seo' },
               { label: 'Agence SEA', href: '/expertises/sea' },
               { label: 'Social Media Ads', href: '/expertises/sma' },
-              { label: 'Media & Display', href: '/expertises/media' },
+              { label: 'Agence Média', href: '/agence-media' },
               { label: 'Analytics & Data', href: '/expertises/analytics' },
               { label: 'Formations', href: '/expertises/formation' },
               { label: 'Studio Créatif', href: '/expertises/studio' },

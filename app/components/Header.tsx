@@ -58,14 +58,16 @@ const expertisesTabs: Tab[] = [
   {
     label: 'MEDIA',
     desc: 'Display & Programmatique',
-    cta: { label: 'Découvrir notre agence Média', href: '/expertises/media' },
+    cta: { label: 'Découvrir notre agence Média', href: '/agence-media' },
     items: [
-      { label: 'Programmatique', desc: 'Achetez de l\'audience en temps réel' },
-      { label: 'Display', desc: 'Visibilité maximale sur le web' },
-      { label: 'Vidéo en ligne', desc: 'Storytelling à grande échelle' },
-      { label: 'Native Ads', desc: 'Publicité intégrée et non intrusive' },
-      { label: 'Retargeting', desc: 'Restez dans l\'esprit de vos prospects' },
-      { label: 'Media planning', desc: 'Arbitrage budgétaire multi-leviers' },
+      { label: 'Audit & Stratégie digitale', desc: 'Diagnostic et recommandations chiffrées', href: '/agence-media/audit-strategie-digitale' },
+      { label: 'Plan média', desc: 'Arbitrage budgétaire multi-leviers', href: '/agence-media/plan-media' },
+      { label: 'Génération de leads', desc: 'Leads qualifiés au bon coût', href: '/agence-media/generation-de-leads' },
+      { label: 'Campagnes emailing', desc: '35M+ adresses optin qualifiées', href: '/agence-media/campagnes-emailing' },
+      { label: 'SMS / RCS', desc: 'Messages enrichis et conversationnels', href: '/agence-media/campagnes-rcs-sms' },
+      { label: 'Audio digital', desc: 'Podcasts, streaming, radio digitale', href: '/agence-media/audio-digital' },
+      { label: 'TV segmentée & CTV', desc: 'Impact TV, précision digitale', href: '/agence-media/tv-segmentee-ctv' },
+      { label: 'Campagnes DOOH', desc: 'Affichage digital extérieur en temps réel', href: '/agence-media/campagnes-dooh' },
     ],
   },
   {
@@ -501,10 +503,13 @@ export default function Header() {
             }}>
               <div>
                 {tabs.map((tab, i) => (
-                  <button
+                  <a
                     key={tab.label}
+                    href={tab.cta?.href ?? '#'}
                     onMouseEnter={() => setActiveTab(i)}
-                    onClick={() => setActiveTab(i)}
+                    onClick={(e) => {
+                      if (!tab.cta?.href) e.preventDefault()
+                    }}
                     style={{
                       width: '100%',
                       display: 'flex',
@@ -516,6 +521,7 @@ export default function Header() {
                       background: activeTab === i ? '#0a0a0a' : 'transparent',
                       cursor: 'pointer',
                       textAlign: 'left',
+                      textDecoration: 'none',
                       transition: 'background 0.15s',
                       marginBottom: 2,
                     }}
@@ -537,7 +543,7 @@ export default function Header() {
                       flexShrink: 0,
                       transition: 'background 0.15s',
                     }}>→</span>
-                  </button>
+                  </a>
                 ))}
               </div>
 

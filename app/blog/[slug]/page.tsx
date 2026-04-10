@@ -8,8 +8,10 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import ZoomImage from '../../components/ZoomImage'
 import { BLOG_ARTICLES, getArticleBySlug, formatDate } from '../../data/blog'
 import NewsletterSidebar from '../../components/NewsletterSidebar'
+import { articleJsonLd } from '../../lib/jsonld'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -26,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = getArticleBySlug(slug)
   if (!article) return {}
   return {
-    title: `${article.title} | Darwin Agency`,
+    title: `${article.title} | DARWIN`,
     description: article.excerpt,
     alternates: { canonical: `/blog/${article.slug}` },
     openGraph: {
@@ -54,8 +56,21 @@ export default async function BlogArticlePage({ params }: Props) {
     )
   ).slice(0, 2)
 
+  const jsonLd = articleJsonLd({
+    headline: article.title,
+    description: article.excerpt,
+    url: `/blog/${article.slug}`,
+    datePublished: article.date,
+    dateModified: article.date,
+    authorName: article.author.name,
+    imageUrl: article.heroImg,
+  })
+
   return (
     <main style={{ background: '#fff', color: '#0a0a0a' }}>
+
+      {/* eslint-disable-next-line react/no-danger */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* ── HERO ──────────────────────────────────────────── */}
       <section style={{ background: '#fff', padding: '48px 24px 0', borderBottom: '1px solid #ebebeb' }}>
@@ -188,7 +203,7 @@ export default async function BlogArticlePage({ params }: Props) {
       {/* ── IMAGE HERO — absente sur la single page, utilisée pour OG/listing ── */}
 
       {/* ── CORPS — 2 colonnes ────────────────────────────── */}
-      <div style={{ maxWidth: 1180, margin: '0 auto', padding: '64px 24px 96px', display: 'grid', gridTemplateColumns: '1fr 340px', gap: 64, alignItems: 'start' }}>
+      <div className="rsp-article-body" style={{ maxWidth: 1180, margin: '0 auto', padding: '64px 24px 96px', display: 'grid', gridTemplateColumns: '1fr 340px', gap: 64, alignItems: 'start' }}>
 
         {/* ── COLONNE PRINCIPALE ── */}
         <article>
@@ -295,17 +310,7 @@ export default async function BlogArticlePage({ params }: Props) {
                   )
                 }
                 if (block.type === 'image') {
-                  return (
-                    <div key={i} style={{ margin: '32px 0' }}>
-                      <Image
-                        src={block.src}
-                        alt={block.alt || ''}
-                        width={1024}
-                        height={683}
-                        style={{ width: '100%', height: 'auto', display: 'block' }}
-                      />
-                    </div>
-                  )
+                  return <ZoomImage key={i} src={block.src} alt={block.alt || ''} />
                 }
                 return null
               })}
@@ -336,7 +341,7 @@ export default async function BlogArticlePage({ params }: Props) {
 
           {/* Navigation précédent / suivant */}
           {relatedArticles.length > 0 && (
-            <div style={{ marginTop: 64, paddingTop: 32, borderTop: '1px solid #ebebeb', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+            <div className="rsp-2col" style={{ marginTop: 64, paddingTop: 32, borderTop: '1px solid #ebebeb', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
               {relatedArticles.map((related, i) => (
                 <Link key={related.slug} href={`/blog/${related.slug}`} style={{ textDecoration: 'none' }}>
                   <div style={{
@@ -358,7 +363,7 @@ export default async function BlogArticlePage({ params }: Props) {
         </article>
 
         {/* ── SIDEBAR ──────────────────────────────────────── */}
-        <aside style={{ position: 'sticky', top: 88, display: 'flex', flexDirection: 'column', gap: 32 }}>
+        <aside className="rsp-article-sidebar" style={{ position: 'sticky', top: 88, display: 'flex', flexDirection: 'column', gap: 32 }}>
 
           {/* CTA Newsletter */}
           <NewsletterSidebar />
