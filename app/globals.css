@@ -270,6 +270,76 @@ details summary::-webkit-details-marker {
   .rsp-text-center-mobile { text-align: center !important; }
 }
 
+/* ── Hero split alias (même comportement que rsp-hero-grid) ── */
+.rsp-hero-split { }
+@media (max-width: 900px) {
+  .rsp-hero-split { grid-template-columns: 1fr !important; min-height: auto !important; }
+  .rsp-hero-split .rsp-hero-map { display: none !important; }
+}
+
+/* ── Sidebar layout — 1fr + colonne fixe ou vice-versa ── */
+/* Couvre : 320px 1fr | 1fr 1.4fr sticky | 1fr 1.6fr sticky | 1fr 1.8fr sticky */
+.rsp-sidebar-layout { }
+@media (max-width: 900px) {
+  .rsp-sidebar-layout { grid-template-columns: 1fr !important; gap: 36px !important; }
+}
+
+/* ── Sticky → static sur mobile (à combiner avec rsp-sidebar-layout) ── */
+.rsp-sticky { }
+@media (max-width: 900px) {
+  .rsp-sticky { position: static !important; top: auto !important; }
+}
+
+/* ── Contact grille spécifique 1fr + 460px ── */
+.rsp-contact-grid { }
+.rsp-contact-form { }
+@media (max-width: 900px) {
+  .rsp-contact-grid { grid-template-columns: 1fr !important; }
+  .rsp-contact-form { padding: 48px 24px !important; border-right: none !important; }
+}
+
+/* ── Article blog (contenu 1fr + sidebar 340px) ── */
+.rsp-article-body { }
+.rsp-article-sidebar { }
+@media (max-width: 900px) {
+  .rsp-article-body { grid-template-columns: 1fr !important; padding: 40px 20px 64px !important; gap: 0 !important; }
+  .rsp-article-sidebar { display: none !important; }
+}
+
+/* ── Step grid (numéro + contenu) ── */
+.rsp-step-grid { }
+@media (max-width: 640px) {
+  .rsp-step-grid { grid-template-columns: 56px 1fr !important; gap: 16px !important; }
+}
+
+/* ── Table scroll horizontal ── */
+.rsp-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* ── Grille cas clients (même comportement que rsp-3col) ── */
+.rsp-cas-grid { }
+@media (min-width: 641px) and (max-width: 1024px) { .rsp-cas-grid { grid-template-columns: 1fr 1fr !important; } }
+@media (max-width: 640px)  { .rsp-cas-grid { grid-template-columns: 1fr !important; } }
+
+/* ── Stats cards horizontales → empilement mobile (skew cards cas-client) ── */
+.rsp-stats-cards { }
+@media (max-width: 640px) {
+  .rsp-stats-cards { flex-direction: column !important; gap: 8px !important; }
+  .rsp-stats-cards > div { transform: skewX(0deg) !important; min-height: 100px !important; padding: 28px 28px !important; }
+  .rsp-stats-cards > div > div { transform: skewX(0deg) !important; }
+}
+
+/* ── Logos row (récompenses, certifications) → wrap centré mobile ── */
+.rsp-logos-row { }
+@media (max-width: 640px) {
+  .rsp-logos-row { flex-wrap: wrap !important; justify-content: center !important; gap: 24px !important; }
+}
+
+/* ── Flex header (titre gauche + lien droit) → wrap mobile ── */
+.rsp-flex-header { }
+@media (max-width: 640px) {
+  .rsp-flex-header { flex-wrap: wrap !important; gap: 16px !important; }
+}
+
 /* ════════════════════════════════════════════════════════════════════════════
    FIN RESPONSIVE
    ════════════════════════════════════════════════════════════════════════════ */

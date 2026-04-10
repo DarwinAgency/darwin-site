@@ -78,14 +78,82 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       {/* eslint-disable-next-line react/no-danger */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }} />
 
+      {/* ── RESPONSIVE CSS ───────────────────────────────────────────────── */}
+      <style>{`
+        .msvmo-hero-grid {
+          max-width: 1280px; margin: 0 auto;
+          display: grid; grid-template-columns: 1fr 1fr; min-height: 600px;
+        }
+        .msvmo-hero-text {
+          padding: 100px 64px 80px 32px;
+          display: flex; flex-direction: column; justify-content: center;
+        }
+        .msvmo-hero-illus {
+          display: flex; align-items: center; justify-content: center; padding: 40px;
+        }
+        .msvmo-grid-left {
+          max-width: 1280px; margin: 0 auto;
+          display: grid; grid-template-columns: 1fr 1.4fr; gap: 96px; align-items: start;
+        }
+        .msvmo-grid-right {
+          max-width: 1280px; margin: 0 auto;
+          display: grid; grid-template-columns: 1.4fr 1fr; gap: 96px; align-items: start;
+        }
+        .msvmo-grid-sidebar {
+          max-width: 1280px; margin: 0 auto;
+          display: grid; grid-template-columns: 320px 1fr; gap: 96px; align-items: start;
+        }
+        .msvmo-sticky { position: sticky; top: 120px; }
+        .msvmo-table-scroll { background: #fff; border: 1px solid #e8e8e8; overflow-x: auto; margin-bottom: 32px; }
+        .msvmo-table-inner { min-width: 560px; }
+        .msvmo-table-header { display: grid; grid-template-columns: 200px 1fr 1fr; border-bottom: 2px solid #0a0a0a; }
+        .msvmo-table-row { display: grid; grid-template-columns: 200px 1fr 1fr; }
+        .msvmo-schema {
+          display: grid;
+          grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+          align-items: center; gap: 0;
+          background: #fff; border: 1px solid #e8e8e8; overflow: hidden;
+        }
+        .msvmo-schema-arrow { padding: 0 20px; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+        .msvmo-pieges-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #e0e0e0; }
+        .msvmo-links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .msvmo-section-pad { padding: 80px 32px; }
+        .msvmo-section-pad-lg { padding: 96px 32px; }
+        .msvmo-section-clip {
+          background: linear-gradient(135deg, #27D9E5 0%, #B8E000 100%);
+          padding: 160px 32px 80px;
+          clip-path: polygon(0 80px, 100% 0, 100% 100%, 0 100%);
+          margin-top: -80px;
+        }
+        .msvmo-nl-wrap { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+        @media (max-width: 768px) {
+          .msvmo-hero-grid { grid-template-columns: 1fr; min-height: auto; }
+          .msvmo-hero-text { padding: 72px 20px 48px; }
+          .msvmo-hero-illus { display: none; }
+          .msvmo-grid-left { grid-template-columns: 1fr; gap: 40px; }
+          .msvmo-grid-right { grid-template-columns: 1fr; gap: 40px; }
+          .msvmo-grid-sidebar { grid-template-columns: 1fr; gap: 36px; }
+          .msvmo-sticky { position: static; }
+          .msvmo-schema { grid-template-columns: 1fr; }
+          .msvmo-schema-arrow { display: none; }
+          .msvmo-pieges-grid { grid-template-columns: 1fr; }
+          .msvmo-links-grid { grid-template-columns: 1fr; }
+          .msvmo-section-pad { padding: 60px 20px; }
+          .msvmo-section-pad-lg { padding: 72px 20px; }
+          .msvmo-section-clip { padding: 120px 20px 60px; }
+          .msvmo-nl-wrap { padding: 0 20px; }
+        }
+      `}</style>
+
       {/* ═══════════════════════════════════════════════════════════════════
           HERO — split 50/50
       ═══════════════════════════════════════════════════════════════════ */}
       <section style={{ background: '#fff', overflow: 'hidden' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 580 }}>
+        <div className="msvmo-hero-grid">
 
           {/* Colonne gauche — texte */}
-          <div style={{ padding: '100px 64px 80px 32px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div className="msvmo-hero-text" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <nav style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 32, fontSize: '0.75rem', color: 'rgba(0,0,0,0.3)', flexWrap: 'wrap' }}>
               <Link href="/" style={{ color: 'rgba(0,0,0,0.3)', textDecoration: 'none' }}>Accueil</Link>
               <span>/</span>
@@ -104,9 +172,9 @@ export default function MarketingStrategiqueVsOperationnelPage() {
               STRATÉGIE MARKETING
             </span>
 
-            <h1 className="font-anton" style={{ fontSize: 'clamp(2rem, 3.8vw, 3.4rem)', textTransform: 'uppercase', color: '#0a0a0a', lineHeight: 1.1, margin: '0 0 28px' }}>
+            <h1 className="font-anton" style={{ fontSize: 'clamp(2.4rem, 4.5vw, 4.2rem)', textTransform: 'uppercase', color: '#0a0a0a', lineHeight: 0.95, margin: '0 0 28px' }}>
               MARKETING<br />
-              <span style={{ color: 'transparent', WebkitTextStroke: '2px #0a0a0a' }}>STRATÉGIQUE</span><br />
+              STRATÉGIQUE<br />
               VS OPÉRATIONNEL
             </h1>
 
@@ -134,7 +202,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
           </div>
 
           {/* Colonne droite — illustration géométrique */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px' }}>
+          <div className="msvmo-hero-illus">
             <div style={{
               background: '#f5f5f5',
               borderRadius: 2,
@@ -216,22 +284,22 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           MARKETING STRATÉGIQUE
       ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: '#fff', padding: '80px 32px' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 96, alignItems: 'start' }}>
+      <section className="msvmo-section-pad" style={{ background: '#FFF127' }}>
+        <div className="msvmo-grid-left">
 
-          <div style={{ position: 'sticky', top: 120 }}>
-            <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', margin: '0 0 20px' }}>
+          <div className="msvmo-sticky">
+            <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.5)', margin: '0 0 20px' }}>
               DÉFINITION
             </p>
             <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.2rem)', textTransform: 'uppercase', color: '#0a0a0a', lineHeight: 1.1, margin: '0 0 28px' }}>
               LE MARKETING<br />
-              <span style={{ color: 'transparent', WebkitTextStroke: '2px #0a0a0a' }}>STRATÉGIQUE</span><br />
+              STRATÉGIQUE<br />
               : DÉCIDER<br />
               AVANT D&apos;AGIR
             </h2>
             <div style={{ display: 'flex', gap: 12 }}>
-              <div style={{ width: 3, background: '#FFF127', flexShrink: 0, alignSelf: 'stretch' }} />
-              <p style={{ fontSize: '0.8rem', color: '#aaa', lineHeight: 1.7, margin: 0, fontStyle: 'italic' }}>
+              <div style={{ width: 3, background: '#0a0a0a', flexShrink: 0, alignSelf: 'stretch' }} />
+              <p style={{ fontSize: '0.8rem', color: 'rgba(0,0,0,0.45)', lineHeight: 1.7, margin: 0, fontStyle: 'italic' }}>
                 Horizon 1 — 3 ans
               </p>
             </div>
@@ -239,10 +307,10 @@ export default function MarketingStrategiqueVsOperationnelPage() {
 
           <div>
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le marketing stratégique, c'est la partie que personne ne voit — et qu'on a pourtant tendance à sauter. Il intervient <strong>en amont de toute action marketing et de toute décision structurante</strong> : avant de choisir un canal, avant de rédiger un message, avant de définir un budget. Son rôle est de répondre à des questions que beaucoup d'équipes n'ont jamais vraiment posées à plat. Dans quel marché évoluez-vous réellement ? À qui vous adressez-vous en priorité ? <strong>Pourquoi un client devrait-il vous préférer à votre concurrent direct ?</strong>" }} />
+            <p className="body-text" style={{ fontSize: '1.05rem', color: '#0a0a0a', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le marketing stratégique, c'est la partie que personne ne voit — et qu'on a pourtant tendance à sauter. Il intervient <strong>en amont de toute action marketing et de toute décision structurante</strong> : avant de choisir un canal, avant de rédiger un message, avant de définir un budget. Son rôle est de répondre à des questions que beaucoup d'équipes n'ont jamais vraiment posées à plat. Dans quel marché évoluez-vous réellement ? À qui vous adressez-vous en priorité ? <strong>Pourquoi un client devrait-il vous préférer à votre concurrent direct ?</strong>" }} />
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Concrètement, cela passe par une <strong>analyse approfondie du marché et de votre environnement concurrentiel</strong>, une <strong>segmentation rigoureuse</strong> de vos cibles et la définition d'un <strong>positionnement clair</strong>. C'est un travail de fond, sur le long terme, souvent peu spectaculaire pour l'entreprise. Mais c'est lui qui donne du sens à tout ce qui vient ensuite." }} />
-            <div style={{ background: '#f5f5f5', borderLeft: '3px solid #0a0a0a', padding: '24px 28px' }}>
+            <p className="body-text" style={{ fontSize: '1.05rem', color: '#0a0a0a', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Concrètement, cela passe par une <strong>analyse approfondie du marché et de votre environnement concurrentiel</strong>, une <strong>segmentation rigoureuse</strong> de vos cibles et la définition d'un <strong>positionnement clair</strong>. C'est un travail de fond, sur le long terme, souvent peu spectaculaire pour l'entreprise. Mais c'est lui qui donne du sens à tout ce qui vient ensuite." }} />
+            <div style={{ background: 'rgba(255,255,255,0.6)', borderLeft: '3px solid #0a0a0a', padding: '24px 28px' }}>
               {/* eslint-disable-next-line react/no-danger */}
               <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "Sans cette base, on peut affiner une campagne Google Ads pendant des semaines sur un segment qui ne convertira jamais. Le problème n'est pas l'exécution. C'est qu'on s'adressait aux <strong>mauvaises personnes, avec le mauvais message</strong>." }} />
             </div>
@@ -253,8 +321,8 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           MARKETING OPÉRATIONNEL
       ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: '#0a0a0a', padding: '80px 32px' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 96, alignItems: 'start' }}>
+      <section className="msvmo-section-pad" style={{ background: '#0a0a0a' }}>
+        <div className="msvmo-grid-right">
 
           <div>
             {/* eslint-disable-next-line react/no-danger */}
@@ -267,13 +335,13 @@ export default function MarketingStrategiqueVsOperationnelPage() {
             </div>
           </div>
 
-          <div style={{ position: 'sticky', top: 120 }}>
-            <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', margin: '0 0 20px' }}>
+          <div className="msvmo-sticky">
+            <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', margin: '0 0 20px' }}>
               DÉFINITION
             </p>
             <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.2rem)', textTransform: 'uppercase', color: '#fff', lineHeight: 1.1, margin: '0 0 28px' }}>
               LE MARKETING<br />
-              <span style={{ color: 'transparent', WebkitTextStroke: '2px #fff' }}>OPÉRATIONNEL</span><br />
+              OPÉRATIONNEL<br />
               : TRADUIRE<br />
               LA STRATÉGIE
             </h2>
@@ -290,14 +358,14 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           NEWSLETTER — INSERTION MID-CONTENT
       ═══════════════════════════════════════════════════════════════════ */}
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 32px' }}>
+      <div className="msvmo-nl-wrap">
         <NewsletterCTA />
       </div>
 
       {/* ═══════════════════════════════════════════════════════════════════
           TABLEAU COMPARATIF + SCHÉMA D'ARTICULATION
       ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: '#fafafa', padding: '80px 32px' }}>
+      <section className="msvmo-section-pad" style={{ background: '#fafafa' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
 
           <div style={{ marginBottom: 48 }}>
@@ -310,10 +378,11 @@ export default function MarketingStrategiqueVsOperationnelPage() {
           </div>
 
           {/* Table */}
-          <div style={{ background: '#fff', border: '1px solid #e8e8e8', overflow: 'hidden', marginBottom: 32 }}>
+          <div className="msvmo-table-scroll">
+            <div className="msvmo-table-inner">
 
             {/* En-tête */}
-            <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr 1fr', borderBottom: '2px solid #0a0a0a' }}>
+            <div className="msvmo-table-header">
               <div style={{ padding: '18px 24px', background: '#f5f5f5', borderRight: '1px solid #e8e8e8' }} />
               <div style={{ padding: '18px 28px', background: '#FFF127', borderRight: '1px solid rgba(0,0,0,0.1)' }}>
                 <p className="font-anton" style={{ fontSize: '0.85rem', textTransform: 'uppercase', color: '#0a0a0a', margin: 0, letterSpacing: '0.08em' }}>Marketing Stratégique</p>
@@ -325,7 +394,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
 
             {/* Lignes */}
             {comparisonRows.map((row, i) => (
-              <div key={row.label} style={{ display: 'grid', gridTemplateColumns: '200px 1fr 1fr', borderBottom: i < comparisonRows.length - 1 ? '1px solid #f0f0f0' : 'none' }}>
+              <div key={row.label} className="msvmo-table-row" style={{ borderBottom: i < comparisonRows.length - 1 ? '1px solid #f0f0f0' : 'none' }}>
                 <div style={{ padding: '20px 24px', background: '#f9f9f9', borderRight: '1px solid #e8e8e8', display: 'flex', alignItems: 'center' }}>
                   <p className="font-anton" style={{ fontSize: '0.72rem', textTransform: 'uppercase', color: '#999', margin: 0, letterSpacing: '0.12em' }}>{row.label}</p>
                 </div>
@@ -337,6 +406,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
                 </div>
               </div>
             ))}
+            </div>{/* end msvmo-table-inner */}
           </div>
 
           {/* eslint-disable-next-line react/no-danger */}
@@ -348,7 +418,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
               SCHÉMA D&apos;ARTICULATION
             </p>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr auto 1fr auto 1fr', alignItems: 'center', gap: 0, background: '#fff', border: '1px solid #e8e8e8', overflow: 'hidden' }}>
+            <div className="msvmo-schema">
 
               {/* Bloc STRATÉGIE */}
               <div style={{ padding: '40px 32px', borderLeft: '4px solid #FFF127', background: '#0a0a0a' }}>
@@ -358,7 +428,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
               </div>
 
               {/* Flèche droite */}
-              <div style={{ padding: '0 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+              <div className="msvmo-schema-arrow">
                 <p style={{ fontSize: '0.55rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#aaa', margin: 0, whiteSpace: 'nowrap' }}>objectifs opérationnels</p>
                 <svg width="48" height="12" viewBox="0 0 48 12" fill="none">
                   <line x1="0" y1="6" x2="40" y2="6" stroke="#0a0a0a" strokeWidth="1.5"/>
@@ -374,7 +444,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
               </div>
 
               {/* Flèche droite */}
-              <div style={{ padding: '0 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+              <div className="msvmo-schema-arrow">
                 <p style={{ fontSize: '0.55rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#aaa', margin: 0, whiteSpace: 'nowrap' }}>données terrain</p>
                 <svg width="48" height="12" viewBox="0 0 48 12" fill="none">
                   <line x1="48" y1="6" x2="8" y2="6" stroke="#555" strokeWidth="1.5"/>
@@ -390,7 +460,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
               </div>
 
               {/* Flèche retour */}
-              <div style={{ padding: '0 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+              <div className="msvmo-schema-arrow">
                 <p style={{ fontSize: '0.55rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#aaa', margin: 0, whiteSpace: 'nowrap' }}>nourrit la stratégie</p>
                 <svg width="48" height="12" viewBox="0 0 48 12" fill="none">
                   <line x1="48" y1="6" x2="8" y2="6" stroke="#FFF127" strokeWidth="2"/>
@@ -414,10 +484,10 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           POURQUOI L'ARTICULATION ÉCHOUE
       ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: '#fff', padding: '80px 32px' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '320px 1fr', gap: 96, alignItems: 'start' }}>
+      <section className="msvmo-section-pad" style={{ background: '#fff' }}>
+        <div className="msvmo-grid-sidebar">
 
-          <div style={{ position: 'sticky', top: 120 }}>
+          <div className="msvmo-sticky">
             <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', margin: '0 0 20px' }}>
               DIAGNOSTIC
             </p>
@@ -444,7 +514,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           LES PIÈGES LES PLUS COURANTS
       ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: '#fafafa', padding: '80px 32px' }}>
+      <section className="msvmo-section-pad" style={{ background: '#fafafa' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
 
           <div style={{ marginBottom: 48 }}>
@@ -456,7 +526,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
             </h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1, background: '#e0e0e0' }}>
+          <div className="msvmo-pieges-grid">
             {[
               {
                 num: '01',
@@ -476,7 +546,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
               },
             ].map((piege) => (
               <div key={piege.num} style={{ background: '#fff', padding: '44px 40px' }}>
-                <p className="font-anton" style={{ fontSize: '2.4rem', color: 'transparent', WebkitTextStroke: '1.5px #e0e0e0', margin: '0 0 20px', lineHeight: 1 }}>
+                <p className="font-anton" style={{ fontSize: '2.4rem', color: '#e0e0e0', margin: '0 0 20px', lineHeight: 1 }}>
                   {piege.num}
                 </p>
                 {/* eslint-disable-next-line react/no-danger */}
@@ -491,10 +561,10 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           DE LA THÉORIE À L'ACTION
       ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: '#fff', padding: '80px 32px' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '320px 1fr', gap: 96, alignItems: 'start' }}>
+      <section className="msvmo-section-pad" style={{ background: '#fff' }}>
+        <div className="msvmo-grid-sidebar">
 
-          <div style={{ position: 'sticky', top: 120 }}>
+          <div className="msvmo-sticky">
             <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', margin: '0 0 20px' }}>
               MISE EN PRATIQUE
             </p>
@@ -517,16 +587,45 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════
+          FAQ
+      ═══════════════════════════════════════════════════════════════════ */}
+      <section className="msvmo-section-pad" style={{ background: '#f4f4f4' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 56 }}>
+            <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', marginBottom: 16 }}>
+              FAQ
+            </p>
+            <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', textTransform: 'uppercase', color: '#0a0a0a', lineHeight: 1.05 }}>
+              VOS QUESTIONS<br />SUR LA STRATÉGIE MARKETING
+            </h2>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+            {faqs.map((faq, i) => (
+              <details key={i} style={{ borderBottom: '1px solid #ddd', background: '#fff' }}>
+                <summary style={{ padding: '24px 28px', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
+                  <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#0a0a0a', margin: 0, lineHeight: 1.4, paddingRight: 24 }}>
+                    {faq.q}
+                  </h3>
+                  <span style={{ fontSize: '1.4rem', fontWeight: 300, flexShrink: 0, color: '#0a0a0a' }}>+</span>
+                </summary>
+                <p className="body-text" style={{ padding: '0 28px 24px', fontSize: '0.95rem', color: '#555', lineHeight: 1.85, margin: 0 }}>{faq.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════════
           CTA — PRENEZ DU RECUL AVANT D'ACCÉLÉRER
       ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: '#0a0a0a', padding: '96px 32px' }}>
+      <section className="msvmo-section-pad-lg" style={{ background: '#0a0a0a' }}>
         <div style={{ maxWidth: 860, margin: '0 auto' }}>
-          <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', margin: '0 0 24px' }}>
+          <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', margin: '0 0 24px' }}>
             ACCOMPAGNEMENT DARWIN
           </p>
           <h2 className="font-anton" style={{ fontSize: 'clamp(2.4rem, 4.5vw, 4rem)', textTransform: 'uppercase', color: '#fff', lineHeight: 1.05, margin: '0 0 40px' }}>
             PRENEZ DU RECUL<br />
-            <span style={{ color: 'transparent', WebkitTextStroke: '2px #fff' }}>AVANT D&apos;ACCÉLÉRER</span>
+            AVANT D&apos;ACCÉLÉRER
           </h2>
 
           {/* eslint-disable-next-line react/no-danger */}
@@ -571,12 +670,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           LIENS INTERNES — PAGES LIÉES
       ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{
-        background: 'linear-gradient(135deg, #27D9E5 0%, #B8E000 100%)',
-        padding: '160px 32px 80px',
-        clipPath: 'polygon(0 80px, 100% 0, 100% 100%, 0 100%)',
-        marginTop: '-80px',
-      }}>
+      <section className="msvmo-section-clip">
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.45)', margin: '0 0 12px' }}>
             POUR ALLER PLUS LOIN
@@ -584,7 +678,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
           <h2 className="font-anton" style={{ fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 48px' }}>
             PAGES LIÉES À VOTRE STRATÉGIE
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+          <div className="msvmo-links-grid">
             {[
               {
                 label: 'Audit Stratégie Digitale',

@@ -78,7 +78,7 @@ export default function BlogListing({ articles }: Props) {
           <p style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 20 }}>
             Nos angles éditoriaux
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: 8 }}>
+          <div className="rsp-6col" style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: 8 }}>
             {EDITORIAL_CATEGORIES.map(cat => {
               const isActive = activeCategory === cat.name
               const isDark = cat.accent === '#0a0a0a'
@@ -149,7 +149,7 @@ export default function BlogListing({ articles }: Props) {
               </button>
             </div>
           ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+            <div className="rsp-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
               {paginated.map(article => (
                 <ArticleCard key={article.slug} article={article} />
               ))}

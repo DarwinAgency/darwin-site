@@ -30,7 +30,7 @@ export default function CasClientsPage() {
     <main>
 
       {/* ── HERO ─────────────────────────────────────────── */}
-      <section style={{ background: '#0a0a0a', padding: '100px 32px 80px' }}>
+      <section className="rsp-section" style={{ background: '#0a0a0a', padding: '100px 32px 80px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', marginBottom: 24 }}>
             NOS RÉSULTATS
@@ -62,14 +62,14 @@ export default function CasClientsPage() {
       </section>
 
       {/* ── GRILLE + FILTRES ─────────────────────────────── */}
-      <section style={{ background: '#fafafa', padding: '80px 32px 96px' }}>
+      <section className="rsp-section" style={{ background: '#fafafa', padding: '80px 32px 96px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <CasClientsGrid />
         </div>
       </section>
 
       {/* ── CTA ──────────────────────────────────────────── */}
-      <section style={{ background: '#0a0a0a', padding: '72px 32px' }}>
+      <section className="rsp-section" style={{ background: '#0a0a0a', padding: '72px 32px' }}>
         <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
           <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', textTransform: 'uppercase', color: '#fff', lineHeight: 1, marginBottom: 20 }}>
             ET SI NOTRE PROCHAIN<br />CAS CLIENT ÉTAIT LE VÔTRE ?

@@ -7,6 +7,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DARWIN_YEARS } from '../../../lib/darwin'
+import { faqJsonLd, serviceJsonLd, breadcrumbJsonLd } from '../../../lib/jsonld'
 
 // ─── METADATA ───────────────────────────────────────────
 
@@ -116,18 +117,41 @@ const faqs = [
   },
 ]
 
+// ─── JSON-LD ─────────────────────────────────────────────
+
+const breadcrumbs = breadcrumbJsonLd([
+  { name: 'Accueil', url: '/' },
+  { name: 'SEO', url: '/expertises/seo' },
+  { name: 'Audit SEO', url: '/expertises/seo/audit-seo' },
+])
+
+const service = serviceJsonLd({
+  name: 'Audit SEO complet',
+  description: 'Diagnostic complet de votre visibilité : audit technique, sémantique, netlinking et GEO. Rapport livrable en 10 jours.',
+  url: '/expertises/seo/audit-seo',
+  keywords: ['audit SEO', 'audit technique SEO', 'GEO', 'Google AI Overviews', 'netlinking'],
+})
+
 // ─── PAGE ────────────────────────────────────────────────
 
 export default function AuditSeoPage() {
   return (
     <main>
 
+      {/* ── JSON-LD ── */}
+      {/* eslint-disable-next-line react/no-danger */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      {/* eslint-disable-next-line react/no-danger */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
+      {/* eslint-disable-next-line react/no-danger */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }} />
+
       {/* ── HERO ─────────────────────────────────────────── */}
       <section style={{ background: '#fff', overflow: 'hidden' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 600 }}>
+        <div className="rsp-hero-grid" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 600 }}>
 
           {/* ── Colonne gauche (contenu) ── */}
-          <div style={{ padding: '100px 64px 80px 32px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div className="rsp-hero-text" style={{ padding: '100px 64px 80px 32px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <nav style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 32, fontSize: '0.75rem', color: 'rgba(0,0,0,0.3)' }}>
               <Link href="/" style={{ color: 'rgba(0,0,0,0.3)', textDecoration: 'none' }}>Accueil</Link>
               <span>/</span>
@@ -145,7 +169,7 @@ export default function AuditSeoPage() {
             </span>
             <h1 className="font-anton" style={{ fontSize: 'clamp(2.4rem, 4.5vw, 4.2rem)', textTransform: 'uppercase', color: '#0a0a0a', lineHeight: 0.95, margin: '0 0 28px' }}>
               AUDIT SEO :<br />
-              <span style={{ color: 'transparent', WebkitTextStroke: '2px #0a0a0a' }}>DIAGNOSTIQUEZ</span><br />
+              DIAGNOSTIQUEZ<br />
               VOTRE VISIBILITÉ
             </h1>
             <p className="body-text" style={{ fontSize: '1rem', color: '#555', lineHeight: 1.8, marginBottom: 40 }}>
@@ -171,7 +195,7 @@ export default function AuditSeoPage() {
           </div>
 
           {/* ── Colonne droite (illustration) ── */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px' }}>
+          <div className="rsp-hero-img" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px' }}>
             {/* Exception documentée : <img> utilisé car SVG illustratif décoratif */}
             <div style={{
               background: '#f5f5f5',
@@ -193,19 +217,19 @@ export default function AuditSeoPage() {
       </section>
 
       {/* ── COÛT DE L'INACTION ───────────────────────────── */}
-      <section style={{ background: '#f4f4f4', padding: '72px 32px' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
+      <section className="rsp-section" style={{ background: '#FFF127', padding: '80px 32px' }}>
+        <div className="rsp-2col" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
           <div>
-            <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', marginBottom: 16 }}>
+            <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.5)', marginBottom: 16 }}>
               POURQUOI UN AUDIT SEO
             </p>
             <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', textTransform: 'uppercase', color: '#0a0a0a', lineHeight: 1.05, marginBottom: 28 }}>
               CE QUE VOUS PERDEZ<br />SANS LE SAVOIR
             </h2>
-            <p className="body-text" style={{ fontSize: '1rem', color: '#444', lineHeight: 1.85, marginBottom: 20 }}>
+            <p className="body-text" style={{ fontSize: '1rem', color: '#0a0a0a', lineHeight: 1.85, marginBottom: 20 }}>
               <strong>91 % des pages web</strong> ne reçoivent aucun trafic organique. Derrière ce chiffre, il y a des sites bien construits, avec du bon contenu, mais invisibles parce qu'un <strong>problème technique ou sémantique non diagnostiqué</strong> bloque toute progression.
             </p>
-            <p className="body-text" style={{ fontSize: '1rem', color: '#444', lineHeight: 1.85 }}>
+            <p className="body-text" style={{ fontSize: '1rem', color: '#0a0a0a', lineHeight: 1.85 }}>
               Un audit SEO n'est pas un rapport de plus à ranger dans un dossier. C'est un <strong>diagnostic chiffré</strong> qui révèle précisément les blocages, les opportunités non exploitées et les actions à mener en priorité pour que votre site devienne <strong>un actif de croissance</strong>.
             </p>
           </div>
@@ -226,25 +250,25 @@ export default function AuditSeoPage() {
       </section>
 
       {/* ── QUAND FAIRE UN AUDIT SEO ─────────────────────── */}
-      <section style={{ background: '#0a0a0a', padding: '72px 32px' }}>
+      <section className="rsp-section" style={{ background: '#0a0a0a', padding: '80px 32px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.8fr', gap: 80, alignItems: 'start' }}>
+          <div className="rsp-sidebar-layout" style={{ display: 'grid', gridTemplateColumns: '1fr 1.8fr', gap: 80, alignItems: 'start' }}>
             <div>
-              <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', marginBottom: 16 }}>
+              <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', marginBottom: 16 }}>
                 SIGNAUX D&apos;ALERTE
               </p>
               <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', textTransform: 'uppercase', color: '#fff', lineHeight: 1.05 }}>
                 QUAND FAIRE<br />UN AUDIT SEO ?
               </h2>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
+            <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
               {signals.map((s) => (
                 <div key={s.label} style={{ background: 'rgba(255,255,255,0.04)', borderLeft: '3px solid #FFF127', padding: '28px 24px' }}>
                   <p className="font-anton" style={{ fontSize: '0.85rem', textTransform: 'uppercase', color: '#fff', letterSpacing: '0.06em', margin: '0 0 12px', lineHeight: 1.3 }}>
                     {s.label}
                   </p>
                   {/* eslint-disable-next-line react/no-danger */}
-                  <p className="body-text" style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.75, margin: 0 }} dangerouslySetInnerHTML={{ __html: s.desc }} />
+                  <p className="body-text" style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.75)', lineHeight: 1.75, margin: 0 }} dangerouslySetInnerHTML={{ __html: s.desc }} />
                 </div>
               ))}
             </div>
@@ -253,7 +277,7 @@ export default function AuditSeoPage() {
       </section>
 
       {/* ── LES 4 DIMENSIONS DE L'AUDIT ─────────────────── */}
-      <section style={{ background: '#fff', padding: '80px 32px' }}>
+      <section className="rsp-section" style={{ background: '#fff', padding: '80px 32px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 64 }}>
             <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', marginBottom: 16 }}>
@@ -264,7 +288,7 @@ export default function AuditSeoPage() {
             </h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 2 }}>
+          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 2 }}>
             {auditPillars.map((pillar, i) => (
               <div key={pillar.id} style={{
                 background: i % 2 === 0 ? '#fafafa' : '#fff',
@@ -274,7 +298,7 @@ export default function AuditSeoPage() {
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: 16, marginBottom: 20 }}>
                   <span className="font-anton" style={{
                     fontSize: '2.4rem', lineHeight: 1,
-                    ...(i % 2 === 0 ? { color: '#0a0a0a' } : { color: 'transparent', WebkitTextStroke: '2px #0a0a0a' }),
+                    color: '#0a0a0a',
                   }}>
                     {pillar.id}
                   </span>
@@ -299,10 +323,10 @@ export default function AuditSeoPage() {
       </section>
 
       {/* ── MÉTHODOLOGIE ─────────────────────────────────── */}
-      <section style={{ background: '#fafafa', padding: '80px 32px' }}>
+      <section className="rsp-section" style={{ background: '#fafafa', padding: '80px 32px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 80, alignItems: 'start' }}>
-            <div style={{ position: 'sticky', top: 120 }}>
+          <div className="rsp-sidebar-layout" style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 80, alignItems: 'start' }}>
+            <div className="rsp-sticky" style={{ position: 'sticky', top: 120 }}>
               <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', marginBottom: 16 }}>
                 NOTRE MÉTHODOLOGIE
               </p>
@@ -315,7 +339,7 @@ export default function AuditSeoPage() {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
               {methodologySteps.map((step, i) => (
-                <div key={step.num} style={{
+                <div key={step.num} className="rsp-step-grid" style={{
                   display: 'grid', gridTemplateColumns: '80px 1fr', gap: 40, alignItems: 'start',
                   background: '#fff',
                   borderLeft: '4px solid #0a0a0a',
@@ -325,10 +349,7 @@ export default function AuditSeoPage() {
                 }}>
                   <p className="font-anton" style={{
                     fontSize: '3.2rem', lineHeight: 1, margin: 0, paddingTop: 4,
-                    ...(i % 2 === 0
-                      ? { color: '#0a0a0a' }
-                      : { color: 'transparent', WebkitTextStroke: '2px #0a0a0a' }
-                    ),
+                    color: '#0a0a0a',
                   }}>
                     {step.num}
                   </p>
@@ -347,8 +368,8 @@ export default function AuditSeoPage() {
       </section>
 
       {/* ── LE LIVRABLE ──────────────────────────────────── */}
-      <section style={{ background: '#FFF127', padding: '72px 32px' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
+      <section className="rsp-section" style={{ background: '#FFF127', padding: '72px 32px' }}>
+        <div className="rsp-2col" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
           <div>
             <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.45)', marginBottom: 16 }}>
               CE QUE VOUS RECEVEZ
@@ -378,7 +399,7 @@ export default function AuditSeoPage() {
       </section>
 
       {/* ── CAS CLIENTS ──────────────────────────────────── */}
-      <section style={{ background: '#fafafa', padding: '80px 32px' }}>
+      <section className="rsp-section" style={{ background: '#fafafa', padding: '80px 32px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 48, flexWrap: 'wrap', gap: 24 }}>
             <div>
@@ -393,7 +414,7 @@ export default function AuditSeoPage() {
               VOIR TOUS LES CAS →
             </Link>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 24 }}>
+          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 24 }}>
             {caseStudies.map(cas => (
               <Link key={cas.slug} href={`/cas-clients/${cas.slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <div style={{ background: '#fff', border: '1px solid #e8e8e8', overflow: 'hidden', transition: 'box-shadow 0.2s ease' }}>
@@ -419,7 +440,7 @@ export default function AuditSeoPage() {
       </section>
 
       {/* ── POURQUOI DARWIN ──────────────────────────────── */}
-      <section style={{ background: '#fff', padding: '80px 32px' }}>
+      <section className="rsp-section" style={{ background: '#fff', padding: '80px 32px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
             <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', marginBottom: 16 }}>
@@ -429,7 +450,7 @@ export default function AuditSeoPage() {
               PAS UNE AGENCE DE PLUS.<br />UNE ÉQUIPE SENIOR.
             </h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2 }}>
+          <div className="rsp-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2 }}>
             {[
               { title: 'Experts seniors uniquement', desc: `Votre audit est réalisé par un consultant SEO senior, pas sous-traité à un junior. ${DARWIN_YEARS} ans d'expertise, ça se sent dans la qualité du diagnostic.` },
               { title: 'GEO intégré en standard', desc: "On n'a pas attendu que tout le monde parle de ChatGPT pour s'y intéresser. La visibilité dans les moteurs génératifs est incluse dans chaque audit, pas vendue en option." },
@@ -452,7 +473,7 @@ export default function AuditSeoPage() {
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────── */}
-      <section style={{ background: '#f4f4f4', padding: '80px 32px' }}>
+      <section className="rsp-section" style={{ background: '#f4f4f4', padding: '80px 32px' }}>
         <div style={{ maxWidth: 860, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
             <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', marginBottom: 16 }}>
@@ -479,6 +500,38 @@ export default function AuditSeoPage() {
         </div>
       </section>
 
+      {/* ── CTA FINAL ──────────────────────────────────── */}
+      <section className="rsp-section" style={{ background: '#FFF127', padding: '96px 32px' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.5)', marginBottom: 24 }}>
+            PREMIER ÉCHANGE
+          </p>
+          <h2 className="font-anton" style={{ fontSize: 'clamp(2.4rem, 4.5vw, 4rem)', textTransform: 'uppercase', color: '#0a0a0a', lineHeight: 1, margin: '0 0 24px' }}>
+            VOTRE AUDIT SEO<br />COMMENCE ICI
+          </h2>
+          <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', maxWidth: 520, margin: '0 auto 40px' }}>
+            Décrivez-nous votre situation. Nous analysons votre site, vos concurrents et vos opportunités — réponse sous 24h ouvrées.
+          </p>
+          <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link href="/contact" style={{
+              display: 'inline-block', background: '#0a0a0a', color: '#fff',
+              fontWeight: 700, fontSize: '0.82rem', letterSpacing: '0.1em',
+              textTransform: 'uppercase', textDecoration: 'none', padding: '18px 36px',
+            }}>
+              DEMANDER MON AUDIT →
+            </Link>
+            <a href="tel:+33413570900" style={{
+              display: 'inline-flex', alignItems: 'center', gap: 8,
+              border: '1.5px solid rgba(0,0,0,0.25)', color: '#0a0a0a',
+              fontWeight: 700, fontSize: '0.82rem', letterSpacing: '0.1em',
+              textTransform: 'uppercase', textDecoration: 'none', padding: '18px 36px',
+            }}>
+              +33 (0)4 13 57 09 00
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ── LIENS INTERNES — AUTRES SOUS-PAGES SEO ───────── */}
       {/*
         Diagonale : clip-path coupe le haut en biais (0 80px → 100% 0).
@@ -498,7 +551,7 @@ export default function AuditSeoPage() {
           <h2 className="font-anton" style={{ fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)', textTransform: 'uppercase', color: '#0a0a0a', marginBottom: 48 }}>
             NOS AUTRES EXPERTISES SEO
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
+          <div className="rsp-4col" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
             {[
               { label: 'SEO Technique', desc: 'Crawl, architecture, Core Web Vitals, JavaScript SEO', href: '/expertises/seo/seo-technique', img: '/images/illustrations/seo-technique.svg' },
               { label: 'Stratégie de contenu', desc: 'Cocons thématiques, intention de recherche, éditorial', href: '/expertises/seo/strategie-contenu', img: '/images/illustrations/strategie-contenu.svg' },

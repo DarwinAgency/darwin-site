@@ -19,8 +19,8 @@ export async function POST(request) {
     }
 
     // Email à l'équipe Darwin
-    await resend.emails.send({
-      from: 'contact@darwin-agency.com',
+    const { data, error } = await resend.emails.send({
+      from: 'onboarding@resend.dev',
       to: ['eleonore.g@darwin-agency.com'],
       subject: `Nouveau lead — ${prenom} ${nom} (${typeEntreprise || 'N/A'})`,
       html: `
@@ -34,9 +34,16 @@ export async function POST(request) {
       `,
     })
 
+    if (error) {
+      console.error('❌ Erreur Resend :', JSON.stringify(error), error?.message, error?.name, error?.statusCode)
+      return Response.json({ error: 'Erreur envoi email.' }, { status: 500 })
+    }
+
+    console.log('✅ Email équipe envoyé :', data)
+
     // Confirmation automatique au prospect
     await resend.emails.send({
-      from: 'Darwin Agency <contact@darwin-agency.com>',
+      from: 'Darwin Agency <onboarding@resend.dev>',
       to: [email],
       subject: 'Nous avons bien reçu votre message — Darwin Agency',
       html: `

@@ -2,26 +2,48 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from '../components/ContactForm'
+import { localBusinessJsonLd, faqJsonLd } from '../lib/jsonld'
 
 export const metadata: Metadata = {
-  title: "Contactez Darwin Agency — Parlons de votre projet digital",
-  description: "Vous avez un projet digital ? Discutons-en. Darwin Agency, agence marketing performance à Aix-en-Provence. +33 (0)4 13 57 09 00",
+  title: "Contactez DARWIN — Parlons de votre projet digital",
+  description: "Vous avez un projet digital ? Discutons-en. DARWIN, agence marketing performance à Aix-en-Provence. +33 (0)4 13 57 09 00",
   alternates: { canonical: '/contact' },
   openGraph: {
-    title: "Contactez Darwin Agency — Parlons de votre projet digital",
-    description: "Vous avez un projet digital ? Discutons-en. Darwin Agency, agence marketing performance à Aix-en-Provence.",
+    title: "Contactez DARWIN — Parlons de votre projet digital",
+    description: "Vous avez un projet digital ? Discutons-en. DARWIN, agence marketing performance à Aix-en-Provence.",
   },
 }
+
+const contactFaqs = [
+  {
+    q: "Comment contacter l'agence DARWIN ?",
+    a: "Par téléphone au +33 (0)4 13 57 09 00, par le formulaire de contact sur cette page, ou directement à notre adresse : 805 Rue Jean René Guillibert, Bâtiment Le Toma, 13290 Aix-en-Provence. Réponse garantie sous 24h ouvrées.",
+  },
+  {
+    q: "Où est située l'agence DARWIN ?",
+    a: "DARWIN est basée à Aix-en-Provence, au Bâtiment Le Toma, 805 Rue Jean René Guillibert, 13290 Aix-en-Provence. L'agence accompagne des clients sur toute la France et à l'international, en présentiel comme à distance.",
+  },
+  {
+    q: "Dans quel délai DARWIN répond-elle à une demande ?",
+    a: "Toutes les demandes reçues via le formulaire ou par téléphone reçoivent une réponse dans les 24 heures ouvrées. Pour les projets urgents, un premier échange téléphonique peut être organisé le jour même.",
+  },
+]
 
 export default function ContactPage() {
   return (
     <main>
 
+      {/* ── JSON-LD ── */}
+      {/* eslint-disable-next-line react/no-danger */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd()) }} />
+      {/* eslint-disable-next-line react/no-danger */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(contactFaqs)) }} />
+
       {/* ── HERO SPLIT ────────────────────────────────────────────── */}
-      <section style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 560 }} className="rsp-hero-split">
+      <section className="rsp-hero-split" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 560 }}>
 
         {/* Moitié gauche — texte */}
-        <div style={{ background: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '140px 56px 56px 48px', borderBottom: '1px solid #ebebeb' }}>
+        <div className="rsp-hero-text" style={{ background: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '140px 56px 56px 48px', borderBottom: '1px solid #ebebeb' }}>
           <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#29C5F5', marginBottom: 20 }}>
             Contactez-nous
           </p>
@@ -58,8 +80,8 @@ export default function ContactPage() {
           </Link>
         </div>
 
-        {/* Moitié droite — carte Google Maps */}
-        <div style={{ position: 'relative', overflow: 'hidden' }}>
+        {/* Moitié droite — carte */}
+        <div className="rsp-hero-map" style={{ position: 'relative', overflow: 'hidden' }}>
           <iframe
             src="https://www.openstreetmap.org/export/embed.html?bbox=5.3717%2C43.5142%2C5.3917%2C43.5242&layer=mapnik&marker=43.5192%2C5.3817"
             style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
@@ -72,10 +94,10 @@ export default function ContactPage() {
 
       {/* ── MAIN CONTENT : FORM + INFOS ─────────────────────────── */}
       <section style={{ background: '#fff' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 460px', gap: 0, alignItems: 'stretch' }} className="rsp-contact-grid">
+        <div className="rsp-contact-grid" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 460px', gap: 0, alignItems: 'stretch' }}>
 
           {/* Colonne gauche — Formulaire */}
-          <div style={{ padding: '72px 64px 72px 48px', borderRight: '1px solid #ebebeb' }} className="rsp-contact-form">
+          <div className="rsp-contact-form" style={{ padding: '72px 64px 72px 48px', borderRight: '1px solid #ebebeb' }}>
             <h2 className="font-anton" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', textTransform: 'uppercase', marginBottom: 8, lineHeight: 1.05 }}>
               Vous avez une idée, un projet,<br />ou juste une question ?
             </h2>

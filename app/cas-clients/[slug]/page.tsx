@@ -8,6 +8,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { CAS_CLIENTS, getCasBySlug } from '../../data/cas-clients'
+import { caseStudyJsonLd, breadcrumbJsonLd } from '../../lib/jsonld'
 
 // ─── TYPES ──────────────────────────────────────────────
 
@@ -47,8 +48,27 @@ export default async function CasClientPage({ params }: Props) {
 
   const otherCas = CAS_CLIENTS.filter(c => c.slug !== cas.slug).slice(0, 3)
 
+  const jsonLdCase = caseStudyJsonLd({
+    name: cas.title,
+    description: cas.excerpt,
+    url: `/cas-clients/${cas.slug}`,
+    client: cas.client,
+    result: cas.stats[0]?.num ?? '',
+  })
+  const jsonLdBreadcrumb = breadcrumbJsonLd([
+    { name: 'Accueil', url: '/' },
+    { name: 'Cas clients', url: '/cas-clients' },
+    { name: cas.client, url: `/cas-clients/${cas.slug}` },
+  ])
+
   return (
     <main>
+
+      {/* ── JSON-LD ── */}
+      {/* eslint-disable-next-line react/no-danger */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCase) }} />
+      {/* eslint-disable-next-line react/no-danger */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
 
       {/* ── HERO ─────────────────────────────────────────── */}
       {/*
@@ -95,7 +115,7 @@ export default async function CasClientPage({ params }: Props) {
       </section>
 
       {/* ── STATS ────────────────────────────────────────── */}
-      <section style={{
+      <section className="rsp-section-sm" style={{
         background: 'linear-gradient(to right, #27D9E5 0%, #B8E000 100%)',
         padding: '52px 48px 60px',
         overflow: 'hidden',
@@ -111,7 +131,7 @@ export default async function CasClientPage({ params }: Props) {
         </p>
 
         {/* Cards */}
-        <div style={{ display: 'flex', gap: 16, alignItems: 'stretch' }}>
+        <div className="rsp-stats-cards" style={{ display: 'flex', gap: 16, alignItems: 'stretch' }}>
           {cas.stats.map((stat, i) => (
             <div
               key={i}
@@ -151,8 +171,8 @@ export default async function CasClientPage({ params }: Props) {
       </section>
 
       {/* ── CONTEXTE + DÉFI ──────────────────────────────── */}
-      <section style={{ background: '#fff', padding: '80px 32px' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'start' }}>
+      <section className="rsp-section" style={{ background: '#fff', padding: '80px 32px' }}>
+        <div className="rsp-2col" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'start' }}>
 
           {/* Bloc gauche — qui est le client + défi */}
           <div>
@@ -178,7 +198,7 @@ export default async function CasClientPage({ params }: Props) {
           </div>
 
           {/* Bloc droit — image à proportions naturelles */}
-          <div style={{ position: 'sticky', top: 120 }}>
+          <div className="rsp-sticky" style={{ position: 'sticky', top: 120 }}>
             <img
               src={cas.problematiqueImg}
               alt={`Illustration ${cas.client}`}
@@ -190,8 +210,8 @@ export default async function CasClientPage({ params }: Props) {
       </section>
 
       {/* ── OBJECTIFS ────────────────────────────────────── */}
-      <section style={{ background: '#fff', padding: '80px 32px' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 80, alignItems: 'start' }}>
+      <section className="rsp-section" style={{ background: '#fff', padding: '80px 32px' }}>
+        <div className="rsp-sidebar-layout" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 80, alignItems: 'start' }}>
           <div>
             <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', marginBottom: 16 }}>
               OBJECTIFS
@@ -220,7 +240,7 @@ export default async function CasClientPage({ params }: Props) {
       </section>
 
       {/* ── SOLUTION ─────────────────────────────────────── */}
-      <section style={{ background: '#fafafa', padding: '80px 32px' }}>
+      <section className="rsp-section" style={{ background: '#fafafa', padding: '80px 32px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
 
           {/* ── En-tête ── */}
@@ -236,7 +256,7 @@ export default async function CasClientPage({ params }: Props) {
           {/* ── Steps ── */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
             {cas.solution.map((step, i) => (
-              <div key={step.id} style={{
+              <div key={step.id} className="rsp-step-grid" style={{
                 display: 'grid',
                 gridTemplateColumns: '80px 1fr',
                 gap: 40,
@@ -274,7 +294,7 @@ export default async function CasClientPage({ params }: Props) {
       </section>
 
       {/* ── CONCLUSION ───────────────────────────────────── */}
-      <section style={{ background: '#FFF127', padding: '80px 32px' }}>
+      <section className="rsp-section" style={{ background: '#FFF127', padding: '80px 32px' }}>
         <div style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center' }}>
           <h2 className="font-anton" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', textTransform: 'uppercase', color: '#0a0a0a', lineHeight: 0.95, marginBottom: 32 }}>
             {cas.conclusion.title}
@@ -297,12 +317,12 @@ export default async function CasClientPage({ params }: Props) {
 
       {/* ── AUTRES CAS ───────────────────────────────────── */}
       {otherCas.length > 0 && (
-        <section style={{ background: '#fafafa', padding: '80px 32px' }}>
+        <section className="rsp-section" style={{ background: '#fafafa', padding: '80px 32px' }}>
           <div style={{ maxWidth: 1280, margin: '0 auto' }}>
             <h2 className="font-anton" style={{ fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)', textTransform: 'uppercase', color: '#0a0a0a', marginBottom: 48 }}>
               DÉCOUVREZ NOS<br />AUTRES CAS
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+            <div className="rsp-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
               {otherCas.map(other => (
                 <Link key={other.slug} href={`/cas-clients/${other.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <div className="cas-card-hover" style={{

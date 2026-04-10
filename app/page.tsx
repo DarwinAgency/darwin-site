@@ -23,7 +23,7 @@ export default function Home() {
       <HeroSection />
 
       {/* ─── TAGLINE ─── */}
-      <section style={{ background: '#fff', padding: '80px 24px' }}>
+      <section className="rsp-section" style={{ background: '#fff', padding: '80px 24px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <p style={{ fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#999', marginBottom: 24 }}>
             CONNECTER LES ESPRITS CRÉATIFS :
@@ -35,7 +35,7 @@ export default function Home() {
       </section>
 
       {/* ─── NOUS SOMMES DARWIN ─── */}
-      <section style={{ background: '#fff', padding: '60px 24px 80px', borderTop: '1px solid #eee' }}>
+      <section className="rsp-section" style={{ background: '#fff', padding: '60px 24px 80px', borderTop: '1px solid #eee' }}>
         <div className="rsp-2col" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80 }}>
 
           {/* ── Colonne gauche — présentation ── */}
@@ -118,12 +118,12 @@ export default function Home() {
       </section>
 
       {/* ─── RÉCOMPENSÉ PAR ─── */}
-      <section style={{ background: '#fff', padding: '72px 24px 80px', borderBottom: '1px solid #ebebeb' }}>
+      <section className="rsp-section" style={{ background: '#fff', padding: '72px 24px 80px', borderBottom: '1px solid #ebebeb' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <p className="font-anton" style={{ fontSize: 'clamp(1.4rem, 3vw, 2.4rem)', textTransform: 'uppercase', textAlign: 'center', color: '#0a0a0a', letterSpacing: '0.06em', marginBottom: 56 }}>
             RÉCOMPENSÉ PAR
           </p>
-          <div style={{ display: 'flex', gap: 0, alignItems: 'center', justifyContent: 'space-between', width: '100%', maxWidth: 1000, margin: '0 auto' }}>
+          <div className="rsp-logos-row" style={{ display: 'flex', gap: 0, alignItems: 'center', justifyContent: 'space-between', width: '100%', maxWidth: 1000, margin: '0 auto' }}>
             <Image src="/logos/recompenses/Les-cas-dor-mod.webp" alt="Les Cas d'Or du Digital" width={90} height={72} style={{ objectFit: 'contain', height: 'auto', maxHeight: 72, flexShrink: 0 }} />
             <Image src="/logos/recompenses/Deloitte_Logo-1.png" alt="Deloitte" width={120} height={48} style={{ objectFit: 'contain', height: 'auto', maxHeight: 48, flexShrink: 0 }} />
             <Image src="/logos/recompenses/Selligent-by-Marigold-evergreen-1.png" alt="Selligent by Marigold" width={150} height={48} style={{ objectFit: 'contain', height: 'auto', maxHeight: 48, flexShrink: 0 }} />
@@ -134,7 +134,7 @@ export default function Home() {
       </section>
 
       {/* ─── NOS MÉTIERS ─── */}
-      <section style={{ background: '#fff', padding: '80px 24px' }}>
+      <section className="rsp-section" style={{ background: '#fff', padding: '80px 24px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 5vw, 4.5rem)', textTransform: 'uppercase', marginBottom: 60, lineHeight: 1 }}>
             NOS MÉTIERS
@@ -255,7 +255,7 @@ export default function Home() {
       </section>
 
       {/* ─── NOS CAS CLIENTS ─── */}
-      <section style={{ background: '#f4f4f4', padding: '80px 24px' }}>
+      <section className="rsp-section" style={{ background: '#f4f4f4', padding: '80px 24px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 5vw, 4.5rem)', textTransform: 'uppercase', marginBottom: 48, lineHeight: 1 }}>
             NOS CAS CLIENTS
@@ -297,7 +297,7 @@ export default function Home() {
       <Testimonials />
 
       {/* ─── NOS CERTIFICATIONS ─── */}
-      <section style={{ background: '#fff', padding: '64px 24px' }}>
+      <section className="rsp-section" style={{ background: '#fff', padding: '64px 24px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 48, textAlign: 'center' }}>
             NOS CERTIFICATIONS
@@ -316,7 +316,7 @@ export default function Home() {
                 { src: '/logos/certifications/trackad.svg', alt: 'Trackad', h: 70 },
               ],
             ].map((row, rowIndex) => (
-              <div key={rowIndex} style={{ display: 'flex', gap: 56, alignItems: 'center', justifyContent: 'center' }}>
+              <div key={rowIndex} className="rsp-logos-row" style={{ display: 'flex', gap: 56, alignItems: 'center', justifyContent: 'center' }}>
                 {row.map((cert) => (
                   <div key={cert.alt} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 70, width: 140 }}>
                     <Image
@@ -335,9 +335,9 @@ export default function Home() {
       </section>
 
       {/* ─── NOTRE BLOG ─── */}
-      <section style={{ background: '#fff', padding: '80px 24px', borderTop: '1px solid #eee' }}>
+      <section className="rsp-section" style={{ background: '#fff', padding: '80px 24px', borderTop: '1px solid #eee' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 48 }}>
+          <div className="rsp-flex-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 48 }}>
             <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 5vw, 4.5rem)', textTransform: 'uppercase', lineHeight: 1, margin: 0 }}>
               NOTRE BLOG
             </h2>
@@ -367,7 +367,7 @@ export default function Home() {
       </section>
 
       {/* ─── CONTACT ─── */}
-      <section id="contact" style={{ background: '#fff', padding: '96px 24px', borderTop: '1px solid #eee' }}>
+      <section id="contact" className="rsp-section" style={{ background: '#fff', padding: '96px 24px', borderTop: '1px solid #eee' }}>
         <div className="rsp-2col" style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 80, alignItems: 'start' }}>
 
           {/* Colonne gauche — accroche */}

@@ -215,6 +215,7 @@ export default function CreativeThinkingCommunityPage() {
             {agencies.map((agency) => (
               <div
                 key={agency.id}
+                className="rsp-2col"
                 style={{
                   display: 'grid',
                   gridTemplateColumns: '1fr 1fr',
@@ -281,7 +282,7 @@ export default function CreativeThinkingCommunityPage() {
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
 
           {/* Header FAQ */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80, alignItems: 'end', marginBottom: 64 }}>
+          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80, alignItems: 'end', marginBottom: 64 }}>
             <div>
               <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 16 }}>
                 Questions fréquentes
@@ -298,7 +299,7 @@ export default function CreativeThinkingCommunityPage() {
           </div>
 
           {/* Grille 2 colonnes */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
+          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
             {faqs.map((faq) => (
               <div
                 key={faq.num}
