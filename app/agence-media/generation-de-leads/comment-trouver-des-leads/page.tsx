@@ -6,6 +6,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { breadcrumbJsonLd, webPageJsonLd } from '../../../lib/jsonld'
 import NewsletterCTA from '../../../components/NewsletterCTA'
@@ -307,12 +308,25 @@ export default function CommentTrouverDesLeadsPage() {
               TROUVER<br />
               DES LEADS
             </h2>
-            <div style={{ display: 'flex', gap: 12 }}>
+            <div style={{ display: 'flex', gap: 12, marginBottom: 32 }}>
               <div style={{ width: 3, background: 'rgba(255,255,255,0.15)', flexShrink: 0, alignSelf: 'stretch' }} />
               <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.3)', lineHeight: 1.7, margin: 0, fontStyle: 'italic' }}>
                 SEO, SEA, Social Ads, Emailing
               </p>
             </div>
+            <div style={{ position: 'relative' }}>
+              <Image
+                src="/images/media/darwin-generation-leads-qualifie.jpeg"
+                alt="Jérôme Renard, Directeur associé DARWIN, en présentation Lead Generation"
+                width={1200}
+                height={800}
+                style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 4 }}
+              />
+              <div style={{ position: 'absolute', bottom: -6, left: 0, width: 48, height: 3, background: '#FFF127' }} />
+            </div>
+            <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)', marginTop: 16, lineHeight: 1.6, fontWeight: 500 }}>
+              Jérôme Renard, Directeur associé — en présentation Lead Generation
+            </p>
           </div>
         </div>
       </section>
