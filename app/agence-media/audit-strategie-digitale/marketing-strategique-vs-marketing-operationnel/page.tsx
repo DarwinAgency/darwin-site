@@ -10,18 +10,19 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { breadcrumbJsonLd, webPageJsonLd } from '../../../lib/jsonld'
 import NewsletterCTA from '../../../components/NewsletterCTA'
+import { ogDefaults } from '../../../lib/og'
 
 // ─── METADATA ────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'Marketing Stratégique vs Marketing Opérationnel : l\'Art d\'Allier Vision et Performance — DARWIN',
+  title: 'Marketing stratégique vs opérationnel — Vision & performance | DARWIN',
   description: 'Marketing stratégique ou opérationnel ? Différences clés, rôles et comment les combiner pour optimiser votre stratégie digitale.',
   alternates: { canonical: '/agence-media/audit-strategie-digitale/marketing-strategique-vs-marketing-operationnel' },
   openGraph: {
-    title: 'Marketing Stratégique vs Marketing Opérationnel : l\'Art d\'Allier Vision et Performance',
+    ...ogDefaults,
+    title: 'Marketing stratégique vs opérationnel — Vision & performance',
     description: 'Marketing stratégique ou opérationnel ? Différences clés, rôles et comment les combiner pour optimiser votre stratégie digitale.',
     url: 'https://darwin-agency.fr/agence-media/audit-strategie-digitale/marketing-strategique-vs-marketing-operationnel',
-    images: [{ url: 'https://darwin-agency.fr/images/og-default.jpg', width: 1200, height: 630, alt: 'Marketing stratégique vs opérationnel — DARWIN' }],
   },
 }
 

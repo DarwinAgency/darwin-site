@@ -291,6 +291,26 @@
 
 ---
 
+## [Session 11] — Audit SEOQuake : OG type site-wide & titres raccourcis
+
+> Retours SEOQuake post-scan : 3 corrections structurelles appliquées.
+
+### Ajouté
+- `app/lib/og.ts` — exporte `ogDefaults` (`siteName`, `locale`, `type: 'website'`, `images`). À spreader dans **chaque** `openGraph` de page pour contourner le shallow-merge Next.js qui écrase les champs du `layout.tsx` dès qu'une page redéfinit `openGraph`.
+
+### Corrigé
+- **OG type manquant** sur 15 pages : SEOQuake signalait "Open Graph type indéterminé". Cause : `metadata.openGraph` est shallowly-merged par Next.js (doc `node_modules/next/dist/docs/.../generate-metadata.md` L1328) — chaque page écrasait `type`, `siteName`, `locale` du layout. Fix : `...ogDefaults` injecté dans `openGraph` de toutes les pages statiques + `blog/[slug]` + `cas-clients/[slug]`. `blog/[slug]` conserve `type: 'article'` positionné après le spread.
+- **Titres trop longs (>70 car.)** raccourcis sur 3 pages :
+  - `agence-media` : 85 → 60 car. — "Agence Média — Plan média & performance publicitaire | DARWIN"
+  - `agence-media/generation-de-leads` : 82 → 67 car. — "Génération de leads B2B & B2C — Méthodes qui convertissent | DARWIN"
+  - `.../marketing-strategique-vs-marketing-operationnel` : 95 → 69 car. — "Marketing stratégique vs opérationnel — Vision & performance | DARWIN"
+
+### À noter
+- Warning SEOQuake "microformats" = **faux positif** : JSON-LD déjà présent sur toutes les pages (FAQPage, Service, Breadcrumb, Article, CaseStudy). Google privilégie JSON-LD depuis ~2015.
+- Warning SEOQuake "canonical inaccessible" sera résolu au basculement DNS.
+
+---
+
 ## [Session 10] — Section agence-media, newsletter Brevo & template niveau 3
 
 ### Brevo — ✅ connecté (aucune variable d'environnement requise)

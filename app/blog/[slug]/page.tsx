@@ -12,6 +12,7 @@ import ZoomImage from '../../components/ZoomImage'
 import { BLOG_ARTICLES, getArticleBySlug, formatDate } from '../../data/blog'
 import NewsletterSidebar from '../../components/NewsletterSidebar'
 import { articleJsonLd } from '../../lib/jsonld'
+import { ogDefaults } from '../../lib/og'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -32,8 +33,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: article.excerpt,
     alternates: { canonical: `/blog/${article.slug}` },
     openGraph: {
+      ...ogDefaults,
       title: article.title,
       description: article.excerpt,
+      url: `https://darwin-agency.fr/blog/${article.slug}`,
       images: [{ url: article.heroImg, width: 1200, height: 630, alt: article.title }],
       type: 'article',
       publishedTime: article.date,

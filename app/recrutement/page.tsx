@@ -3,15 +3,17 @@ import Link from 'next/link'
 import Image from 'next/image'
 import OffreCard from './OffreCard'
 import { DARWIN_YEARS } from '../lib/darwin'
+import { ogDefaults } from '../lib/og'
 
 export const metadata: Metadata = {
   title: "Rejoindre DARWIN — Offres d'emploi à Aix-en-Provence",
   description: "DARWIN recrute des experts en marketing digital : SEO, SEA, SMA, Analytics. Découvrez nos offres et rejoignez une équipe de 30+ experts seniors à Aix-en-Provence.",
   alternates: { canonical: '/recrutement' },
   openGraph: {
+    ...ogDefaults,
     title: "Rejoindre DARWIN — Offres d'emploi",
     description: "Rejoignez une équipe de 30+ experts seniors. SEO, SEA, SMA, Analytics à Aix-en-Provence.",
-    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630, alt: 'DARWIN Recrutement' }],
+    url: 'https://darwin-agency.fr/recrutement',
   },
 }
 
@@ -145,34 +147,42 @@ const valeurs = [
 
 const avantages = [
   {
-    id: '01',
-    titre: 'Bureaux & cadre de vie',
-    items: ["Open-space lumineux et grande terrasse avec BBQ", "Jardin avec pétanque, ping-pong et transats", "Parking privé + arrêt de bus à proximité"],
+    label: 'Mutuelle santé',
+    value: 'Prise en charge à 100% par DARWIN',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 12L14 3l11 9v13H3V12z" />
-        <rect x="10" y="18" width="8" height="8" />
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 21S3 14.5 3 8.5a5.5 5.5 0 0 1 9-4.2A5.5 5.5 0 0 1 21 8.5C21 14.5 12 21 12 21z" />
       </svg>
     ),
   },
   {
-    id: '02',
-    titre: 'Social & bien-être',
-    items: ["Mutuelle santé prise en charge à 100% par DARWIN", "Séminaires d'équipe et events réguliers", "Label RSE Ecovadis Silver"],
+    label: 'Formations continues',
+    value: 'Sur tous les leviers digitaux',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14 24S4 17 4 10a6 6 0 0 1 10-4.5A6 6 0 0 1 24 10c0 7-10 14-10 14z" />
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 7l9-4 9 4-9 4-9-4z" />
+        <path d="M7 9v5c0 1.5 2.5 3 5 3s5-1.5 5-3V9" />
       </svg>
     ),
   },
   {
-    id: '03',
-    titre: 'Carrière & formation',
-    items: ["Formations continues sur tous les leviers digitaux", "Accès aux certifications Google, Meta, Microsoft", "Évolution rapide dans une structure à taille humaine"],
+    label: 'Certifications',
+    value: 'Google, Meta, Microsoft',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="4,22 10,14 16,18 24,8" />
-        <polyline points="19,8 24,8 24,13" />
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="9" r="6" />
+        <polyline points="9,9 11,11 15,7" />
+        <path d="M8 15l-2 6 6-3 6 3-2-6" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Évolution rapide',
+    value: 'Structure à taille humaine',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="3,17 9,11 13,15 21,7" />
+        <polyline points="16,7 21,7 21,12" />
       </svg>
     ),
   },
@@ -310,31 +320,234 @@ export default function RecrutementPage() {
         </div>
       </section>
 
-      {/* ─── AVANTAGES ─── */}
-      <section style={{ background: '#0a0a0a', padding: '80px 24px' }}>
+      {/* ─── HAPPY AT WORK ─── */}
+      <section style={{ background: '#fafafa', padding: '96px 24px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <div style={{ marginBottom: 56 }}>
-            <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#555', marginBottom: 16 }}>
-              Pourquoi nous rejoindre
-            </p>
-            <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3.2rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: 0, color: '#fff' }}>
-              CE QU&apos;ON VOUS OFFRE
+          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 72, alignItems: 'center' }}>
+
+            {/* Image */}
+            <div style={{ position: 'relative', aspectRatio: '4 / 5', overflow: 'hidden', background: '#0a0a0a' }}>
+              <Image
+                src="/images/team/happy-at-work.jpg"
+                alt="Happy At Work chez DARWIN — épanouissement et cohésion d'équipe"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                sizes="(max-width: 900px) 100vw, 45vw"
+              />
+              <div style={{ position: 'absolute', left: 24, bottom: 24, background: '#FFF127', padding: '10px 16px', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#0a0a0a' }}>
+                Happy At Work
+              </div>
+            </div>
+
+            {/* Texte */}
+            <div>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 24 }}>
+                <span style={{ display: 'inline-block', width: 32, height: 3, background: '#FFF127' }} />
+                <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#0a0a0a' }}>Notre approche RH</span>
+              </div>
+              <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: '0 0 28px', color: '#0a0a0a' }}>
+                CULTIVER L&apos;ÉPANOUISSEMENT<br />ET LA COHÉSION
+              </h2>
+              <p
+                style={{ fontSize: '1rem', lineHeight: 1.8, color: '#444', margin: '0 0 40px', maxWidth: 620 }}
+                dangerouslySetInnerHTML={{ __html: "Nous proposons un <strong>environnement professionnel stimulant</strong>. Le <strong>bien-être et la sécurité</strong> de chacun sont prioritaires. Notre approche &lsquo;<strong>Happy At Work</strong>&rsquo; combine <strong>confort, flexibilité et développement professionnel</strong>." }}
+              />
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
+                <div style={{ borderLeft: '3px solid #FFF127', paddingLeft: 22 }}>
+                  <h3 className="font-anton" style={{ fontSize: '1.1rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 10px', letterSpacing: '0.02em' }}>Cadre de travail</h3>
+                  <p
+                    style={{ fontSize: '0.92rem', lineHeight: 1.75, color: '#555', margin: 0 }}
+                    dangerouslySetInnerHTML={{ __html: "<strong>Espaces collaboratifs</strong> conçus pour favoriser le partage d&rsquo;idées, <strong>terrasse aménagée</strong> (barbecue, jardin paysagé, transats), zones de détente avec <strong>cuisine équipée</strong>, <strong>salle de repos</strong> avec console de jeux et télé, et <strong>parking privatif sécurisé</strong> pour un quotidien serein." }}
+                  />
+                </div>
+
+                <div style={{ borderLeft: '3px solid #FFF127', paddingLeft: 22 }}>
+                  <h3 className="font-anton" style={{ fontSize: '1.1rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 10px', letterSpacing: '0.02em' }}>Équilibre et cohésion</h3>
+                  <p
+                    style={{ fontSize: '0.92rem', lineHeight: 1.75, color: '#555', margin: 0 }}
+                    dangerouslySetInnerHTML={{ __html: "<strong>Horaires flexibles</strong>, <strong>télétravail une journée par semaine</strong> avec mise à disposition de matériel, <strong>activités sportives régulières</strong> (pétanque, badminton, ping-pong), <strong>séminaires annuels</strong> d&rsquo;une journée suivis d&rsquo;une soirée et <strong>séminaire biennal de 3-4 jours à l&rsquo;étranger</strong> pour renforcer l&rsquo;esprit et la cohésion d&rsquo;équipe." }}
+                  />
+                </div>
+
+                <div style={{ borderLeft: '3px solid #FFF127', paddingLeft: 22 }}>
+                  <h3 className="font-anton" style={{ fontSize: '1.1rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 10px', letterSpacing: '0.02em' }}>Culture inclusive</h3>
+                  <p
+                    style={{ fontSize: '0.92rem', lineHeight: 1.75, color: '#555', margin: 0 }}
+                    dangerouslySetInnerHTML={{ __html: "<strong>Politique d&rsquo;inclusion et d&rsquo;égalité des chances</strong> (handicap, diversité, formations adaptées), <strong>parité homme/femme</strong>, <strong>lutte active contre les discriminations et le harcèlement</strong>, et <strong>respect absolu de la vie privée</strong>." }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── AGIR POUR LA PLANÈTE ─── */}
+      <section style={{ background: '#fff', padding: '96px 24px', borderTop: '1px solid #eee' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 72, alignItems: 'center' }}>
+
+            {/* Texte */}
+            <div>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 24 }}>
+                <span style={{ display: 'inline-block', width: 32, height: 3, background: '#FFF127' }} />
+                <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#0a0a0a' }}>Engagement environnemental</span>
+              </div>
+              <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: '0 0 28px', color: '#0a0a0a' }}>
+                AGIR POUR<br />LA PLANÈTE
+              </h2>
+              <p
+                style={{ fontSize: '1rem', lineHeight: 1.8, color: '#444', margin: '0 0 40px', maxWidth: 620 }}
+                dangerouslySetInnerHTML={{ __html: "Notre <strong>engagement environnemental</strong> se traduit par des <strong>actions réalisées au quotidien</strong>. Il implique l&rsquo;ensemble de nos collaborateurs dans une <strong>démarche éco-responsable globale</strong>." }}
+              />
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
+                <div style={{ borderLeft: '3px solid #FFF127', paddingLeft: 22 }}>
+                  <h3 className="font-anton" style={{ fontSize: '1.1rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 10px', letterSpacing: '0.02em' }}>Sensibilisation active</h3>
+                  <p
+                    style={{ fontSize: '0.92rem', lineHeight: 1.75, color: '#555', margin: 0 }}
+                    dangerouslySetInnerHTML={{ __html: "<strong>Formations régulières</strong> et affichages dans les locaux, <strong>communication dédiée</strong> via newsletters et supports internes pour tenir informés nos équipes de nos <strong>initiatives RSE</strong>." }}
+                  />
+                </div>
+
+                <div style={{ borderLeft: '3px solid #FFF127', paddingLeft: 22 }}>
+                  <h3 className="font-anton" style={{ fontSize: '1.1rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 10px', letterSpacing: '0.02em' }}>Impact maîtrisé</h3>
+                  <p
+                    style={{ fontSize: '0.92rem', lineHeight: 1.75, color: '#555', margin: 0 }}
+                    dangerouslySetInnerHTML={{ __html: "<strong>Politique de réduction des déchets</strong> avec tri sélectif et suppression des plastiques à usage unique, <strong>dématérialisation complète</strong> des documents et processus internes, utilisation de <strong>matériaux éco-responsables et recyclés</strong> pour l&rsquo;aménagement des locaux, et <strong>optimisation énergétique</strong> (éclairage LED, capteurs de présence, équipements basse consommation)." }}
+                  />
+                </div>
+
+                <div style={{ borderLeft: '3px solid #FFF127', paddingLeft: 22 }}>
+                  <h3 className="font-anton" style={{ fontSize: '1.1rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 10px', letterSpacing: '0.02em' }}>Mobilité durable</h3>
+                  <p
+                    style={{ fontSize: '0.92rem', lineHeight: 1.75, color: '#555', margin: 0 }}
+                    dangerouslySetInnerHTML={{ __html: "<strong>Déplacements éco-responsables</strong> encouragés avec <strong>indemnités</strong> pour les salariés utilisant le vélo ou les transports en commun, installation de <strong>bornes de recharge</strong> pour véhicules électriques sur le parking de l&rsquo;entreprise." }}
+                  />
+                </div>
+
+                <div style={{ borderLeft: '3px solid #FFF127', paddingLeft: 22 }}>
+                  <h3 className="font-anton" style={{ fontSize: '1.1rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 10px', letterSpacing: '0.02em' }}>Initiatives vertes</h3>
+                  <p
+                    style={{ fontSize: '0.92rem', lineHeight: 1.75, color: '#555', margin: 0 }}
+                    dangerouslySetInnerHTML={{ __html: "<strong>Partenariat avec des associations</strong> pour la compensation carbone, organisation de <strong>journées de bénévolat</strong> pour des actions locales comme le nettoyage d&rsquo;espaces verts et <strong>actions de sensibilisation en écoles</strong>." }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Badge Ecovadis */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20, position: 'sticky', top: 24 }}>
+              <div style={{ aspectRatio: '1 / 1', width: '100%', maxWidth: 420, background: '#fafafa', border: '1px solid #ebebeb', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 48 }}>
+                <Image
+                  src="/images/team/ecovadis-argent-2024.jpg"
+                  alt="DARWIN — Médaille Argent Ecovadis 2024"
+                  width={420}
+                  height={420}
+                  style={{ width: '100%', height: 'auto', maxWidth: 320 }}
+                />
+              </div>
+              <div style={{ textAlign: 'center', maxWidth: 360 }}>
+                <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 6px' }}>Médaille Argent 2024</p>
+                <p style={{ fontSize: '0.82rem', lineHeight: 1.6, color: '#888', margin: 0 }}>Évaluation Ecovadis — démarche RSE auditée et reconnue</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── ÉTHIQUE & RESPONSABILITÉ ─── */}
+      <section style={{ background: '#fafafa', padding: '96px 24px' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 72, alignItems: 'center' }}>
+
+            {/* Image GAELLE */}
+            <div style={{ position: 'relative', aspectRatio: '4 / 5', overflow: 'hidden', background: '#0a0a0a' }}>
+              <Image
+                src="/images/team/gaelle-ethique.jpg"
+                alt="Gaëlle — DARWIN, éthique et responsabilité"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                sizes="(max-width: 900px) 100vw, 45vw"
+              />
+              <div style={{ position: 'absolute', left: 24, bottom: 24, background: '#FFF127', padding: '10px 16px', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#0a0a0a' }}>
+                Éthique
+              </div>
+            </div>
+
+            {/* Texte */}
+            <div>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 24 }}>
+                <span style={{ display: 'inline-block', width: 32, height: 3, background: '#FFF127' }} />
+                <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#0a0a0a' }}>Gouvernance &amp; partenariats</span>
+              </div>
+              <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: '0 0 28px', color: '#0a0a0a' }}>
+                S&apos;ENGAGER AVEC ÉTHIQUE<br />ET RESPONSABILITÉ
+              </h2>
+              <p
+                style={{ fontSize: '1rem', lineHeight: 1.8, color: '#444', margin: '0 0 40px', maxWidth: 620 }}
+                dangerouslySetInnerHTML={{ __html: "Nous créons des <strong>relations durables</strong> basées sur la <strong>confiance, la transparence et le respect mutuel</strong> avec l&rsquo;ensemble de nos partenaires." }}
+              />
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
+                <div style={{ borderLeft: '3px solid #FFF127', paddingLeft: 22 }}>
+                  <h3 className="font-anton" style={{ fontSize: '1.1rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 10px', letterSpacing: '0.02em' }}>Cadre éthique solide</h3>
+                  <p
+                    style={{ fontSize: '0.92rem', lineHeight: 1.75, color: '#555', margin: 0 }}
+                    dangerouslySetInnerHTML={{ __html: "<strong>Conformité légale stricte</strong>, <strong>protection des données personnelles</strong>, <strong>sécurité au travail renforcée</strong>." }}
+                  />
+                </div>
+
+                <div style={{ borderLeft: '3px solid #FFF127', paddingLeft: 22 }}>
+                  <h3 className="font-anton" style={{ fontSize: '1.1rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 10px', letterSpacing: '0.02em' }}>Relations équitables</h3>
+                  <p
+                    style={{ fontSize: '0.92rem', lineHeight: 1.75, color: '#555', margin: 0 }}
+                    dangerouslySetInnerHTML={{ __html: "<strong>Concurrence loyale</strong>, gestion transparente des <strong>conflits d&rsquo;intérêts</strong>, <strong>lutte contre la corruption</strong>." }}
+                  />
+                </div>
+
+                <div style={{ borderLeft: '3px solid #FFF127', paddingLeft: 22 }}>
+                  <h3 className="font-anton" style={{ fontSize: '1.1rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 10px', letterSpacing: '0.02em' }}>Achats responsables</h3>
+                  <p
+                    style={{ fontSize: '0.92rem', lineHeight: 1.75, color: '#555', margin: 0 }}
+                    dangerouslySetInnerHTML={{ __html: "<strong>Sélection méticuleuse</strong> des fournisseurs éthiques, priorité aux <strong>circuits courts France/Europe</strong>, <strong>partenariats durables</strong>." }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── FEATURE BAR — SANTÉ & CARRIÈRE ─── */}
+      <section style={{ background: '#0a0a0a', padding: '56px 24px' }}>
+        <div className="rsp-2col" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.8fr 2.2fr', gap: 56, alignItems: 'center' }}>
+          <div>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
+              <span style={{ display: 'inline-block', width: 24, height: 3, background: '#FFF127' }} />
+              <span style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#FFF127' }}>En plus</span>
+            </div>
+            <h2 className="font-anton" style={{ fontSize: 'clamp(1.4rem, 2.2vw, 2rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: 0, color: '#fff' }}>
+              CE QU&apos;ON VOUS OFFRE<br />AUSSI
             </h2>
           </div>
 
-          <div className="rsp-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
-            {avantages.map((a) => (
-              <div key={a.id} style={{ padding: '36px 32px', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderTop: '4px solid #FFF127' }}>
-                <div style={{ marginBottom: 20 }}>{a.icon}</div>
-                <h3 className="font-anton" style={{ fontSize: '1.4rem', textTransform: 'uppercase', color: '#fff', marginBottom: 20, lineHeight: 1.1 }}>{a.titre}</h3>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
-                  {a.items.map(item => (
-                    <li key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: '0.85rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>
-                      <span style={{ width: 6, height: 6, background: '#FFF127', borderRadius: '50%', flexShrink: 0, marginTop: 6 }} />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+          <div className="rsp-4col" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0 }}>
+            {avantages.map((a, i) => (
+              <div
+                key={a.label}
+                style={{
+                  padding: '4px 24px',
+                  borderLeft: i > 0 ? '1px solid rgba(255,255,255,0.1)' : 'none',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 10,
+                }}
+              >
+                <div>{a.icon}</div>
+                <div className="font-anton" style={{ fontSize: '0.95rem', textTransform: 'uppercase', color: '#fff', lineHeight: 1.15, letterSpacing: '0.02em' }}>{a.label}</div>
+                <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.5 }}>{a.value}</div>
               </div>
             ))}
           </div>

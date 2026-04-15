@@ -3,15 +3,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { faqJsonLd, webPageJsonLd, breadcrumbJsonLd } from '@/app/lib/jsonld'
 import { DARWIN_YEARS } from '@/app/lib/darwin'
+import { ogDefaults } from '@/app/lib/og'
 
 export const metadata: Metadata = {
   title: "Creative Thinking Community — Collectif d'agences expertes | DARWIN",
   description: "La Creative Thinking Community réunit 4 agences complémentaires — hey!Charly, DARWIN, TBD Group et l'Atelier Imagescence — pour connecter marque, digital et création.",
   alternates: { canonical: '/creative-thinking-community' },
   openGraph: {
+    ...ogDefaults,
     title: "Creative Thinking Community — Collectif d'agences expertes | DARWIN",
     description: "4 agences expertes unies pour révéler le potentiel de chaque projet : stratégie de marque, performance digitale, création web et UX/UI.",
-    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630, alt: 'Creative Thinking Community — DARWIN' }],
+    url: 'https://darwin-agency.fr/creative-thinking-community',
   },
 }
 

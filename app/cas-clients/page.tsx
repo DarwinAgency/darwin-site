@@ -8,6 +8,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import CasClientsGrid from '../components/CasClientsGrid'
 import { DARWIN_YEARS } from '../lib/darwin'
+import { ogDefaults } from '../lib/og'
 
 // ─── METADATA ───────────────────────────────────────────
 
@@ -16,10 +17,10 @@ export const metadata: Metadata = {
   description: "Découvrez les résultats obtenus par DARWIN pour ses clients : SEO, SEA, SMA, Média, Data & Tracking, Formation. Des chiffres réels, des stratégies éprouvées.",
   alternates: { canonical: '/cas-clients' },
   openGraph: {
+    ...ogDefaults,
     title: 'Cas Clients — Résultats concrets | DARWIN',
     description: "400+ clients accompagnés. Découvrez nos études de cas en SEO, SEA, SMA, Média et Data.",
     url: 'https://darwin-agency.fr/cas-clients',
-    images: [{ url: 'https://darwin-agency.fr/images/og-default.jpg', width: 1200, height: 630, alt: 'DARWIN — Cas Clients' }],
   },
 }
 

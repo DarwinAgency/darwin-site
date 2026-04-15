@@ -3,14 +3,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from '../components/ContactForm'
 import { localBusinessJsonLd, faqJsonLd } from '../lib/jsonld'
+import { ogDefaults } from '../lib/og'
 
 export const metadata: Metadata = {
   title: "Contactez DARWIN — Parlons de votre projet digital",
   description: "Vous avez un projet digital ? Discutons-en. DARWIN, agence marketing performance à Aix-en-Provence. +33 (0)4 13 57 09 00",
   alternates: { canonical: '/contact' },
   openGraph: {
+    ...ogDefaults,
     title: "Contactez DARWIN — Parlons de votre projet digital",
     description: "Vous avez un projet digital ? Discutons-en. DARWIN, agence marketing performance à Aix-en-Provence.",
+    url: 'https://darwin-agency.fr/contact',
   },
 }
 

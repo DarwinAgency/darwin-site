@@ -3,16 +3,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { DARWIN_YEARS } from '../lib/darwin'
 import { faqJsonLd, serviceJsonLd, breadcrumbJsonLd } from '../lib/jsonld'
+import { ogDefaults } from '../lib/og'
 
 export const metadata: Metadata = {
-  title: "Agence Média — Chaque levier média joue un rôle précis dans la performance | DARWIN",
+  title: "Agence Média — Plan média & performance publicitaire | DARWIN",
   description: "Notre agence média vous accompagne dans la définition de votre stratégie médias, la planification et l'achat d'espaces. Audit, plan média, leads : nos expertises.",
   alternates: { canonical: '/agence-media' },
   openGraph: {
-    title: "Agence Média — Chaque levier média joue un rôle précis dans la performance | DARWIN",
+    ...ogDefaults,
+    title: "Agence Média — Plan média & performance publicitaire | DARWIN",
     description: "Agence média experte depuis 2003. Programmatique, display, TV segmentée, DOOH, emailing, SMS/RCS. Structurez vos investissements publicitaires.",
     url: 'https://darwin-agency.fr/agence-media',
-    images: [{ url: 'https://darwin-agency.fr/images/og-default.jpg', width: 1200, height: 630, alt: "DARWIN Agence Média" }],
   },
 }
 

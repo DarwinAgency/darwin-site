@@ -10,6 +10,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { breadcrumbJsonLd, webPageJsonLd } from '../../../lib/jsonld'
 import NewsletterCTA from '../../../components/NewsletterCTA'
+import { ogDefaults } from '../../../lib/og'
 
 // ─── METADATA ────────────────────────────────────────────────────────────────
 
@@ -18,10 +19,10 @@ export const metadata: Metadata = {
   description: 'Comment trouver des leads qualifiés ? SEO, SEA, social ads, emailing : les meilleures sources, les pièges de l\'achat de leads et comment mesurer leur qualité.',
   alternates: { canonical: '/agence-media/generation-de-leads/comment-trouver-des-leads' },
   openGraph: {
+    ...ogDefaults,
     title: 'Comment Trouver des Leads Qualifiés ? Méthodes et Canaux',
     description: 'Comment trouver des leads qualifiés ? SEO, SEA, social ads, emailing : les meilleures sources, les pièges de l\'achat de leads et comment mesurer leur qualité.',
     url: 'https://darwin-agency.fr/agence-media/generation-de-leads/comment-trouver-des-leads',
-    images: [{ url: 'https://darwin-agency.fr/images/og-default.jpg', width: 1200, height: 630, alt: 'Comment Trouver des Leads — DARWIN' }],
   },
 }
 

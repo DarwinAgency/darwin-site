@@ -9,18 +9,19 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { DARWIN_YEARS } from '../../lib/darwin'
 import { serviceJsonLd, breadcrumbJsonLd } from '../../lib/jsonld'
+import { ogDefaults } from '../../lib/og'
 
 // ─── METADATA ───────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'Génération de Leads : Stratégies et Méthodes pour Attirer des Prospects | DARWIN',
+  title: 'Génération de leads B2B & B2C — Méthodes qui convertissent | DARWIN',
   description: "La génération de leads ne se résume pas à capter des emails. DARWIN structure votre tunnel d'acquisition : attraction, qualification, conversion — du premier contact à la signature.",
   alternates: { canonical: '/agence-media/generation-de-leads' },
   openGraph: {
-    title: 'Génération de Leads : Stratégies et Méthodes pour Attirer des Prospects | DARWIN',
+    ...ogDefaults,
+    title: 'Génération de leads B2B & B2C — Méthodes qui convertissent | DARWIN',
     description: "Dispositif intégré de génération de leads qualifiés : du premier contact publicitaire à la signature. SEO, SEA, emailing, SMS, social ads, programmatique.",
     url: 'https://darwin-agency.fr/agence-media/generation-de-leads',
-    images: [{ url: 'https://darwin-agency.fr/images/og-default.jpg', width: 1200, height: 630, alt: 'Génération de Leads DARWIN' }],
   },
 }
 

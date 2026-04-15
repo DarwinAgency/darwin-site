@@ -2,14 +2,17 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { DARWIN_YEARS } from '../lib/darwin'
+import { ogDefaults } from '../lib/og'
 
 export const metadata: Metadata = {
   title: "L'Agence Darwin — Expertise digitale depuis 2003 | Darwin Agency",
   description: `Découvrez Darwin Agency : ${DARWIN_YEARS} ans d'expertise en performance digitale, +400 clients accompagnés, 30+ experts seniors. Google Partner Premier, Meta Business Partner.`,
   alternates: { canonical: '/agence' },
   openGraph: {
+    ...ogDefaults,
     title: "L'Agence Darwin — Expertise digitale depuis 2003",
     description: `Découvrez Darwin Agency : ${DARWIN_YEARS} ans d'expertise en performance digitale, +400 clients accompagnés, 30+ experts seniors.`,
+    url: 'https://darwin-agency.fr/agence',
     images: [{ url: '/images/agence-hero.jpg', width: 1200, height: 630, alt: "Darwin Agency — L'équipe" }],
   },
 }

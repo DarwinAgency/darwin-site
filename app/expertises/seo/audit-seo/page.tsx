@@ -8,6 +8,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DARWIN_YEARS } from '../../../lib/darwin'
 import { faqJsonLd, serviceJsonLd, breadcrumbJsonLd } from '../../../lib/jsonld'
+import { ogDefaults } from '../../../lib/og'
 
 // ─── METADATA ───────────────────────────────────────────
 
@@ -16,10 +17,10 @@ export const metadata: Metadata = {
   description: "Identifiez ce qui freine votre visibilité sur Google et les IA. DARWIN réalise votre audit SEO complet : technique, sémantique, netlinking et GEO. Livrable actionnable sous 10 jours.",
   alternates: { canonical: '/expertises/seo/audit-seo' },
   openGraph: {
+    ...ogDefaults,
     title: 'Audit SEO complet — Technique, Contenu, Netlinking & IA | DARWIN',
     description: "Diagnostic SEO complet par DARWIN : crawl technique, analyse sémantique, profil de liens et visibilité dans les moteurs génératifs. Rapport livré en 10 jours.",
     url: 'https://darwin-agency.fr/expertises/seo/audit-seo',
-    images: [{ url: 'https://darwin-agency.fr/images/og-default.jpg', width: 1200, height: 630, alt: 'Audit SEO DARWIN' }],
   },
 }
 

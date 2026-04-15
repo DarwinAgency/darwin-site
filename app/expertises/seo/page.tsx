@@ -2,16 +2,17 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { DARWIN_YEARS } from '../../lib/darwin'
+import { ogDefaults } from '../../lib/og'
 
 export const metadata: Metadata = {
   title: "Agence SEO — Référencement naturel & GEO | DARWIN",
   description: "DARWIN, agence SEO experte depuis 2003. Audit SEO, SEO technique, rédaction, netlinking, GEO (Generative Engine Optimization). 400+ clients accompagnés.",
   alternates: { canonical: '/expertises/seo' },
   openGraph: {
+    ...ogDefaults,
     title: "Agence SEO — Référencement naturel & GEO | DARWIN",
     description: "Expert SEO depuis 2003. Audit, technique, contenu, netlinking et GEO pour être visible dans Google et les LLMs.",
     url: 'https://darwin-agency.fr/expertises/seo',
-    images: [{ url: 'https://darwin-agency.fr/images/og-default.jpg', width: 1200, height: 630, alt: "DARWIN Agence SEO" }],
   },
 }
 

@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { CAS_CLIENTS, getCasBySlug } from '../../data/cas-clients'
 import { caseStudyJsonLd, breadcrumbJsonLd } from '../../lib/jsonld'
+import { ogDefaults } from '../../lib/og'
 
 // ─── TYPES ──────────────────────────────────────────────
 
@@ -31,6 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: cas.excerpt,
     alternates: { canonical: `/cas-clients/${cas.slug}` },
     openGraph: {
+      ...ogDefaults,
       title: `Cas ${cas.client} | DARWIN`,
       description: cas.excerpt,
       url: `https://darwin-agency.fr/cas-clients/${cas.slug}`,

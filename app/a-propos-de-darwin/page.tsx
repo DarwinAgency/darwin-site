@@ -2,16 +2,17 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { DARWIN_YEARS } from '../lib/darwin'
+import { ogDefaults } from '../lib/og'
 
 export const metadata: Metadata = {
   title: "DARWIN — L'agence marketing digital depuis 2003",
   description: `Découvrez DARWIN : 30+ experts seniors, 400+ clients accompagnés, ${DARWIN_YEARS} ans de performance digitale à Aix-en-Provence.`,
   alternates: { canonical: '/a-propos-de-darwin' },
   openGraph: {
+    ...ogDefaults,
     title: "DARWIN — L'agence marketing digital depuis 2003",
     description: `30+ experts seniors, 400+ clients accompagnés, ${DARWIN_YEARS} ans de performance digitale.`,
     url: 'https://darwin-agency.fr/a-propos-de-darwin',
-    images: [{ url: 'https://darwin-agency.fr/images/og-default.jpg', width: 1200, height: 630, alt: "DARWIN — L'agence" }],
   },
 }
 

@@ -9,6 +9,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { DARWIN_YEARS } from '../../lib/darwin'
 import { serviceJsonLd, breadcrumbJsonLd } from '../../lib/jsonld'
+import { ogDefaults } from '../../lib/og'
 
 // ─── METADATA ───────────────────────────────────────────
 
@@ -17,10 +18,10 @@ export const metadata: Metadata = {
   description: "Identifiez ce qui performe, ce qui stagne et ce qui coûte sans produire. DARWIN réalise votre audit de stratégie digitale : chaque levier passé au crible, plan d'action actionnable.",
   alternates: { canonical: '/agence-media/audit-strategie-digitale' },
   openGraph: {
+    ...ogDefaults,
     title: 'Audit Stratégie Digitale — Optimisez votre Mix Marketing | DARWIN',
     description: "Diagnostic complet de votre présence digitale : SEO, SEA, emailing, social, contenu. Recommandations chiffrées et plan d'action priorisé.",
     url: 'https://darwin-agency.fr/agence-media/audit-strategie-digitale',
-    images: [{ url: 'https://darwin-agency.fr/images/og-default.jpg', width: 1200, height: 630, alt: 'Audit Stratégie Digitale DARWIN' }],
   },
 }
 
