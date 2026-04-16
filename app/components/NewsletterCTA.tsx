@@ -43,7 +43,7 @@ export default function NewsletterCTA() {
 
   if (status === 'success') {
     return (
-      <div style={{ background: '#FFF127', padding: '48px 56px', margin: '64px 0', display: 'flex', alignItems: 'center', gap: 32 }}>
+      <div className="nl-cta-root" style={{ background: '#FFF127', padding: '48px 24px', margin: '64px 0', display: 'flex', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
         <div style={{ width: 56, height: 56, background: '#0a0a0a', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
             <path d="M4 11l5 5L18 7" stroke="#FFF127" strokeWidth="2.5" strokeLinecap="square"/>
@@ -62,11 +62,11 @@ export default function NewsletterCTA() {
   }
 
   return (
-    <div style={{ background: '#FFF127', margin: '64px 0', overflow: 'hidden' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+    <div className="nl-cta-root" style={{ background: '#FFF127', margin: '64px 0', overflow: 'hidden' }}>
+      <div className="nl-cta-grid">
 
         {/* Colonne gauche — accroche */}
-        <div style={{ padding: '52px 56px', borderRight: '1px solid rgba(0,0,0,0.1)' }}>
+        <div className="nl-cta-left">
           <p style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.4)', margin: '0 0 16px' }}>
             NEWSLETTER DARWIN
           </p>
@@ -91,7 +91,7 @@ export default function NewsletterCTA() {
         </div>
 
         {/* Colonne droite — formulaire */}
-        <div style={{ padding: '52px 56px', background: '#0a0a0a', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <div className="nl-cta-right">
           <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', margin: '0 0 28px' }}>
             REJOINDRE LA LISTE
           </p>
@@ -193,7 +193,37 @@ export default function NewsletterCTA() {
 
       </div>
 
-      <style>{`@keyframes nl-spin { to { transform: rotate(360deg); } }`}</style>
+      <style>{`
+        @keyframes nl-spin { to { transform: rotate(360deg); } }
+        .nl-cta-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        .nl-cta-left {
+          padding: 52px 56px;
+          border-right: 1px solid rgba(0,0,0,0.1);
+        }
+        .nl-cta-right {
+          padding: 52px 56px;
+          background: #0a0a0a;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        @media (max-width: 768px) {
+          .nl-cta-grid {
+            grid-template-columns: 1fr;
+          }
+          .nl-cta-left {
+            padding: 36px 24px;
+            border-right: none;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+          }
+          .nl-cta-right {
+            padding: 36px 24px;
+          }
+        }
+      `}</style>
     </div>
   )
 }
