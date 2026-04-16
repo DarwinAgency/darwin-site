@@ -29,10 +29,9 @@ export const metadata: Metadata = {
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 
 const comparisonRows = [
-  { label: 'Horizon',              strategic: 'Long terme (1 à 3 ans)',              operational: 'Court terme (semaine, mois)' },
-  { label: 'Question clé',         strategic: 'Où allons-nous et pourquoi ?',        operational: 'Comment y allons-nous ?' },
-  { label: 'Outils',               strategic: 'SWOT, Segmentation, Positionnement',  operational: 'Campagnes, Contenus, Leviers payants' },
-  { label: 'Expert de référence',  strategic: 'Philip Kotler (Vision)',              operational: 'Jerome McCarthy (Mix)' },
+  { label: 'Horizon',              strategic: '1 à 3 ans',                                            operational: 'Semaine ou mois' },
+  { label: 'Question clé',         strategic: 'Où allons-nous et pourquoi ?',                         operational: 'Comment y allons-nous avec le budget disponible ?' },
+  { label: 'Outils',               strategic: 'SWOT, segmentation, positionnement, mix marketing',    operational: 'Campagnes, contenus, leviers payants et leurs KPIs propres' },
 ]
 
 // ─── JSON-LD ──────────────────────────────────────────────────────────────────
@@ -163,10 +162,10 @@ export default function MarketingStrategiqueVsOperationnelPage() {
             </h1>
 
             <p className="body-text" style={{ fontSize: '1rem', color: '#555', lineHeight: 1.8, marginBottom: 16, maxWidth: 460 }}>
-              On active des campagnes marketing. On met en ligne, on teste chaque action opérationnelle, on optimise la performance. Et pourtant, malgré l&apos;agitation technique, les résultats déçoivent et ne répondent pas aux attentes. Ce sentiment de &quot;faire du surplace&quot; cache presque toujours le même problème : une confusion entre <strong>marketing opérationnel</strong> et <strong>marketing stratégique</strong>.
+              On lance des campagnes, on teste, on optimise. Et les résultats déçoivent. Ce sentiment de «&nbsp;faire du surplace&nbsp;» cache presque toujours le même angle mort : une confusion entre <strong>marketing stratégique et opérationnel</strong>. L&apos;un définit le cap — à qui vous parlez, pourquoi, avec quelle promesse. L&apos;autre exécute — sur quels canaux, avec quels formats, à quel rythme. Confondre les deux, c&apos;est courir vite dans la mauvaise direction.
             </p>
             <p className="body-text" style={{ fontSize: '1rem', color: '#555', lineHeight: 1.8, marginBottom: 40, maxWidth: 460 }}>
-              Pour réussir, il faut comprendre que l&apos;un définit le &quot;pourquoi&quot; (la vision de <strong>Philip Kotler</strong>), tandis que l&apos;autre gère le &quot;comment&quot; (l&apos;exécution des <strong>4P de McCarthy</strong>).
+              Cette page distingue les deux registres, montre comment ils s&apos;articulent dans une stratégie digitale rentable, et pointe les erreurs qui plombent le plus souvent la performance des entreprises.
             </p>
 
             <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
@@ -294,23 +293,12 @@ export default function MarketingStrategiqueVsOperationnelPage() {
 
           <div>
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: '#0a0a0a', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le marketing stratégique est la partie immergée de l'iceberg dans toute entreprise orientée marché. Il intervient <strong>en amont de toute action</strong>, bien avant de choisir un canal ou de rédiger un message." }} />
+            <p className="body-text" style={{ fontSize: '1.05rem', color: '#0a0a0a', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le marketing stratégique intervient <strong>en amont de toute action</strong>. Avant le choix d'un canal, avant la rédaction d'un message, avant la première enchère Google Ads. C'est le travail qui répond à trois questions : qui sont mes clients prioritaires, quelle valeur unique je leur propose, et pourquoi choisiraient-ils mon offre plutôt que celle d'un concurrent." }} />
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: '#0a0a0a', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Comme le soulignait <strong>Theodore Levitt</strong> avec son concept de \"Myopie du Marketing\", l'entreprise doit d'abord définir son marché par le besoin client plutôt que par son produit. Ce travail de fond repose sur :" }} />
-            <ul style={{ margin: '0 0 28px', paddingLeft: 24 }}>
-              <li className="body-text" style={{ fontSize: '1.05rem', color: '#0a0a0a', lineHeight: 1.9, marginBottom: 8 }}>
-                <strong>L&apos;analyse approfondie</strong> : Étude du marché et de l&apos;environnement concurrentiel (via les 5 forces de <strong>Michael Porter</strong>).
-              </li>
-              <li className="body-text" style={{ fontSize: '1.05rem', color: '#0a0a0a', lineHeight: 1.9, marginBottom: 8 }}>
-                <strong>La segmentation et le ciblage</strong> : Identifier à qui s&apos;adresser en priorité.
-              </li>
-              <li className="body-text" style={{ fontSize: '1.05rem', color: '#0a0a0a', lineHeight: 1.9 }}>
-                <strong>Le positionnement</strong> : Définir une proposition de valeur unique pour que l&apos;offre soit choisie face aux concurrents.
-              </li>
-            </ul>
+            <p className="body-text" style={{ fontSize: '1.05rem', color: '#0a0a0a', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Ce travail s'appuie sur des référentiels éprouvés : les cinq forces de <strong>Michael Porter</strong> pour cartographier la concurrence, une matrice SWOT pour croiser forces internes et opportunités de marché, une segmentation qui hiérarchise les cibles par potentiel et accessibilité. Le livrable, ce n'est pas un slide deck de 80 pages. C'est une feuille de route tenable : trois à cinq priorités claires, un positionnement défendable, des objectifs chiffrés." }} />
             <div style={{ background: 'rgba(255,255,255,0.6)', borderLeft: '3px solid #0a0a0a', padding: '24px 28px' }}>
               {/* eslint-disable-next-line react/no-danger */}
-              <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "C'est un travail stratégique sur le long terme, structuré autour d'un plan clair. Sans cette base, vous pouvez affiner une campagne Google Ads pendant des semaines sur un segment qui ne convertira jamais : <strong>le problème n'est pas l'exécution, mais le fait de s'adresser aux mauvaises personnes</strong>." }} />
+              <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "En pratique, le marketing stratégique se relit tous les douze à dix-huit mois. Il s'ajuste, il ne se réécrit pas chaque trimestre au gré des tendances. Sans ce socle, vous pouvez affiner une campagne SEA pendant six semaines sur un segment qui ne convertira jamais — <strong>le problème n'est pas l'exécution, mais la cible</strong>." }} />
             </div>
           </div>
         </div>
@@ -324,23 +312,12 @@ export default function MarketingStrategiqueVsOperationnelPage() {
 
           <div>
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le marketing opérationnel est la partie visible et concrète : campagnes, contenus, emails, annonces et actions de communication. C'est l'ensemble des leviers déployés pour atteindre les objectifs fixés (<strong>SEO, SEA, Social Ads, emailing</strong>)." }} />
+            <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le marketing opérationnel est la partie visible. Les campagnes, les contenus, les emails, les annonces, les plans média. C'est ce qu'on voit tourner au quotidien." }} />
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Ici, on applique le célèbre <strong>Marketing Mix (les 4P) de McCarthy</strong> pour décliner la stratégie en plan d'action concret et mesurable sur le terrain :" }} />
-            <ul style={{ margin: '0 0 28px', paddingLeft: 24 }}>
-              <li className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, marginBottom: 8 }}>
-                <strong>Produit &amp; Prix</strong> : L&apos;offre adaptée au segment choisi.
-              </li>
-              <li className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, marginBottom: 8 }}>
-                <strong>Distribution (Place)</strong> : Le choix des canaux, notamment le e-commerce et les marketplaces.
-              </li>
-              <li className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9 }}>
-                <strong>Communication (Promotion)</strong> : Le message et les formats publicitaires.
-              </li>
-            </ul>
+            <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Il s'appuie historiquement sur le <strong>Marketing Mix — les 4P de Jérôme McCarthy</strong> : Produit, Prix, Place (distribution), Promotion (communication). Ces quatre leviers se déclinent aujourd'hui dans un environnement digital dense : SEO et SEA pour la visibilité en intention, Social Ads pour la notoriété et le retargeting, emailing et SMS/RCS pour la conversion, programmatique pour le reach qualifié, contenu pour la considération." }} />
             <div style={{ borderLeft: '3px solid #FFF127', padding: '24px 28px', background: 'rgba(255,255,255,0.06)' }}>
               {/* eslint-disable-next-line react/no-danger */}
-              <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "À l'ère digitale, ce marketing doit être \"remarquable\" pour briser le bruit ambiant, comme le préconise <strong>Seth Godin</strong>. Un bon marketing opérationnel s'appuie sur la donnée et chaque outil d'analyse, s'ajuste en continu et délivre des <strong>résultats mesurables (CA, Leads, Trafic)</strong> au service de la performance." }} />
+              <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "Le marketing opérationnel a une exigence de mesure. Chaque euro engagé doit pouvoir se relier à un résultat : leads qualifiés, chiffre d'affaires, panier moyen, coût par acquisition. C'est aussi ce qui le rend attirant — et trompeur. Le risque, c'est de prendre le tableau de bord pour la stratégie. <strong>Un pilotage fin sur une mauvaise cible reste un pilotage sur une mauvaise cible.</strong>" }} />
             </div>
           </div>
 
@@ -432,7 +409,9 @@ export default function MarketingStrategiqueVsOperationnelPage() {
           </div>
 
           {/* eslint-disable-next-line react/no-danger */}
-          <p className="body-text" style={{ fontSize: '1rem', color: '#555', lineHeight: 1.85, maxWidth: 720, margin: '0 0 72px' }} dangerouslySetInnerHTML={{ __html: "<strong>La stratégie sans exécution reste une note d'intention dans un tiroir. L'exécution sans stratégie est une \"agitation bien organisée\".</strong>" }} />
+          <p className="body-text" style={{ fontSize: '1rem', color: '#555', lineHeight: 1.85, maxWidth: 720, margin: '0 0 24px' }} dangerouslySetInnerHTML={{ __html: "Ce qui lie les deux, c'est la boucle. La stratégie descend vers l'exécution sous forme de priorités claires. L'exécution remonte vers la stratégie sous forme de signaux : taux de clic, objections commerciales, audiences qui convertissent mieux que prévu, messages qui tombent à plat." }} />
+          {/* eslint-disable-next-line react/no-danger */}
+          <p className="body-text" style={{ fontSize: '1rem', color: '#555', lineHeight: 1.85, maxWidth: 720, margin: '0 0 72px' }} dangerouslySetInnerHTML={{ __html: "<strong>La stratégie sans exécution reste une note d'intention dans un tiroir. L'exécution sans stratégie est une agitation bien organisée.</strong>" }} />
 
           {/* ─── SCHÉMA D'ARTICULATION ───────────────────────────────────────── */}
           <div style={{ marginTop: 0 }}>
@@ -520,10 +499,10 @@ export default function MarketingStrategiqueVsOperationnelPage() {
 
           <div>
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "L'échec survient généralement lorsque la stratégie ne \"descend\" pas vers chaque équipe opérationnelle, laissant les professionnels <strong>sans approche claire ni meilleur choix d'exécution</strong>." }} />
+            <p className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "L'échec survient le plus souvent quand la stratégie ne « descend » pas vers les équipes opérationnelles. Le CODIR a validé un positionnement en janvier. En juin, l'équipe performance en ignore l'essentiel et continue de pousser les audiences qui « tournent bien ». Résultat : un pilotage opérationnel efficace sur un terrain mal choisi." }} />
             <div style={{ background: '#f5f5f5', padding: '32px 36px', borderLeft: '3px solid #0a0a0a' }}>
               {/* eslint-disable-next-line react/no-danger */}
-              <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "À l'inverse, on tombe souvent dans le piège de la réactivité pure : optimiser un coût d'acquisition (CPA) sans savoir si l'on parle à la bonne cible, ou publier du contenu sans objectif de conversion clair. Comme le suggère <strong>David Aaker</strong>, si vos actions opérationnelles ne nourrissent pas votre <strong>capital de marque (Brand Equity)</strong>, vous détruisez de la valeur à long terme au profit de gains immédiats." }} />
+              <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "L'autre dérive est symétrique. La réactivité pure : optimiser un coût d'acquisition sans savoir si l'on parle à la bonne cible, ou publier du contenu sans objectif de conversion clair. Quand vos actions opérationnelles ne nourrissent pas votre capital de marque, vous détruisez de la valeur à long terme au profit de gains immédiats." }} />
             </div>
           </div>
         </div>
@@ -548,19 +527,19 @@ export default function MarketingStrategiqueVsOperationnelPage() {
             {[
               {
                 num: '01',
-                text: "La confusion entre les deux niveaux est de loin l'erreur la plus répandue. On croit faire de la stratégie parce qu'on a planifié ses publications LinkedIn pour le trimestre. <strong>Planifier une campagne ou un plan de communication, c'est de l'opérationnel. Décider à qui on s'adresse et pourquoi, c'est stratégique.</strong> Ce n'est pas le même travail, et ce n'est pas la même posture.",
+                text: "<strong>La confusion entre les deux niveaux</strong> reste l'erreur la plus répandue. On croit faire de la stratégie parce qu'on a planifié ses publications LinkedIn pour le trimestre. Planifier une campagne ou un plan de communication, c'est de l'opérationnel. Décider à qui on s'adresse et pourquoi, c'est stratégique. Ce n'est pas le même travail, et ce n'est pas la même posture.",
               },
               {
                 num: '02',
-                text: "Vient ensuite la tentation de brûler l'étape stratégique pour aller plus vite. La pression du court terme est réelle, on comprend. Pourtant, <strong>une semaine d'analyse sérieuse en amont peut éviter des mois de budget investi dans la mauvaise direction</strong>. Ce n'est pas du temps perdu. C'est souvent le <strong>meilleur investissement du trimestre</strong>.",
+                text: "Vient ensuite <strong>la tentation de brûler l'étape stratégique pour aller plus vite</strong>. La pression du court terme est réelle. Pourtant, une semaine d'analyse sérieuse en amont évite des mois de budget investi dans la mauvaise direction. C'est souvent le meilleur investissement du trimestre.",
               },
               {
                 num: '03',
-                text: "Il y a aussi l'erreur inverse : réviser la stratégie à chaque nouvelle tendance, chaque changement d'algorithme, chaque rapport de benchmarks. <strong>Le marketing stratégique n'est pas une météo.</strong> Il se relit, il s'ajuste, mais il <strong>ne se réécrit pas chaque trimestre</strong>. Si vos fondamentaux bougent aussi souvent, c'est qu'ils n'étaient pas encore vraiment des fondamentaux.",
+                text: "Il y a aussi <strong>l'erreur inverse : réviser la stratégie à chaque nouvelle tendance</strong>, chaque changement d'algorithme, chaque rapport de benchmarks. Le marketing stratégique n'est pas une météo. Il se relit, il s'ajuste, mais il ne se réécrit pas chaque trimestre. Si vos fondamentaux bougent aussi souvent, c'est qu'ils n'étaient pas encore vraiment des fondamentaux.",
               },
               {
                 num: '04',
-                text: "Enfin, négliger le feedback du terrain. Les campagnes, les taux de clics, les objections commerciales : tout cela dit quelque chose sur vos cibles, vos messages, votre positionnement. <strong>Ces signaux doivent remonter et alimenter la réflexion stratégique.</strong> Ce n'est pas automatique. Ça se construit.",
+                text: "Dernier piège, plus silencieux : <strong>négliger le feedback du terrain</strong>. Les campagnes, les taux de clics, les objections commerciales disent quelque chose sur vos cibles, vos messages, votre positionnement. Ces signaux doivent remonter et alimenter la réflexion stratégique. Ce n'est pas automatique. Ça se construit.",
               },
             ].map((piege) => (
               <div key={piege.num} style={{ background: '#fff', padding: '44px 40px' }}>
@@ -593,24 +572,20 @@ export default function MarketingStrategiqueVsOperationnelPage() {
 
           <div>
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Pour que votre e-commerce progresse durablement sur son marché, la mise en œuvre doit suivre une <strong>approche continue</strong> :" }} />
+            <p className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Pour qu'une entreprise progresse durablement sur son marché, la mise en œuvre suit quatre temps." }} />
             <ul style={{ margin: '0 0 28px', paddingLeft: 24 }}>
               {/* eslint-disable-next-line react/no-danger */}
-              <li className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, marginBottom: 8 }} dangerouslySetInnerHTML={{ __html: "<strong>Audit &amp; Analyse</strong> : Utiliser la matrice SWOT pour confronter votre réalité interne aux opportunités du marché." }} />
+              <li className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, marginBottom: 8 }} dangerouslySetInnerHTML={{ __html: "<strong>Audit &amp; analyse</strong> : matrice SWOT, analyse concurrentielle, lecture des performances passées. On pose à plat ce qui marche, ce qui tire le budget sans résultat, et ce qu'on a oublié de tester." }} />
               {/* eslint-disable-next-line react/no-danger */}
-              <li className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, marginBottom: 8 }} dangerouslySetInnerHTML={{ __html: "<strong>Définition du Cap</strong> : Fixer des objectifs précis (Notoriété, ROAS, Fidélisation)." }} />
+              <li className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, marginBottom: 8 }} dangerouslySetInnerHTML={{ __html: "<strong>Définition du cap</strong> : objectifs business chiffrés (part de marché, ROAS — retour sur dépense publicitaire, taux de rétention), priorités éditoriales, choix de segments cibles." }} />
               {/* eslint-disable-next-line react/no-danger */}
-              <li className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, marginBottom: 8 }} dangerouslySetInnerHTML={{ __html: "<strong>Déploiement Multicanal</strong> : Inbound marketing, automation et stratégie CRM." }} />
+              <li className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, marginBottom: 8 }} dangerouslySetInnerHTML={{ __html: "<strong>Déploiement multicanal</strong> : inbound marketing, automation, stratégie CRM, avec un arbitrage clair entre acquisition, fidélisation et branding." }} />
               {/* eslint-disable-next-line react/no-danger */}
-              <li className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9 }} dangerouslySetInnerHTML={{ __html: "<strong>Remontée de Data</strong> : Les KPIs opérationnels doivent alimenter la réflexion stratégique pour ajuster le tir." }} />
+              <li className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9 }} dangerouslySetInnerHTML={{ __html: "<strong>Remontée de data</strong> : les KPIs opérationnels alimentent la réflexion stratégique pour ajuster le tir au trimestre suivant." }} />
             </ul>
-            <div style={{ background: '#FFF127', padding: '32px 36px', borderLeft: '3px solid #0a0a0a', marginBottom: 28 }}>
+            <div style={{ background: '#FFF127', padding: '32px 36px', borderLeft: '3px solid #0a0a0a' }}>
               {/* eslint-disable-next-line react/no-danger */}
-              <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "<strong>Le conseil de DARWIN :</strong> Ne confondez pas planification et stratégie. Planifier vos posts LinkedIn est de l'opérationnel ; décider quelle \"tribu\" vous ciblez et quel message unique leur adresser est stratégique." }} />
-            </div>
-            <div style={{ background: '#f5f5f5', padding: '32px 36px', borderLeft: '3px solid #0a0a0a' }}>
-              {/* eslint-disable-next-line react/no-danger */}
-              <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "Chaque mission chez DARWIN commence par un <strong>audit stratégique</strong> de votre stratégie digitale, véritable chapitre fondateur avant toute formation, master ou alternance orientée marketing sur le terrain. Optimiser chaque action sans définir le bon objectif, c'est courir très vite... mais dans la mauvaise direction." }} />
+              <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "<strong>Le conseil de DARWIN.</strong> Planifier vos posts LinkedIn pour le trimestre n'est pas de la stratégie. C'est de l'opérationnel. Décider quelle cible vous servez, avec quelle promesse, et pourquoi elle devrait vous choisir — c'est stratégique. Les deux travaux sont utiles. Ce ne sont pas les mêmes." }} />
             </div>
           </div>
         </div>
@@ -630,22 +605,22 @@ export default function MarketingStrategiqueVsOperationnelPage() {
           </h2>
 
           {/* eslint-disable-next-line react/no-danger */}
-          <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "La distinction entre marketing stratégique et marketing opérationnel n'est pas une question de vocabulaire ni une simple approche théorique enseignée en master ou en formation professionnelle. Elle structure la façon dont vous investissez votre <strong>énergie et vos budgets</strong>. Une agence qui se contente d'exécuter sans comprendre le positionnement de votre marque, votre produit et votre vision ne peut pas vous aider à progresser durablement. <strong>Elle peut vous faire avancer. Pas dans la bonne direction.</strong>" }} />
+          <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "La frontière entre marketing stratégique et marketing opérationnel n'est pas un débat de vocabulaire enseigné en master. Elle structure la façon dont vous investissez votre énergie et vos budgets. Une agence qui se contente d'exécuter sans comprendre votre positionnement, votre offre et votre vision peut vous faire avancer. <strong>Pas forcément dans la bonne direction.</strong>" }} />
 
           <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.9, margin: '0 0 48px' }}>
             Chez DARWIN, chaque mission commence par un{' '}
             <Link href="/agence-media/audit-strategie-digitale" style={{ color: '#fff', textDecoration: 'underline', textUnderlineOffset: 3 }}>
               audit de votre stratégie digitale
             </Link>{' '}
-            : identifier les déséquilibres entre votre vision et vos actions, clarifier vos{' '}
+            : on identifie les déséquilibres entre votre vision et vos actions, on clarifie vos{' '}
             <Link href="/agence-media/audit-strategie-digitale/objectifs-marketing-digital" style={{ color: '#fff', textDecoration: 'underline', textUnderlineOffset: 3 }}>
               objectifs marketing
             </Link>{' '}
-            et aligner vos{' '}
+            et on aligne vos{' '}
             <Link href="/agence-media/audit-strategie-digitale/indicateurs-de-performance-mix-marketing" style={{ color: '#fff', textDecoration: 'underline', textUnderlineOffset: 3 }}>
               indicateurs de performance
             </Link>{' '}
-            sur ce qui compte vraiment pour votre activité. Parce qu&apos;optimiser chaque action sans avoir défini le bon objectif ni fait les bons choix stratégiques, c&apos;est courir plus vite dans la mauvaise direction.
+            sur ce qui compte vraiment pour votre activité.
           </p>
 
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>

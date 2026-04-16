@@ -49,7 +49,7 @@ const auditPillars = [
   {
     id: '04',
     title: 'Opportunités & canaux manquants',
-    desc: "On examine aussi ce qui manque — les <strong>canaux sous-exploités</strong>, les données non collectées, les opportunités invisibles depuis l'intérieur. Un stockage de données inexploité dans votre CRM, un réseau social où votre cible est active mais où vous êtes absent, un format que vous n'avez jamais testé. L'audit révèle les <strong>angles morts de votre mix marketing</strong> et les transforme en leviers actionnables.",
+    desc: "On examine aussi ce qui manque — les <strong>canaux sous-exploités</strong>, les données non collectées, les opportunités invisibles depuis l'intérieur. Un stockage de données dormant dans votre CRM, un réseau social où votre cible est active mais où vous n'avez aucune présence en ligne, un format que vous n'avez jamais testé, une place libre sur un sujet que vos concurrents n'adressent pas encore. L'audit révèle les <strong>angles morts de votre mix marketing</strong> et les transforme en leviers actionnables.",
     items: ['Cartographie des canaux sous-exploités', 'Segments d\'audience mal adressés', 'Formats et leviers non testés', 'Données CRM inexploitées'],
   },
 ]
@@ -241,7 +241,7 @@ export default function AuditStrategieDigitalePage() {
           </div>
           <div>
             <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }}>
-              Un audit de stratégie digitale, c&apos;est un état des lieux structuré de l&apos;ensemble de votre présence sur internet : référencement naturel, campagnes payantes, réseaux sociaux, emailing, contenu, site web, parcours utilisateur. L&apos;objectif n&apos;est pas de tout remettre en cause. C&apos;est de comprendre où vous en êtes, de mesurer l&apos;écart entre vos <Link href="/agence-media/audit-strategie-digitale/objectifs-marketing-digital" style={{ color: '#29C5F5', textDecoration: 'underline', textUnderlineOffset: '3px' }}>objectifs</Link> et vos résultats réels, et d&apos;identifier les points de friction qui freinent votre performance.
+              Un audit de stratégie digitale, c&apos;est un état des lieux structuré de l&apos;ensemble de votre présence en ligne, sur internet comme sur les réseaux sociaux : référencement naturel, campagnes payantes, emailing, contenu, site web, parcours utilisateur, outils de suivi et stockage des informations clients. L&apos;objectif n&apos;est pas de tout remettre en cause. C&apos;est de comprendre où vous en êtes, de mesurer l&apos;écart entre vos <Link href="/agence-media/audit-strategie-digitale/objectifs-marketing-digital" style={{ color: '#29C5F5', textDecoration: 'underline', textUnderlineOffset: '3px' }}>objectifs</Link> et vos résultats réels, et d&apos;identifier les points de friction qui freinent votre performance.
             </p>
             <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }}>
               Concrètement, on passe au crible chaque levier actif : sa contribution réelle au chiffre d&apos;affaires, son coût d&apos;acquisition, sa cohérence avec votre cible. On examine aussi ce qui manque — les canaux sous-exploités, les données non collectées, les opportunités invisibles depuis l&apos;intérieur. On évalue votre communication digitale dans sa globalité, y compris l&apos;expérience vécue par vos visiteurs à chaque point de contact.
@@ -347,7 +347,7 @@ export default function AuditStrategieDigitalePage() {
               UN PLAN D&apos;ACTION,<br />PAS UN DOCUMENT DE PLUS
             </h2>
             <p style={{ fontSize: '1rem', color: '#0a0a0a', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }}>
-              À l&apos;issue de l&apos;audit, vous disposez d&apos;une <strong>vision complète et documentée </strong> de votre présence digitale. Plus précisément, vous repartez avec un diagnostic complet de chaque levier actif — ce qui performe, ce qui stagne, ce qui mobilise des ressources sans retour tangible. Un regard expert, extérieur, sur un écosystème que vous n&apos;avez plus le recul nécessaire pour évaluer depuis l&apos;intérieur.
+              À l&apos;issue de l&apos;audit, vous disposez d&apos;une <strong>vision complète et documentée </strong> de votre présence digitale. Plus précisément, vous repartez avec un diagnostic complet de chaque levier actif — ce qui performe, ce qui stagne, ce qui mobilise des ressources sans retour tangible. Un regard expert, extérieur, sur un ensemble que vous n&apos;avez plus le recul nécessaire pour évaluer depuis l&apos;intérieur.
             </p>
             <p style={{ fontSize: '1rem', color: '#0a0a0a', lineHeight: 1.85, textAlign: 'justify' }}>
               Mais surtout, vous repartez avec un <strong>plan d&apos;action opérationnel</strong>. Des recommandations hiérarchisées, reliées à vos objectifs business, avec des étapes concrètes et un calendrier réaliste. Pas un idéal théorique — un chemin praticable, adapté à vos moyens et à votre organisation. C&apos;est la différence entre savoir qu&apos;il faut « faire mieux en digital » et savoir exactement par où commencer.
@@ -428,7 +428,7 @@ export default function AuditStrategieDigitalePage() {
                 { title: 'Consultants seniors uniquement', desc: `Votre audit est réalisé par un consultant senior, pas sous-traité à un junior. ${DARWIN_YEARS} ans d'expertise dans le pilotage de mix marketing complexes.` },
                 { title: 'Vision transversale native', desc: "SEO, SEA, SMA, Média, Analytics — chez DARWIN, ces leviers sont gérés en interne. Chaque pôle est sollicité. L'audit bénéficie de cette vision intégrée, pas de silos." },
                 { title: "Données réelles, pas d'estimations", desc: "On travaille sur vos données Analytics, CRM, outils publicitaires. Pas sur des outils tiers qui approximent votre performance." },
-                { title: 'Plan d\'action opérationnel', desc: "Chaque recommandation est formulée avec son impact estimé, son effort et la personne responsable. Actionnable dès la restitution grâce aux Quick Wins." },
+                { title: 'Plan d\'action opérationnel', desc: "Chaque recommandation est formulée avec son impact estimé, son effort et la personne responsable. Actionnable dès la restitution grâce aux quick wins — ces gains rapides sur les leviers existants." },
                 { title: 'Pas de vente déguisée', desc: "L'audit est un outil de décision, pas un prétexte pour vendre des prestations. Si votre mix est sain, on vous le dit. C'est l'occasion d'aller trouver de nouvelles opportunités et c'est notre spécialité." },
               ].map((item) => (
                 <div key={item.title} style={{ padding: '20px 0', borderBottom: '1px solid #ebebeb' }}>

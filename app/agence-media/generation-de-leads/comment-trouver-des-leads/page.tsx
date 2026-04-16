@@ -143,7 +143,7 @@ export default function CommentTrouverDesLeadsPage() {
             </h1>
 
             <p className="body-text" style={{ fontSize: '1rem', color: '#555', lineHeight: 1.8, marginBottom: 40, maxWidth: 460 }}>
-              Beaucoup d&apos;entreprises ont un problème de volume. Elles veulent trouver des leads, plus de contacts, plus de noms dans le CRM. Pourtant, ce n&apos;est pas ça, la vraie difficulté. La vraie difficulté, c&apos;est de trouver des leads qualifiés — ceux qui correspondent réellement à votre offre, qui ont un besoin identifié et la capacité de passer à l&apos;achat. Un pipeline gonflé de prospects hors cible coûte cher en temps pour votre équipe commerciale et pénalise la performance de vente et génère des taux de conversion désastreux. Autant partir sur de bonnes bases.
+              Beaucoup d&apos;entreprises ont un problème de volume. Elles veulent trouver des leads, plus de contacts, plus de noms dans le CRM. Pourtant, ce n&apos;est pas ça, la vraie difficulté. La vraie difficulté, c&apos;est de trouver des leads qualifiés — ceux qui correspondent réellement à votre offre, qui ont un besoin identifié et la capacité de passer à l&apos;achat. Un pipeline gonflé de prospects hors cible coûte cher en temps commercial, pénalise la performance de vente et fait chuter le taux de conversion. Autant partir sur de bonnes bases : les bons canaux d&apos;acquisition, les bons outils, les bonnes offres, dès le premier euro investi.
             </p>
 
             <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
@@ -269,10 +269,10 @@ export default function CommentTrouverDesLeadsPage() {
             {/* eslint-disable-next-line react/no-danger */}
             <p className="body-text" style={{ fontSize: '1.05rem', color: '#0a0a0a', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Un lead, c'est un contact qui a montré un intérêt pour votre produit ou service. Mais un <strong>lead qualifié</strong>, c'est plus précis que ça. C'est un prospect dont vous avez pu vérifier — via des <strong>données concrètes</strong> et des informations fiables issues de votre base marketing — qu'il remplit les critères de votre <strong>client idéal</strong>." }} />
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: '#0a0a0a', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Ces critères varient selon votre activité. En <strong>B2B</strong>, on regarde souvent la taille de l'entreprise, le secteur, la fonction du décisionnaire, le budget disponible. En <strong>BtoC</strong>, on s'intéresse plutôt au comportement : pages visitées, durée de session, formulaire rempli, téléchargement réalisé. Ce qui compte, ce n'est pas le nombre de leads dans votre base. C'est la <strong>proportion de leads qualifiés</strong> parmi eux." }} />
+            <p className="body-text" style={{ fontSize: '1.05rem', color: '#0a0a0a', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Ces critères varient selon votre activité. En <strong>B2B</strong>, on regarde souvent la taille de l'entreprise, le secteur, la fonction du décisionnaire, le budget disponible. En <strong>BtoC</strong>, on s'intéresse plutôt au comportement : pages visitées, durée de session, formulaire rempli, téléchargement d'un contenu gratuit, ajout au panier. Ce qui compte, ce n'est pas le nombre de leads dans votre base. C'est la <strong>proportion de leads qualifiés</strong> parmi eux." }} />
             <div style={{ background: 'rgba(255,255,255,0.6)', borderLeft: '3px solid #0a0a0a', padding: '24px 28px' }}>
               {/* eslint-disable-next-line react/no-danger */}
-              <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "Reste que cette notion est souvent floue en interne. Marketing et équipe commerciale n'ont pas toujours la même définition. C'est un problème. Et le résoudre commence par <strong>aligner ces deux équipes autour de critères communs, formalisés, partagés</strong>." }} />
+              <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "Reste que cette notion est souvent floue en interne. Marketing et équipe commerciale n'ont pas toujours la même définition du prospect qualifié. C'est un problème. Et le résoudre commence par <strong>aligner ces deux équipes autour de critères communs, formalisés, partagés</strong> — et appliqués à chaque lead entrant." }} />
             </div>
           </div>
         </div>
@@ -286,16 +286,16 @@ export default function CommentTrouverDesLeadsPage() {
 
           <div>
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Il n'existe pas de canal universel. Chaque source de leads a ses logiques, ses coûts et ses profils de prospects. Ce qui fonctionne pour un éditeur SaaS ne fonctionne pas forcément pour un réseau de franchises." }} />
+            <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Il n'existe pas de canal universel. Chaque source de génération de leads a ses logiques, ses coûts et ses profils de prospects. Ce qui fonctionne pour un éditeur SaaS ne fonctionne pas forcément pour un réseau de franchises." }} />
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le <strong>SEO</strong> reste l'un des <strong>canaux d'acquisition et de génération de leads les plus rentables</strong> sur la durée. Un contenu optimisé et à forte valeur attire des visiteurs à intention d'achat et facilite la conversion en prospect qualifié. — des gens qui cherchent activement une solution. <strong>Le coût par lead diminue avec le temps</strong>, contrairement aux campagnes payantes qui s'arrêtent dès qu'on coupe le budget." }} />
+            <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Le <strong>SEO</strong> reste l'un des <strong>canaux d'acquisition les plus rentables</strong> sur la durée. Un contenu optimisé et à forte valeur attire des visiteurs à intention d'achat — des gens qui cherchent activement une solution. <strong>Le coût par lead qualifié diminue mois après mois</strong>, contrairement aux campagnes payantes qui s'arrêtent dès qu'on coupe le budget." }} />
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Les campagnes <strong>SEA</strong> (Google Ads) permettent, elles, d'aller plus vite. On cible des requêtes commerciales précises, on capte le prospect au bon moment. Le coût est plus élevé, mais la conversion peut être immédiate. C'est souvent la <strong>combinaison SEO + SEA</strong> qui donne les meilleurs résultats sur le moyen terme." }} />
+            <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Les campagnes <strong>SEA</strong> — Google Ads en tête — permettent d'aller plus vite. On cible des requêtes commerciales précises, on capte le prospect au bon moment du cycle d'achat. Le coût par clic est plus élevé qu'en organique, mais la conversion peut être immédiate. C'est souvent la <strong>combinaison SEO + SEA</strong> qui donne les meilleurs résultats sur le moyen terme." }} />
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Les <strong>social ads</strong> — Meta, LinkedIn selon votre cible — ouvrent un autre registre. On ne répond plus à une intention de recherche, on crée l'intérêt. Ces plateformes sont puissantes pour toucher des profils précis, générer des leads via des <strong>formulaires natifs</strong>, ou recibler des visiteurs déjà passés sur votre site." }} />
+            <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Les <strong>social ads</strong> changent de registre. Sur Meta ou LinkedIn selon votre cible B2B ou grand public, on ne répond plus à une intention de recherche, on crée l'intérêt. Ces plateformes publicitaires sont puissantes pour toucher des profils précis, générer des leads via des <strong>formulaires natifs</strong>, ou relancer des visiteurs déjà passés sur votre site." }} />
             <div style={{ borderLeft: '3px solid #FFF127', padding: '24px 28px', background: 'rgba(255,255,255,0.06)' }}>
               {/* eslint-disable-next-line react/no-danger */}
-              <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "L'emailing, enfin, reste sous-estimé. Sur une base bien segmentée, une séquence de prospection bien conçue génère un retour exceptionnel. Le coût est faible, <strong>le ciblage est chirurgical</strong>. Mais ça suppose d'avoir une <strong>base de qualité</strong> — et c'est là que ça se complique." }} />
+              <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "L'emailing de prospection, enfin, reste largement sous-estimé. Sur une base bien segmentée, une séquence courte et bien écrite produit un retour de conversion exceptionnel pour un coût faible. <strong>Le ciblage est chirurgical.</strong> Seule condition : une <strong>base de qualité, fraîche, conforme</strong>. Et c'est là que les écarts se creusent entre une opération rentable et un budget parti en fumée." }} />
             </div>
           </div>
 
@@ -355,25 +355,25 @@ export default function CommentTrouverDesLeadsPage() {
           </div>
 
           {/* eslint-disable-next-line react/no-danger */}
-          <p className="body-text" style={{ fontSize: '1rem', color: '#555', lineHeight: 1.85, maxWidth: 720, margin: '0 0 40px' }} dangerouslySetInnerHTML={{ __html: "Ces quatre canaux ne s'opposent pas. Ils se complètent. La question, c'est plutôt : qu'est-ce que vous cherchez à faire, et dans quel délai ?" }} />
+          <p className="body-text" style={{ fontSize: '1rem', color: '#555', lineHeight: 1.85, maxWidth: 720, margin: '0 0 40px' }} dangerouslySetInnerHTML={{ __html: "Ces quatre canaux ne s'opposent pas. Ils se complètent. La vraie question, c'est : qu'est-ce que vous cherchez à faire, et dans quel délai ?" }} />
 
           <div className="ctdl-canaux-grid">
             {[
               {
                 label: 'SEO',
-                text: "Le SEO construit une <strong>acquisition durable et organique</strong>. C'est un investissement en contenu et en stratégie dont les effets se mesurent sur <strong>6 à 18 mois</strong>. Pour une entreprise qui veut réduire sa dépendance au budget publicitaire, c'est incontournable.",
+                text: "Le SEO construit une <strong>acquisition durable</strong>. C'est un investissement en contenu, en stratégie éditoriale et en données dont les effets se mesurent sur <strong>6 à 18 mois</strong>. Pour une entreprise qui veut réduire sa dépendance au budget publicitaire, c'est incontournable.",
               },
               {
                 label: 'SEA',
-                text: "Le SEA offre une <strong>visibilité immédiate</strong> sur des requêtes à <strong>forte intention commerciale</strong>. C'est le canal privilégié pour tester une offre, lancer un produit, ou compenser en attendant que le SEO monte.",
+                text: "Le SEA offre une <strong>visibilité immédiate</strong> sur des requêtes à <strong>forte intention commerciale</strong>. C'est le canal privilégié pour tester une offre, lancer un nouveau produit, ou compenser en attendant que le SEO monte en puissance.",
               },
               {
                 label: 'SOCIAL ADS',
-                text: "Les social ads excellent dans la <strong>génération de notoriété</strong> et la capture de leads à des stades précoces du cycle d'achat. <strong>LinkedIn est particulièrement performant en B2B</strong> pour toucher des décisionnaires par fonction, secteur ou taille d'entreprise.",
+                text: "Les social ads excellent dans la <strong>génération de notoriété</strong> et la capture de leads à des stades précoces du cycle d'achat. <strong>LinkedIn est particulièrement performant en B2B</strong> pour cibler des décisionnaires par fonction, secteur ou taille d'entreprise.",
               },
               {
                 label: 'EMAILING',
-                text: "L'emailing de prospection s'appuie sur une donnée existante — achetée, collectée ou construite. Il est efficace pour réactiver des contacts, nourrir des prospects en phase de réflexion, ou déclencher une action sur une offre précise. <strong>La personnalisation fait toute la différence.</strong>",
+                text: "L'emailing s'appuie sur une donnée existante — collectée en propre, partenaire ou issue d'une base louée. Il est efficace pour réactiver des contacts dormants, nourrir des prospects en phase de réflexion, ou déclencher une action sur une offre précise. <strong>La personnalisation du message fait toute la différence.</strong>",
               },
             ].map((canal) => (
               <div key={canal.label} style={{ background: '#fff', padding: '44px 40px' }}>
@@ -414,11 +414,11 @@ export default function CommentTrouverDesLeadsPage() {
             </div>
 
             {/* eslint-disable-next-line react/no-danger */}
-            <p className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Générer ses propres leads demande plus d'investissement initial — en contenu, en stratégie de marketing, en outil et en personnel. Mais les leads produits en interne sont <strong>plus qualifiés, plus engagés, et moins coûteux</strong> sur le long terme. Ils ont volontairement interagi avec votre marque. Ce n'est pas neutre." }} />
+            <p className="body-text" style={{ fontSize: '1.05rem', color: '#555', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Générer ses propres leads demande plus d'investissement initial — en contenu, en personnel, en outils de marketing. Mais les leads produits en interne sont <strong>plus qualifiés, plus engagés, et moins coûteux</strong> sur le long terme. Ils ont volontairement interagi avec votre marque. Ce n'est pas neutre." }} />
 
             <div style={{ background: '#FFF127', padding: '32px 36px', borderLeft: '3px solid #0a0a0a' }}>
               {/* eslint-disable-next-line react/no-danger */}
-              <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "Pour autant, l'achat de leads peut être utile dans certains cas précis : phase de lancement, besoin de volume rapide, secteur où l'audience organique est trop lente à construire. L'essentiel, c'est de ne pas en faire sa stratégie principale. <strong>C'est un accélérateur ponctuel, pas un moteur.</strong>" }} />
+              <p className="body-text" style={{ fontSize: '1.05rem', color: '#333', lineHeight: 1.9, margin: 0 }} dangerouslySetInnerHTML={{ __html: "L'achat peut rester utile dans certains cas : phase de lancement, besoin de volume rapide, secteur où l'audience organique est trop lente à construire. <strong>C'est un accélérateur ponctuel, pas un moteur.</strong>" }} />
             </div>
           </div>
         </div>
@@ -440,21 +440,21 @@ export default function CommentTrouverDesLeadsPage() {
           </div>
 
           {/* eslint-disable-next-line react/no-danger */}
-          <p className="body-text" style={{ fontSize: '1rem', color: '#555', lineHeight: 1.85, maxWidth: 720, margin: '0 0 40px' }} dangerouslySetInnerHTML={{ __html: "Trouver des leads ne suffit pas. Il faut savoir s'ils valent quelque chose. Plusieurs indicateurs et données de suivi permettent de piloter cette qualité et d'optimiser votre stratégie dans le temps." }} />
+          <p className="body-text" style={{ fontSize: '1rem', color: '#555', lineHeight: 1.85, maxWidth: 720, margin: '0 0 40px' }} dangerouslySetInnerHTML={{ __html: "Trouver des leads ne suffit pas. Il faut savoir s'ils valent quelque chose. Plusieurs indicateurs permettent de piloter cette qualité et d'ajuster la stratégie d'acquisition dans le temps." }} />
 
           <div className="ctdl-metrics-grid">
             {[
               {
                 num: '01',
-                text: "Le <strong>taux de conversion lead-to-client</strong> est le plus direct. Sur 100 leads entrants, combien deviennent des clients ? Un taux faible peut signifier que vos sources de génération sont mal ciblées — ou que la qualification en aval est insuffisante.",
+                text: "Le <strong>taux de conversion lead-to-client</strong> est le plus direct. Sur 100 leads entrants, combien deviennent des clients ? Un taux faible peut signaler que vos sources de génération sont mal ciblées — ou que la qualification en aval est insuffisante.",
               },
               {
                 num: '02',
-                text: "Le <strong>coût par lead qualifié</strong> est plus pertinent que le coût par lead brut. Si vous payez 5 € par lead SEA mais que seulement 10 % sont qualifiés, <strong>votre coût réel est de 50 €</strong>. Intégrer cette dimension change radicalement la lecture des performances.",
+                text: "Le <strong>coût par lead qualifié</strong> est plus pertinent que le coût par lead brut. Si vous payez 5 € par lead SEA mais que seuls 10 % sont qualifiés, <strong>votre coût réel est de 50 €</strong>. Intégrer cette dimension change radicalement la lecture des performances, et oriente les arbitrages budgétaires vers les sources vraiment rentables.",
               },
               {
                 num: '03',
-                text: "Le <strong>délai de conversion</strong> est également instructif. Un lead qui tarde trois mois à se décider n'a pas la même valeur qu'un prospect prêt à signer en deux semaines. La rapidité du cycle d'achat dit beaucoup sur la <strong>température du prospect</strong> au moment de l'entrée en base.",
+                text: "Le <strong>délai de conversion</strong> complète le tableau. Un lead qui met trois mois à se décider n'a pas la même valeur qu'un prospect prêt à signer en deux semaines. La rapidité du cycle d'achat dit beaucoup sur la <strong>température du prospect</strong> au moment de l'entrée en base — et sur la qualité de votre qualification initiale.",
               },
             ].map((metric) => (
               <div key={metric.num} style={{ background: '#fff', padding: '44px 40px' }}>
@@ -484,13 +484,13 @@ export default function CommentTrouverDesLeadsPage() {
           </h2>
 
           {/* eslint-disable-next-line react/no-danger */}
-          <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Chez DARWIN, on ne vend pas des leads. On construit les conditions pour que vous en trouviez <strong>en continu</strong> sur les <strong>bons canaux</strong>, avec le <strong>bon message</strong>, pour les <strong>bonnes cibles</strong>." }} />
+          <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Chez DARWIN, on ne vend pas des leads. On construit les conditions pour que vous en trouviez <strong>en continu</strong>, sur les <strong>bons canaux</strong>, avec le <strong>bon message</strong>, pour les <strong>bonnes cibles</strong>." }} />
 
           {/* eslint-disable-next-line react/no-danger */}
-          <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Notre approche commence par un audit de votre acquisition actuelle : quelles sources génèrent vos leads aujourd'hui, lesquelles convertissent vraiment, et où se perdent les prospects dans votre funnel. Cette analyse de données est souvent révélatrice." }} />
+          <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "Notre approche commence par un audit de votre acquisition actuelle : quelles sources génèrent vos leads aujourd'hui, lesquelles convertissent vraiment, et où se perdent les prospects dans votre tunnel. Cette analyse de données est souvent révélatrice — elle met à plat les biais du reporting classique." }} />
 
           {/* eslint-disable-next-line react/no-danger */}
-          <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "On travaille ensuite à activer ou optimiser les canaux les plus pertinents pour votre entreprise, votre secteur et vos objectifs commerciaux. SEO, SEA, social ads, emailing : <strong>pas de dogme</strong>, juste ce qui marche pour votre profil client et votre contexte commercial." }} />
+          <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.9, margin: '0 0 28px' }} dangerouslySetInnerHTML={{ __html: "On active ensuite ou on optimise les canaux les plus pertinents pour votre entreprise, votre secteur et vos objectifs commerciaux. SEO, SEA, social ads, emailing de prospection, contenu : <strong>pas de dogme</strong>, juste la combinaison qui marche pour votre profil client et votre offre." }} />
 
           {/* eslint-disable-next-line react/no-danger */}
           <p className="body-text" style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.9, margin: '0 0 48px' }} dangerouslySetInnerHTML={{ __html: "Le <strong>reporting en temps réel</strong> fait partie intégrante de notre service. Vous suivez vos leads, leur source, leur coût et leur taux de conversion — sans attendre la réunion mensuelle pour savoir si ça avance." }} />
