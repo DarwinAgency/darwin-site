@@ -123,12 +123,12 @@ const certifications = [
 ]
 
 const expertises = [
-  { title: 'SEO', desc: 'Référencement naturel', href: '/expertises/seo' },
-  { title: 'SEA', desc: 'Google & Bing Ads', href: '/expertises/sea' },
-  { title: 'SMA', desc: 'Social Media Ads', href: '/expertises/sma' },
-  { title: 'MEDIA', desc: 'Display & Programmatique', href: '/expertises/media' },
-  { title: 'ANALYTICS', desc: 'Data & Tracking', href: '/expertises/analytics' },
-  { title: 'FORMATION', desc: 'Montée en compétences', href: '/expertises/formation' },
+  { title: 'SEO', desc: 'Référencement naturel', href: '/agence-seo' },
+  { title: 'SEA', desc: 'Google & Bing Ads', href: '/agence-sea' },
+  { title: 'SMA', desc: 'Social Media Ads', href: '/agence-sma' },
+  { title: 'MEDIA', desc: 'Display & Programmatique', href: '/agence-media' },
+  { title: 'ANALYTICS', desc: 'Data & Tracking', href: '/agence-analytics' },
+  { title: 'FORMATION', desc: 'Montée en compétences', href: '/formations' },
 ]
 
 /* ─── PAGE ──────────────────────────────────────────── */
@@ -189,7 +189,7 @@ export default function AgencePage() {
           {/* RIGHT — image agence (caché mobile via rsp-hero-img) */}
           <div className="rsp-hero-img" style={{ position: 'relative', background: '#0a0a0a', overflow: 'hidden' }}>
             <Image
-              src="/images/agence-hero.jpg"
+              src="/images/agence/agence-hero.jpg"
               alt="DARWIN — L'équipe de l'agence marketing digital"
               fill
               style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.95 }}

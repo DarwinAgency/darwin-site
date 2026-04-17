@@ -172,7 +172,7 @@ export default function NotFound() {
             RETOUR À L'ACCUEIL →
           </Link>
           <Link
-            href="/expertises/seo"
+            href="/agence-seo"
             style={{
               display: 'inline-block',
               background: 'transparent',

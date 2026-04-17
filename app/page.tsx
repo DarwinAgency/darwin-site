@@ -108,7 +108,7 @@ export default function Home() {
 
           {/* Colonne droite — photo gymnaste */}
           <div style={{
-            backgroundImage: 'url(/images/gymnaste.jpg)',
+            backgroundImage: 'url(/images/homepage/gymnaste.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center top',
             minHeight: 560,

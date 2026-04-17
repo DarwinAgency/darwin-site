@@ -1,26 +1,26 @@
 // ─────────────────────────────────────────────────────────
-// FICHIER : app/expertises/seo/audit-seo/page.tsx
+// FICHIER : app/agence-seo/audit-seo/page.tsx
 // RÔLE    : Sous-page "Audit SEO" — modèle spoke de la page mère SEO
-// DÉPEND  : app/expertises/seo/page.tsx (page mère / hub)
+// DÉPEND  : app/agence-seo/page.tsx (page mère / hub)
 // ─────────────────────────────────────────────────────────
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { DARWIN_YEARS } from '../../../lib/darwin'
-import { faqJsonLd, serviceJsonLd, breadcrumbJsonLd } from '../../../lib/jsonld'
-import { ogDefaults } from '../../../lib/og'
+import { DARWIN_YEARS } from '../../lib/darwin'
+import { faqJsonLd, serviceJsonLd, breadcrumbJsonLd } from '../../lib/jsonld'
+import { ogDefaults } from '../../lib/og'
 
 // ─── METADATA ───────────────────────────────────────────
 
 export const metadata: Metadata = {
   title: 'Audit SEO — Diagnostic complet de votre site | DARWIN',
   description: "Identifiez ce qui freine votre visibilité sur Google et les IA. DARWIN réalise votre audit SEO complet : technique, sémantique, netlinking et GEO. Livrable actionnable sous 10 jours.",
-  alternates: { canonical: '/expertises/seo/audit-seo' },
+  alternates: { canonical: '/agence-seo/audit-seo' },
   openGraph: {
     ...ogDefaults,
     title: 'Audit SEO complet — Technique, Contenu, Netlinking & IA | DARWIN',
     description: "Diagnostic SEO complet par DARWIN : crawl technique, analyse sémantique, profil de liens et visibilité dans les moteurs génératifs. Rapport livré en 10 jours.",
-    url: 'https://darwin-agency.fr/expertises/seo/audit-seo',
+    url: 'https://darwin-agency.fr/agence-seo/audit-seo',
   },
 }
 
@@ -122,14 +122,14 @@ const faqs = [
 
 const breadcrumbs = breadcrumbJsonLd([
   { name: 'Accueil', url: '/' },
-  { name: 'SEO', url: '/expertises/seo' },
-  { name: 'Audit SEO', url: '/expertises/seo/audit-seo' },
+  { name: 'SEO', url: '/agence-seo' },
+  { name: 'Audit SEO', url: '/agence-seo/audit-seo' },
 ])
 
 const service = serviceJsonLd({
   name: 'Audit SEO complet',
   description: 'Diagnostic complet de votre visibilité : audit technique, sémantique, netlinking et GEO. Rapport livrable en 10 jours.',
-  url: '/expertises/seo/audit-seo',
+  url: '/agence-seo/audit-seo',
   keywords: ['audit SEO', 'audit technique SEO', 'GEO', 'Google AI Overviews', 'netlinking'],
 })
 
@@ -156,7 +156,7 @@ export default function AuditSeoPage() {
             <nav style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 32, fontSize: '0.75rem', color: 'rgba(0,0,0,0.3)' }}>
               <Link href="/" style={{ color: 'rgba(0,0,0,0.3)', textDecoration: 'none' }}>Accueil</Link>
               <span>/</span>
-              <Link href="/expertises/seo" style={{ color: 'rgba(0,0,0,0.3)', textDecoration: 'none' }}>SEO</Link>
+              <Link href="/agence-seo" style={{ color: 'rgba(0,0,0,0.3)', textDecoration: 'none' }}>SEO</Link>
               <span>/</span>
               <span style={{ color: 'rgba(0,0,0,0.6)' }}>Audit SEO</span>
             </nav>
@@ -184,7 +184,7 @@ export default function AuditSeoPage() {
               }}>
                 DEMANDER UN AUDIT →
               </Link>
-              <Link href="/expertises/seo" style={{
+              <Link href="/agence-seo" style={{
                 display: 'inline-flex', alignItems: 'center', gap: 8,
                 fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.08em',
                 textTransform: 'uppercase', color: 'rgba(0,0,0,0.4)', textDecoration: 'none',
@@ -554,10 +554,10 @@ export default function AuditSeoPage() {
           </h2>
           <div className="rsp-4col" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
             {[
-              { label: 'SEO Technique', desc: 'Crawl, architecture, Core Web Vitals, JavaScript SEO', href: '/expertises/seo/seo-technique', img: '/images/illustrations/seo-technique.svg' },
-              { label: 'Stratégie de contenu', desc: 'Cocons thématiques, intention de recherche, éditorial', href: '/expertises/seo/strategie-contenu', img: '/images/illustrations/strategie-contenu.svg' },
-              { label: 'Netlinking', desc: 'Profil de liens, acquisition, popularité concurrentielle', href: '/expertises/seo/netlinking', img: '/images/illustrations/netlinking.svg' },
-              { label: 'GEO — Visibilité IA', desc: 'AI Overviews, ChatGPT Search, Perplexity, Gemini', href: '/expertises/seo/geo-visibilite-ia', img: '/images/illustrations/geo-visibilite-ia.svg' },
+              { label: 'SEO Technique', desc: 'Crawl, architecture, Core Web Vitals, JavaScript SEO', href: '/agence-seo/seo-technique', img: '/images/illustrations/seo-technique.svg' },
+              { label: 'Stratégie de contenu', desc: 'Cocons thématiques, intention de recherche, éditorial', href: '/agence-seo/strategie-contenu', img: '/images/illustrations/strategie-contenu.svg' },
+              { label: 'Netlinking', desc: 'Profil de liens, acquisition, popularité concurrentielle', href: '/agence-seo/netlinking', img: '/images/illustrations/netlinking.svg' },
+              { label: 'GEO — Visibilité IA', desc: 'AI Overviews, ChatGPT Search, Perplexity, Gemini', href: '/agence-seo/geo-visibilite-ia', img: '/images/illustrations/geo-visibilite-ia.svg' },
             ].map(link => (
               <Link key={link.href} href={link.href} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <div style={{ background: '#fff', overflow: 'hidden', boxShadow: '0 4px 32px rgba(0,0,0,0.12)', borderTop: '3px solid #FFF127' }}>

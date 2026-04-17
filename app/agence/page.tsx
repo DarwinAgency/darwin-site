@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "L'Agence Darwin — Expertise digitale depuis 2003",
     description: `Découvrez Darwin Agency : ${DARWIN_YEARS} ans d'expertise en performance digitale, +400 clients accompagnés, 30+ experts seniors.`,
     url: 'https://darwin-agency.fr/agence',
-    images: [{ url: '/images/agence-hero.jpg', width: 1200, height: 630, alt: "Darwin Agency — L'équipe" }],
+    images: [{ url: '/images/agence/agence-hero.jpg', width: 1200, height: 630, alt: "Darwin Agency — L'équipe" }],
   },
 }
 
@@ -124,12 +124,12 @@ const certifications = [
 ]
 
 const expertises = [
-  { title: 'SEO', desc: 'Référencement naturel', href: '/expertises/seo' },
-  { title: 'SEA', desc: 'Google & Bing Ads', href: '/expertises/sea' },
-  { title: 'SMA', desc: 'Social Media Ads', href: '/expertises/sma' },
-  { title: 'MEDIA', desc: 'Display & Programmatique', href: '/expertises/media' },
-  { title: 'ANALYTICS', desc: 'Data & Tracking', href: '/expertises/analytics' },
-  { title: 'FORMATION', desc: 'Montée en compétences', href: '/expertises/formation' },
+  { title: 'SEO', desc: 'Référencement naturel', href: '/agence-seo' },
+  { title: 'SEA', desc: 'Google & Bing Ads', href: '/agence-sea' },
+  { title: 'SMA', desc: 'Social Media Ads', href: '/agence-sma' },
+  { title: 'MEDIA', desc: 'Display & Programmatique', href: '/agence-media' },
+  { title: 'ANALYTICS', desc: 'Data & Tracking', href: '/agence-analytics' },
+  { title: 'FORMATION', desc: 'Montée en compétences', href: '/formations' },
 ]
 
 /* ─── PAGE ──────────────────────────────────────────── */
@@ -190,7 +190,7 @@ export default function AgencePage() {
           {/* RIGHT — image gymnaste (caché mobile via rsp-hero-img) */}
           <div className="rsp-hero-img" style={{ position: 'relative', background: '#0a0a0a', overflow: 'hidden' }}>
             <Image
-              src="/images/gymnaste.jpg"
+              src="/images/homepage/gymnaste.jpg"
               alt="Darwin Agence — Performance & Créativité"
               fill
               style={{ objectFit: 'cover', objectPosition: 'center top', opacity: 0.9 }}

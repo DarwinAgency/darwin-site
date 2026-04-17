@@ -19,20 +19,20 @@ const expertisesTabs: Tab[] = [
   {
     label: 'SEO',
     desc: 'Référencement naturel',
-    cta: { label: 'Découvrir notre agence SEO', href: '/expertises/seo' },
+    cta: { label: 'Découvrir notre agence SEO', href: '/agence-seo' },
     items: [
-      { label: 'Audit SEO', desc: 'Identifiez vos forces et axes de progression', href: '/expertises/seo/audit-seo' },
-      { label: 'Stratégie de contenu', desc: 'Structurez vos cocons sémantiques', href: '/expertises/seo/strategie-contenu' },
-      { label: 'GEO', desc: 'Generative Engine Optimization', href: '/expertises/seo/geo-visibilite-ia' },
-      { label: 'Netlinking', desc: 'Renforcez votre autorité de domaine', href: '/expertises/seo/netlinking' },
-      { label: 'SEO Technique', desc: 'Corrigez les blocages qui freinent vos rankings', href: '/expertises/seo/seo-technique' },
+      { label: 'Audit SEO', desc: 'Identifiez vos forces et axes de progression', href: '/agence-seo/audit-seo' },
+      { label: 'Stratégie de contenu', desc: 'Structurez vos cocons sémantiques', href: '/agence-seo/strategie-contenu' },
+      { label: 'GEO', desc: 'Generative Engine Optimization', href: '/agence-seo/geo-visibilite-ia' },
+      { label: 'Netlinking', desc: 'Renforcez votre autorité de domaine', href: '/agence-seo/netlinking' },
+      { label: 'SEO Technique', desc: 'Corrigez les blocages qui freinent vos rankings', href: '/agence-seo/seo-technique' },
       { label: 'SEO E-commerce', desc: 'Optimisez vos fiches produits et catégories' },
     ],
   },
   {
     label: 'SEA',
     desc: 'Google & Bing Ads',
-    cta: { label: 'Découvrir notre agence SEA', href: '/expertises/sea' },
+    cta: { label: 'Découvrir notre agence SEA', href: '/agence-sea' },
     items: [
       { label: 'Google Ads', desc: 'Captez l\'intention au bon moment' },
       { label: 'Bing Ads', desc: 'Touchez des audiences complémentaires' },
@@ -45,7 +45,7 @@ const expertisesTabs: Tab[] = [
   {
     label: 'SMA',
     desc: 'Social Media Ads',
-    cta: { label: 'Découvrir notre agence SMA', href: '/expertises/sma' },
+    cta: { label: 'Découvrir notre agence SMA', href: '/agence-sma' },
     items: [
       { label: 'Meta Ads', desc: 'Facebook & Instagram à la performance' },
       { label: 'LinkedIn Ads', desc: 'Ciblez les décideurs B2B' },
@@ -73,7 +73,7 @@ const expertisesTabs: Tab[] = [
   {
     label: 'ANALYTICS',
     desc: 'Data & Tracking',
-    cta: { label: 'Découvrir notre agence Analytics', href: '/expertises/analytics' },
+    cta: { label: 'Découvrir notre agence Data', href: '/agence-analytics' },
     items: [
       { label: 'GA4', desc: 'Mise en place et configuration avancée' },
       { label: 'Google Tag Manager', desc: 'Tracking précis de chaque interaction' },
@@ -86,7 +86,7 @@ const expertisesTabs: Tab[] = [
   {
     label: 'FORMATIONS',
     desc: 'Montée en compétences',
-    cta: { label: 'Toutes nos formations', href: '/expertises/formation' },
+    cta: { label: 'Toutes nos formations', href: '/formations' },
     items: [
       { label: 'Formation SEO', desc: 'Maîtrisez le référencement en interne' },
       { label: 'Formation SEA', desc: 'Gérez vos campagnes Google Ads' },
@@ -99,7 +99,7 @@ const expertisesTabs: Tab[] = [
   {
     label: 'STUDIO CRÉATIF',
     desc: 'Création & production visuelle',
-    cta: { label: 'En savoir plus sur le Studio Hey Charly!', href: '/expertises/studio' },
+    cta: { label: 'Découvrir le Studio Créatif', href: '/studio-creatif' },
     items: [
       { label: 'Direction artistique', desc: 'Identité visuelle et ligne graphique' },
       { label: 'Production vidéo', desc: 'Spots, motion design et formats sociaux' },
@@ -261,7 +261,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', padding: '6px 0', zIndex: 1 }}>
             <Image
-              src="/images/logo-darwin.png"
+              src="/images/brand/logo-darwin.png"
               alt="DARWIN"
               width={780}
               height={439}

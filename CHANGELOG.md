@@ -251,6 +251,13 @@
 | Recrutement | `/recrutement` | À créer |
 | Audit SEO | `/expertises/seo/audit-seo` | ✅ Fait |
 | Sous-pages SEO | `/seo/seo-technique`, `/seo/strategie-contenu`, `/seo/netlinking`, `/seo/geo-visibilite-ia` | À créer |
+| Agence Média (hub) | `/agence-media` | ✅ Fait |
+| Audit Stratégie Digitale | `/agence-media/audit-strategie-digitale` | ✅ Fait |
+| Marketing Strat vs Ops | `.../marketing-strategique-vs-marketing-operationnel` | ✅ Fait (ArticleLayoutV2) |
+| Génération de Leads | `/agence-media/generation-de-leads` | ✅ Fait |
+| Comment Trouver des Leads | `.../comment-trouver-des-leads` | ✅ Fait (ArticleLayoutV2) |
+| Leads B2B | `.../comment-generer-des-leads-en-b2b` | ✅ Fait (ArticleLayoutV2) |
+| Qualification d'un Lead | `.../etapes-de-qualification-d-un-lead` | ✅ Fait (ArticleLayoutV2) |
 
 ---
 
@@ -288,6 +295,117 @@
 | C8 | Header + Footer | Ajouter `/cas-clients` dans la navigation | ✅ Fait |
 | C9 | Sitemap | Ajouter `/cas-clients` et `/cas-clients/[slug]` dans `sitemap.ts` | ✅ Fait |
 | C10 | SEO dynamique | `metadata` par cas : title, description, OG, canonical + JSON-LD schema `CaseStudy` | ⏳ À faire |
+
+---
+
+## [Session 13] — ArticleLayoutV2 : nouveau design pages profondes & contenus mis à jour
+
+> Design validé en réunion le 16/04/2026. Devient la convention pour toutes les pages profondes (niveau 3+).
+
+### Contenus textes mis à jour (5 pages)
+
+Intégration mot pour mot des contenus markdown validés depuis les fichiers de production :
+
+| Page | Modifications principales |
+|------|--------------------------|
+| `agence-media/page.tsx` | Hero (DARWIN, parcours d'achat), définition (outils multimédia, métier technique), pilotage (brand safety), FAQ (ROI, secteurs), méthode, différence (collectif) |
+| `agence-media/audit-strategie-digitale/page.tsx` | Définition élargie (présence en ligne, outils de suivi), 4e dimension enrichie (présence en ligne, concurrents), livrable (ensemble), quick wins |
+| `.../marketing-strategique-vs-marketing-operationnel/page.tsx` | Réécriture sections stratégique/opérationnel, table comparative refondue (3 lignes), pièges, théorie→action, CTA final |
+| `agence-media/generation-de-leads/page.tsx` | ROI/ROAS explicités, définition secteurs, parcours B2B détaillé |
+| `.../comment-trouver-des-leads/page.tsx` | ~20 passages réalignés (hero, sources, canaux, indicateurs, CTA DARWIN) |
+
+### Nouvelles pages créées (2 pages)
+
+| Page | URL | Contenu |
+|------|-----|---------|
+| Génération de Leads B2B | `/agence-media/generation-de-leads/comment-generer-des-leads-en-b2b` | LinkedIn Ads, social selling, content marketing, thought leadership, SEO B2B |
+| Qualification d'un Lead | `/agence-media/generation-de-leads/etapes-de-qualification-d-un-lead` | MQL/SQL, lead scoring, BANT/CHAMP, automatisation CRM |
+
+### Nouveau composant : `ArticleLayoutV2` (`app/components/ArticleLayoutV2.tsx`)
+
+Composant client réutilisable pour toutes les pages profondes. Remplace l'ancien template à sections alternées colorées (jaune/noir/blanc) par un layout article/blog.
+
+**Structure :**
+1. **Hero split 50/50** — breadcrumb, titre Anton, intro, illustration SVG (optionnelle), meta (temps de lecture, type), boutons de partage social
+2. **Encart "L'essentiel"** — synthèse GEO/AEO en 4-5 points, bordure jaune gauche, pensé pour extraction par IA génératives (ChatGPT, Perplexity, AI Overviews)
+3. **Layout 2 colonnes** — `grid: 300px 1fr` :
+   - **Sidebar gauche (sticky)** : fond `#fafafa`, bordure + barre jaune top, sommaire avec ancres actives (IntersectionObserver), auteur (photo ronde + nom + rôle), widget "Sur le même sujet"
+   - **Contenu principal** : sections avec eyebrow cyan, H2 Anton, paragraphes justifiés, blockquotes, cartes accent/dark
+4. **Conclusion** — encart fond noir `#0a0a0a` avec label jaune "En résumé"
+5. **Boutons de partage** — LinkedIn, X (Twitter), Email — en haut (hero meta) et en bas (après conclusion)
+6. **Mobile (≤960px)** — sidebar masquée, remplacée par toggle "Sommaire" sticky, hero passe en 1 colonne, illustration masquée
+
+**Props :**
+```tsx
+interface ArticleLayoutV2Props {
+  jsonLd: object[]
+  breadcrumbs: BreadcrumbItem[]
+  badge?: string                    // Badge jaune (généralement omis)
+  title: ReactNode                  // H1 Anton avec <br />
+  intro: string                     // Paragraphe d'intro
+  heroIllustration?: ReactNode      // SVG illustration
+  shareUrl: string                  // URL pour partage social
+  shareTitle: string                // Titre pour partage social
+  tocItems: TocItem[]               // Sommaire { id, label }
+  relatedPages: RelatedPage[]       // Pages liées { href, label, desc }
+  essentialPoints: string[]         // Points de synthèse GEO
+  author?: Author                   // { name, role, photo }
+  conclusion?: ReactNode            // Encart "En résumé"
+  children: ReactNode               // Sections article
+}
+```
+
+**Classes CSS du contenu :**
+- `artv2-section` — wrapper de section avec `id` pour ancres
+- `artv2-section-header` — contient `artv2-eyebrow` (cyan) + `artv2-h2`
+- `artv2-body` — paragraphe corps (justify, 1rem)
+- `artv2-blockquote` / `artv2-blockquote--highlight` — citations (bordure noire / jaune)
+- `artv2-card-accent` — carte fond gris avec bordure jaune gauche
+- `artv2-card-dark` — carte fond noir
+
+**Conventions titres :** toujours `&nbsp;` entre les 2 derniers mots des H2 (anti-orphelin typographique).
+
+### Pages migrées vers ArticleLayoutV2 (4 pages)
+
+| Page | Auteur sidebar |
+|------|----------------|
+| `comment-generer-des-leads-en-b2b` | Carole Kabanda |
+| `comment-trouver-des-leads` | Jérôme Renard |
+| `etapes-de-qualification-d-un-lead` | Carole Kabanda |
+| `marketing-strategique-vs-marketing-operationnel` | Mathilde Colonna D'Istria |
+
+### Corrigé
+
+- **`NewsletterCTA.tsx`** — responsive mobile : grid passe de `1fr 1fr` à `1fr` sous 768px, padding réduit, bordure adaptée
+- **Hydration mismatch** corrigé : `readingTime` calculé dans `useEffect` (pas au render initial)
+- **React key warning** corrigé : children wrappés dans `<div>` dédié dans le composant layout
+
+### Architecture mise à jour
+
+```
+app/
+├── agence-media/
+│   ├── page.tsx                                          ← Hub Agence Média
+│   ├── audit-strategie-digitale/
+│   │   ├── page.tsx                                      ← Audit Stratégie Digitale
+│   │   └── marketing-strategique-vs-marketing-operationnel/
+│   │       └── page.tsx                                  ← ArticleLayoutV2
+│   └── generation-de-leads/
+│       ├── page.tsx                                      ← Génération de Leads
+│       ├── comment-trouver-des-leads/page.tsx             ← ArticleLayoutV2
+│       ├── comment-generer-des-leads-en-b2b/page.tsx      ← ArticleLayoutV2
+│       └── etapes-de-qualification-d-un-lead/page.tsx     ← ArticleLayoutV2
+├── components/
+│   ├── ArticleLayoutV2.tsx                               ← NOUVEAU — layout article pages profondes
+│   ├── NewsletterCTA.tsx                                 ← Responsive fix
+│   └── ...
+```
+
+---
+
+## [Session 12] — Section Agence Média : 8 pages + sous-pages
+
+> Session précédente (non documentée) : création de la section `/agence-media/` complète avec page hub et 7 sous-pages (plan-media, campagnes-emailing, campagnes-rcs-sms, audio-digital, tv-segmentee-ctv, campagnes-dooh, audit-strategie-digitale) + photos équipe.
 
 ---
 
@@ -455,8 +573,11 @@ app/
 │   ├── HeroSection.tsx             ← Hero parallax homepage
 │   ├── ContactForm.jsx             ← Formulaire de contact
 │   ├── PageHero.tsx                ← Hero sobre réutilisable
+│   ├── ArticleLayoutV2.tsx         ← Layout article pages profondes (sidebar sticky, TOC, GEO)
 │   ├── ArticleCard.tsx             ← Carte article blog
 │   ├── CasClientsGrid.tsx          ← Grille cas clients
+│   ├── NewsletterCTA.tsx           ← Bloc newsletter Brevo mid-content (responsive)
+│   ├── NewsletterSidebar.tsx       ← Newsletter compact sidebar blog
 │   ├── BesoinsAccordion.tsx        ← Accordéon besoins homepage
 │   └── PerformanceSlider.tsx       ← Slider méthodologie homepage
 └── data/

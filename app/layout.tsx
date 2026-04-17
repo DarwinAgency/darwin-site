@@ -36,7 +36,7 @@ const jsonLd = {
   '@type': 'ProfessionalService',
   name: 'Darwin Agency',
   url: 'https://www.darwin-agency.fr',
-  logo: 'https://www.darwin-agency.fr/images/logo-darwin.png',
+  logo: 'https://www.darwin-agency.fr/images/brand/logo-darwin.png',
   description: `Agence digitale dédiée à la performance depuis ${DARWIN_YEARS} ans. SEO, SEA, SMA, MEDIA, Analytics.`,
   foundingDate: '2003',
   address: {

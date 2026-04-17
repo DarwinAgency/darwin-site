@@ -77,7 +77,7 @@ export default function Footer() {
         {/* Col 1 — Logo + infos + newsletter */}
         <div>
           <div style={{ marginBottom: 28 }}>
-            <Image src="/images/logo-darwin.png" alt="DARWIN" width={140} height={40} style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+            <Image src="/images/brand/logo-darwin.png" alt="DARWIN" width={140} height={40} style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
           </div>
           <p style={{ fontSize: '0.82rem', color: '#888', lineHeight: 1.7, marginBottom: 28, maxWidth: 280 }}>
             Agence digitale indépendante fondée en 2003. Experts en acquisition, SEO, SEA, SMA, Media et Data au service de vos performances.
@@ -149,13 +149,13 @@ export default function Footer() {
           </h3>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
             {[
-              { label: 'Agence SEO', href: '/expertises/seo' },
-              { label: 'Agence SEA', href: '/expertises/sea' },
-              { label: 'Social Media Ads', href: '/expertises/sma' },
+              { label: 'Agence SEO', href: '/agence-seo' },
+              { label: 'Agence SEA', href: '/agence-sea' },
+              { label: 'Social Media Ads', href: '/agence-sma' },
               { label: 'Agence Média', href: '/agence-media' },
-              { label: 'Analytics & Data', href: '/expertises/analytics' },
-              { label: 'Formations', href: '/expertises/formation' },
-              { label: 'Studio Créatif', href: '/expertises/studio' },
+              { label: 'Analytics & Data', href: '/agence-analytics' },
+              { label: 'Formations', href: '/formations' },
+              { label: 'Studio Créatif', href: '/studio-creatif' },
             ].map(link => (
               <li key={link.href}>
                 <Link href={link.href} style={{ color: '#888', textDecoration: 'none', fontSize: '0.84rem', transition: 'color 0.15s' }}

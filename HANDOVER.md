@@ -16,9 +16,12 @@
 7. [Comment modifier du contenu](#7-comment-modifier-du-contenu)
 8. [Comment ajouter du contenu](#8-comment-ajouter-du-contenu)
 9. [Les composants réutilisables](#9-les-composants-réutilisables)
-10. [Déploiement](#10-déploiement)
-11. [SEO et bonnes pratiques](#11-seo-et-bonnes-pratiques)
-12. [En cas de problème](#12-en-cas-de-problème)
+10. [Pages profondes — ArticleLayoutV2](#10-pages-profondes--articlelayoutv2)
+11. [Section Agence Média](#11-section-agence-média)
+12. [Newsletter Brevo](#12-newsletter-brevo)
+13. [Déploiement](#13-déploiement)
+14. [SEO et bonnes pratiques](#14-seo-et-bonnes-pratiques)
+15. [En cas de problème](#15-en-cas-de-problème)
 
 ---
 
@@ -39,6 +42,7 @@ Le site contient :
 - Une **page d'accueil** avec présentation de l'agence
 - Une **page Agence** (équipe, valeurs)
 - Des **pages Expertises** (SEO, audit SEO…)
+- Une **section Agence Média** complète (hub + 8 sous-pages + 4 pages profondes)
 - Un **Blog** avec articles dynamiques
 - Des **Cas clients** (études de cas dynamiques)
 - Une **page Contact** avec formulaire
@@ -139,6 +143,7 @@ darwin-agency/
 │   ├── blog/                   ← Page blog + pages d'articles dynamiques
 │   ├── cas-clients/            ← Page cas clients + pages d'études de cas
 │   ├── expertises/seo/         ← Pages expertises SEO
+│   ├── agence-media/           ← Section Agence Média (hub + sous-pages + pages profondes)
 │   ├── agence/                 ← Page agence / équipe
 │   ├── contact/                ← Page contact
 │   ├── a-propos-de-darwin/     ← Page à propos
@@ -181,6 +186,13 @@ darwin-agency/
 | `/cas-clients/[slug]` | `app/cas-clients/[slug]/page.tsx` | Étude de cas individuelle |
 | `/contact` | `app/contact/page.tsx` | Formulaire de contact |
 | `/a-propos-de-darwin` | `app/a-propos-de-darwin/page.tsx` | Page à propos |
+| `/agence-media` | `app/agence-media/page.tsx` | Hub Agence Média |
+| `/agence-media/audit-strategie-digitale` | `app/agence-media/audit-strategie-digitale/page.tsx` | Audit Stratégie Digitale |
+| `/agence-media/audit-strategie-digitale/marketing-strategique-vs-marketing-operationnel` | `app/.../page.tsx` | Marketing strat. vs opérationnel (ArticleLayoutV2) |
+| `/agence-media/generation-de-leads` | `app/agence-media/generation-de-leads/page.tsx` | Génération de Leads |
+| `/agence-media/generation-de-leads/comment-trouver-des-leads` | `app/.../page.tsx` | Comment trouver des leads (ArticleLayoutV2) |
+| `/agence-media/generation-de-leads/comment-generer-des-leads-en-b2b` | `app/.../page.tsx` | Leads B2B (ArticleLayoutV2) |
+| `/agence-media/generation-de-leads/etapes-de-qualification-d-un-lead` | `app/.../page.tsx` | Qualification d'un lead (ArticleLayoutV2) |
 
 ---
 
@@ -310,15 +322,99 @@ import Footer from "@/app/components/Footer";
 | `BesoinsAccordion` | `BesoinsAccordion.tsx` | Section accordéon (FAQ / besoins) |
 | `ContactForm` | `ContactForm.jsx` | Formulaire de contact |
 | `PerformanceSlider` | `PerformanceSlider.tsx` | Slider de métriques |
+| `ArticleLayoutV2` | `ArticleLayoutV2.tsx` | Layout article pour les pages profondes (niveau 3+). Sidebar sticky avec sommaire, auteur et pages liées. Encart "L'essentiel" pour le référencement IA (GEO). Boutons de partage social. |
+| `NewsletterCTA` | `NewsletterCTA.tsx` | Bloc d'inscription newsletter Brevo en milieu de page. Responsive mobile. |
+| `NewsletterSidebar` | `NewsletterSidebar.tsx` | Version compacte du formulaire newsletter pour la sidebar du blog. |
 
 > **Règle importante :** Le `Header` et le `Footer` sont déjà inclus dans `app/layout.tsx`.
 > Ne pas les rajouter dans les pages individuelles.
 
 ---
 
-## 10. Déploiement
+## 10. Pages profondes — ArticleLayoutV2
 
-### Comment ça fonctionne
+Depuis avril 2026, toutes les pages profondes (niveau 3 et au-delà, par exemple les sous-pages de `/agence-media/generation-de-leads/`) utilisent le composant **ArticleLayoutV2**. Ce composant remplace l'ancien design à sections alternées colorées (jaune/noir/blanc).
+
+### Ce que le composant fournit automatiquement
+
+- Un **hero en deux colonnes** (texte + illustration SVG optionnelle)
+- Un encart **"L'essentiel"** en haut de page — synthèse de l'article en 4-5 points, destiné aux moteurs de recherche IA (ChatGPT, Perplexity, Google AI Overviews)
+- Une **sidebar à gauche fixe** avec un sommaire cliquable (ancres), la photo de l'auteur et des liens vers les pages du même sujet
+- Des **boutons de partage** (LinkedIn, X, email) en haut et en bas de l'article
+- Un encart de **conclusion** sur fond noir en bas de l'article
+- Un **design responsive** : sur mobile, la sidebar disparaît et est remplacée par un menu "Sommaire" déroulant en haut de page
+
+### Comment créer une nouvelle page profonde
+
+Dupliquer le fichier de référence :
+```
+app/agence-media/generation-de-leads/comment-generer-des-leads-en-b2b/page.tsx
+```
+
+Les informations à personnaliser pour chaque nouvelle page :
+
+| Prop | Description |
+|------|-------------|
+| `title` | Le titre H1 de la page (avec `<br />` pour les retours à la ligne) |
+| `intro` | Le paragraphe d'introduction |
+| `shareUrl` / `shareTitle` | L'URL et le titre pour le partage social |
+| `tocItems` | La liste des sections (id + libellé pour le sommaire) |
+| `relatedPages` | Les pages du même niveau à afficher dans la sidebar |
+| `essentialPoints` | 4-5 points de synthèse pour l'encart "L'essentiel" |
+| `author` | Nom, rôle et photo de l'auteur (photos dans `public/images/team/`) |
+| `conclusion` | Le paragraphe de conclusion mis en avant |
+| `heroIllustration` | Illustration SVG optionnelle pour le hero |
+
+### Classes CSS du contenu
+
+| Classe | Usage |
+|--------|-------|
+| `artv2-section` | Wrapper de section (avec attribut `id` pour les ancres du sommaire) |
+| `artv2-section-header` | Contient le label + titre H2 |
+| `artv2-eyebrow` | Petit label cyan au-dessus du titre |
+| `artv2-h2` | Titre H2 (font Anton, uppercase) |
+| `artv2-body` | Paragraphe de contenu |
+| `artv2-blockquote` | Citation avec bordure noire à gauche |
+| `artv2-blockquote--highlight` | Citation avec bordure jaune à gauche |
+| `artv2-card-accent` | Carte fond gris avec bordure jaune à gauche |
+| `artv2-card-dark` | Carte fond noir |
+
+### Convention typographique
+
+Dans tous les titres H2, toujours insérer un espace insécable (`&nbsp;`) entre les deux derniers mots pour éviter qu'un mot se retrouve seul sur une ligne (règle anti-orphelin).
+
+---
+
+## 11. Section Agence Média
+
+La section `/agence-media/` est la plus développée du site. Elle est organisée en 3 niveaux :
+
+| Niveau | Pages | Design |
+|--------|-------|--------|
+| **Niveau 1** (hub) | `/agence-media` | Sections alternées classiques |
+| **Niveau 2** (sous-pages) | `audit-strategie-digitale`, `generation-de-leads`, `plan-media`, `campagnes-emailing`, `campagnes-rcs-sms`, `audio-digital`, `tv-segmentee-ctv`, `campagnes-dooh` | Sections alternées classiques |
+| **Niveau 3** (pages profondes) | `marketing-strategique-vs-marketing-operationnel`, `comment-trouver-des-leads`, `comment-generer-des-leads-en-b2b`, `etapes-de-qualification-d-un-lead` | **ArticleLayoutV2** |
+
+Les contenus textes de ces pages sont rédigés dans des fichiers markdown séparés (dans le dossier `Production Contenus/`) et intégrés **mot pour mot** dans les pages. Ne jamais modifier les textes sans validation préalable.
+
+---
+
+## 12. Newsletter Brevo
+
+Deux composants newsletter sont disponibles :
+
+| Composant | Usage | Style |
+|-----------|-------|-------|
+| `NewsletterCTA` | En milieu de page, dans les articles longs | Fond jaune + formulaire noir, 2 colonnes (1 colonne en mobile) |
+| `NewsletterSidebar` | Dans la sidebar du blog | Fond noir, compact |
+
+Les deux sont connectés à Brevo via la route `/api/newsletter`. Aucune configuration supplémentaire n'est nécessaire.
+
+---
+
+## 13. Déploiement
+
+### Comment ça marche
 
 ```
 Modification du code
@@ -374,7 +470,7 @@ npm run build
 
 ---
 
-## 11. SEO et bonnes pratiques
+## 14. SEO et bonnes pratiques
 
 ### Metadata (titre + description)
 
@@ -405,7 +501,7 @@ Elles permettent à Google de mieux comprendre le contenu du site.
 
 ---
 
-## 12. En cas de problème
+## 15. En cas de problème
 
 ### Le site ne s'affiche pas en local
 

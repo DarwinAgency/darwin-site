@@ -269,16 +269,12 @@ export default async function BlogArticlePage({ params }: Props) {
               {section.blocks.map((block, i) => {
                 if (block.type === 'paragraph') {
                   return (
-                    <p key={i} style={{ fontSize: '1rem', lineHeight: 1.85, color: '#333', marginBottom: 20 }}>
-                      {block.text}
-                    </p>
+                    <p key={i} style={{ fontSize: '1rem', lineHeight: 1.85, color: '#333', marginBottom: 20 }} dangerouslySetInnerHTML={{ __html: block.text }} />
                   )
                 }
                 if (block.type === 'subtitle') {
                   return (
-                    <h3 key={i} className="font-anton" style={{ fontSize: '1.1rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '28px 0 16px' }}>
-                      {block.text}
-                    </h3>
+                    <h3 key={i} className="font-anton" style={{ fontSize: '1.1rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '28px 0 16px' }} dangerouslySetInnerHTML={{ __html: block.text }} />
                   )
                 }
                 if (block.type === 'list') {
@@ -287,7 +283,7 @@ export default async function BlogArticlePage({ params }: Props) {
                       {block.items.map((item, j) => (
                         <li key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, fontSize: '0.95rem', lineHeight: 1.65, color: '#333' }}>
                           <span style={{ width: 6, height: 6, background: '#FFF127', border: '1.5px solid #0a0a0a', borderRadius: '50%', flexShrink: 0, marginTop: 8 }} />
-                          {item}
+                          <span dangerouslySetInnerHTML={{ __html: item }} />
                         </li>
                       ))}
                     </ul>
@@ -306,9 +302,7 @@ export default async function BlogArticlePage({ params }: Props) {
                           {block.title}
                         </p>
                       )}
-                      <p style={{ fontSize: '0.95rem', lineHeight: 1.75, color: '#0a0a0a', margin: 0, fontWeight: 600 }}>
-                        {block.text}
-                      </p>
+                      <p style={{ fontSize: '0.95rem', lineHeight: 1.75, color: '#0a0a0a', margin: 0, fontWeight: 600 }} dangerouslySetInnerHTML={{ __html: block.text! }} />
                     </div>
                   )
                 }

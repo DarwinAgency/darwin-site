@@ -48,7 +48,7 @@ export default function HeroSection() {
           willChange: 'transform',
         }}
       >
-        <Image src="/images/hero-bg.png" alt="" fill style={{ objectFit: 'cover' }} />
+        <Image src="/images/homepage/hero-bg.png" alt="" fill style={{ objectFit: 'cover' }} />
       </div>
 
       {/* Contenu — se déplace légèrement moins vite */}

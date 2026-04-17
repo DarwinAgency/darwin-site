@@ -1,18 +1,18 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { DARWIN_YEARS } from '../../lib/darwin'
-import { ogDefaults } from '../../lib/og'
+import { DARWIN_YEARS } from '../lib/darwin'
+import { ogDefaults } from '../lib/og'
 
 export const metadata: Metadata = {
   title: "Agence SEO — Référencement naturel & GEO | DARWIN",
   description: "DARWIN, agence SEO experte depuis 2003. Audit SEO, SEO technique, rédaction, netlinking, GEO (Generative Engine Optimization). 400+ clients accompagnés.",
-  alternates: { canonical: '/expertises/seo' },
+  alternates: { canonical: '/agence-seo' },
   openGraph: {
     ...ogDefaults,
     title: "Agence SEO — Référencement naturel & GEO | DARWIN",
     description: "Expert SEO depuis 2003. Audit, technique, contenu, netlinking et GEO pour être visible dans Google et les LLMs.",
-    url: 'https://darwin-agency.fr/expertises/seo',
+    url: 'https://darwin-agency.fr/agence-seo',
   },
 }
 
@@ -103,12 +103,12 @@ const faqs = [
 ]
 
 const otherExpertises = [
-  { title: 'SEA', desc: 'Google & Bing Ads', href: '/expertises/sea' },
-  { title: 'SMA', desc: 'Social Media Ads', href: '/expertises/sma' },
-  { title: 'MEDIA', desc: 'Display & Programmatique', href: '/expertises/media' },
-  { title: 'ANALYTICS', desc: 'Data & Tracking', href: '/expertises/analytics' },
-  { title: 'FORMATION', desc: 'Montée en compétences', href: '/expertises/formation' },
-  { title: 'STUDIO CRÉATIF', desc: 'Direction artistique & Contenu', href: '/expertises/studio' },
+  { title: 'SEA', desc: 'Google & Bing Ads', href: '/agence-sea' },
+  { title: 'SMA', desc: 'Social Media Ads', href: '/agence-sma' },
+  { title: 'MEDIA', desc: 'Display & Programmatique', href: '/agence-media' },
+  { title: 'ANALYTICS', desc: 'Data & Tracking', href: '/agence-analytics' },
+  { title: 'FORMATION', desc: 'Montée en compétences', href: '/formations' },
+  { title: 'STUDIO CRÉATIF', desc: 'Direction artistique & Contenu', href: '/studio-creatif' },
 ]
 
 /* ─── PAGE ──────────────────────────────────────────── */
@@ -274,12 +274,12 @@ export default function SeoPage() {
 
           <div className="rsp-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
             {[
-              { href: '/expertises/seo/audit-seo', title: 'Audit SEO', accent: '#FFF127', desc: "Photographie complète de votre présence organique : indexation, architecture, vitesse, mots-clés, backlinks et positionnement. L'audit DARWIN est actionnable sous 5 jours." },
-              { href: '/expertises/seo/seo-technique', title: 'SEO Technique', accent: '#FFF127', desc: "Core Web Vitals, crawl budget, canonicalisation, données structurées, migration de site. Ce que Google mesure avant vos contenus — et que vos concurrents négligent." },
-              { href: '/expertises/seo/redaction-seo', title: 'Rédaction SEO', accent: '#FFF127', desc: "Cocons thématiques, pages piliers, articles de blog, fiches produit. Des contenus écrits par des rédacteurs experts, structurés pour l'intention de recherche." },
-              { href: '/expertises/seo/netlinking', title: 'Netlinking', accent: '#FFF127', desc: "Acquisition de backlinks qualitatifs, audit et désaveu de liens toxiques, stratégie d'autorité de domaine. L'influence SEO qui se construit sur le long terme." },
-              { href: '/expertises/seo/seo-local', title: 'SEO Local', accent: '#FFF127', desc: "Google Business Profile, citations locales, avis clients, pages localisées. Idéal pour les réseaux de franchises, enseignes multi-sites ou commerçants locaux." },
-              { href: '/expertises/seo/seo-ecommerce', title: 'SEO E-commerce', accent: '#29C5F5', desc: "Optimisation des pages catégories, fiches produit, gestion des facettes et des doublons. Nous transformons le catalogue en moteur d'acquisition." },
+              { href: '/agence-seo/audit-seo', title: 'Audit SEO', accent: '#FFF127', desc: "Photographie complète de votre présence organique : indexation, architecture, vitesse, mots-clés, backlinks et positionnement. L'audit DARWIN est actionnable sous 5 jours." },
+              { href: '/agence-seo/seo-technique', title: 'SEO Technique', accent: '#FFF127', desc: "Core Web Vitals, crawl budget, canonicalisation, données structurées, migration de site. Ce que Google mesure avant vos contenus — et que vos concurrents négligent." },
+              { href: '/agence-seo/redaction-seo', title: 'Rédaction SEO', accent: '#FFF127', desc: "Cocons thématiques, pages piliers, articles de blog, fiches produit. Des contenus écrits par des rédacteurs experts, structurés pour l'intention de recherche." },
+              { href: '/agence-seo/netlinking', title: 'Netlinking', accent: '#FFF127', desc: "Acquisition de backlinks qualitatifs, audit et désaveu de liens toxiques, stratégie d'autorité de domaine. L'influence SEO qui se construit sur le long terme." },
+              { href: '/agence-seo/seo-local', title: 'SEO Local', accent: '#FFF127', desc: "Google Business Profile, citations locales, avis clients, pages localisées. Idéal pour les réseaux de franchises, enseignes multi-sites ou commerçants locaux." },
+              { href: '/agence-seo/seo-ecommerce', title: 'SEO E-commerce', accent: '#29C5F5', desc: "Optimisation des pages catégories, fiches produit, gestion des facettes et des doublons. Nous transformons le catalogue en moteur d'acquisition." },
             ].map((card) => (
               <Link
                 key={card.href}
@@ -318,7 +318,7 @@ export default function SeoPage() {
                 VOTRE MARQUE<br />EST-ELLE <span style={{ color: '#29C5F5' }}>CITÉE PAR L&apos;IA ?</span>
               </h2>
             </div>
-            <a href="/expertises/geo" className="btn-cyan" style={{ flexShrink: 0 }}>
+            <a href="/agence-seo/geo-visibilite-ia" className="btn-cyan" style={{ flexShrink: 0 }}>
               DÉCOUVRIR NOTRE APPROCHE GEO →
             </a>
           </div>

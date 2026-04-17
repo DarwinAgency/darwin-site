@@ -76,7 +76,7 @@ export function faqJsonLd(items: FaqItem[]) {
 
 // ─── Service ─────────────────────────────────────────────
 /**
- * À utiliser sur chaque page expertise (/expertises/seo, /expertises/sea, etc.)
+ * À utiliser sur chaque page expertise (/agence-seo, /agence-sea, etc.)
  * Permet aux LLMs d'associer DARWIN à un service précis avec une URL.
  */
 export function serviceJsonLd({ name, description, url, keywords }: ServiceItem) {
@@ -94,14 +94,14 @@ export function serviceJsonLd({ name, description, url, keywords }: ServiceItem)
 
 // ─── BreadcrumbList ───────────────────────────────────────
 /**
- * À utiliser sur toutes les sous-pages (/expertises/*, /expertises/seo/*, etc.)
+ * À utiliser sur toutes les sous-pages (/expertises/*, /agence-seo/*, etc.)
  * Indispensable pour l'architecture sémantique et les AI Overviews.
  *
  * Exemple :
  *   breadcrumbJsonLd([
  *     { name: 'Accueil', url: '/' },
  *     { name: 'Expertises', url: '/expertises' },
- *     { name: 'SEO', url: '/expertises/seo' },
+ *     { name: 'SEO', url: '/agence-seo' },
  *   ])
  */
 export function breadcrumbJsonLd(items: BreadcrumbItem[]) {
@@ -149,7 +149,7 @@ export function articleJsonLd({
       ...DARWIN_PROVIDER,
       logo: {
         '@type': 'ImageObject',
-        url: `${BASE_URL}/images/logo-darwin.png`,
+        url: `${BASE_URL}/images/brand/logo-darwin.png`,
       },
     },
     ...(imageUrl ? { image: { '@type': 'ImageObject', url: `${BASE_URL}${imageUrl}` } } : {}),
@@ -173,7 +173,7 @@ export function localBusinessJsonLd() {
     telephone: '+33413570900',
     email: 'contact@darwin-agency.fr',
     foundingDate: '2003',
-    logo: `${BASE_URL}/images/logo-darwin.png`,
+    logo: `${BASE_URL}/images/brand/logo-darwin.png`,
     image: `${BASE_URL}/images/og-default.jpg`,
     address: {
       '@type': 'PostalAddress',
