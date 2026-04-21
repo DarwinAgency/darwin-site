@@ -6,13 +6,13 @@ import { faqJsonLd, serviceJsonLd, breadcrumbJsonLd } from '../lib/jsonld'
 import { ogDefaults } from '../lib/og'
 
 export const metadata: Metadata = {
-  title: "Agence Data & Analytics — Tracking & pilotage data | DARWIN",
-  description: "Lorem ipsum dolor sit amet. Agence data experte depuis 2003.",
+  title: "Agence Analytics — Data, Tracking & Attribution | DARWIN",
+  description: "Agence data certifiée Google Analytics. Tracking, GA4, attribution multi-touch, dashboards, server-side, consentement RGPD. Pilotez vos investissements par la donnée.",
   alternates: { canonical: '/agence-analytics' },
   openGraph: {
     ...ogDefaults,
-    title: "Agence Data & Analytics — Tracking & pilotage data | DARWIN",
-    description: "Lorem ipsum dolor sit amet. Agence data experte depuis 2003.",
+    title: "Agence Analytics — Data, Tracking & Attribution | DARWIN",
+    description: "Agence data certifiée Google Analytics. Tracking, GA4, attribution multi-touch, dashboards, server-side, consentement RGPD. Pilotez vos investissements par la donnée.",
     url: 'https://darwin-agency.fr/agence-analytics',
   },
 }
@@ -23,70 +23,69 @@ const stats = [
   { num: `${DARWIN_YEARS} ans`, label: "d'expertise data" },
   { num: '400+', label: 'clients accompagnés' },
   { num: '7 ans', label: 'de fidélité moyenne' },
-  { num: '500+', label: 'dashboards déployés' },
+  { num: '15+', label: 'outils maîtrisés' },
 ]
 
 const pillars = [
   {
     id: '01',
-    title: 'Audit & Plan de Taggage',
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    items: ['Audit du tracking existant', 'Plan de taggage structuré', 'Vérification des événements clés', 'Documentation technique complète'],
+    title: 'Data Tracking & Plan de Taggage',
+    desc: "Un plan de taggage rigoureux est le fondement de toute stratégie data fiable. Sans lui, les données collectées sont incomplètes, incohérentes, et les décisions qui en découlent le sont tout autant. DARWIN structure votre collecte autour d'un plan de marquage avancé, intégrant la génération d'UTM, la pose de Google Tag Manager et la configuration précise des événements GA4 — notamment pour le e-commerce. Nous déployons également vos dashboards sur Google Data Studio (Looker Studio) pour rendre la donnée immédiatement lisible et actionnable. Le server-side tagging représente aujourd'hui l'évolution naturelle du tracking client-side : en envoyant les données depuis votre serveur plutôt que depuis le navigateur, vous gagnez en fiabilité, en résilience face aux bloqueurs publicitaires et en conformité RGPD.",
+    items: ['Plan de marquage avancé', 'GA4 & e-commerce', 'Google Tag Manager', 'Dashboards Data Studio'],
   },
   {
     id: '02',
-    title: 'Dashboards & Reporting',
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna.",
-    items: ['Looker Studio & Power BI', 'KPI business personnalisés', 'Automatisation des reportings', 'Alertes et anomalies en temps réel'],
+    title: "Attribution & Contribution",
+    desc: "Nous vous accompagnons dans la mise en place d'une analyse multi-touch Data-Driven de vos parcours de conversion, grâce à la mise en place d'une étude de la contribution et de l'attribution algorithmique des leviers, afin d'optimiser votre mix Marketing et vos investissements. Cette approche vous permet de prendre des décisions éclairées, basées sur des données fiables, pour maximiser le retour sur investissement de chaque action menée. En identifiant précisément le rôle de chaque point de contact dans le parcours d'achat, nous vous aidons à mieux comprendre le comportement de vos clients et à ajuster vos budgets en conséquence. Fini les décisions prises à l'aveugle : chaque euro investi est piloté avec méthode, pour une performance durable et mesurable.",
+    items: ['Attribution algorithmique', 'Parcours multi-touch', 'Optimisation du mix marketing', 'Pilotage budgétaire data-driven'],
   },
   {
     id: '03',
-    title: 'Attribution & Contribution',
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ut facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis.",
-    items: ['Modèles d\'attribution multi-touch', 'Analyse des parcours de conversion', 'Contribution par canal et campagne', 'Recommandations budgétaires data-driven'],
+    title: "Server-Side Tracking",
+    desc: "L'ère du cookie tiers touche à sa fin, et avec elle, le tracking client-side traditionnel perd en fiabilité chaque mois. Le server-side tracking est la réponse structurelle à cette mutation : au lieu de s'appuyer sur le navigateur de l'utilisateur pour envoyer les données aux plateformes (Google, Meta, TikTok), c'est votre serveur qui prend le relais. Le résultat est immédiat : meilleure qualité de données, moins de pertes liées aux bloqueurs de publicités ou aux refus de consentement, et une attribution nettement plus fiable. Chez DARWIN, nous déployons le server-side pour GA4 via GTM Server-Side, pour Meta via la Conversions API (CAPI), et pour TikTok via l'Events API. Cette approche vous rend moins dépendant des évolutions des navigateurs et vous positionne durablement dans un écosystème data first-party, plus résilient et plus conforme.",
+    items: ['Server-Side GTM', 'Meta Conversions API', 'TikTok Events API', 'Data quality & résilience'],
   },
   {
     id: '04',
-    title: 'Data Activation',
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.",
-    items: ['Audiences first-party activables', 'Intégration CRM & CDP', 'Scoring et segmentation avancée', 'Personnalisation en temps réel'],
+    title: 'Consentement & RGPD',
+    desc: "La mise en application de la RGPD sur le recueil du consentements des cookies sur les sites implique désormais un recueil du consentement éclairé et en adéquation avec la réglementation mais cela peut avoir des impacts négatifs sur vos données remontées dans Analytics et les différentes plateformes si le taux de refus est important. DARWIN vous accompagne sur différents volets afin d'optimiser votre recueil : choix de la CMP (Consent Management Platform) et mise en place technique via Google Tag Management. Nous vous conseillons d'aller plus loin en configurant par la même occasion GA4 qui vous permettra de mutualiser un certain nombre de tâches afin de mettre en place cette nouvelle version de Google Analytics basée sur les évènements, mieux adaptée au crossdevice.",
+    items: ['CMP & recueil du consentement', 'Conformité RGPD', 'Optimisation du taux d\'acceptation', 'GA4 cross-device'],
   },
 ]
 
 const services = [
-  { href: '/agence-analytics/google-analytics-4', title: 'Google Analytics 4', accent: '#FFF127', desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
-  { href: '/agence-analytics/tag-management', title: 'Tag Management', accent: '#FFF127', desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum." },
-  { href: '/agence-analytics/attribution-multi-touch', title: 'Attribution Multi-Touch', accent: '#FFF127', desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ut facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus." },
-  { href: '/agence-analytics/dashboards-sur-mesure', title: 'Dashboards Sur-Mesure', accent: '#FFF127', desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper." },
-  { href: '/agence-analytics/crm-data-integration', title: 'CRM & Data Integration', accent: '#FFF127', desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue." },
-  { href: '/agence-analytics/server-side-tracking', title: 'Server-Side Tracking', accent: '#29C5F5', desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ut facilisis in." },
+  { href: '/agence-analytics', title: 'Google Analytics 4', accent: '#FFF127', desc: "GA4 est devenu la norme de la mesure digitale. Nous assurons son déploiement complet, de la configuration initiale à la mise en place des événements avancés, en passant par le e-commerce enhanced. Chaque interaction utilisateur est captée avec précision pour alimenter vos analyses et vos audiences publicitaires." },
+  { href: '/agence-analytics', title: 'Google Tag Manager', accent: '#FFF127', desc: "GTM est le chef d'orchestre de votre collecte de données. Nous concevons des plans de marquage structurés, configurons les déclencheurs et variables personnalisées, et documentons l'ensemble pour que votre tracking reste maintenable et évolutif dans le temps." },
+  { href: '/agence-analytics', title: 'Attribution Multi-Touch', accent: '#FFF127', desc: "Le dernier clic ne raconte qu'une fraction de l'histoire. Nos modèles d'attribution data-driven analysent l'ensemble du parcours de conversion pour identifier la contribution réelle de chaque levier. L'attribution algorithmique vous permet de réallouer vos budgets là où ils produisent le plus de valeur." },
+  { href: '/agence-analytics', title: 'Dashboards Sur-Mesure', accent: '#FFF127', desc: "Looker Studio (ex Google Data Studio) est notre outil de prédilection pour créer des dashboards qui parlent à vos équipes. KPIs métier, reporting en temps réel, segmentations avancées : chaque tableau de bord est conçu pour accélérer la prise de décision, pas pour produire des slides." },
+  { href: '/agence-analytics', title: 'Server-Side Tracking', accent: '#29C5F5', desc: "Le tracking server-side via GTM Server, Meta CAPI et TikTok Events API garantit une collecte de données first-party résiliente. Moins de pertes liées aux ad blockers, meilleure attribution, conformité renforcée : c'est l'infrastructure data de demain, déployable aujourd'hui." },
+  { href: '/agence-analytics', title: 'IA & Data Intelligence', accent: '#29C5F5', desc: "L'intelligence artificielle transforme la manière dont nous exploitons la donnée. Audiences prédictives dans GA4, détection automatique d'anomalies, insights générés par le machine learning, signaux de smart bidding nourris par un tracking de qualité : l'IA ne remplace pas l'analyste, elle lui donne une longueur d'avance." },
 ]
-
 
 const faqs = [
   {
-    q: "Pourquoi migrer vers Google Analytics 4 ?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    q: "Pourquoi migrer vers Google Analytics 4 en 2026 ?",
+    a: "Universal Analytics a définitivement cessé de collecter des données en juillet 2023. GA4 est désormais la seule version active de Google Analytics, et son modèle basé sur les événements offre une vision bien plus fine des parcours utilisateurs que l'ancien modèle basé sur les sessions. En 2026, l'enjeu n'est plus la migration elle-même — c'est l'exploitation avancée de GA4 : audiences prédictives, intégration avec Google Ads, mesure cross-device, modélisation des conversions. Chez DARWIN à Aix-en-Provence, nous accompagnons nos clients sur la configuration avancée de GA4, la mise en place d'événements personnalisés et l'activation des données dans les campagnes publicitaires.",
   },
   {
-    q: "Qu'est-ce que le server-side tracking et pourquoi est-ce important ?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum.",
+    q: "Quelle est la différence entre le tracking server-side et client-side ?",
+    a: "Le tracking client-side envoie les données directement depuis le navigateur de l'utilisateur vers les plateformes (Google Analytics, Meta, TikTok). Le problème : les bloqueurs de publicités, les restrictions navigateur (ITP Safari, ETP Firefox) et les refus de consentement empêchent une part croissante de ces données d'arriver à destination. Le tracking server-side, lui, passe par un serveur intermédiaire que vous contrôlez. Les données transitent par votre infrastructure avant d'être transmises aux plateformes. Résultat : moins de pertes, des données first-party plus fiables, une meilleure attribution et une conformité RGPD renforcée. DARWIN déploie le server-side via GTM Server-Side, Meta CAPI et TikTok Events API.",
   },
   {
-    q: "Comment construire un plan de taggage efficace ?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ut facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+    q: "Quel modèle d'attribution choisir pour mes campagnes digitales ?",
+    a: "Le modèle last-click, encore utilisé par défaut dans de nombreux comptes, attribue 100% de la conversion au dernier point de contact. C'est simple mais trompeur : il ignore tout le parcours amont qui a construit l'intention d'achat. Les modèles d'attribution data-driven, disponibles dans GA4 et Google Ads, analysent l'ensemble des points de contact et distribuent le crédit de conversion de manière algorithmique. Chez DARWIN, nous mettons en place des études de contribution et d'attribution multi-touch qui vous permettent de comprendre le rôle réel de chaque levier — SEA, SMA, SEO, Display, Email — et d'optimiser votre mix marketing en conséquence.",
   },
   {
-    q: "Quelle est la différence entre attribution last-click et multi-touch ?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.",
+    q: "Quel est l'impact du RGPD sur mes données analytics ?",
+    a: "L'impact est direct et mesurable. Depuis l'application stricte des directives de la CNIL, un site qui implémente correctement le recueil du consentement perd en moyenne 30 à 40% de ses données analytics — parfois davantage selon le secteur et le taux de refus. Cela signifie que vos rapports GA4 sous-estiment votre trafic réel et que vos plateformes publicitaires reçoivent moins de signaux de conversion. DARWIN vous accompagne pour optimiser votre taux d'acceptation via le choix et la configuration de votre CMP, et pour compenser les pertes grâce au consent mode v2, à la modélisation des conversions GA4 et au tracking server-side.",
   },
   {
-    q: "Comment intégrer les données CRM avec les données web analytics ?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.",
+    q: "Quels outils utilisez-vous pour les dashboards et le reporting ?",
+    a: "Notre outil principal est Looker Studio (ex Google Data Studio) pour sa flexibilité, sa gratuité et son intégration native avec l'écosystème Google. Pour des besoins plus avancés — connexion à des sources de données multiples, rafraîchissement en temps réel, partage sécurisé — nous travaillons également avec Power BI et des solutions sur-mesure. Chaque dashboard est conçu autour de vos KPIs métier, pas de métriques vanity. L'objectif est de produire un outil de pilotage que vos équipes utilisent réellement au quotidien, pas un reporting mensuel que personne ne lit.",
   },
   {
-    q: "Quels KPIs suivre dans un dashboard analytics performant ?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ut facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.",
+    q: "Quel est le ROI d'un investissement en analytics et tracking ?",
+    a: "Un tracking fiable ne génère pas de revenus directement — mais il conditionne la rentabilité de tous vos autres investissements digitaux. Sans données fiables, vous optimisez à l'aveugle : budgets SEA mal répartis, audiences SMA mal ciblées, décisions basées sur des métriques incomplètes. Nos clients constatent en moyenne une amélioration de 15 à 25% du ROAS global après la mise en place d'un tracking rigoureux et d'une attribution multi-touch. Le coût d'un bon setup analytics est amorti en quelques semaines de campagnes mieux pilotées. C'est l'investissement le plus rentable du digital — parce qu'il rend tous les autres plus performants.",
   },
 ]
 
@@ -104,14 +103,14 @@ const otherExpertises = [
 export default function AgenceDataPage() {
   const jsonLdFaq = faqJsonLd(faqs.map(f => ({ q: f.q, a: f.a })))
   const jsonLdService = serviceJsonLd({
-    name: 'Agence Data & Analytics',
-    description: "Agence data spécialisée en tracking, attribution, dashboards, data activation, CRM et tag management.",
+    name: 'Agence Analytics',
+    description: "Agence data certifiée Google Analytics. Tracking GA4, attribution multi-touch, dashboards Looker Studio, server-side tracking, consentement RGPD.",
     url: 'https://darwin-agency.fr/agence-analytics',
-    keywords: ['agence data', 'analytics', 'tracking', 'attribution', 'dashboard', 'Google Analytics 4', 'tag management', 'server-side tracking'],
+    keywords: ['agence analytics', 'tracking', 'GA4', 'Google Analytics', 'attribution', 'dashboard', 'server-side tracking', 'RGPD', 'data'],
   })
   const jsonLdBreadcrumb = breadcrumbJsonLd([
     { name: 'Accueil', url: 'https://darwin-agency.fr/' },
-    { name: 'Agence Data & Analytics', url: 'https://darwin-agency.fr/agence-analytics' },
+    { name: 'Agence Analytics', url: 'https://darwin-agency.fr/agence-analytics' },
   ])
 
   return (
@@ -132,26 +131,22 @@ export default function AgenceDataPage() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 36, fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#bbb' }}>
               <Link href="/" style={{ color: '#bbb', textDecoration: 'none' }}>Accueil</Link>
               <span>/</span>
-              <span style={{ color: '#0a0a0a' }}>Agence Data &amp; Analytics</span>
+              <span style={{ color: '#0a0a0a' }}>Agence Analytics</span>
             </div>
 
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 28 }}>
               <span style={{ display: 'inline-block', width: 32, height: 3, background: '#FFF127' }} />
-              <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#0a0a0a' }}>Expertise Data</span>
+              <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#0a0a0a' }}>Expertise Analytics</span>
             </div>
 
             <h1 className="font-anton" style={{ fontSize: 'clamp(2.6rem, 5vw, 4.8rem)', lineHeight: 0.95, textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 28px' }}>
-              <span style={{ display: 'block' }}>LA DATA AU SERVICE</span>
-              <span style={{ display: 'inline-block', background: '#FFF127', padding: '0 8px', marginBottom: 4 }}>DE VOS DÉCISIONS</span>
-              <span style={{ display: 'block' }}>MARKETING</span>
+              <span style={{ display: 'block' }}>BIEN MESURER ET</span>
+              <span style={{ display: 'block' }}>ANALYSER VOS DONNÉES</span>
+              <span style={{ display: 'inline-block', background: '#FFF127', padding: '0 8px', marginBottom: 4 }}>POUR OPTIMISER VOS</span>
+              <span style={{ display: 'block' }}>PERFORMANCES</span>
             </h1>
 
-            <p style={{ fontSize: '1rem', lineHeight: 1.75, color: '#555', marginBottom: 16, maxWidth: 460 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <p style={{ fontSize: '1rem', lineHeight: 1.75, color: '#555', marginBottom: 40, maxWidth: 460 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            </p>
+            <p style={{ fontSize: '1rem', lineHeight: 1.75, color: '#555', marginBottom: 40, maxWidth: 460 }} dangerouslySetInnerHTML={{ __html: "L'approche <strong>Data-driven</strong> qui caractérise DARWIN est basée sur une bonne collecte des données via votre <strong>Analytics</strong> et sur un traitement intelligent de ces données mixant <strong>datavisualisation</strong> et analyse des parcours dans une logique <strong>Attribution / Contribution</strong> pour avoir la meilleure compréhension possible des parcours existants et pouvoir ainsi optimiser vos <strong>investissements digitaux</strong> afin de maximiser votre rentabilité." }} />
 
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 48 }}>
               <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#0a0a0a', color: '#fff', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
@@ -167,22 +162,22 @@ export default function AgenceDataPage() {
           <div className="rsp-hero-img" style={{ position: 'relative', background: '#0a0a0a', overflow: 'hidden' }}>
             <Image
               src="/images/analytics/cover-agence-data-tracking.jpeg"
-              alt="Agence Data & Analytics DARWIN — Tracking et pilotage data"
+              alt="Agence Analytics DARWIN — Data, Tracking & Attribution"
               fill
               style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.85 }}
               priority
             />
             {/* Overlay gradient left */}
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(255,255,255,0.15) 0%, transparent 40%)' }} />
-            {/* Floating stat */}
+            {/* Floating stat — GA4 Certifié */}
             <div style={{ position: 'absolute', top: 40, left: 32, background: '#FFF127', padding: '16px 20px', borderRadius: 4 }}>
-              <div className="font-anton" style={{ fontSize: '1.8rem', lineHeight: 1, color: '#0a0a0a' }}>500+</div>
-              <div style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#555', marginTop: 4 }}>dashboards déployés</div>
+              <div className="font-anton" style={{ fontSize: '1.8rem', lineHeight: 1, color: '#0a0a0a' }}>GA4</div>
+              <div style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#555', marginTop: 4 }}>Certifié</div>
             </div>
-            {/* Floating stat 2 */}
+            {/* Floating stat 2 — 15+ outils */}
             <div style={{ position: 'absolute', bottom: 32, right: 32, background: '#fff', padding: '16px 20px', borderRadius: 4, boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}>
-              <div className="font-anton" style={{ fontSize: '1.8rem', lineHeight: 1, color: '#0a0a0a' }}>6</div>
-              <div style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#555', marginTop: 4 }}>expertises data intégrées</div>
+              <div className="font-anton" style={{ fontSize: '1.8rem', lineHeight: 1, color: '#0a0a0a' }}>15+</div>
+              <div style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#555', marginTop: 4 }}>outils maîtrisés</div>
             </div>
           </div>
         </div>
@@ -196,20 +191,16 @@ export default function AgenceDataPage() {
               L&apos;enjeu
             </p>
             <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: 0, color: '#0a0a0a' }}>
-              DES DONNÉES PARTOUT,<br />MAIS AUCUNE VISION CLAIRE.
+              LA QUALITÉ DE LA DONNÉE<br />EST LE SOCLE DE TOUTE DÉCISION
             </h2>
           </div>
           <div>
-            <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', margin: '0 0 20px' }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
-            <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', margin: 0 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-            </p>
+            <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', margin: '0 0 20px' }} dangerouslySetInnerHTML={{ __html: "La plupart des entreprises souffrent du même problème sans le savoir : un <strong>tracking incomplet</strong>, des données faussées par les refus de consentement, des outils qui ne communiquent pas entre eux. Le CRM ne parle pas à l'analytics, le SEA ne voit pas les mêmes conversions que le SMA, et les décisions stratégiques finissent par se prendre au doigt mouillé plutôt que sur la base de faits mesurés. En 2026, avec la fin des cookies tiers et des taux de consentement qui plafonnent à 60-70%, la perte de données n'a jamais été aussi massive." }} />
+            <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', margin: 0 }} dangerouslySetInnerHTML={{ __html: "Sans <strong>mesure fiable</strong>, chaque décision d'optimisation est prise à l'aveugle. Vous investissez en publicité sans savoir quel levier convertit réellement. Vous construisez des audiences sur des données partielles. Vous pilotez votre croissance avec un tableau de bord qui ne reflète que la moitié de la réalité. La qualité de la donnée n'est pas un sujet technique secondaire — c'est le <strong>socle de toute performance digitale</strong>." }} />
             <div style={{ marginTop: 24, display: 'flex', gap: 24 }}>
               <div style={{ borderLeft: '3px solid #0a0a0a', paddingLeft: 16 }}>
-                <div className="font-anton" style={{ fontSize: '1.8rem' }}>500+</div>
-                <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#555' }}>dashboards déployés</div>
+                <div className="font-anton" style={{ fontSize: '1.8rem' }}>30-40%</div>
+                <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#555' }}>de données perdues post-RGPD</div>
               </div>
               <div style={{ borderLeft: '3px solid #0a0a0a', paddingLeft: 16 }}>
                 <div className="font-anton" style={{ fontSize: '1.8rem' }}>100%</div>
@@ -220,7 +211,7 @@ export default function AgenceDataPage() {
         </div>
       </section>
 
-      {/* ─── QU'EST-CE QU'UNE AGENCE DATA ─── */}
+      {/* ─── DATA TRACKING & ANALYTICS ─── */}
       <section style={{ background: '#fff', padding: '96px 24px', borderTop: '1px solid #eee' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
 
@@ -232,20 +223,33 @@ export default function AgenceDataPage() {
                 Définition
               </p>
               <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: '0 0 32px', color: '#0a0a0a' }}>
-                QU&apos;EST-CE QU&apos;UNE<br />AGENCE DATA ?
+                DATA TRACKING<br />&amp; ANALYTICS
               </h2>
-              <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 20, textAlign: 'justify' }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 20, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "DARWIN adopte une <strong>approche data-driven</strong>, plaçant au coeur de sa méthodologie la collecte, l'optimisation et le traitement de la donnée." }} />
+              <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 20, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "La <strong>qualité de la mesure</strong> et des données collectées est donc essentielle pour prendre les bonnes décisions." }} />
+              <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 20, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "Nos experts certifiés <strong>Google Analytics</strong> vous accompagnent donc dans cette démarche :" }} />
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 20px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {[
+                  'Mise en place du tracking (Générateur d\'UTM, pose GTM, plan de marquage avancé GTM…)',
+                  'Déploiement GA4 et configuration avancée des évènements nécessaires, notamment au e-commerce',
+                  'Configuration de dashboard digital (Google Data Studio)',
+                  'Formation Google Analytics',
+                ].map((item) => (
+                  <li key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: '0.9rem', color: '#444', lineHeight: 1.6 }}>
+                    <span style={{ width: 6, height: 6, background: '#FFF127', borderRadius: '50%', flexShrink: 0, marginTop: 8 }} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 32, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "Nous disposons de compétences Analytics sur <strong>Google Analytics</strong> mais aussi sur d'autres outils tels que <strong>Matomo</strong>, <strong>Piwik Pro</strong>, <strong>Piano</strong>, <strong>AT Internet</strong>…" }} />
+
+              {/* Certification */}
+              <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 24 }}>
+                Nos certifications
               </p>
-              <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 20, textAlign: 'justify' }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.
-              </p>
-              <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 20, textAlign: 'justify' }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ut facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-              </p>
-              <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', margin: 0, textAlign: 'justify' }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.
-              </p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 48, flexWrap: 'wrap' }}>
+                <Image src="/logos/certifications/google-analytics.png" alt="Google Analytics Certifié" width={200} height={90} style={{ height: 90, width: 'auto', display: 'block' }} />
+              </div>
             </div>
 
             {/* RIGHT — photo with editorial framing */}
@@ -254,8 +258,8 @@ export default function AgenceDataPage() {
               <div style={{ position: 'relative' }}>
                 <div style={{ position: 'absolute', top: 12, left: 12, right: -12, bottom: -12, border: '1px solid #ebebeb', borderRadius: 4, pointerEvents: 'none' }} />
                 <Image
-                  src="/images/analytics/agence-analytics-equipe.jpg"
-                  alt="Consultants DARWIN en session d'analyse data"
+                  src="/images/analytics/cover-agence-data-tracking.jpeg"
+                  alt="Équipe DARWIN — Data Tracking & Analytics"
                   width={640}
                   height={460}
                   style={{ width: '100%', maxWidth: 480, height: 'auto', display: 'block', borderRadius: 4, position: 'relative', zIndex: 1 }}
@@ -327,72 +331,132 @@ export default function AgenceDataPage() {
 
           <div className="rsp-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
             {services.map((card) => (
-              <Link
-                key={card.href}
-                href={card.href}
+              <div
+                key={card.title}
                 style={{
                   display: 'block',
                   padding: '36px 32px',
                   background: '#fff',
                   borderTop: `4px solid ${card.accent}`,
-                  textDecoration: 'none',
-                  transition: 'transform 0.2s, box-shadow 0.2s',
                 }}
-                className="levier-card"
               >
                 <h3 className="font-anton" style={{ fontSize: '1.5rem', textTransform: 'uppercase', color: '#0a0a0a', marginBottom: 14, lineHeight: 1.1 }}>{card.title}</h3>
                 <p style={{ fontSize: '0.85rem', lineHeight: 1.75, color: '#666', margin: '0 0 24px' }}>{card.desc}</p>
-                <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: card.accent === '#FFF127' ? '#0a0a0a' : card.accent }}>Découvrir →</span>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ─── VOS OBJECTIFS, NOTRE STRATÉGIE ─── */}
+      {/* ─── MÉTHODE ─── */}
+      <section id="methode" style={{ background: '#0a0a0a', padding: '80px 24px', color: '#fff', borderTop: '1px solid #1a1a1a' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+
+          {/* Header row */}
+          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40, alignItems: 'end', marginBottom: 48 }}>
+            <div>
+              <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#555', marginBottom: 16 }}>
+                Notre méthode
+              </p>
+              <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 3.6rem)', textTransform: 'uppercase', lineHeight: 1, margin: 0, color: '#fff' }}>
+                5 ÉTAPES POUR<br />UNE DATA ACTIONNABLE
+              </h2>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#FFF127', color: '#0a0a0a', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+                Parler à un expert data →
+              </Link>
+            </div>
+          </div>
+
+          {/* 5 steps — horizontal timeline cards */}
+          <div className="rsp-5col" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 0 }}>
+            {[
+              {
+                num: '01', title: 'Audit data', subtitle: 'état des lieux',
+                desc: "État du tracking existant, qualité des données collectées, outils en place. Nous identifions les fuites de données, les incohérences entre plateformes et les opportunités manquées.",
+                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>,
+              },
+              {
+                num: '02', title: 'Plan de marquage', subtitle: 'architecture',
+                desc: "Architecture GTM structurée, événements GA4 définis selon vos objectifs métier, conventions de nommage documentées. Le plan de marquage est la colonne vertébrale de votre collecte.",
+                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>,
+              },
+              {
+                num: '03', title: 'Implémentation', subtitle: 'pose & tests',
+                desc: "Pose des tags via GTM, configuration server-side, déploiement de la CMP, tests de bout en bout. Chaque événement est validé avant mise en production.",
+                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>,
+              },
+              {
+                num: '04', title: 'Dashboards', subtitle: 'KPIs & reporting',
+                desc: "Création de dashboards Looker Studio connectés à vos KPIs métier. Reporting automatisé, segmentations avancées, partage sécurisé avec vos équipes.",
+                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20V10" /><path d="M18 20V4" /><path d="M6 20v-4" /></svg>,
+              },
+              {
+                num: '05', title: 'Pilotage', subtitle: 'optimisation continue',
+                desc: "Attribution multi-touch, insights IA, optimisation continue des investissements. La donnée ne dort jamais — votre pilotage non plus.",
+                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>,
+              },
+            ].map((step, i) => (
+              <div key={step.num} style={{ position: 'relative', padding: '32px 24px', borderLeft: i > 0 ? '1px solid #1a1a1a' : 'none' }}>
+                {/* Yellow top bar */}
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: '#FFF127' }} />
+
+                {/* Connector dot */}
+                <div style={{ position: 'absolute', top: -5, left: '50%', transform: 'translateX(-50%)', width: 10, height: 10, borderRadius: '50%', background: '#FFF127', border: '2px solid #0a0a0a' }} />
+
+                {/* Icon */}
+                <div style={{ marginBottom: 20 }}>
+                  {step.icon}
+                </div>
+
+                {/* Number */}
+                <div className="font-anton" style={{ fontSize: '2.4rem', lineHeight: 1, color: '#fff', marginBottom: 12 }}>{step.num}</div>
+
+                {/* Title */}
+                <h3 className="font-anton" style={{ fontSize: '1.3rem', textTransform: 'uppercase', color: '#fff', lineHeight: 1.1, marginBottom: 4 }}>{step.title}</h3>
+                <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 16 }}>{step.subtitle}</div>
+
+                {/* Desc */}
+                <p style={{ fontSize: '0.82rem', lineHeight: 1.7, color: 'rgba(255,255,255,0.75)', margin: 0 }}>{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── IA & DATA INTELLIGENCE ─── */}
       <section style={{ background: '#fff', padding: '96px 24px', borderTop: '1px solid #eee' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ marginBottom: 64 }}>
             <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 16 }}>
-              Vos objectifs, notre stratégie
+              IA & Data Intelligence
             </p>
-            <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 3.6rem)', textTransform: 'uppercase', lineHeight: 1, margin: 0, maxWidth: 800 }}>
-              MESURER, COMPRENDRE, OPTIMISER, DÉCIDER : LA DATA AU SERVICE DE VOS PRIORITÉS
+            <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 3.6rem)', textTransform: 'uppercase', lineHeight: 1, margin: '0 0 32px', maxWidth: 800 }}>
+              L&apos;INTELLIGENCE ARTIFICIELLE<br />AU SERVICE DE VOS DONNÉES
             </h2>
           </div>
 
-          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 2 }}>
-            {[
-              {
-                title: 'Mesurer avec précision',
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-              },
-              {
-                title: 'Comprendre les parcours utilisateurs',
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.",
-              },
-              {
-                title: 'Optimiser les investissements publicitaires',
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ut facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
-              },
-              {
-                title: 'Décider sur la base de faits, pas d\'intuitions',
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                style={{
-                  padding: '48px 40px',
-                  background: '#fafafa',
-                  border: '1px solid #ebebeb',
-                }}
-              >
-                <div style={{ display: 'inline-block', background: '#FFF127', height: 3, width: 32, marginBottom: 20 }} />
-                <h3 className="font-anton" style={{ fontSize: '1.3rem', textTransform: 'uppercase', marginBottom: 16, lineHeight: 1.15, color: '#0a0a0a' }}>{item.title}</h3>
-                <p style={{ fontSize: '0.9rem', lineHeight: 1.8, color: '#444', margin: 0 }}>{item.text}</p>
-              </div>
-            ))}
+          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'start' }}>
+            <div>
+              <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 20, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "En 2026, l'<strong>intelligence artificielle</strong> n'est plus une promesse pour l'analytics — c'est une réalité opérationnelle. GA4 intègre nativement des <strong>métriques prédictives</strong> (probabilité d'achat, probabilité de churn) qui permettent de créer des audiences avant même que le comportement ne se produise. La détection automatique d'anomalies alerte vos équipes quand un KPI dévie de sa trajectoire habituelle, sans attendre le reporting mensuel. Les <strong>modèles d'attribution pilotés par l'IA</strong> dépassent les règles statiques pour analyser des millions de parcours et attribuer la valeur de chaque conversion avec une précision que l'humain seul ne peut atteindre." }} />
+              <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 20, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "Mais l'IA ne fonctionne qu'avec de la <strong>donnée de qualité</strong>. Un tracking approximatif nourrit des modèles approximatifs — et des décisions approximatives. C'est pourquoi chez DARWIN, nous considérons l'infrastructure data (tracking, server-side, CMP) comme le prérequis indispensable avant d'activer les capacités IA. Les <strong>audiences intelligentes</strong>, les insights automatisés, les signaux de smart bidding — tout repose sur la fiabilité de ce qui est mesuré en amont." }} />
+              <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', margin: 0, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "DARWIN exploite ces capacités pour ses clients au quotidien : <strong>audiences prédictives</strong> activées dans Google Ads et Meta, détection d'anomalies configurée sur les KPIs métier critiques, attribution algorithmique intégrée au pilotage budgétaire. L'IA ne remplace pas l'expertise humaine — elle la démultiplie. Et les entreprises qui l'adoptent aujourd'hui prennent une avance structurelle sur celles qui attendent encore." }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              {[
+                { num: 'Prédictif', label: 'Audiences GA4', sub: 'Probabilité d\'achat et de churn' },
+                { num: 'Anomalies', label: 'Détection automatique', sub: 'Alertes en temps réel sur vos KPIs' },
+                { num: 'Attribution', label: 'Modèles IA', sub: 'Data-driven, multi-touch, algorithmique' },
+                { num: 'Smart Bidding', label: 'Signaux enrichis', sub: 'Meilleure donnée = meilleur algorithme' },
+              ].map((item) => (
+                <div key={item.label} style={{ padding: '28px 24px', background: '#fafafa', border: '1px solid #ebebeb' }}>
+                  <div className="font-anton" style={{ fontSize: '1.4rem', lineHeight: 1, marginBottom: 6, color: '#0a0a0a', textTransform: 'uppercase' }}>{item.num}</div>
+                  <div style={{ fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.06em', textTransform: 'uppercase', color: '#0a0a0a', marginBottom: 4 }}>{item.label}</div>
+                  <div style={{ fontSize: '0.72rem', color: '#aaa', fontWeight: 500 }}>{item.sub}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -417,31 +481,31 @@ export default function AgenceDataPage() {
           <div className="rsp-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
             {[
               {
-                client: 'Client Alpha',
-                category: 'Analytics · Data',
-                result: '+40%',
-                resultLabel: 'de conversions trackées en plus',
-                period: 'Migration GA4 complète en 3 semaines',
-                img: '/images/cas-clients/verisure-cover.jpg',
-                href: '/cas-clients',
+                client: 'Catimini',
+                category: 'SEA · DATA',
+                result: 'x2',
+                resultLabel: 'objectifs doublés sur 10 marchés',
+                period: 'Déploiement multi-pays coordonné',
+                img: '/images/cas-clients/catimini-cover.jpg',
+                href: '/cas-clients/catimini',
               },
               {
-                client: 'Client Beta',
-                category: 'Attribution · Tracking',
-                result: '-25%',
-                resultLabel: "de coût par acquisition",
-                period: 'Attribution multi-touch déployée',
-                img: '/images/cas-clients/prefon-cover.jpg',
-                href: '/cas-clients',
+                client: 'Pandora',
+                category: 'MÉDIA · DATA',
+                result: '+95%',
+                resultLabel: 'CA Noël',
+                period: 'Stratégie data & attribution avancée',
+                img: '/images/cas-clients/pandora-cover.jpg',
+                href: '/cas-clients/pandora',
               },
               {
-                client: 'Client Gamma',
-                category: 'Dashboard · CRM',
-                result: 'x3',
-                resultLabel: 'vitesse de prise de décision',
-                period: 'Dashboard temps réel unifié',
-                img: '/images/cas-clients/acadomia-cover.jpg',
-                href: '/cas-clients',
+                client: 'Kiosque Mag',
+                category: 'MÉDIA · DATA',
+                result: 'CAC',
+                resultLabel: 'maîtrisé',
+                period: 'Pilotage data-driven des acquisitions',
+                img: '/images/cas-clients/kiosque-mag-cover.jpg',
+                href: '/cas-clients/kiosquemag',
               },
             ].map((c) => (
               <Link key={c.client} href={c.href} style={{ position: 'relative', overflow: 'hidden', borderRadius: 6, height: 420, display: 'block', textDecoration: 'none' }}>
@@ -476,128 +540,47 @@ export default function AgenceDataPage() {
         </div>
       </section>
 
-      {/* ─── MÉTHODE ─── */}
-      <section id="methode" style={{ background: '#0a0a0a', padding: '80px 24px', color: '#fff' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-
-          {/* Header row */}
-          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40, alignItems: 'end', marginBottom: 48 }}>
-            <div>
-              <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#555', marginBottom: 16 }}>
-                Notre méthode
-              </p>
-              <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 3.6rem)', textTransform: 'uppercase', lineHeight: 1, margin: 0, color: '#fff' }}>
-                5 ÉTAPES POUR<br />UNE DATA ACTIONNABLE
-              </h2>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#FFF127', color: '#0a0a0a', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-                Parler à un expert data →
-              </Link>
-            </div>
-          </div>
-
-          {/* 5 steps — horizontal timeline cards */}
-          <div className="rsp-5col" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 0 }}>
-            {[
-              {
-                num: '01', title: 'Audit', subtitle: 'tracking complet',
-                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>,
-              },
-              {
-                num: '02', title: 'Plan de taggage', subtitle: 'structuré',
-                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.",
-                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>,
-              },
-              {
-                num: '03', title: 'Implémentation', subtitle: '& collecte',
-                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ut facilisis in.",
-                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>,
-              },
-              {
-                num: '04', title: 'Dashboards', subtitle: '& analyse',
-                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida.",
-                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20V10" /><path d="M18 20V4" /><path d="M6 20v-4" /></svg>,
-              },
-              {
-                num: '05', title: 'Activation', subtitle: '& itération',
-                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius.",
-                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>,
-              },
-            ].map((step, i) => (
-              <div key={step.num} style={{ position: 'relative', padding: '32px 24px', borderLeft: i > 0 ? '1px solid #1a1a1a' : 'none' }}>
-                {/* Yellow top bar */}
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: '#FFF127' }} />
-
-                {/* Connector dot */}
-                <div style={{ position: 'absolute', top: -5, left: '50%', transform: 'translateX(-50%)', width: 10, height: 10, borderRadius: '50%', background: '#FFF127', border: '2px solid #0a0a0a' }} />
-
-                {/* Icon */}
-                <div style={{ marginBottom: 20 }}>
-                  {step.icon}
-                </div>
-
-                {/* Number */}
-                <div className="font-anton" style={{ fontSize: '2.4rem', lineHeight: 1, color: '#fff', marginBottom: 12 }}>{step.num}</div>
-
-                {/* Title */}
-                <h3 className="font-anton" style={{ fontSize: '1.3rem', textTransform: 'uppercase', color: '#fff', lineHeight: 1.1, marginBottom: 4 }}>{step.title}</h3>
-                <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 16 }}>{step.subtitle}</div>
-
-                {/* Desc */}
-                <p style={{ fontSize: '0.82rem', lineHeight: 1.7, color: 'rgba(255,255,255,0.75)', margin: 0 }}>{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── DARWIN DIFFÉRENT ─── */}
+      {/* ─── POURQUOI DARWIN ─── */}
       <section style={{ background: '#fff', padding: '96px 24px', borderTop: '1px solid #eee' }}>
-        <div className="rsp-2col" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
-          <div>
+        <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+          <div style={{ marginBottom: 56 }}>
             <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 16 }}>
               Notre différence
             </p>
-            <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3.4rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: '0 0 32px' }}>
-              LA DATA QUI ÉCLAIRE,<br />PAS JUSTE QUI MESURE
+            <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3.4rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: '0 0 24px' }}>
+              POURQUOI CHOISIR DARWIN<br />POUR VOTRE DATA ?
             </h2>
-            <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 24 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
-            <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 40 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum.
-            </p>
-            <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#0a0a0a', color: '#fff', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-              Échangeons sur votre stratégie data →
-            </Link>
+            <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#444', maxWidth: 720, margin: 0 }} dangerouslySetInnerHTML={{ __html: "Quelle que soit la taille de votre entreprise ou la maturité de votre stack data, nous adaptons notre accompagnement à vos enjeux : <strong>tracking</strong>, <strong>attribution</strong>, <strong>dashboards</strong> ou <strong>server-side</strong>." }} />
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            {/* Image ornement — équipe DARWIN */}
-            <div style={{ position: 'relative', width: '100%', height: 220, borderRadius: 6, overflow: 'hidden' }}>
-              <Image
-                src="/images/analytics/data-ornement.jpg"
-                alt="L'équipe Data DARWIN au travail"
-                fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
-              />
-            </div>
-            <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-              {[
-                { num: '30+', label: 'Experts seniors', sub: '6+ ans d\'ancienneté moyenne' },
-                { num: '500+', label: 'Dashboards déployés', sub: 'Looker Studio, Power BI, Data Studio' },
-                { num: '4', label: 'Entités créatives', sub: 'Creative Thinking Community' },
-                { num: '7 ans', label: 'Fidélité client', sub: 'Durée moyenne de collaboration' },
-              ].map((item) => (
-                <div key={item.num} style={{ padding: '28px 24px', background: '#fafafa', border: '1px solid #ebebeb' }}>
-                  <div className="font-anton" style={{ fontSize: '2.2rem', lineHeight: 1, marginBottom: 6, color: '#0a0a0a' }}>{item.num}</div>
-                  <div style={{ fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.06em', textTransform: 'uppercase', color: '#0a0a0a', marginBottom: 4 }}>{item.label}</div>
-                  <div style={{ fontSize: '0.72rem', color: '#aaa', fontWeight: 500 }}>{item.sub}</div>
-                </div>
-              ))}
-            </div>
+          <div className="rsp-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2 }}>
+            {[
+              {
+                title: 'Une expertise certifiée et multi-outils',
+                text: "Nos consultants sont certifiés Google Analytics et maîtrisent un écosystème large : GA4, GTM, Matomo, Piwik Pro, Piano, AT Internet. Cette polyvalence nous permet de nous adapter à votre stack existant plutôt que de vous imposer un outil. Nous parlons la langue de vos données, quel que soit l'outil qui les collecte.",
+              },
+              {
+                title: 'Une approche intégrée : la data nourrit tout',
+                text: "Chez DARWIN, la data n'est pas une expertise isolée. Elle irrigue chaque levier : les insights analytics orientent vos campagnes SEA, vos audiences SMA, votre stratégie SEO et vos plans média. Cette approche intégrée signifie que chaque donnée collectée est activée — pas simplement stockée dans un rapport que personne ne consulte.",
+              },
+              {
+                title: 'Transparence totale : pas de boîte noire',
+                text: "Chaque client dispose de dashboards en temps réel accessibles à tout moment. Nous documentons nos plans de marquage, partageons nos méthodologies d'attribution et expliquons chaque recommandation par la donnée qui la soutient. Vous savez exactement ce qui est mesuré, comment c'est mesuré, et pourquoi nous préconisons telle action plutôt qu'une autre.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                style={{
+                  padding: '48px 40px',
+                  background: '#fafafa',
+                  border: '1px solid #ebebeb',
+                }}
+              >
+                <div style={{ display: 'inline-block', background: '#FFF127', height: 3, width: 32, marginBottom: 20 }} />
+                <h3 className="font-anton" style={{ fontSize: '1.3rem', textTransform: 'uppercase', marginBottom: 16, lineHeight: 1.15, color: '#0a0a0a' }}>{item.title}</h3>
+                <p style={{ fontSize: '0.9rem', lineHeight: 1.8, color: '#444', margin: 0 }}>{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -658,9 +641,7 @@ export default function AgenceDataPage() {
           <h2 className="font-anton" style={{ fontSize: 'clamp(2.4rem, 5vw, 5rem)', textTransform: 'uppercase', lineHeight: 1, margin: '0 0 24px', color: '#0a0a0a' }}>
             ÉCHANGEONS SUR<br />VOTRE STRATÉGIE DATA
           </h2>
-          <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', marginBottom: 40, maxWidth: 560, margin: '0 auto 40px' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
+          <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', marginBottom: 40, maxWidth: 560, margin: '0 auto 40px' }} dangerouslySetInnerHTML={{ __html: "La donnée est le fondement de toute <strong>performance digitale</strong>. Sans mesure fiable, chaque optimisation est un pari. Avec un tracking rigoureux, une attribution claire et des dashboards qui parlent à vos équipes, chaque euro investi est piloté par la donnée — pas par l'intuition. Parlons de vos enjeux : nous vous dirons exactement ce que votre stack data peut gagner." }} />
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#0a0a0a', color: '#fff', padding: '16px 36px', borderRadius: 4, textDecoration: 'none', fontSize: '0.88rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
               Parlons de vos enjeux data →

@@ -6,13 +6,13 @@ import { faqJsonLd, serviceJsonLd, breadcrumbJsonLd } from '../lib/jsonld'
 import { ogDefaults } from '../lib/og'
 
 export const metadata: Metadata = {
-  title: "Agence SMA — Social Media Ads & performance réseaux sociaux | DARWIN",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Agence SMA experte depuis 2003.",
+  title: "Agence SMA — Social Media Ads & réseaux sociaux | DARWIN",
+  description: "Vous cherchez à développer votre marque sur les réseaux sociaux? Face à la multiplicité des plateformes et des formats publicitaires, piloter efficacement vos campagnes Social Ads nécessite l'accompagnement d'un professionnel.",
   alternates: { canonical: '/agence-sma' },
   openGraph: {
     ...ogDefaults,
-    title: "Agence SMA — Social Media Ads & performance réseaux sociaux | DARWIN",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Agence SMA experte depuis 2003.",
+    title: "Agence SMA — Social Media Ads & réseaux sociaux | DARWIN",
+    description: "Vous cherchez à développer votre marque sur les réseaux sociaux? Face à la multiplicité des plateformes et des formats publicitaires, piloter efficacement vos campagnes Social Ads nécessite l'accompagnement d'un professionnel.",
     url: 'https://darwin-agency.fr/agence-sma',
   },
 }
@@ -20,80 +20,79 @@ export const metadata: Metadata = {
 /* ─── DATA ─────────────────────────────────────────── */
 
 const stats = [
-  { num: `${DARWIN_YEARS} ans`, label: "d'expertise Social Ads" },
-  { num: '350+', label: 'clients accompagnés' },
-  { num: '6+', label: 'plateformes activées' },
-  { num: '10K+', label: 'campagnes lancées' },
+  { num: `${DARWIN_YEARS} ans`, label: "d'expertise" },
+  { num: '400+', label: 'clients accompagnés' },
+  { num: '7 ans', label: 'de fidélité moyenne' },
+  { num: 'Meta', label: 'Partner certifié' },
 ]
 
 const pillars = [
   {
     id: '01',
-    title: 'Stratégie & Ciblage',
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    items: ['Analyse des audiences et personas', 'Ciblage socio-démographique avancé', 'Lookalike audiences & retargeting', 'Recommandations budgétaires par plateforme'],
+    title: 'Facebook et Instagram, les incontournables',
+    desc: "Notre certification Meta Business Partner vous donne accès au meilleur de Facebook et Instagram. Reels, Stories, Shops… nous utilisons chaque format publicitaire de manière stratégique pour capter l'attention de votre cible. Grâce au Pixel avancé, à l'A/B testing automatique et à l'option Shopping Advantage+, nous optimisons vos campagnes en permanence. Les outils de Conversions API nous permettent d'affiner votre ciblage et d'optimiser vos campagnes Facebook et Instagram. Enfin, les outils d'IA permettent désormais de générer automatiquement des variantes publicitaires et d'optimiser les visuels en temps réel.",
+    items: ['Meta Business Partner', 'Pixel & Conversions API', 'Shopping Advantage+', 'A/B testing & IA'],
   },
   {
     id: '02',
-    title: 'Création & Formats',
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    items: ['Création de visuels & vidéos', 'Adaptation multi-formats (Stories, Reels, Feed)', 'UGC & contenus natifs', 'Tests créatifs A/B multivariés'],
+    title: 'LinkedIn pour une stratégie business',
+    desc: "LinkedIn est le réseau professionnel par excellence pour toucher les décideurs et développer votre activité B2B. Nous utilisons toute la gamme d'outils publicitaires LinkedIn pour atteindre vos objectifs.",
+    items: ['Publications sponsorisées', 'Messages privés sponsorisés', 'Publicités dynamiques', 'Formulaires pré-remplis'],
   },
   {
     id: '03',
-    title: 'Activation & Tests',
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    items: ['Lancement multi-plateformes coordonné', 'A/B testing audiences & créas', 'Scaling progressif des budgets', 'Attribution multi-touch'],
+    title: "TikTok pour capter l'attention d'une nouvelle génération",
+    desc: "TikTok transforme les règles de la publicité sur les réseaux sociaux avec son format vidéo court et dynamique. Notre collectif maîtrise les codes créatifs de TikTok : musiques virales, effets visuels et montages dynamiques. Nous transformons votre message publicitaire en contenu impactant qui touche aussi bien les jeunes générations que les audiences plus larges, désormais très présentes sur la plateforme.",
+    items: ['Contenus organiques amplifiés', 'Formats immersifs', 'Trends & créatif natif', 'Audiences jeunes & larges'],
   },
   {
     id: '04',
-    title: 'Pilotage & Reporting',
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    items: ['Dashboard KPI temps réel', 'Optimisation quotidienne des enchères', 'Réallocation budgétaire data-driven', 'Reporting mensuel actionnable'],
+    title: "D'autres réseaux à explorer",
+    desc: "De nouveaux réseaux sociaux voient le jour, offrant de nouvelles opportunités pour votre marque. Au-delà des plateformes majeures, d'autres canaux méritent de l'attention.",
+    items: ['X (actualité en temps réel)', 'Threads (conversations authentiques)', 'Pinterest (inspiration & conversion)', 'WhatsApp (messaging Snapchat (jeunes audiences) commerce)'],
   },
 ]
 
 const services = [
-  { href: '/agence-sma/meta-ads', title: 'Meta Ads', accent: '#FFF127', desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore." },
-  { href: '/agence-sma/linkedin-ads', title: 'LinkedIn Ads', accent: '#FFF127', desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore." },
-  { href: '/agence-sma/tiktok-ads', title: 'TikTok Ads', accent: '#FFF127', desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore." },
-  { href: '/agence-sma/pinterest-ads', title: 'Pinterest Ads', accent: '#FFF127', desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore." },
-  { href: '/agence-sma/retargeting-social', title: 'Retargeting Social', accent: '#29C5F5', desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore." },
-  { href: '/agence-sma/influence', title: 'Influence', accent: '#29C5F5', desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore." },
+  { href: '/agence-sma/facebook-ads', title: 'Facebook Ads', accent: '#FFF127', objective: 'Notoriété, trafic, engagement', desc: 'Vidéos, carrousels, publicités dynamiques' },
+  { href: '/agence-sma/instagram-ads', title: 'Instagram Ads', accent: '#FFF127', objective: 'Visibilité, conversion, notoriété', desc: 'Stories, photos, vidéos courtes' },
+  { href: '/agence-sma/linkedin-ads', title: 'LinkedIn Ads', accent: '#FFF127', objective: 'Lead generation, B2B, recrutement', desc: 'Annonces textuelles, sponsored InMail' },
+  { href: '/agence-sma/tiktok-ads', title: 'TikTok Ads', accent: '#FFF127', objective: 'Engagement, notoriété, viralité', desc: 'Formats vidéo courts et dynamiques' },
+  { href: '/agence-sma/pinterest-ads', title: 'Pinterest Ads', accent: '#29C5F5', objective: 'E-commerce, inspiration', desc: 'Visuels inspirants, guides d\'achat' },
+  { href: '/agence-sma/whatsapp-business', title: 'WhatsApp Business', accent: '#29C5F5', objective: 'Messaging, commerce, relation client', desc: 'Catalogues, messagerie automatisée, click-to-WhatsApp' },
 ]
-
 
 const faqs = [
   {
     q: "Quelle est la différence entre le SMA et le community management ?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    a: "Le community management consiste à animer vos réseaux sociaux de manière organique : publications, interactions avec votre communauté, modération. Le SMA (Social Media Advertising) désigne la gestion de campagnes publicitaires payantes sur les réseaux sociaux. Chez DARWIN, nous recommandons de combiner les deux approches : le community management construit votre image de marque sur le long terme, tandis que le SMA amplifie votre visibilité et génère des résultats mesurables rapidement grâce à un ciblage précis.",
   },
   {
     q: "Quel budget minimum pour lancer des campagnes Social Ads ?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    a: "Le budget dépend de vos objectifs, de votre secteur et des plateformes ciblées. Il se compose de l'investissement publicitaire (dépensé directement sur les plateformes comme Meta, LinkedIn ou TikTok) et des honoraires de l'agence. Faire appel à une agence SMA spécialisée comme DARWIN vous permet d'optimiser chaque euro investi grâce à une expertise de ciblage, de créatifs et de pilotage qui fait toute la différence sur le retour sur investissement.",
   },
   {
-    q: "Comment choisir entre Meta Ads, LinkedIn Ads et TikTok Ads ?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    q: "Comment choisir entre Facebook, Instagram, LinkedIn et TikTok ?",
+    a: "Chaque plateforme a ses forces et touche des audiences différentes. Facebook et Instagram (Meta) offrent le ciblage le plus complet et conviennent à la plupart des secteurs. LinkedIn est incontournable pour le B2B et le recrutement. TikTok excelle pour toucher les jeunes audiences et créer de la viralité. Chez DARWIN, nous analysons votre cible, vos objectifs et votre marché pour recommander le mix de plateformes le plus pertinent — souvent une combinaison de plusieurs réseaux pour maximiser l'impact.",
   },
   {
     q: "Combien de temps pour voir les premiers résultats en Social Ads ?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    a: "Les premières données (impressions, clics, engagement) arrivent dès les premiers jours de diffusion. Cependant, les résultats business significatifs — leads qualifiés, ventes, coût d'acquisition stabilisé — nécessitent généralement 4 à 6 semaines d'optimisation. Ce délai permet aux algorithmes des plateformes de collecter suffisamment de données, et à nos consultants d'affiner les audiences, les créatifs et les enchères pour atteindre vos objectifs de performance.",
   },
   {
     q: "DARWIN gère-t-il aussi la création des visuels publicitaires ?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    a: "Oui, notre studio créatif intégré conçoit l'ensemble des visuels et vidéos nécessaires à vos campagnes Social Ads. Stories, Reels, carrousels, vidéos courtes TikTok : nous maîtrisons les codes créatifs de chaque plateforme pour produire des contenus qui captent l'attention et génèrent de l'engagement. Cette intégration créa + média garantit une cohérence parfaite entre le message et la stratégie de diffusion.",
   },
   {
     q: "Comment mesurer le ROI de ses campagnes Social Ads ?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    a: "La mesure du ROI commence par un tracking fiable : Pixel Meta, Conversions API, intégration CRM. Au-delà des indicateurs classiques (impressions, clics, CPM), nous nous concentrons sur les KPIs directement liés à vos objectifs business : coût par lead, coût par acquisition, ROAS, taux de conversion. Chaque client DARWIN dispose d'un reporting personnalisé avec des dashboards en temps réel qui permettent de suivre précisément la rentabilité de chaque euro investi.",
   },
 ]
 
 const otherExpertises = [
   { title: 'SEO', desc: 'Référencement naturel', href: '/agence-seo' },
   { title: 'SEA', desc: 'Google & Bing Ads', href: '/agence-sea' },
-  { title: 'MÉDIA', desc: 'Plan média & performance', href: '/agence-media' },
+  { title: 'MÉDIA', desc: 'Plan média & acquisition', href: '/agence-media' },
   { title: 'ANALYTICS', desc: 'Data & Tracking', href: '/agence-analytics' },
   { title: 'FORMATION', desc: 'Montée en compétences', href: '/formations' },
   { title: 'STUDIO CRÉATIF', desc: 'Direction artistique & Contenu', href: '/studio-creatif' },
@@ -105,9 +104,9 @@ export default function AgenceSmaPage() {
   const jsonLdFaq = faqJsonLd(faqs.map(f => ({ q: f.q, a: f.a })))
   const jsonLdService = serviceJsonLd({
     name: 'Agence SMA',
-    description: "Agence SMA spécialisée en Social Media Ads. Meta Ads, LinkedIn Ads, TikTok Ads, Pinterest Ads, retargeting social et influence.",
+    description: "Agence SMA certifiée Meta Partner. Gestion de campagnes Social Ads sur Facebook, Instagram, LinkedIn, TikTok, Pinterest et WhatsApp.",
     url: 'https://darwin-agency.fr/agence-sma',
-    keywords: ['agence SMA', 'Social Media Ads', 'Meta Ads', 'LinkedIn Ads', 'TikTok Ads', 'Pinterest Ads', 'publicité réseaux sociaux', 'Social Ads'],
+    keywords: ['agence SMA', 'Social Media Ads', 'Facebook Ads', 'Instagram Ads', 'LinkedIn Ads', 'TikTok Ads', 'Pinterest Ads', 'publicité réseaux sociaux'],
   })
   const jsonLdBreadcrumb = breadcrumbJsonLd([
     { name: 'Accueil', url: 'https://darwin-agency.fr/' },
@@ -141,18 +140,15 @@ export default function AgenceSmaPage() {
             </div>
 
             <h1 className="font-anton" style={{ fontSize: 'clamp(2.6rem, 5vw, 4.8rem)', lineHeight: 0.95, textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 28px' }}>
-              <span style={{ display: 'block' }}>VOS AUDIENCES</span>
-              <span style={{ display: 'block' }}>SONT SUR LES</span>
-              <span style={{ display: 'inline-block', background: '#FFF127', padding: '0 8px', marginBottom: 4 }}>SOCIAL MEDIA ADS</span>
-              <span style={{ display: 'block' }}>VOS CAMPAGNES AUSSI</span>
+              <span style={{ display: 'block' }}>S&apos;ADAPTER AUX TENDANCES,</span>
+              <span style={{ display: 'block' }}>AFFIRMER SA PRÉSENCE</span>
+              <span style={{ display: 'inline-block', background: '#FFF127', padding: '0 8px', marginBottom: 4 }}>SUR LES RÉSEAUX SOCIAUX</span>
             </h1>
 
             <p style={{ fontSize: '1rem', lineHeight: 1.75, color: '#555', marginBottom: 16, maxWidth: 460 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>Meta Ads</strong>, <strong>LinkedIn Ads</strong>, <strong>TikTok Ads</strong>, <strong>Pinterest Ads</strong> — ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              Vous cherchez à développer votre marque sur les réseaux sociaux? Face à la multiplicité des plateformes et des formats publicitaires, piloter efficacement vos campagnes Social Ads nécessite l&apos;accompagnement d&apos;un professionnel.
             </p>
-            <p style={{ fontSize: '1rem', lineHeight: 1.75, color: '#555', marginBottom: 40, maxWidth: 460 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
+            <p style={{ fontSize: '1rem', lineHeight: 1.75, color: '#555', marginBottom: 40, maxWidth: 460 }} dangerouslySetInnerHTML={{ __html: "Les réseaux sont un levier marketing puissant lorsqu'ils sont bien utilisés. <strong>Facebook</strong>, <strong>TikTok</strong>, <strong>Instagram</strong> ou encore <strong>LinkedIn</strong>, chaque réseau social a ses codes et ses spécificités. Nous exploitons les forces de chaque plateforme pour créer des publicités qui captent l'attention et génèrent de l'engagement. Stories, Reels, carrousels ou posts sponsorisés: nous choisissons les bons leviers à activer en fonction de vos objectifs." }} />
 
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 48 }}>
               <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#0a0a0a', color: '#fff', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
@@ -168,22 +164,16 @@ export default function AgenceSmaPage() {
           <div className="rsp-hero-img" style={{ position: 'relative', background: '#0a0a0a', overflow: 'hidden' }}>
             <Image
               src="/images/sma/cover-agence-sma.jpeg"
-              alt="Agence SMA DARWIN — Social Media Ads & performance réseaux sociaux"
+              alt="Agence SMA DARWIN — Social Media Ads & réseaux sociaux"
               fill
               style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.85 }}
               priority
             />
             {/* Overlay gradient left */}
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(255,255,255,0.15) 0%, transparent 40%)' }} />
-            {/* Floating stat */}
-            <div style={{ position: 'absolute', top: 40, left: 32, background: '#FFF127', padding: '16px 20px', borderRadius: 4 }}>
-              <div className="font-anton" style={{ fontSize: '1.8rem', lineHeight: 1, color: '#0a0a0a' }}>6+</div>
-              <div style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#555', marginTop: 4 }}>plateformes activées</div>
-            </div>
-            {/* Floating stat 2 */}
-            <div style={{ position: 'absolute', bottom: 32, right: 32, background: '#fff', padding: '16px 20px', borderRadius: 4, boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}>
-              <div className="font-anton" style={{ fontSize: '1.8rem', lineHeight: 1, color: '#0a0a0a' }}>10K+</div>
-              <div style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#555', marginTop: 4 }}>campagnes lancées</div>
+            {/* Meta Partner badge — bottom right */}
+            <div style={{ position: 'absolute', bottom: 28, right: 28, background: '#fff', padding: '24px 32px', borderRadius: 4, boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}>
+              <Image src="/logos/certifications/meta-partner.jpg" alt="Meta Partner" width={300} height={100} style={{ height: 90, width: 'auto', display: 'block' }} />
             </div>
           </div>
         </div>
@@ -197,24 +187,25 @@ export default function AgenceSmaPage() {
               L&apos;enjeu
             </p>
             <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: 0, color: '#0a0a0a' }}>
-              DES BUDGETS QUI TOURNENT,<br />MAIS PAS DE STRATÉGIE CLAIRE.
+              LE SMA, UN INDISPENSABLE<br />POUR VOTRE STRATÉGIE ?
             </h2>
           </div>
           <div>
+            <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', margin: '0 0 20px' }} dangerouslySetInnerHTML={{ __html: "Plus les années passent, plus les réseaux sociaux deviennent nécessaires dans la création d'une stratégie digitale efficace. Contrairement aux autres leviers du marketing en ligne, le SMA vous permet d'atteindre précisément votre cible, là où elle passe du temps au quotidien : sur les réseaux sociaux comme <strong>Facebook</strong>, <strong>Instagram</strong>, <strong>LinkedIn</strong> et <strong>TikTok</strong>." }} />
             <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', margin: '0 0 20px' }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              À la différence des publications organiques (des publications non boostées), dont la portée est limitée, les ads multiplient votre visibilité. Ils vous offrent un ciblage d&apos;une précision remarquable : les centres d&apos;intérêt, la localisation, les comportements en ligne, les habitudes d&apos;achat ou encore les interactions avec votre marque.
             </p>
-            <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', margin: 0 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', margin: '0 0 16px' }}>
+              Les chiffres parlent d&apos;eux-mêmes. Plus de 5 milliards de personnes sont actives sur les réseaux. Cela représente plus de 60% de la population mondiale. Cette présence massive ne cesse de croître, avec 266 millions de nouveaux utilisateurs rien qu&apos;en 2023 par rapport à l&apos;année précédente.
             </p>
             <div style={{ marginTop: 24, display: 'flex', gap: 24 }}>
               <div style={{ borderLeft: '3px solid #0a0a0a', paddingLeft: 16 }}>
-                <div className="font-anton" style={{ fontSize: '1.8rem' }}>350+</div>
-                <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#555' }}>clients accompagnés</div>
+                <div className="font-anton" style={{ fontSize: '1.8rem' }}>5Mds+</div>
+                <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#555' }}>utilisateurs actifs</div>
               </div>
               <div style={{ borderLeft: '3px solid #0a0a0a', paddingLeft: 16 }}>
-                <div className="font-anton" style={{ fontSize: '1.8rem' }}>10K+</div>
-                <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#555' }}>campagnes lancées</div>
+                <div className="font-anton" style={{ fontSize: '1.8rem' }}>2h23</div>
+                <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#555' }}>temps moyen/jour</div>
               </div>
             </div>
           </div>
@@ -236,17 +227,23 @@ export default function AgenceSmaPage() {
                 QU&apos;EST-CE QU&apos;UNE<br />AGENCE SMA ?
               </h2>
               <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 20, textAlign: 'justify' }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Une agence SMA (Social Media Advertising) est un partenaire spécialisé dans la conception, le pilotage et l&apos;optimisation de campagnes publicitaires sur les réseaux sociaux. Son rôle va bien au-delà de la simple création de posts sponsorisés. Elle définit la stratégie d&apos;acquisition sociale, sélectionne les plateformes pertinentes, construit les audiences, conçoit les créatifs et pilote les budgets au quotidien pour maximiser le retour sur investissement.
               </p>
               <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 20, textAlign: 'justify' }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Concrètement, une agence SMA intervient sur l&apos;ensemble du tunnel de conversion. En haut de tunnel : campagnes de notoriété et de reach sur Meta, TikTok ou YouTube pour installer votre marque. Au milieu : formats d&apos;engagement (carrousels, vidéos, stories) pour nourrir la considération. En bas : retargeting, formulaires natifs et campagnes de conversion pour transformer l&apos;audience en clients. Chaque plateforme a ses codes, ses formats et ses algorithmes — et c&apos;est la maîtrise de ces spécificités qui fait la différence entre un budget dépensé et un budget investi.
               </p>
               <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 20, textAlign: 'justify' }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Chez DARWIN, le SMA ne fonctionne pas en silo. Nos campagnes Social Ads s&apos;intègrent dans un dispositif d&apos;acquisition global — SEO, SEA, Média, Analytics — où les données de chaque levier enrichissent les autres. Les audiences issues de vos campagnes Meta alimentent vos listes de remarketing Google. Les insights Analytics orientent vos ciblages sociaux. Cette approche intégrée, portée par notre certification Meta Business Partner et {DARWIN_YEARS} ans d&apos;expérience, est ce qui fidélise nos clients en moyenne sept ans.
               </p>
-              <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', margin: 0, textAlign: 'justify' }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+              {/* Certifications logos */}
+              <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 24 }}>
+                Nos certifications
               </p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 48, flexWrap: 'wrap' }}>
+                <Image src="/logos/certifications/meta-partner.jpg" alt="Meta Partner" width={300} height={100} style={{ height: 90, width: 'auto', display: 'block' }} />
+                <Image src="/logos/certifications/google-analytics.png" alt="Google Analytics" width={260} height={90} style={{ height: 80, width: 'auto', display: 'block' }} />
+              </div>
             </div>
 
             {/* RIGHT — photo with editorial framing */}
@@ -255,7 +252,7 @@ export default function AgenceSmaPage() {
               <div style={{ position: 'relative' }}>
                 <div style={{ position: 'absolute', top: 12, left: 12, right: -12, bottom: -12, border: '1px solid #ebebeb', borderRadius: 4, pointerEvents: 'none' }} />
                 <Image
-                  src="/images/sma/agence-sma-equipe.jpg"
+                  src="/images/sma/definition-agence-sma.jpg"
                   alt="Consultants DARWIN en stratégie Social Media Ads"
                   width={640}
                   height={460}
@@ -342,57 +339,10 @@ export default function AgenceSmaPage() {
                 className="levier-card"
               >
                 <h3 className="font-anton" style={{ fontSize: '1.5rem', textTransform: 'uppercase', color: '#0a0a0a', marginBottom: 14, lineHeight: 1.1 }}>{card.title}</h3>
+                <p style={{ fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.04em', color: '#0a0a0a', marginBottom: 8 }}>{card.objective}</p>
                 <p style={{ fontSize: '0.85rem', lineHeight: 1.75, color: '#666', margin: '0 0 24px' }}>{card.desc}</p>
                 <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: card.accent === '#FFF127' ? '#0a0a0a' : card.accent }}>Découvrir →</span>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── VOS OBJECTIFS, NOTRE STRATÉGIE ─── */}
-      <section style={{ background: '#fff', padding: '96px 24px', borderTop: '1px solid #eee' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <div style={{ marginBottom: 64 }}>
-            <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 16 }}>
-              Vos objectifs, notre stratégie
-            </p>
-            <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 3.6rem)', textTransform: 'uppercase', lineHeight: 1, margin: 0, maxWidth: 800 }}>
-              NOTORIÉTÉ, ENGAGEMENT, CONVERSION OU TRAFIC : CHAQUE OBJECTIF A SA STRATÉGIE
-            </h2>
-          </div>
-
-          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 2 }}>
-            {[
-              {
-                title: 'Notoriété',
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-              },
-              {
-                title: 'Engagement',
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-              },
-              {
-                title: 'Conversion',
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-              },
-              {
-                title: 'Trafic',
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                style={{
-                  padding: '48px 40px',
-                  background: '#fafafa',
-                  border: '1px solid #ebebeb',
-                }}
-              >
-                <div style={{ display: 'inline-block', background: '#FFF127', height: 3, width: 32, marginBottom: 20 }} />
-                <h3 className="font-anton" style={{ fontSize: '1.3rem', textTransform: 'uppercase', marginBottom: 16, lineHeight: 1.15, color: '#0a0a0a' }}>{item.title}</h3>
-                <p style={{ fontSize: '0.9rem', lineHeight: 1.8, color: '#444', margin: 0 }}>{item.text}</p>
-              </div>
             ))}
           </div>
         </div>
@@ -418,31 +368,31 @@ export default function AgenceSmaPage() {
           <div className="rsp-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
             {[
               {
-                client: 'Verisure',
-                category: 'SMA · Meta Ads',
-                result: '8K',
-                resultLabel: 'rendez-vous générés / mois',
-                period: '+23% de taux de transformation',
-                img: '/images/cas-clients/verisure-cover.jpg',
-                href: '/cas-clients/verisure',
-              },
-              {
-                client: 'Préfon',
-                category: 'SMA · LinkedIn Ads',
-                result: '-10%',
-                resultLabel: "de coût d'acquisition",
-                period: '12 ans de collaboration',
-                img: '/images/cas-clients/prefon-cover.jpg',
-                href: '/cas-clients/prefon',
-              },
-              {
                 client: 'Acadomia',
-                category: 'SMA · Meta Ads · TikTok',
+                category: 'SMA · Média',
                 result: '+65%',
-                resultLabel: 'de leads générés / mois',
-                period: 'x2 taux de conversion landing page',
+                resultLabel: 'leads/mois',
+                period: 'Stratégie Social Ads multi-plateforme',
                 img: '/images/cas-clients/acadomia-cover.jpg',
                 href: '/cas-clients/acadomia',
+              },
+              {
+                client: 'EBRA',
+                category: 'SMA · Média',
+                result: '+46%',
+                resultLabel: 'nouveaux abonnés',
+                period: 'Campagnes Social Ads ciblées',
+                img: '/images/cas-clients/ebra-cover.jpg',
+                href: '/cas-clients/ebra',
+              },
+              {
+                client: 'Ponant',
+                category: 'SEA · SMA',
+                result: '+55%',
+                resultLabel: 'objectifs leads',
+                period: 'Stratégie Search & Social Ads premium',
+                img: '/images/cas-clients/ponant-cover.jpg',
+                href: '/cas-clients/ponant',
               },
             ].map((c) => (
               <Link key={c.client} href={c.href} style={{ position: 'relative', overflow: 'hidden', borderRadius: 6, height: 420, display: 'block', textDecoration: 'none' }}>
@@ -488,7 +438,7 @@ export default function AgenceSmaPage() {
                 Notre méthode
               </p>
               <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 3.6rem)', textTransform: 'uppercase', lineHeight: 1, margin: 0, color: '#fff' }}>
-                5 ÉTAPES POUR DES<br />SOCIAL ADS RENTABLES
+                NOUS VOUS ACCOMPAGNONS<br />DE A À Z
               </h2>
             </div>
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
@@ -498,33 +448,33 @@ export default function AgenceSmaPage() {
             </div>
           </div>
 
-          {/* 5 steps — horizontal timeline cards */}
-          <div className="rsp-5col" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 0 }}>
+          {/* Intro text */}
+          <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.7)', marginBottom: 48, maxWidth: 800 }}>
+            Pour réussir vos campagnes publicitaires, il faut une bonne méthodologie et beaucoup d&apos;imagination. Nous unissons ces deux forces en étant à la fois stratèges dans notre approche et créatifs dans nos solutions. Avant de lancer votre campagne, nous prenons le temps de vous connaître. Votre histoire, vos valeurs, vos ambitions nous inspirent. C&apos;est en comprenant parfaitement votre univers - votre marché, vos concurrents, vos clients - que nous mettons en place des campagnes qui vous ressemblent.
+          </p>
+
+          {/* 4 steps — horizontal timeline cards */}
+          <div className="rsp-4col" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0 }}>
             {[
               {
-                num: '01', title: 'Audit', subtitle: 'Social Ads complet',
-                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+                num: '01', title: 'Veille', subtitle: 'des tendances',
+                desc: "Une veille constante des tendances",
                 icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>,
               },
               {
-                num: '02', title: 'Stratégie', subtitle: 'multi-plateformes',
-                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+                num: '02', title: 'Tests', subtitle: '& messages',
+                desc: "Des tests réguliers pour identifier les messages qui font réagir votre audience",
                 icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>,
               },
               {
-                num: '03', title: 'Création', subtitle: '& activation',
-                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+                num: '03', title: 'Optimisation', subtitle: 'quotidienne',
+                desc: "Une optimisation quotidienne de vos campagnes",
                 icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>,
               },
               {
-                num: '04', title: 'Optimisation', subtitle: 'continue',
-                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+                num: '04', title: 'Suivi', subtitle: 'transparent',
+                desc: "Un suivi transparent des performances",
                 icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20V10" /><path d="M18 20V4" /><path d="M6 20v-4" /></svg>,
-              },
-              {
-                num: '05', title: 'Reporting', subtitle: '& itération',
-                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-                icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>,
               },
             ].map((step, i) => (
               <div key={step.num} style={{ position: 'relative', padding: '32px 24px', borderLeft: i > 0 ? '1px solid #1a1a1a' : 'none' }}>
@@ -551,6 +501,14 @@ export default function AgenceSmaPage() {
               </div>
             ))}
           </div>
+
+          {/* Reporting section */}
+          <div style={{ marginTop: 64, padding: '48px 40px', background: '#1a1a1a', borderLeft: '4px solid #FFF127' }}>
+            <h3 className="font-anton" style={{ fontSize: '1.6rem', textTransform: 'uppercase', color: '#fff', marginBottom: 16 }}>ANALYSE ET REPORTING</h3>
+            <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.7)', margin: 0, maxWidth: 800 }}>
+              L&apos;analyse des performances est au coeur de toute stratégie réussie. En plus des principaux indicateurs de performances comme le nombre d&apos;impressions ou le nombre de clics, nous nous concentrons sur des KPIs directement liés à vos objectifs business.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -562,13 +520,13 @@ export default function AgenceSmaPage() {
               Notre différence
             </p>
             <h2 className="font-anton" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3.4rem)', textTransform: 'uppercase', lineHeight: 1.05, margin: '0 0 32px' }}>
-              LE SOCIAL ADS QUI CONVERTIT,<br />PAS JUSTE QUI BOOSTE
+              DONNEZ UNE NOUVELLE DIMENSION<br />À VOTRE PRÉSENCE SOCIALE
             </h2>
             <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 24 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Les réseaux sociaux offrent une opportunité unique de connecter votre marque avec votre audience. Notre équipe mobilise son expertise et sa créativité pour transformer cette opportunité en conversion.
             </p>
             <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 40 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Chez DARWIN, nous restons à vos côtés pour faire grandir votre présence sociale et développer votre activité.
             </p>
             <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#0a0a0a', color: '#fff', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
               Échangeons sur votre stratégie →
@@ -576,10 +534,10 @@ export default function AgenceSmaPage() {
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            {/* Image ornement — équipe DARWIN */}
+            {/* Image ornement */}
             <div style={{ position: 'relative', width: '100%', height: 220, borderRadius: 6, overflow: 'hidden' }}>
               <Image
-                src="/images/sma/sma-ornement.jpg"
+                src="/images/sma/agence-sma-dimension.jpg"
                 alt="L'équipe DARWIN au travail sur les Social Ads"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -587,9 +545,9 @@ export default function AgenceSmaPage() {
             </div>
             <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
               {[
-                { num: '30+', label: 'Experts seniors', sub: '6+ ans d\'ancienneté moyenne' },
-                { num: '6+', label: 'Plateformes', sub: 'Meta, LinkedIn, TikTok, Pinterest...' },
-                { num: '4', label: 'Entités créatives', sub: 'Creative Thinking Community' },
+                { num: `${DARWIN_YEARS} ans`, label: "D'expertise", sub: "Depuis 2003" },
+                { num: '400+', label: 'Clients', sub: 'Accompagnés en Social Ads' },
+                { num: 'Meta', label: 'Partner', sub: 'Certification officielle' },
                 { num: '7 ans', label: 'Fidélité client', sub: 'Durée moyenne de collaboration' },
               ].map((item) => (
                 <div key={item.num + item.label} style={{ padding: '28px 24px', background: '#fafafa', border: '1px solid #ebebeb' }}>
@@ -657,10 +615,13 @@ export default function AgenceSmaPage() {
             Premier échange
           </p>
           <h2 className="font-anton" style={{ fontSize: 'clamp(2.4rem, 5vw, 5rem)', textTransform: 'uppercase', lineHeight: 1, margin: '0 0 24px', color: '#0a0a0a' }}>
-            ÉCHANGEONS SUR<br />VOTRE STRATÉGIE SOCIAL ADS
+            DONNEZ UNE NOUVELLE DIMENSION<br />À VOTRE PRÉSENCE SOCIALE
           </h2>
-          <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', marginBottom: 40, maxWidth: 560, margin: '0 auto 40px' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', marginBottom: 12, maxWidth: 700, margin: '0 auto 12px' }}>
+            Les réseaux sociaux offrent une opportunité unique de connecter votre marque avec votre audience. Notre équipe mobilise son expertise et sa créativité pour transformer cette opportunité en conversion.
+          </p>
+          <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', marginBottom: 40, maxWidth: 700, margin: '0 auto 40px' }}>
+            Chez DARWIN, nous restons à vos côtés pour faire grandir votre présence sociale et développer votre activité.
           </p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#0a0a0a', color: '#fff', padding: '16px 36px', borderRadius: 4, textDecoration: 'none', fontSize: '0.88rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>

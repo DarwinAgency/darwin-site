@@ -51,7 +51,7 @@ const expertisesTabs: Tab[] = [
       { label: 'LinkedIn Ads', desc: 'Ciblez les décideurs B2B' },
       { label: 'TikTok Ads', desc: 'Engagez les nouvelles audiences' },
       { label: 'Pinterest Ads', desc: 'Inspirez et convertissez' },
-      { label: 'Snap & X Ads', desc: 'Diversifiez vos points de contact' },
+      { label: 'WhatsApp & X Ads', desc: 'Messaging, commerce et conversations' },
       { label: 'Social Strategy', desc: 'Construisez votre présence sociale' },
     ],
   },
