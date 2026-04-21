@@ -71,7 +71,7 @@ export default function CommentTrouverDesLeadsPage() {
         { label: 'Comment Trouver des Leads' },
       ]}
       title={<>COMMENT TROUVER<br />DES LEADS&nbsp;QUALIFIÉS&nbsp;?</>}
-      intro="Beaucoup d'entreprises ont un problème de volume. Elles veulent trouver des leads, plus de contacts, plus de noms dans le CRM. Pourtant, ce n'est pas ça, la vraie difficulté. La vraie difficulté, c'est de trouver des leads qualifiés — ceux qui correspondent réellement à votre offre, qui ont un besoin identifié et la capacité de passer à l'achat. Un pipeline gonflé de prospects hors cible coûte cher en temps commercial, pénalise la performance de vente et fait chuter le taux de conversion. Autant partir sur de bonnes bases : les bons canaux d'acquisition, les bons outils, les bonnes offres, dès le premier euro investi."
+      intro="Beaucoup d'entreprises, de marques et d'annonceurs ont un problème de volume. Elles veulent trouver des leads, plus de contacts, plus de prospects, pour leur CRM. Pourtant, ce n'est pas ça, la vraie difficulté. La vraie difficulté, c'est de trouver des leads qualifiés — ceux qui correspondent réellement à votre offre, qui ont un besoin identifié et la capacité de passer à l'achat ou de souscrire, in fine ceux qui auront une bonne conversion. Un pipeline gonflé de prospects hors cible coûte cher en temps commercial, pénalise la performance de vente, fait chuter le taux de conversion et augmente le coût d'acquisition d'un nouveau client. Autant partir sur de bonnes bases : les bons canaux d'acquisition, les bons outils, la bonne donnée, les bonnes offres, dès le premier euro investi."
       shareUrl="/agence-media/generation-de-leads/comment-trouver-des-leads"
       shareTitle="Comment Trouver des Leads Qualifiés ? Méthodes et Canaux"
       heroIllustration={
@@ -142,7 +142,7 @@ export default function CommentTrouverDesLeadsPage() {
       essentialPoints={essentialPoints}
       author={{ name: 'Jérôme Renard', role: 'Directeur Associé', photo: '/images/team/jerome-renard.jpg' }}
       conclusion={
-        <p dangerouslySetInnerHTML={{ __html: "On active ensuite ou on optimise les canaux les plus pertinents pour votre entreprise, votre secteur et vos objectifs commerciaux. SEO, SEA, social ads, emailing de prospection, contenu : <strong>pas de dogme</strong>, juste la combinaison qui marche pour votre profil client et votre offre. Le <strong>reporting en temps réel</strong> fait partie intégrante de notre service. Vous suivez vos leads, leur source, leur coût et leur taux de conversion — sans attendre la réunion mensuelle pour savoir si ça avance." }} />
+        <p dangerouslySetInnerHTML={{ __html: "On active ensuite ou on optimise les canaux les plus pertinents pour votre marque, votre activité et vos objectifs commerciaux. SEO, SEA, social ads, emailing de prospection, SMS : <strong>pas de dogme</strong>, juste la combinaison la plus adaptée pour votre croissance." }} />
       }
     >
       <>
@@ -155,8 +155,8 @@ export default function CommentTrouverDesLeadsPage() {
           <h2 className="font-anton artv2-h2">Qu&apos;est-ce qu&apos;un lead&nbsp;qualifié&nbsp;?</h2>
         </div>
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Un lead, c'est un contact qui a montré un intérêt pour votre produit ou service. Mais un <strong>lead qualifié</strong>, c'est plus précis que ça. C'est un prospect dont vous avez pu vérifier — via des <strong>données concrètes</strong> et des informations fiables issues de votre base marketing — qu'il remplit les critères de votre <strong>client idéal</strong>." }} />
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Ces critères varient selon votre activité. En <strong>B2B</strong>, on regarde souvent la taille de l'entreprise, le secteur, la fonction du décisionnaire, le budget disponible. En <strong>BtoC</strong>, on s'intéresse plutôt au comportement : pages visitées, durée de session, formulaire rempli, téléchargement d'un contenu gratuit, ajout au panier. Ce qui compte, ce n'est pas le nombre de leads dans votre base. C'est la <strong>proportion de leads qualifiés</strong> parmi eux." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Un lead, c'est un contact qui a montré un intérêt pour votre produit ou service. Mais un <strong>lead qualifié</strong>, c'est plus précis que ça. C'est un prospect dont vous avez pu vérifier — via des <strong>données concrètes</strong> et des informations fiables issues de votre base marketing — qu'il remplit plusieurs critères pour devenir potentiellement un nouveau client." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Ces critères varient selon votre activité. En <strong>B2B</strong>, on regarde souvent la taille de l'entreprise, le secteur, la fonction du décisionnaire, le budget disponible. En <strong>BtoC</strong>, on s'intéresse aux critères de segmentation et aux comportements : pages visitées, ouverture emails, réactivité, formulaire rempli, téléchargement d'un contenu gratuit, ajout au panier. Ce qui compte, ce n'est pas le nombre de leads dans votre base. C'est la <strong>proportion de leads qualifiés</strong> parmi eux." }} />
 
         <blockquote className="artv2-blockquote">
           <p dangerouslySetInnerHTML={{ __html: "Reste que cette notion est souvent floue en interne. Marketing et équipe commerciale n'ont pas toujours la même définition du prospect qualifié. C'est un problème. Et le résoudre commence par <strong>aligner ces deux équipes autour de critères communs, formalisés, partagés</strong> — et appliqués à chaque lead entrant." }} />
@@ -172,13 +172,13 @@ export default function CommentTrouverDesLeadsPage() {
           <h2 className="font-anton artv2-h2">Les meilleures sources pour trouver des&nbsp;leads</h2>
         </div>
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Il n'existe pas de canal universel. Chaque source de génération de leads a ses logiques, ses coûts et ses profils de prospects. Ce qui fonctionne pour un éditeur SaaS ne fonctionne pas forcément pour un réseau de franchises." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Il n'existe pas de canal universel. Chaque source de génération de leads a ses logiques, ses coûts et ses profils de prospects. Ce qui fonctionne pour un éditeur SaaS ne fonctionne pas forcément pour une mutuelle ou un service à la personne." }} />
         <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Le <strong>SEO</strong> reste l'un des <strong>canaux d'acquisition les plus rentables</strong> sur la durée. Un contenu optimisé et à forte valeur attire des visiteurs à intention d'achat — des gens qui cherchent activement une solution. <strong>Le coût par lead qualifié diminue mois après mois</strong>, contrairement aux campagnes payantes qui s'arrêtent dès qu'on coupe le budget." }} />
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Les campagnes <strong>SEA</strong> — Google Ads en tête — permettent d'aller plus vite. On cible des requêtes commerciales précises, on capte le prospect au bon moment du cycle d'achat. Le coût par clic est plus élevé qu'en organique, mais la conversion peut être immédiate. C'est souvent la <strong>combinaison SEO + SEA</strong> qui donne les meilleurs résultats sur le moyen terme." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Les campagnes <strong>SEA</strong> — Google Ads en tête — permettent d'aller plus vite. On est présent sur des champs sémantiques affinitaires, on capte le prospect, avec le bon message, au bon moment du cycle d'achat. Il y a un coût par clic contrairement au SEO, mais la conquête de leads est immédiate. C'est souvent la <strong>combinaison SEO + SEA</strong> qui donne les meilleurs résultats sur le moyen terme." }} />
         <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Les <strong>social ads</strong> changent de registre. Sur Meta ou LinkedIn selon votre cible B2B ou grand public, on ne répond plus à une intention de recherche, on crée l'intérêt. Ces plateformes publicitaires sont puissantes pour toucher des profils précis, générer des leads via des <strong>formulaires natifs</strong>, ou relancer des visiteurs déjà passés sur votre site." }} />
 
         <blockquote className="artv2-blockquote artv2-blockquote--highlight">
-          <p dangerouslySetInnerHTML={{ __html: "L'emailing de prospection, enfin, reste largement sous-estimé. Sur une base bien segmentée, une séquence courte et bien écrite produit un retour de conversion exceptionnel pour un coût faible. <strong>Le ciblage est chirurgical.</strong> Seule condition : une <strong>base de qualité, fraîche, conforme</strong>. Et c'est là que les écarts se creusent entre une opération rentable et un budget parti en fumée." }} />
+          <p dangerouslySetInnerHTML={{ __html: "L'emailing de prospection reste un canal de poids, parfois sous-estimé. Sur une base bien segmentée, une séquence courte et bien écrite produit un retour de conversion exceptionnel pour un coût compétitif. <strong>Le ciblage est chirurgical.</strong> Seule condition : une <strong>base bien qualifiée, bien segmentée, conforme RGPD</strong>, évidemment. Et c'est là que les écarts se creusent entre une opération rentable et un budget parti en fumée." }} />
         </blockquote>
 
         <div style={{ position: 'relative', marginTop: 32 }}>
@@ -209,22 +209,22 @@ export default function CommentTrouverDesLeadsPage() {
 
         <div className="artv2-card-accent">
           <h3 className="font-anton artv2-h3">SEO</h3>
-          <p dangerouslySetInnerHTML={{ __html: "Le SEO construit une <strong>acquisition durable</strong>. C'est un investissement en contenu, en stratégie éditoriale et en données dont les effets se mesurent sur <strong>6 à 18 mois</strong>. Pour une entreprise qui veut réduire sa dépendance au budget publicitaire, c'est incontournable." }} />
+          <p dangerouslySetInnerHTML={{ __html: "Le SEO construit une <strong>acquisition durable</strong>. C'est un investissement sur des sujets techniques et en contenu, en stratégie éditoriale et en popularité au sens SEO du terme dont les effets se mesurent sur <strong>6 à 18 mois</strong>. Pour une entreprise qui veut réduire sa dépendance au budget publicitaire, c'est incontournable." }} />
         </div>
 
         <div className="artv2-card-accent">
           <h3 className="font-anton artv2-h3">SEA</h3>
-          <p dangerouslySetInnerHTML={{ __html: "Le SEA offre une <strong>visibilité immédiate</strong> sur des requêtes à <strong>forte intention commerciale</strong>. C'est le canal privilégié pour tester une offre, lancer un nouveau produit, ou compenser en attendant que le SEO monte en puissance." }} />
+          <p dangerouslySetInnerHTML={{ __html: "Le SEA offre une <strong>visibilité immédiate</strong> sur des requêtes à <strong>forte intention commerciale</strong>. C'est le canal privilégié pour capter des prospects qualifiés, pousser une offre commerciale, lancer un nouveau produit, ou compenser en attendant que le SEO monte en puissance." }} />
         </div>
 
         <div className="artv2-card-accent">
           <h3 className="font-anton artv2-h3">Social Ads</h3>
-          <p dangerouslySetInnerHTML={{ __html: "Les social ads excellent dans la <strong>génération de notoriété</strong> et la capture de leads à des stades précoces du cycle d'achat. <strong>LinkedIn est particulièrement performant en B2B</strong> pour cibler des décisionnaires par fonction, secteur ou taille d'entreprise." }} />
+          <p dangerouslySetInnerHTML={{ __html: "Les social ads excellent dans la <strong>génération de notoriété</strong> et la capture de leads à des stades précoces du cycle de conversion. <strong>LinkedIn est particulièrement performant en B2B</strong> pour cibler des décisionnaires par fonction, secteur ou taille d'entreprise." }} />
         </div>
 
         <div className="artv2-card-accent">
           <h3 className="font-anton artv2-h3">Emailing</h3>
-          <p dangerouslySetInnerHTML={{ __html: "L'emailing s'appuie sur une donnée existante — collectée en propre, partenaire ou issue d'une base louée. Il est efficace pour réactiver des contacts dormants, nourrir des prospects en phase de réflexion, ou déclencher une action sur une offre précise. <strong>La personnalisation du message fait toute la différence.</strong>" }} />
+          <p dangerouslySetInnerHTML={{ __html: "L'emailing s'appuie sur une donnée comportementale et déclarative — collectée en propre, partenaire ou issue d'une base louée. Il est efficace pour réactiver des contacts dormants, nourrir des prospects en phase de réflexion, ou déclencher une action sur une offre précise. <strong>La personnalisation du message fait toute la différence.</strong>" }} />
         </div>
       </section>
 
@@ -242,17 +242,13 @@ export default function CommentTrouverDesLeadsPage() {
           <h2 className="font-anton artv2-h2">Acheter des leads ou les générer&nbsp;soi-même&nbsp;?</h2>
         </div>
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "C'est la question qui divise. L'achat de leads est séduisant sur le papier : des contacts immédiatement disponibles, un coût apparent maîtrisé, pas besoin d'attendre. En pratique, c'est souvent décevant." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "C'est la question qui divise. L'achat de leads est séduisant sur le papier : des contacts immédiatement disponibles, un coût apparent maîtrisé, pas besoin d'attendre. En pratique, ça répond souvent plus à un objectif de volumes." }} />
 
         <div className="artv2-card-dark">
-          <p dangerouslySetInnerHTML={{ __html: "Les leads achetés sont <strong>rarement exclusifs</strong>. Le même prospect reçoit des sollicitations de cinq concurrents en même temps. La qualité est variable, la pertinence contestable. Et surtout, vous ne contrôlez pas les <strong>critères de sélection</strong> ni la fraîcheur des informations." }} />
+          <p dangerouslySetInnerHTML={{ __html: "Les leads achetés sont <strong>exclusifs ou mutualisés</strong>. Le même prospect reçoit des sollicitations de cinq concurrents en même temps. La qualité est variable, la pertinence discutable. Et surtout, vous ne contrôlez pas les <strong>critères de sélection</strong> ni la fraîcheur des informations." }} />
         </div>
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Générer ses propres leads demande plus d'investissement initial — en contenu, en personnel, en outils de marketing. Mais les leads produits en interne sont <strong>plus qualifiés, plus engagés, et moins coûteux</strong> sur le long terme. Ils ont volontairement interagi avec votre marque. Ce n'est pas neutre." }} />
-
-        <blockquote className="artv2-blockquote artv2-blockquote--highlight">
-          <p dangerouslySetInnerHTML={{ __html: "L'achat peut rester utile dans certains cas : phase de lancement, besoin de volume rapide, secteur où l'audience organique est trop lente à construire. <strong>C'est un accélérateur ponctuel, pas un moteur.</strong>" }} />
-        </blockquote>
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Générer ses propres leads demande plus d'investissement initial — en contenu, en personnel, en outils de marketing. Mais les leads produits avec votre marque, vos contenus, sont <strong>plus qualifiés, plus engagés, et moins coûteux</strong> sur le long terme. Ils ont volontairement interagi avec votre marque. Ce n'est pas neutre." }} />
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════
@@ -278,7 +274,7 @@ export default function CommentTrouverDesLeadsPage() {
 
         <div className="artv2-card-accent">
           <h3 className="font-anton artv2-h3">03 — Délai de conversion</h3>
-          <p dangerouslySetInnerHTML={{ __html: "Le <strong>délai de conversion</strong> complète le tableau. Un lead qui met trois mois à se décider n'a pas la même valeur qu'un prospect prêt à signer en deux semaines. La rapidité du cycle d'achat dit beaucoup sur la <strong>température du prospect</strong> au moment de l'entrée en base — et sur la qualité de votre qualification initiale." }} />
+          <p dangerouslySetInnerHTML={{ __html: "Le <strong>délai de conversion</strong> complète le tableau. Un lead qui met trois mois à transformer n'a pas la même valeur qu'un prospect prêt à signer en deux semaines. La rapidité du cycle d'achat dit beaucoup sur la <strong>température du prospect</strong> au moment de l'entrée en base — et sur la qualité de ciblage initial." }} />
         </div>
       </section>
 
@@ -291,7 +287,7 @@ export default function CommentTrouverDesLeadsPage() {
           <h2 className="font-anton artv2-h2">Comment DARWIN vous aide à trouver des leads qui&nbsp;convertissent</h2>
         </div>
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Chez DARWIN, on ne vend pas des leads. On construit les conditions pour que vous en trouviez <strong>en continu</strong>, sur les <strong>bons canaux</strong>, avec le <strong>bon message</strong>, pour les <strong>bonnes cibles</strong>." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Chez DARWIN, on ne vend pas des leads. On construit les conditions pour que vous en trouviez <strong>en continu</strong>, sur les <strong>bons canaux</strong>, avec le <strong>bon message</strong>, auprès des <strong>bonnes cibles</strong>." }} />
 
         <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Notre approche commence par un audit de votre acquisition actuelle : quelles sources génèrent vos leads aujourd'hui, lesquelles convertissent vraiment, et où se perdent les prospects dans votre tunnel. Cette analyse de données est souvent révélatrice — elle met à plat les biais du reporting classique." }} />
       </section>

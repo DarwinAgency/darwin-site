@@ -71,7 +71,7 @@ export default function QualificationLeadPage() {
         { label: 'Qualification d\'un Lead' },
       ]}
       title={<>QUALIFICATION<br />D&apos;UN LEAD : LES<br />ÉTAPES&nbsp;CLÉS</>}
-      intro="Le débat est vieux comme le marketing digital. Les commerciaux se plaignent : « On nous envoie des leads pourris. » Le marketing répond : « On vous envoie du volume, c'est à vous de vendre. » Les deux équipes ont souvent raison — et tort à la fois. Le vrai problème, c'est l'absence de qualification lead structurée. Sans processus clair pour évaluer un prospect avant de le transmettre à la vente, tout le monde perd de l'énergie. Et le temps commercial, c'est la ressource la plus chère de l'entreprise."
+      intro="Le débat est vieux comme le marketing digital. Les commerciaux se plaignent : « On nous envoie des leads trop froids. » Le marketing répond : « On vous envoie du volume, c'est à vous de vendre. » Les deux équipes ont souvent raison — et tort à la fois. Le vrai problème, c'est la qualification et l'analyse d'un lead qui s'avère insuffisante et pas assez structurée. Sans processus clair pour évaluer un prospect dans le processus de vente, tout le monde perd de l'énergie. Et le temps commercial, c'est une ressource coûteuse pour une société ou une marque."
       shareUrl="/agence-media/generation-de-leads/etapes-de-qualification-d-un-lead"
       shareTitle="Qualification d'un Lead : les Étapes Clés pour Mieux Convertir"
       heroIllustration={
@@ -158,7 +158,7 @@ export default function QualificationLeadPage() {
       essentialPoints={essentialPoints}
       author={{ name: 'Carole Kabanda', role: 'Directrice Media', photo: '/images/team/carole-kabanda.jpg' }}
       conclusion={
-        <p dangerouslySetInnerHTML={{ __html: "On configure les automatisations nécessaires pour identifier les leads chauds et les faire remonter directement dans le pipeline commercial, au bon moment, sans traitement manuel ni délai qui refroidit l'intérêt. Et on suit les taux de conversion à chaque étape pour ajuster le processus dans le temps. Résultat : une équipe de vendeurs qui passe moins de temps à prospecter à froid et plus de temps à convertir les meilleurs prospects — ceux qui ont déjà levé la main. Les gains sur le <strong>taux de conversion</strong> sont souvent visibles dès les premiers&nbsp;mois." }} />
+        <p dangerouslySetInnerHTML={{ __html: "On configure les automatisations nécessaires pour identifier les leads chauds et les faire remonter directement dans le pipeline commercial, au bon moment, sans traitement manuel ni délai qui refroidit l'intérêt. Nos équipes sont alimentées par vos équipes commerciales qui exploitent les leads : joignabilité, maturité, objections. Et on suit les taux de conversion à chaque étape pour ajuster le processus dans le temps. Résultat : une équipe de vendeurs qui passe moins de temps à prospecter à froid et plus de temps à convertir les meilleurs prospects — ceux qui ont déjà levé la main. Les gains sur le <strong>taux de conversion</strong> sont souvent visibles à court&nbsp;terme." }} />
       }
     >
       <>
@@ -175,12 +175,12 @@ export default function QualificationLeadPage() {
           Qualifier un lead, c&apos;est évaluer dans quelle mesure un prospect correspond à votre client idéal et se trouve dans les bonnes conditions pour acheter votre produit ou votre service. C&apos;est la brique la plus importante d&apos;une stratégie commerciale rentable, et souvent la moins bien travaillée. Ce n&apos;est pas simplement vérifier qu&apos;il a laissé un email valide. C&apos;est comprendre qui il est, ce qu&apos;il cherche, s&apos;il en a les moyens — et si le moment est le bon.
         </p>
         <p className="artv2-body">
-          La qualification repose sur deux dimensions complémentaires. La première est démographique et firmographique : secteur d&apos;activité, taille de l&apos;entreprise, poste du contact, zone géographique. Ces données permettent de vérifier que le prospect entre dans votre cible théorique et qu&apos;il correspond au profil de client idéal que votre entreprise souhaite atteindre.
+          La qualification repose sur deux dimensions complémentaires. La première repose sur des critères sociodémographiques : profession, zone géographique, âges, statuts, civilité… Ces données permettent de vérifier que le prospect est dans votre cible et qu&apos;il correspond au profil idéal que vous souhaitez atteindre.
         </p>
 
         <blockquote className="artv2-blockquote">
           <p>
-            La seconde dimension est comportementale : pages visitées sur votre site, contenus téléchargés, emails ouverts, formulaires remplis, webinaires suivis. Ces signaux d&apos;intérêt indiquent le niveau de maturité du prospect dans son cycle d&apos;achat. Un lead vraiment qualifié coche les deux cases : il correspond à votre cible ET il démontre un intérêt actif. L&apos;un sans l&apos;autre, c&apos;est insuffisant.
+            La seconde dimension est comportementale : pages visitées sur votre site, contenus téléchargés, emails ouverts, formulaires remplis, webinaires suivis. Ces signaux d&apos;intérêt indiquent un niveau de maturité du prospect, dans son cycle d&apos;achat. Un lead vraiment qualifié coche les deux cases : il correspond à votre cible ET il démontre un intérêt actif par des signaux collectés. L&apos;un sans l&apos;autre, c&apos;est insuffisant.
           </p>
         </blockquote>
       </section>
@@ -197,12 +197,12 @@ export default function QualificationLeadPage() {
         <p className="artv2-body">
           Ces deux acronymes structurent le processus de qualification dans la plupart des organisations. Les confondre est l&apos;une des sources principales de friction entre marketing et commercial.
         </p>
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Un <strong>MQL</strong> — <strong>marketing qualified lead</strong> — est un prospect que l'équipe marketing juge, selon des critères précis, suffisamment engagé pour mériter une attention. Il a interagi avec plusieurs contenus, rempli un formulaire, assisté à un webinaire. Il est dans votre base, il vous connaît. Mais il n'est pas encore prêt à recevoir une offre commerciale." }} />
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Un <strong>SQL</strong> — <strong>sales qualified lead</strong> — est un MQL que l'équipe commerciale a validé après un premier contact. Il a confirmé son besoin, son budget, son délai de décision et son rôle dans le processus d'achat. C'est lui qu'on travaille en priorité, avec un effort commercial proportionnel à son potentiel." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Un <strong>MQL</strong> — <strong>marketing qualified lead</strong> — est un prospect que l'équipe marketing juge, selon des critères précis, suffisamment engagé pour mériter une attention. Il a interagi avec plusieurs contenus, rempli un formulaire, assisté à un webinaire. Il est dans votre base, il vous connaît. Mais il n'est pas encore prêt à recevoir une offre commerciale ou il a besoin d'en savoir encore un petit peu plus avant de convertir." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Un <strong>SQL</strong> — <strong>sales qualified lead</strong> — est un MQL que l'équipe commerciale a validé après un premier contact. Il a confirmé son besoin, son budget, son appétence pour le produit ou le service, son délai de décision et son rôle dans le processus d'achat. C'est lui qu'on travaille en priorité, avec un effort commercial pour le transformer en client, proportionnel à son potentiel et sa capacité à convertir." }} />
 
         <blockquote className="artv2-blockquote artv2-blockquote--highlight">
           <p>
-            La frontière entre MQL et SQL doit être définie ensemble, par les équipes marketing et commerciale, avec des critères écrits, partagés et alignés sur les objectifs de vente de l&apos;entreprise. Sans ça, chaque camp applique sa propre définition — et les reproches mutuels reprennent de plus belle.
+            La frontière entre MQL et SQL doit être définie ensemble, par les équipes marketing et commerciale, avec des critères écrits, partagés et alignés sur les objectifs de vente de l&apos;entreprise. Sans ça, chaque camp applique sa propre définition.
           </p>
         </blockquote>
 
@@ -231,27 +231,27 @@ export default function QualificationLeadPage() {
         </div>
 
         <p className="artv2-body">
-          Le lead scoring est l&apos;outil le plus opérationnel pour gérer la qualification à grande échelle et améliorer le taux de conversion. Le principe est simple : on attribue des points à chaque action ou information relative à un prospect. Plus le score est élevé, plus le lead est prioritaire.
+          Le lead scoring est l&apos;outil le plus opérationnel pour gérer la qualification à grande échelle et améliorer le taux de conversion. Le principe est simple : on attribue des points à chaque action ou information relative à un prospect. Plus le score est élevé, plus le lead est prioritaire en raison de ses chances de se convertir en client.
         </p>
 
         <div className="artv2-card-accent">
           <h3 className="font-anton artv2-h3">EXEMPLES DE SCORING</h3>
           <p>
-            Un téléchargement de livre blanc vaut 10 points. Une visite de la page tarifs vaut 20. Un email ouvert trois fois vaut 5. Un poste de directeur marketing vaut 15 points de plus qu&apos;un stagiaire. Chaque entreprise définit sa propre grille de scoring en fonction de ses données historiques de conversion et des informations réellement disponibles dans son CRM.
+            Un téléchargement de livre blanc ou de catalogue vaut 10 points. Une visite de la page tarifs vaut 20. Un email ouvert trois fois vaut 5. Un statut de propriétaire vaut 15 points de plus qu&apos;un statut de locataire. Chaque entreprise, marque, société, définit sa propre grille de scoring en fonction de ses données historiques de conversion et des informations réellement collectées et disponibles dans son CRM.
           </p>
         </div>
 
         <div className="artv2-card-accent">
           <h3 className="font-anton artv2-h3">TIMING</h3>
           <p>
-            L&apos;objectif est de faire remonter les leads les plus chauds vers l&apos;équipe commerciale au bon moment — ni trop tôt (avant qu&apos;ils soient prêts), ni trop tard (après qu&apos;ils aient signé avec un concurrent). C&apos;est un équilibre délicat. Il se calibre dans la durée, en comparant les scores attribués aux taux de conversion réels.
+            L&apos;objectif est de faire remonter et exploiter les leads les plus chauds vers l&apos;équipe commerciale au bon moment — ni trop tôt (avant qu&apos;ils soient prêts), ni trop tard (après qu&apos;ils aient signé avec un concurrent). C&apos;est un équilibre délicat. Il se calibre dans la durée, en comparant les scores attribués aux taux de conversion réels.
           </p>
         </div>
 
         <div className="artv2-card-accent">
           <h3 className="font-anton artv2-h3">ENTRETIEN</h3>
           <p>
-            Pourtant, beaucoup d&apos;entreprises mettent en place un scoring et ne l&apos;ajustent jamais. Un outil figé devient rapidement inexact. La valeur du scoring vient de son entretien régulier, pas de sa mise en place initiale.
+            Pourtant, beaucoup de marques mettent en place un scoring et ne l&apos;ajustent jamais. Un outil figé devient rapidement inexact. La valeur du scoring vient de son entretien régulier, pas de sa mise en place initiale.
           </p>
         </div>
       </section>
@@ -271,18 +271,18 @@ export default function QualificationLeadPage() {
         </div>
 
         <p className="artv2-body">
-          Deux frameworks sont couramment utilisés pour qualifier les prospects lors des premiers échanges commerciaux.
+          Deux méthodologies sont couramment utilisées pour qualifier les prospects lors des premiers échanges commerciaux.
         </p>
 
         <div className="artv2-card-dark">
-          <p dangerouslySetInnerHTML={{ __html: "<strong>BANT</strong> est le plus ancien : <em>Budget, Authority, Need, Timeline</em>. Le prospect a-t-il le budget ? Est-il décisionnaire ? A-t-il un besoin réel ? Quel est son délai ? C'est une grille efficace pour les cycles d'achat courts et les offres bien définies. Elle est parfois critiquée pour sa rigidité — en B2B complexe, le budget n'est pas toujours identifié au premier contact." }} />
+          <p dangerouslySetInnerHTML={{ __html: "<strong>BANT</strong> est la plus ancienne : <em>Budget, Authority, Need, Timeline</em>. Le prospect a-t-il le budget ? Est-il décisionnaire ? A-t-il un besoin réel ? Quel est son délai ? C'est une grille efficace pour les cycles d'achat courts et les offres bien définies. Elle est parfois critiquée pour sa rigidité — en B2B complexe, le budget n'est pas toujours identifié au premier contact." }} />
         </div>
 
         <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "<strong>CHAMP</strong> est une version plus contemporaine : <em>Challenges, Authority, Money, Prioritization</em>. L'ordre change : on commence par le problème du prospect, pas par son portefeuille. Cette approche est mieux adaptée aux ventes consultatives où l'enjeu est d'abord de comprendre la situation avant de proposer une solution." }} />
 
         <blockquote className="artv2-blockquote artv2-blockquote--highlight">
           <p>
-            Ces frameworks ne sont pas des scripts à dérouler mot pour mot. Ce sont des repères stratégiques utilisés à chaque étape clé du processus de qualification — pour s&apos;assurer que, à la fin de chaque échange, vous avez les informations essentielles pour évaluer la probabilité de conversion. Un vendeur qui fait des propositions sans avoir vérifié ces critères perd son temps — et renvoie une mauvaise image de l&apos;entreprise.
+            Ces méthodologies ne sont pas des scripts à dérouler mot pour mot. Ce sont des repères stratégiques utilisés à chaque étape clé du processus de qualification — pour s&apos;assurer qu&apos;à la fin de chaque échange vous avez les informations essentielles pour évaluer la probabilité de conversion. Un vendeur qui fait des propositions sans avoir vérifié ces critères perd son temps — et renvoie une mauvaise image de l&apos;entreprise.
           </p>
         </blockquote>
       </section>
@@ -297,7 +297,7 @@ export default function QualificationLeadPage() {
         </div>
 
         <p className="artv2-body">
-          Quand les volumes de leads augmentent, la qualification manuelle devient impossible. C&apos;est là que l&apos;outillage devient stratégique.
+          Quand les volumes de leads augmentent, la qualification manuelle devient impossible. C&apos;est là que les équipements et outils deviennent stratégiques.
         </p>
 
         <div className="artv2-card-accent">

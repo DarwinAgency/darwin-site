@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 // ─── DATA ────────────────────────────────────────────────
 
 const signals = [
-  { label: 'Volume élevé, conversion basse', desc: "Le CRM se remplit, mais le taux de transformation lead-to-client ne décolle pas. Le problème n'est pas la quantité — c'est le ciblage en amont et la qualification en aval." },
+  { label: 'Volume élevé, conversion basse', desc: "Le CRM se remplit, mais le taux de transformation leads en clients ne décolle pas. Le problème n'est pas la quantité — c'est le ciblage en amont." },
   { label: 'Canaux en silo', desc: "Chaque levier tourne indépendamment, sans orchestration ni attribution partagée. Impossible de savoir quels canaux contribuent réellement à la conversion finale." },
   { label: 'Friction marketing / commerce', desc: "Le marketing envoie des volumes, les commerciaux les jugent « froids ». Personne n'a tort — c'est la définition du lead qualifié qui n'a jamais été posée." },
   { label: 'Coût par lead en hausse, ROI flou (retour sur investissement)', desc: "Les budgets augmentent, les CPL aussi. Mais sans modèle d'attribution fiable, vous ne savez pas si le problème vient du canal, du message, ou du parcours de conversion." },
@@ -123,7 +123,7 @@ export default function GenerationDeLeadsPage() {
               STRATÉGIES ET MÉTHODES
             </h1>
             {/* eslint-disable-next-line react/no-danger */}
-            <p style={{ fontSize: '1rem', color: '#555', lineHeight: 1.8, marginBottom: 40, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "Vous avez du trafic. Vous avez des campagnes. Vous avez même des formulaires qui se remplissent. Mais combien de ces contacts deviennent vraiment des clients ? La <strong>génération de leads</strong> ne se résume pas à capter des emails. C'est un processus qui va de l'attraction du bon prospect jusqu'à sa <strong>conversion en opportunité commerciale</strong>. Et entre les deux, il y a un chemin que beaucoup d'entreprises n'ont jamais cartographié." }} />
+            <p style={{ fontSize: '1rem', color: '#555', lineHeight: 1.8, marginBottom: 40, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "Vous avez du trafic. Vous avez des campagnes. Vous générez des prospects pour alimenter vos équipes commerciales et recrutez vos futurs clients. Mais combien de ces contacts deviennent vraiment des clients ? La <strong>génération de leads</strong> ne se résume pas à capter de nouveaux formulaires et des prospects. C'est un processus qui va de l'attraction du bon prospect par les campagnes qui orientent vers la page d'atterrissage jusqu'à sa <strong>conversion en opportunité commerciale</strong> et en achat. Entre les deux, il y a un chemin que beaucoup d'entreprises n'ont jamais cartographié." }} />
             <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
               <Link href="/contact" style={{
                 display: 'inline-block', background: '#FFF127', color: '#0a0a0a',
@@ -238,9 +238,9 @@ export default function GenerationDeLeadsPage() {
               CE N&apos;EST PAS UN PROBLÈME<br />DE VOLUME. C&apos;EST UN<br />PROBLÈME DE VALEUR.
             </h2>
             {/* eslint-disable-next-line react/no-danger */}
-            <p style={{ fontSize: '1rem', color: '#0a0a0a', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "La plupart des annonceurs que nous rencontrons ne manquent pas de leads. Ils en ont même beaucoup. Le problème, c'est que ces contacts ne se transforment pas. Le CRM déborde, mais <strong>le pipe commercial stagne</strong>. Les commerciaux passent leur temps à trier au lieu de vendre. Et personne ne sait vraiment d'où viennent les leads qui signent — ni pourquoi les autres ne signent pas." }} />
+            <p style={{ fontSize: '1rem', color: '#0a0a0a', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "La plupart des annonceurs que nous rencontrons ne manquent pas toujours de leads. Ils en ont, parfois, beaucoup. Le problème, c'est que ces prospects ne transforment pas assez en nouveaux clients, achats ou souscriptions. Le CRM déborde, mais <strong>le pipe commercial stagne</strong>. Les commerciaux passent leur temps à exploiter les leads et les données collectées par les formulaires, à tenter de les joindre pour leur partager l'offre commerciale. Et personne ne sait vraiment d'où viennent les leads qui signent — ni pourquoi les autres ne signent pas." }} />
             {/* eslint-disable-next-line react/no-danger */}
-            <p style={{ fontSize: '1rem', color: '#0a0a0a', lineHeight: 1.85, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "Ce décalage entre <strong>volume et valeur</strong> est souvent le symptôme d'un dispositif de génération construit par couches successives : un canal ajouté ici, une campagne reconduite là, un partenaire testé sans suivi. Au fil du temps, les sources se multiplient, les critères de qualification divergent, et la lecture de la performance devient impossible. On mesure des clics, des CPL, des taux d'ouverture — mais la vraie question reste sans réponse : <strong>combien de ces leads génèrent du chiffre d'affaires ?</strong>" }} />
+            <p style={{ fontSize: '1rem', color: '#0a0a0a', lineHeight: 1.85, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "Ce décalage entre <strong>volume et valeur</strong> est souvent le symptôme d'un dispositif de génération construit par couches successives : un canal ajouté ici, une campagne reconduite là, un partenaire testé sans suivi. Au fil du temps, les sources se multiplient, les critères de qualification divergent, et la lecture de la performance devient impossible. On mesure des clics, la réactivité, des CPL (coûts par lead), des taux d'ouverture, des taux de joignabilité — mais la vraie question reste sans réponse : <strong>combien de ces leads génèrent du chiffre d'affaires et quel est mon coût d'acquisition final pour un nouveau client ?</strong>" }} />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             {signals.map(s => (
@@ -278,7 +278,7 @@ export default function GenerationDeLeadsPage() {
               QU&apos;EST-CE QUE LA<br />GÉNÉRATION DE LEADS ?
             </h2>
             {/* eslint-disable-next-line react/no-danger */}
-            <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "La génération de leads désigne l'ensemble des actions marketing destinées à attirer des prospects et à recueillir leurs coordonnées — dans le but de les intégrer à un <strong style='color:#fff'>parcours de conversion</strong>. Formulaire rempli, demande de devis, inscription à un événement, téléchargement d'un contenu : chaque point de contact qui transforme un visiteur anonyme en contact identifié est un acte de génération de leads." }} />
+            <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "La génération de leads désigne l'ensemble des actions marketing destinées à attirer des prospects et à recueillir leurs coordonnées — dans le but de les intégrer à un <strong style='color:#fff'>parcours de conversion qui commence souvent par une relance téléphonique de l'équipe commerciale</strong>. Formulaire rempli, demande de devis, demande de documentation ou de catalogue, inscription à un événement, téléchargement d'un contenu : chaque point de contact qui transforme un visiteur anonyme en contact identifié est un acte de génération de leads." }} />
             {/* eslint-disable-next-line react/no-danger */}
             <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "Mais cette définition, aussi juste soit-elle, ne suffit pas à poser le véritable enjeu. Générer un lead, techniquement, c'est simple. Générer un lead qui a un <strong style='color:#fff'>besoin réel, un budget, un pouvoir de décision</strong> et un calendrier compatible avec votre cycle de vente — c'est autre chose. C'est là que la stratégie commence." }} />
             <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }}>
@@ -348,7 +348,7 @@ export default function GenerationDeLeadsPage() {
                 Déclencher l&apos;action
               </p>
               {/* eslint-disable-next-line react/no-danger */}
-              <p style={{ fontSize: '0.95rem', color: '#555', lineHeight: 1.85, margin: 0, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "Ces canaux ne sont pas des outils de prospection à froid. Ce sont des <strong>accélérateurs de conversion</strong>, à condition de les piloter avec rigueur. Sur une base bien ciblée — nos partenaires data nous donnent accès à plus de <strong>35 millions d'adresses optin et 25 millions de numéros</strong> dédupliqués —, une campagne emailing ou SMS correctement séquencée déclenche l'action là où les autres canaux ont préparé le terrain. Le RCS ouvre un nouveau champ de possibilités : messages enrichis, visuels, conversationnels, avec des <strong>taux d'engagement supérieurs</strong> au SMS classique." }} />
+              <p style={{ fontSize: '0.95rem', color: '#555', lineHeight: 1.85, margin: 0, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "Ces canaux ne sont pas des outils de prospection à froid. Ce sont des <strong>accélérateurs de conversion</strong>, à condition de les piloter avec rigueur. Sur une base bien ciblée — nos partenaires data nous donnent accès à plus de <strong>35 millions d'adresses optin et 25 millions de numéros</strong> dédupliqués —, une campagne emailing ou SMS correctement séquencée déclenche l'action là où les autres canaux ont préparé le terrain. Le RCS ouvre un nouveau champ de possibilités pour le canal SMS : messages enrichis, visuels, conversationnels, avec des <strong>taux d'engagement supérieurs</strong> au SMS classique." }} />
             </div>
 
             {/* 04 — Social Ads */}
@@ -375,19 +375,19 @@ export default function GenerationDeLeadsPage() {
               <div style={{ display: 'flex', alignItems: 'baseline', gap: 16, marginBottom: 8 }}>
                 <span className="font-anton" style={{ fontSize: '2.4rem', lineHeight: 1, color: '#0a0a0a' }}>05</span>
                 <h3 className="font-anton" style={{ fontSize: '1.3rem', textTransform: 'uppercase', color: '#0a0a0a', margin: 0, lineHeight: 1.1 }}>
-                  Affiliation &amp; Brand Content
+                  Affiliation
                 </h3>
               </div>
               <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#29C5F5', margin: '0 0 20px' }}>
                 Élargir le spectre
               </p>
               {/* eslint-disable-next-line react/no-danger */}
-              <p style={{ fontSize: '0.95rem', color: '#555', lineHeight: 1.85, margin: 0, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "L'affiliation développe un réseau de partenaires qui promeuvent vos offres <strong>en ne payant que les résultats</strong>. Le brand content, lui, utilise l'audience d'un site affinitaire pour parler de vous dans un contexte éditorial crédible. Ces deux leviers élargissent votre <strong>surface de génération</strong> au-delà de vos propres canaux — et touchent des prospects que vos campagnes directes ne captent pas." }} />
+              <p style={{ fontSize: '0.95rem', color: '#555', lineHeight: 1.85, margin: 0, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "L'affiliation développe un réseau de partenaires qui promeuvent vos offres en ne payant que les résultats." }} />
             </div>
           </div>
 
           {/* eslint-disable-next-line react/no-danger */}
-          <p style={{ fontSize: '0.95rem', color: '#555', lineHeight: 1.85, maxWidth: 960, margin: '48px auto 0', textAlign: 'center' }} dangerouslySetInnerHTML={{ __html: "L'enjeu n'est pas d'activer tous ces canaux. C'est de <strong>les orchestrer</strong>. Un prospect touché en display, retouché en emailing, qui manifeste son intérêt sur un contenu, puis convertit via un formulaire SEO — voilà un exemple de parcours courant dans la plupart des secteurs B2B. Chaque étape de ce processus doit déclencher une action mesurable : clic, téléchargement, demande de devis, prise de rendez-vous. Encore faut-il le tracer, le mesurer, et l'optimiser. C'est exactement ce que permet un <strong>modèle d'attribution multi-touch</strong> bien configuré." }} />
+          <p style={{ fontSize: '0.95rem', color: '#555', lineHeight: 1.85, maxWidth: 960, margin: '48px auto 0', textAlign: 'center' }} dangerouslySetInnerHTML={{ __html: "L'enjeu n'est pas d'activer tous ces canaux. C'est de <strong>les orchestrer</strong>. Un prospect touché en display, retouché en emailing, puis convertit via un formulaire SEO — voilà un exemple de parcours courant dans la plupart des secteurs. Chaque étape de ce processus doit déclencher une action mesurable : clic, téléchargement, demande de devis, prise de rendez-vous. Encore faut-il le tracer, le mesurer, et l'optimiser. C'est exactement ce que permet un <strong>modèle d'attribution multi-touch</strong> bien configuré." }} />
         </div>
       </section>
 
@@ -404,7 +404,7 @@ export default function GenerationDeLeadsPage() {
                 DEUX LOGIQUES,<br />UN MÊME OBJECTIF
               </h2>
               <p style={{ fontSize: '0.95rem', color: '#666', lineHeight: 1.8, textAlign: 'justify' }}>
-                Opposer les deux est une erreur classique. Les dispositifs les plus performants que nous pilotons combinent les deux approches. L&apos;un finance la croissance immédiate, l&apos;autre construit l&apos;actif à long terme.
+                Opposer les deux est une erreur classique. Les dispositifs les plus performants que nous pilotons combinent les deux approches. L&apos;outbound crée le volume initial et alimente le haut du tunnel. L&apos;inbound construit la crédibilité et nourrit les prospects en phase de réflexion. L&apos;un finance la croissance immédiate, l&apos;autre construit l&apos;actif à long terme.
               </p>
             </div>
 
@@ -420,7 +420,7 @@ export default function GenerationDeLeadsPage() {
               <div style={{ background: '#fafafa', borderLeft: '4px solid #0a0a0a', padding: '40px 40px 40px 36px', boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
                 <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#29C5F5', margin: '0 0 12px' }}>OUTBOUND — POUSSER</p>
                 {/* eslint-disable-next-line react/no-danger */}
-                <p style={{ fontSize: '0.95rem', color: '#555', lineHeight: 1.85, margin: 0, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "L'outbound pousse. Vous allez chercher le prospect là où il est — dans sa boîte mail, dans son fil LinkedIn, sur son écran en programmatique, sur son téléphone en SMS. Le résultat est plus rapide, mais le coût est direct et récurrent. Chaque campagne consomme du budget, et <strong>les leads s'arrêtent quand l'investissement s'arrête</strong>." }} />
+                <p style={{ fontSize: '0.95rem', color: '#555', lineHeight: 1.85, margin: 0, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "L'outbound pousse. Vous allez chercher le prospect là où il est — dans sa boîte mail, dans son fil LinkedIn, sur son PC, sur son téléphone en SMS. Le résultat est plus rapide, le coût est direct et récurrent. Chaque campagne consomme du budget, et <strong>les leads s'arrêtent quand l'investissement s'arrête</strong>." }} />
               </div>
 
               {/* COMBINER */}
@@ -464,9 +464,9 @@ export default function GenerationDeLeadsPage() {
               C&apos;est le maillon que beaucoup d&apos;entreprises négligent. Savoir <Link href="/agence-media/generation-de-leads/comment-trouver-des-leads" style={{ color: '#0a0a0a', textDecoration: 'underline', textUnderlineOffset: '3px', fontWeight: 600 }}>où et comment trouver des leads</Link>, c&apos;est bien. Mais c&apos;est la qualification qui détermine si votre investissement en génération de leads produit du chiffre d&apos;affaires — ou juste des lignes dans un CRM.
             </p>
             {/* eslint-disable-next-line react/no-danger */}
-            <p style={{ fontSize: '1rem', color: '#0a0a0a', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "Qualifier un lead, c'est évaluer sa correspondance avec votre client idéal ET sa <strong>maturité dans le cycle d'achat</strong>. Un contact qui coche tous les critères démographiques mais qui n'a aucun projet à court terme ne vaut pas le même effort commercial qu'un prospect actif avec un budget validé. La qualification croise ces deux dimensions pour prioriser l'action." }} />
+            <p style={{ fontSize: '1rem', color: '#0a0a0a', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "Qualifier un lead, c'est évaluer sa correspondance avec votre client idéal ET sa <strong>maturité dans le cycle d'achat</strong>. Un contact qui coche tous les critères en apparence mais qui n'a aucun projet à court terme ne vaut pas le même effort commercial qu'un prospect actif avec un budget validé. La qualification croise ces deux dimensions pour prioriser l'action." }} />
             {/* eslint-disable-next-line react/no-danger */}
-            <p style={{ fontSize: '1rem', color: '#0a0a0a', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "En pratique, cela passe par la mise en place d'un <strong>scoring</strong> — un système de points qui pondère les informations récoltées (secteur, poste, taille d'entreprise) et les comportements observés (pages visitées, contenus téléchargés, emails ouverts). Quand le score atteint un seuil défini, le lead bascule du marketing vers le commercial. Quand il stagne, il entre dans une séquence de <strong>nurturing</strong> pour être travaillé dans la durée." }} />
+            <p style={{ fontSize: '1rem', color: '#0a0a0a', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "En pratique, cela passe par la mise en place d'un croisement entre les critères de ciblage et un scoring des comportements observés (pages visitées, contenus téléchargés, emails ouverts, emails cliqués, CPL généré par source de trafic). Quand le score atteint un seuil défini et satisfaisant pour une source donnée, c'est à ce moment que les équipes commerciales exploitent de meilleurs leads avec à la clé une transformation clients / leads qui progresse et des CPL plus compétitifs." }} />
             {/* eslint-disable-next-line react/no-danger */}
             <p style={{ fontSize: '1rem', color: '#0a0a0a', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: "L'<strong>alignement entre équipes marketing et commerciales</strong> est la condition de réussite. Sans définition commune de ce qu'est un lead qualifié — avec des critères écrits, partagés, réévalués régulièrement —, le marketing envoie des volumes que le commerce juge inutiles. Et le cycle de frustration recommence." }} />
             <p style={{ fontSize: '1rem', color: '#0a0a0a', lineHeight: 1.85, textAlign: 'justify' }}>
@@ -575,8 +575,8 @@ export default function GenerationDeLeadsPage() {
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
               {[
-                { title: 'Vision intégrée', desc: "SEO, SEA, SMA, Média, Emailing, SMS, Affiliation : chez DARWIN, ces leviers sont gérés par une même équipe. L'orchestration multi-canal n'est pas un discours — c'est notre fonctionnement quotidien." },
-                { title: 'Data au centre', desc: "Chaque décision est fondée sur vos données réelles. Pas sur des benchmarks génériques ou des estimations d'outil tiers. Nous travaillons sur votre Analytics, votre CRM, vos outils publicitaires." },
+                { title: 'Vision intégrée', desc: "SEO, SEA, SMA, Média, Emailing, SMS, Affiliation : chez DARWIN, ces leviers sont gérés par plusieurs équipes seniors et expertes. L'orchestration multi-canal n'est pas un discours — c'est notre fonctionnement quotidien." },
+                { title: 'Data au centre', desc: "Chaque décision est fondée sur vos données réelles. Pas sur des benchmarks génériques ou des estimations d'outil tiers. Nous travaillons sur votre Analytics, vos feedbacks commerciaux, vos outils de pilotage." },
                 { title: 'Consultants seniors en première ligne', desc: "Votre dispositif est piloté par des consultants expérimentés — six ans d'ancienneté moyenne. Pas de sous-traitance, pas de junior en gestion opérationnelle." },
                 { title: 'Attribution et transparence', desc: "Nos modèles d'attribution multi-touch vous montrent la contribution réelle de chaque canal. Vous savez exactement ce qui produit du business — et ce qui n'en produit pas. Nos dashboards sont accessibles en temps réel." },
                 { title: `${DARWIN_YEARS} ans de terrain`, desc: "Plus de 400 clients accompagnés depuis 2003. 7 ans de durée moyenne de collaboration. Ces chiffres ne sont pas un argument marketing — c'est le résultat d'un engagement sur les résultats, pas sur les promesses." },

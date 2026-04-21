@@ -71,7 +71,7 @@ export default function CommentGenererDesLeadsEnB2BPage() {
         { label: 'Leads B2B' },
       ]}
       title={<>COMMENT GÉNÉRER<br />DES LEADS EN B2B&nbsp;?</>}
-      intro="En B2B, la génération de leads ne ressemble à rien de ce qu'on fait en BtoC. Les cycles d'achat sont longs. Les décisions sont collectives. Un projet peut mettre six mois à se concrétiser — et encore, si vous avez parlé au bon interlocuteur dès le départ. Attirer un prospect ne suffit pas. Il faut l'atteindre au bon moment, avec le bon message, et rester présent tout au long de sa réflexion. C'est ça, la génération de leads B2B. Et c'est loin d'être simple."
+      intro="En B2B, la génération de leads ne ressemble à rien de ce qu'on fait en BtoC. Les cycles d'achat sont longs. Les décisions sont collectives, l'information est partagée au sein des hiérarchies. Un projet peut mettre six mois à se concrétiser — et encore, si vous avez parlé au bon interlocuteur dès le départ. Attirer un prospect ne suffit pas. Il faut l'atteindre au bon moment, avec le bon message, et rester présent tout au long de sa réflexion. La prospection se fait sur temps long. La génération de leads B2B est loin d'être simple."
       shareUrl="/agence-media/generation-de-leads/comment-generer-des-leads-en-b2b"
       shareTitle="Comment Générer des Leads en B2B ? Stratégies efficaces"
       heroIllustration={
@@ -140,7 +140,7 @@ export default function CommentGenererDesLeadsEnB2BPage() {
       essentialPoints={essentialPoints}
       author={{ name: 'Carole Kabanda', role: 'Directrice Media', photo: '/images/team/carole-kabanda.jpg' }}
       conclusion={
-        <p dangerouslySetInnerHTML={{ __html: "On construit ensuite un <strong>plan d'action priorisé</strong>, centré sur les canaux les plus pertinents pour votre audience B2B, vos ressources et vos objectifs commerciaux. SEO, SEA, LinkedIn Ads, contenu, nurturing : chaque levier est activé avec un objectif précis, un budget cadré et des KPIs définis dès le départ. Vous avez chez DARWIN un interlocuteur qui connaît votre secteur, qui reste dans la durée, et qui vous rend des comptes sur ce qui fonctionne vraiment. Pas sur des impressions ou des clics. Sur des <strong>prospects qualifiés, des conversations commerciales ouvertes et des contrats signés</strong>." }} />
+        <p dangerouslySetInnerHTML={{ __html: "On construit ensuite un <strong>plan d'action priorisé</strong>, centré sur les canaux les plus pertinents pour votre audience B2B, vos ressources et vos objectifs commerciaux. SEO, SEA, LinkedIn Ads, contenu, nurturing : chaque levier est activé avec un objectif précis, un budget cadré et des KPIs définis dès le départ. Vous avez chez DARWIN un interlocuteur senior qui connaît votre secteur, qui vous accompagne au quotidien, et qui vous rapporte sur ce qui fonctionne vraiment. Pas sur des impressions ou des clics. Sur des <strong>prospects qualifiés, qui se transforment en clients, souscriptions, contrats</strong>." }} />
       }
     >
       <>
@@ -150,17 +150,17 @@ export default function CommentGenererDesLeadsEnB2BPage() {
       <section id="specificites" className="artv2-section">
         <div className="artv2-section-header">
           <span className="artv2-eyebrow">SPÉCIFICITÉS</span>
-          <h2 className="font-anton artv2-h2">Ce qui différencie vraiment la génération de&nbsp;leads</h2>
+          <h2 className="font-anton artv2-h2">Ce qui différencie vraiment la génération de leads entre le B2B et&nbsp;B2C</h2>
         </div>
 
         <p className="artv2-body">
-          Le B2C parle à un individu. Le B2B parle à une organisation. Cette distinction change tout.
+          Le B2C parle à un individu. Le B2B parle à une organisation, c&apos;est souvent un ensemble d&apos;individus à transformer en client. Cette distinction change tout.
         </p>
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "En B2B, la décision d'achat implique rarement une seule personne. Il y a le décisionnaire, le prescripteur, parfois le DAF qui valide le budget, parfois une direction technique qui émet un avis. Chacun de ces profils a des <strong>attentes différentes</strong>, des objections spécifiques et une manière propre de s'informer. La campagne qui convertit un directeur marketing ne convertit pas forcément son DAF." }} />
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "La durée du <strong>cycle d'achat</strong> est sans commune mesure avec le grand public. Un prospect peut télécharger un contenu en janvier et signer un contrat en septembre. Entre les deux, il lit vos articles, regarde vos concurrents, assiste à un webinaire, échange avec un commercial. Ce parcours non linéaire exige une <strong>stratégie de contenu et de nurturing</strong> pensée sur la durée — pas une simple séquence d'emails déclenchée par un téléchargement." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "En B2B, la décision d'achat implique rarement une seule personne. Il y a le décisionnaire, le prescripteur, parfois le DAF qui valide le budget, parfois une direction technique qui émet un avis. Chacun de ces profils a des <strong>attentes différentes</strong>, des objections spécifiques et une manière propre de s'informer. La campagne qui convertit un directeur marketing ne convertit pas forcément son DAF ou les équipes opérationnelles." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "La durée du <strong>cycle d'achat</strong> est sans commune mesure avec le grand public. Un prospect peut télécharger un contenu en janvier et signer un contrat en septembre. Entre les deux, il lit vos articles, regarde vos concurrents, assiste à un webinaire, échange avec un commercial. Ce parcours non linéaire exige une <strong>stratégie de contenu et de nurturing</strong> pensée sur la durée — pas une simple séquence d'emails déclenchée avec à la clé un formulaire complété, pour un téléchargement, une demande de devis ou d'informations." }} />
 
         <blockquote className="artv2-blockquote">
-          <p>Enfin, les besoins B2B sont souvent complexes à formuler. L&apos;entreprise cliente ne cherche pas toujours un produit — elle cherche une solution à un problème qu&apos;elle a parfois du mal à nommer. Votre capacité à poser ce problème mieux qu&apos;elle-même devient un avantage compétitif direct.</p>
+          <p>Les besoins B2B sont souvent complexes à formuler. L&apos;entreprise cliente ne cherche pas toujours un produit — elle cherche une solution à un problème qu&apos;elle a parfois du mal à nommer. Votre capacité à poser ce problème mieux qu&apos;elle-même devient un avantage compétitif direct.</p>
         </blockquote>
       </section>
 
@@ -174,17 +174,17 @@ export default function CommentGenererDesLeadsEnB2BPage() {
         </div>
 
         <p className="artv2-body">
-          Tous les canaux de génération de leads ne se valent pas en B2B. Certains excellent dans la capture de prospects chauds. D&apos;autres construisent la notoriété sur le long terme. L&apos;enjeu, c&apos;est de choisir la bonne combinaison selon votre audience, votre offre et votre stade de développement.
+          Tous les canaux de génération de leads ne se valent pas en B2B. Certains excellent dans la capture de prospects chauds. D&apos;autres construisent la notoriété sur le long terme. L&apos;enjeu, c&apos;est de choisir la bonne combinaison selon vos audiences, votre offre et la phase de croissance dans laquelle vous êtes.
         </p>
 
         <div className="artv2-card-accent">
-          <h3 className="font-anton artv2-h3">SEO</h3>
-          <p dangerouslySetInnerHTML={{ __html: "Le <strong>SEO</strong> est fondamental pour capter des prospects en phase de recherche active. Une équipe marketing qui tape « agence génération leads B2B » est déjà engagée dans un processus de sélection. Être visible à ce moment-là, c'est être dans la short-list dès le départ. Construire un contenu SEO solide prend du temps, mais l'acquisition devient progressivement <strong>autonome</strong>, indépendante des budgets publicitaires mensuels." }} />
+          <h3 className="font-anton artv2-h3">SEO &amp; GEO</h3>
+          <p dangerouslySetInnerHTML={{ __html: "Le <strong>SEO et le GEO</strong> sont des fondamentaux pour capter des prospects en phase de recherche active. Une équipe marketing qui tape « agence génération leads B2B » est déjà engagée dans un processus de sélection et a probablement identifié son besoin. Être visible à ce moment-là, c'est être dans la short-list dès le départ. Construire des contenus SEO et GEO friendly solides prend du temps, mais l'acquisition devient progressivement <strong>autonome</strong>, indépendante des budgets publicitaires mensuels." }} />
         </div>
 
         <div className="artv2-card-accent">
           <h3 className="font-anton artv2-h3">SEA</h3>
-          <p dangerouslySetInnerHTML={{ __html: "Le <strong>SEA</strong> complète le SEO sur les requêtes à forte intention commerciale. C'est particulièrement utile pour tester un nouveau marché, une offre ciblée ou un segment de niche avec un <strong>coût par lead mesuré</strong> dès la première semaine." }} />
+          <p dangerouslySetInnerHTML={{ __html: "Le <strong>SEA</strong> complète le SEO et le GEO sur les requêtes à forte intention commerciale. C'est particulièrement utile pour tester un nouveau marché, une offre ciblée ou un segment de niche avec un <strong>coût par lead mesuré</strong> dès la première semaine." }} />
         </div>
 
         <div className="artv2-card-accent">
@@ -220,7 +220,7 @@ export default function CommentGenererDesLeadsEnB2BPage() {
 
         <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "C'est là que le <strong>content marketing</strong> joue un rôle stratégique. Publier des articles sur les enjeux de votre secteur, produire des études, partager des retours d'expérience concrets — tout cela installe votre expertise dans l'esprit du prospect bien avant qu'il soit en situation d'achat." }} />
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Le <strong>thought leadership</strong> — littéralement le leadership d'opinion — va un cran plus loin. Il ne s'agit plus seulement de produire du contenu utile, mais de prendre position. D'avoir un point de vue défendable, parfois à contre-courant, toujours ancré dans une réalité opérationnelle. Les décideurs B2B font confiance aux gens qui osent avoir une opinion, pas à ceux qui répètent les généralités du marché." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Le <strong>thought leadership</strong> — littéralement le leadership d'opinion — va un cran plus loin. Il ne s'agit plus seulement de produire du contenu utile, mais de prendre position. D'avoir un point de vue défendable, parfois à contre-courant, toujours ancré dans une réalité opérationnelle. Les décideurs B2B font confiance aux professionnels visibles, qui ont des convictions tranchées, des visions partagées. La crédibilité et l'autorité sont moins évidentes lorsque les preuves sont perçues comme des généralités." }} />
 
         <blockquote className="artv2-blockquote artv2-blockquote--highlight">
           <p>Les webinaires et les formats live s&apos;ajoutent au dispositif avec un effet mesurable sur le pipeline. L&apos;inscription crée un acte d&apos;engagement. La présence confirme l&apos;intérêt. Les échanges en direct sont souvent le déclencheur d&apos;une conversation commerciale qualifiée.</p>
@@ -241,16 +241,16 @@ export default function CommentGenererDesLeadsEnB2BPage() {
           <h2 className="font-anton artv2-h2">LinkedIn Ads et social selling : le duo&nbsp;gagnant</h2>
         </div>
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "LinkedIn est un réseau social incontournable en B2B. C'est la seule plateforme où vous pouvez cibler par <strong>intitulé de poste, taille d'entreprise, secteur d'activité et niveau hiérarchique</strong> en même temps. Cette granularité de ciblage n'existe nulle part ailleurs." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "LinkedIn est le réseau social incontournable en B2B. C'est la seule plateforme où vous pouvez cibler par <strong>intitulé de poste, taille d'entreprise, secteur d'activité et niveau hiérarchique</strong> en même temps. Cette granularité de ciblage n'existe nulle part ailleurs." }} />
 
         <div className="artv2-card-dark">
-          <p dangerouslySetInnerHTML={{ __html: "Les <strong>LinkedIn Ads</strong> permettent de toucher des décisionnaires que vous n'auriez jamais pu atteindre en organique. Les formats <strong>Lead Gen Form</strong> — formulaires pré-remplis intégrés à la plateforme — réduisent la friction et améliorent significativement les taux de conversion. Le coût par lead est souvent plus élevé qu'en Google Ads, mais la qualité des prospects justifie généralement cet écart, surtout sur les ventes B2B à forte valeur." }} />
+          <p dangerouslySetInnerHTML={{ __html: "<strong>LinkedIn Ads</strong> permet de toucher des décisionnaires que vous n'auriez jamais pu atteindre en organique. Les formats <strong>Lead Gen Form</strong> — formulaires pré-remplis intégrés à la plateforme — réduisent la friction et améliorent significativement les taux de conversion. Le coût par lead est souvent plus élevé par rapport à Google Ads, mais la qualité des prospects justifie généralement cet écart, surtout sur les ventes B2B à forte valeur." }} />
         </div>
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Le <strong>social selling</strong> s'appuie sur des actions organiques : publier du contenu à forte valeur ajoutée, commenter de manière pertinente, entrer en contact avec des prospects ciblés via des messages personnalisés. C'est chronophage si mal structuré. Mais quand une équipe commerciale adopte une discipline de publication régulière — éventuellement après une formation courte aux codes LinkedIn — les résultats en inbound sont réels et mesurables sur trois à six mois." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Le <strong>social selling</strong> s'appuie sur des actions organiques : publier du contenu à forte valeur ajoutée, commenter de manière pertinente, entrer en contact avec des prospects ciblés via des messages personnalisés. C'est chronophage si mal structuré. Mais quand une équipe commerciale adopte une discipline de publication régulière — éventuellement après une formation pour maîtriser les codes LinkedIn — les résultats en inbound sont réels et mesurables sur trois à six mois." }} />
 
         <blockquote className="artv2-blockquote artv2-blockquote--highlight">
-          <p>La combinaison Ads + social selling crée un effet de présence puissant. Le prospect vous voit dans son fil d&apos;actualité, puis voit votre publicité, puis reçoit un message. La répétition du signal accélère la conversion — à condition de rester utile, pas intrusif.</p>
+          <p>La combinaison Ads + social selling crée un effet de présence puissant. Le prospect vous voit dans son fil d&apos;actualité, puis voit votre publicité, puis reçoit un message. La succession de touches et la répétition de signaux accélèrent la conversion — à condition de rester utile, pas intrusif.</p>
         </blockquote>
       </section>
 
@@ -263,12 +263,12 @@ export default function CommentGenererDesLeadsEnB2BPage() {
           <h2 className="font-anton artv2-h2">SEO en B2B : capter les prospects avant qu&apos;ils arrivent chez un&nbsp;concurrent</h2>
         </div>
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Le SEO en B2B répond à une <strong>logique d'intention</strong>. Quand un directeur marketing tape « comment réduire mon coût par lead en B2B », il est en phase de recherche d'information. Quand il tape « agence génération de leads B2B Paris », il est en phase de sélection. Ces deux requêtes méritent des contenus différents — mais les deux méritent d'être adressées par votre stratégie éditoriale." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Le SEO en B2B répond à une <strong>logique d'intention</strong>. Quand un directeur marketing tape « comment réduire mon coût par lead en B2B », il est en phase de recherche d'information. Quand il tape « agence génération de leads B2B Paris », il est en phase de sélection. Ces deux requêtes méritent des réponses différentes — les deux méritent d'être adressées par votre stratégie éditoriale." }} />
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "La construction d'un <strong>cocon sémantique</strong> autour des enjeux, besoins et objections de votre audience est la base. Chaque page traite un aspect précis du sujet, répond à une question spécifique, et renvoie vers les pages connexes. Google perçoit cette profondeur de traitement comme un signal d'expertise. Les prospects, eux, y trouvent les réponses qu'ils cherchent — et associent progressivement votre marque à leur problématique." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "La construction d'un <strong>cocon sémantique</strong> autour des enjeux, besoins et objections de votre audience est la base. Chaque page traite un aspect précis du sujet, répond à une question spécifique, et renvoie vers les pages connexes. Google perçoit cette profondeur de traitement comme un signal d'expertise. Les prospects, eux, y trouvent les réponses qu'ils cherchent — et associent progressivement votre marque à une solution en réponse à leur problématique." }} />
 
         <blockquote className="artv2-blockquote">
-          <p>La durée d&apos;indexation est un frein classique pour les équipes qui veulent des résultats immédiats. En pratique, un contenu SEO bien construit sur une thématique B2B ciblée peut remonter en première page en trois à six mois. Et contrairement à la publicité payante, il continue de générer des leads sans budget mensuel supplémentaire.</p>
+          <p>L&apos;inertie du SEO est un frein classique pour les équipes qui veulent des résultats immédiats. En pratique, un contenu SEO bien construit sur une thématique B2B ciblée peut remonter en première page en trois à six mois, si le niveau de concurrence le permet. Il est parfois si élevé qu&apos;un objectif d&apos;une position en première page dans ce délai ne soit pas réaliste. Et contrairement à la publicité payante, il continue de générer des leads sans budget mensuel supplémentaire.</p>
         </blockquote>
       </section>
 
@@ -281,9 +281,9 @@ export default function CommentGenererDesLeadsEnB2BPage() {
           <h2 className="font-anton artv2-h2">Notre accompagnement en génération de leads&nbsp;B2B</h2>
         </div>
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "DARWIN accompagne des entreprises B2B à différents stades : celles qui partent de zéro et cherchent à structurer leur premier canal d'acquisition, et celles qui ont déjà un dispositif en place mais veulent l'optimiser." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "DARWIN accompagne des entreprises en acquisition de leads B2B à différents stades : celles qui partent de zéro et cherchent à structurer leur premier canal d'acquisition, et celles qui ont déjà un dispositif en place mais veulent l'optimiser." }} />
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Notre approche commence toujours par <strong>l'analyse de votre pipeline actuel</strong> et de votre base de leads, avec les meilleurs outils de prospection B2B du marché. Quels canaux génèrent du volume ? Lesquels convertissent ? Où se produisent les ruptures dans le parcours prospect ? Cette lecture de vos données permet de qualifier chaque lead, de vérifier la qualité réelle des prospects entrants et d'adapter la stratégie aux résultats observés — pas aux résultats espérés." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Notre approche commence toujours par <strong>l'analyse de votre pipeline actuel de leads</strong>, et de vos outils de prospection. Quels canaux génèrent du volume ? Lesquels convertissent ? Où se produisent les ruptures dans le parcours prospect ? Cette lecture de vos données permet de qualifier chaque lead, de vérifier la qualité réelle des prospects entrants et d'adapter la stratégie aux résultats observés — pas aux résultats espérés." }} />
       </section>
       </>
     </ArticleLayoutV2>
