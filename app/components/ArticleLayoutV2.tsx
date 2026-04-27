@@ -30,7 +30,7 @@ interface ArticleLayoutV2Props {
   breadcrumbs: BreadcrumbItem[]
   badge?: string
   title: ReactNode
-  intro: string
+  intro: ReactNode
   heroIllustration?: ReactNode
   shareUrl: string
   shareTitle: string

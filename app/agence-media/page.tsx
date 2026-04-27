@@ -6,12 +6,12 @@ import { faqJsonLd, serviceJsonLd, breadcrumbJsonLd } from '../lib/jsonld'
 import { ogDefaults } from '../lib/og'
 
 export const metadata: Metadata = {
-  title: "Agence Média — Plan média & performance publicitaire | DARWIN",
-  description: "Notre agence média vous accompagne dans la définition de votre stratégie médias, la planification et l'achat d'espaces. Audit, plan média, leads : nos expertises.",
+  title: "Agence Média | Plan média & performance publicitaire | DARWIN",
+  description: "Structurez vos investissements média avec DARWIN : audit, plan média, génération de leads, achat d'espaces. 23 ans d'expertise digitale.",
   alternates: { canonical: '/agence-media' },
   openGraph: {
     ...ogDefaults,
-    title: "Agence Média — Plan média & performance publicitaire | DARWIN",
+    title: "Agence Média | Plan média & performance publicitaire | DARWIN",
     description: "Agence média experte depuis 2003. Programmatique, display, TV segmentée, DOOH, emailing, SMS/RCS. Structurez vos investissements publicitaires.",
     url: 'https://darwin-agency.fr/agence-media',
   },
@@ -30,7 +30,7 @@ const pillars = [
   {
     id: '01',
     title: 'Stratégie & Audit',
-    desc: "Avant d'activer quoi que ce soit, nous auditons. C'est une étape que beaucoup d'agences survolent — parce qu'elle prend du temps et ne se facture pas toujours facilement. Nous, on la considère comme le socle de tout le reste. L'audit couvre vos campagnes en cours, votre collecte de données, vos performances historiques, votre positionnement concurrentiel et la cohérence de votre mix marketing. Il révèle souvent des angles morts coûteux pour votre entreprise : des canaux sous-exploités, des budgets mal répartis, des créas fatiguées, qui tournent depuis trop longtemps.",
+    desc: "Avant d'activer quoi que ce soit, nous auditons. C'est une étape que beaucoup d'agences survolent, parce qu'elle prend du temps et ne se facture pas toujours facilement. Nous, on la considère comme le socle de tout le reste. L'audit couvre vos campagnes en cours, votre collecte de données, vos performances historiques, votre positionnement concurrentiel et la cohérence de votre mix marketing. Il révèle souvent des angles morts coûteux pour votre entreprise : des canaux sous-exploités, des budgets mal répartis, des créas fatiguées, qui tournent depuis trop longtemps.",
     items: ['Audit des campagnes existantes', 'Analyse concurrentielle', 'Diagnostic du mix marketing', 'Recommandations chiffrées et argumentées'],
   },
   {
@@ -42,7 +42,7 @@ const pillars = [
   {
     id: '03',
     title: 'Génération de leads',
-    desc: "Générer des leads qualifiés, qui convertissent en clients finaux, au bon coût d'acquisition et en fil rouge toute l'année, est un challenge que nous relevons depuis 23 ans. Notre approche repose sur des tests et sur l'activation de plusieurs leviers, selon plusieurs modèles économiques d'achat : emailing, SMS, display, affiliation pour ne payer que les résultats, SEO, SEA, SMA. Chaque levier a sa place dans le tunnel de conversion, et c'est leur orchestration qui crée la performance — pas la somme des budgets.",
+    desc: <span><Link href="/agence-media/generation-de-leads" style={{ color: '#444', textDecoration: 'underline', textUnderlineOffset: '3px' }}>Générer des leads qualifiés</Link>, qui convertissent en clients finaux, au bon coût d&apos;acquisition et en fil rouge toute l&apos;année, est un challenge que nous relevons depuis 23 ans. Notre approche repose sur des tests et sur l&apos;activation de plusieurs leviers, selon plusieurs modèles économiques d&apos;achat : emailing, SMS, display, affiliation pour ne payer que les résultats, SEO, SEA, SMA. Chaque levier a sa place dans le tunnel de conversion, et c&apos;est leur orchestration qui crée la performance, pas la somme des budgets.</span>,
     items: ['Activation multi-leviers coordonnée', 'Qualification et scoring des leads', 'Attribution multi-touch', 'Reporting orienté business'],
   },
   {
@@ -54,29 +54,29 @@ const pillars = [
 ]
 
 const services = [
-  { href: '/agence-media/audit-strategie-digitale', title: 'Audit & Stratégie digitale', accent: '#FFF127', desc: "Analyse complète de votre dispositif digital : campagnes en cours, historiques des performances, positionnement concurrentiel et cohérence de votre mix marketing. Nous identifions les quick wins — ces gains rapides sur les leviers existants qui produisent des résultats immédiats — et posons les bases d'une organisation média efficace sur la durée. Chaque recommandation est argumentée avec des projections réalistes, pas des promesses en l'air." },
-  { href: '/agence-media/plan-media', title: 'Plan média', accent: '#FFF127', desc: "Traduction opérationnelle de votre stratégie en actions concrètes : canaux activés, formats retenus, calendrier de diffusion, budgets par levier et KPIs de pilotage. Un plan vivant, piloté au quotidien. Tests A/B, réallocation budgétaire vers les sources qui performent, ajustement des enchères — nous faisons vivre vos dispositifs pour améliorer les résultats semaine après semaine." },
-  { href: '/agence-media/generation-de-leads', title: 'Génération de leads', accent: '#FFF127', desc: "Leads qualifiés au bon coût : emailing, SMS, display retargeting et affiliation orchestrés dans un tunnel de conversion cohérent. Nous ne livrons pas des volumes — nous qualifions, nous analysons le parcours de chaque lead du premier point de contact jusqu'à la conversion, pour comprendre quels canaux contribuent réellement à votre business pour concentrer les budgets sur ce qui transforme." },
-  { href: '/agence-media/campagnes-emailing', title: 'Campagnes emailing', accent: '#FFF127', desc: "Plus de 35 millions d'adresses optin grâce à nos partenaires data, fruit de 23 ans d'expertises en campagnes emailing, une méthodologie millimétrée en planification et en suivi quotidien. L'email reste un levier redoutablement efficace pour déclencher l'action — à condition de maîtriser la pression marketing pour préserver l'image de marque des marques et des annonceurs. Notre différence : la capacité à activer de la donnée fraîche et performante en fonction de l'audience que vous souhaitez toucher. Trop de messages tue le message. Nous ajustons et contrôlons les campagnes d'acquisition de ce canal." },
-  { href: '/agence-media/campagnes-rcs-sms', title: 'SMS / RCS', accent: '#FFF127', desc: "25M+ de numéros dédupliqués grâce à nos partenaires data historiques. L'arrivée du RCS change la donne : images, vidéos, carrousels, RCS conversationnel. Ce qui était un texto devient une expérience de marque à part entière. Le RCS répond désormais à tous les objectifs — visibilité, trafic, conversion — avec des taux d'ouverture que l'email ne peut pas atteindre." },
-  { href: '/agence-media/audio-digital', title: 'Audio digital', accent: '#FFF127', desc: "Podcasts, streaming musical, radio digitale : l'audio s'est imposé dans les habitudes d'écoute quotidiennes. Spotify, Deezer, webradios, plateformes de podcasts — nous paramétrons un cadre de diffusion pour toucher vos audiences dans des moments privilégiés où l'attention est captive. Quand un auditeur écoute, il n'est pas en train de scroller. L'audio fonctionne particulièrement bien pour la mémorisation, la connexion émotionnelle avec la marque et les stratégies de communication locales." },
-  { href: '/agence-media/tv-segmentee-ctv', title: 'TV segmentée & CTV', accent: '#29C5F5', desc: "La TV segmentée s'appuie sur les données des box internet pour adresser des messages différents à chaque foyer, y compris pour un même programme. La CTV — Smart TV, box Android, Apple TV, consoles — capte le regard dans un moment de détente, sur grand écran, souvent partagé à plusieurs. Vous gardez la force d'impact du média TV tout en gagnant la précision du ciblage digital. Vos investissements en achats d'espaces TV deviennent mesurables, optimisés, et chaque diffusion touche vraiment les bonnes personnes et soutiennent votre visibilité." },
-  { href: '/agence-media/campagnes-dooh', title: 'Campagnes DOOH', accent: '#29C5F5', desc: "L'affichage digital extérieur prolonge votre présence au-delà des écrans personnels. Panneaux en gare, centres commerciaux, façades d'immeubles, arrêts de bus. La flexibilité totale du DOOH programmatique : vous adaptez vos créations en fonction de l'heure, de la météo, des événements locaux. Et vous mesurez l'impact sur le trafic en magasin — au kilomètre près." },
+  { href: '/agence-media/audit-strategie-digitale', title: 'Audit & Stratégie digitale', accent: '#FFF127', anchor: "Découvrir notre audit & stratégie digitale", desc: "Analyse complète de votre dispositif digital : campagnes en cours, historiques des performances, positionnement concurrentiel et cohérence de votre mix marketing. Nous identifions les quick wins (ces gains rapides sur les leviers existants qui produisent des résultats immédiats) et posons les bases d'une organisation média efficace sur la durée. Chaque recommandation est argumentée avec des projections réalistes, pas des promesses en l'air." },
+  { href: '/agence-media/plan-media', title: 'Plan média', accent: '#FFF127', anchor: "Construire votre plan média sur-mesure", desc: "Traduction opérationnelle de votre stratégie en actions concrètes : canaux activés, formats retenus, calendrier de diffusion, budgets par levier et KPIs de pilotage. Un plan vivant, piloté au quotidien. Tests A/B, réallocation budgétaire vers les sources qui performent, ajustement des enchères. Nous faisons vivre vos dispositifs pour améliorer les résultats semaine après semaine." },
+  { href: '/agence-media/generation-de-leads', title: 'Génération de leads', accent: '#FFF127', anchor: "Activer la génération de leads qualifiés", desc: "Leads qualifiés au bon coût : emailing, SMS, display retargeting et affiliation orchestrés dans un tunnel de conversion cohérent. Nous ne livrons pas des volumes. Nous qualifions, nous analysons le parcours de chaque lead du premier point de contact jusqu'à la conversion, pour comprendre quels canaux contribuent réellement à votre business pour concentrer les budgets sur ce qui transforme." },
+  { href: '/agence-media/campagnes-emailing', title: 'Campagnes emailing', accent: '#FFF127', anchor: "Déployer vos campagnes emailing à grande échelle", desc: "Plus de 35 millions d'adresses optin grâce à nos partenaires data, fruit de 23 ans d'expertises en campagnes emailing, une méthodologie millimétrée en planification et en suivi quotidien. L'email reste un levier redoutablement efficace pour déclencher l'action, à condition de maîtriser la pression marketing pour préserver l'image de marque des marques et des annonceurs. Notre différence : la capacité à activer de la donnée fraîche et performante en fonction de l'audience que vous souhaitez toucher. Trop de messages tue le message. Nous ajustons et contrôlons les campagnes d'acquisition de ce canal." },
+  { href: '/agence-media/campagnes-rcs-sms', title: 'SMS / RCS', accent: '#FFF127', anchor: "Lancer vos campagnes SMS et RCS", desc: "25M+ de numéros dédupliqués grâce à nos partenaires data historiques. L'arrivée du RCS change la donne : images, vidéos, carrousels, RCS conversationnel. Ce qui était un texto devient une expérience de marque à part entière. Le RCS répond désormais à tous les objectifs (visibilité, trafic, conversion) avec des taux d'ouverture que l'email ne peut pas atteindre." },
+  { href: '/agence-media/audio-digital', title: 'Audio digital', accent: '#FFF127', anchor: "Toucher vos audiences en audio digital", desc: "Podcasts, streaming musical, radio digitale : l'audio s'est imposé dans les habitudes d'écoute quotidiennes. Spotify, Deezer, webradios, plateformes de podcasts. Nous paramétrons un cadre de diffusion pour toucher vos audiences dans des moments privilégiés où l'attention est captive. Quand un auditeur écoute, il n'est pas en train de scroller. L'audio fonctionne particulièrement bien pour la mémorisation, la connexion émotionnelle avec la marque et les stratégies de communication locales." },
+  { href: '/agence-media/tv-segmentee-ctv', title: 'TV segmentée & CTV', accent: '#29C5F5', anchor: "Cibler en TV segmentée et CTV", desc: "La TV segmentée s'appuie sur les données des box internet pour adresser des messages différents à chaque foyer, y compris pour un même programme. La CTV (Smart TV, box Android, Apple TV, consoles) capte le regard dans un moment de détente, sur grand écran, souvent partagé à plusieurs. Vous gardez la force d'impact du média TV tout en gagnant la précision du ciblage digital. Vos investissements en achats d'espaces TV deviennent mesurables, optimisés, et chaque diffusion touche vraiment les bonnes personnes et soutiennent votre visibilité." },
+  { href: '/agence-media/campagnes-dooh', title: 'Campagnes DOOH', accent: '#29C5F5', anchor: "Géocibler avec nos campagnes DOOH", desc: "L'affichage digital extérieur prolonge votre présence au-delà des écrans personnels. Panneaux en gare, centres commerciaux, façades d'immeubles, arrêts de bus. La flexibilité totale du DOOH programmatique : vous adaptez vos créations en fonction de l'heure, de la météo, des événements locaux. Et vous mesurez l'impact sur le trafic en magasin, au kilomètre près." },
 ]
 
 
 const faqs = [
   {
     q: "Quelle est la différence entre une agence média et une régie publicitaire ?",
-    a: "Une régie vend de l'espace publicitaire — elle représente les éditeurs (sites, chaînes, plateformes). Une agence média, c'est l'inverse : elle représente l'annonceur. Elle négocie, planifie et achète ces espaces pour votre compte, en veillant à ce que chaque euro investi serve vos objectifs. Chez DARWIN, nous intégrons le média dans une stratégie d'acquisition globale — SEO, SEA, Social Ads compris.",
+    a: "Une régie vend de l'espace publicitaire : elle représente les éditeurs (sites, chaînes, plateformes). Une agence média, c'est l'inverse : elle représente l'annonceur. Elle négocie, planifie et achète ces espaces pour votre compte, en veillant à ce que chaque euro investi serve vos objectifs. Chez DARWIN, nous intégrons le média dans une stratégie d'acquisition globale (SEO, SEA, Social Ads compris).",
   },
   {
     q: "Quel budget minimum faut-il pour travailler avec une agence média ?",
-    a: "Pas de réponse universelle. Ce qui compte, c'est l'adéquation entre votre budget, vos objectifs et les leviers activés. Certains dispositifs sont rentables dès quelques milliers d'euros mensuels. D'autres nécessitent plus d'enveloppe pour atteindre un seuil de diffusion significatif. Nous commençons toujours par un audit pour dimensionner le bon dispositif — pas pour vendre le plus gros.",
+    a: "Pas de réponse universelle. Ce qui compte, c'est l'adéquation entre votre budget, vos objectifs et les leviers activés. Certains dispositifs sont rentables dès quelques milliers d'euros mensuels. D'autres nécessitent plus d'enveloppe pour atteindre un seuil de diffusion significatif. Nous commençons toujours par un audit pour dimensionner le bon dispositif, pas pour vendre le plus gros.",
   },
   {
     q: "Comment mesurer le ROI de ses campagnes média ?",
-    a: "Ça commence par des indicateurs clairs posés en amont : coût par acquisition, coût par lead, taux de conversion, ROAS. Mais le vrai enjeu, c'est l'attribution. Quel canal a initié le parcours ? Lequel a converti ? Nous mettons en place des modèles d'attribution multi-touch pour que vous compreniez la contribution réelle de chaque levier — pas seulement le dernier clic.",
+    a: "Ça commence par des indicateurs clairs posés en amont : coût par acquisition, coût par lead, taux de conversion, ROAS. Mais le vrai enjeu, c'est l'attribution. Quel canal a initié le parcours ? Lequel a converti ? Nous mettons en place des modèles d'attribution multi-touch pour que vous compreniez la contribution réelle de chaque levier, pas seulement le dernier clic.",
   },
   {
     q: "Combien de temps faut-il pour voir les premiers résultats ?",
@@ -88,11 +88,11 @@ const faqs = [
   },
   {
     q: "Est-ce qu'une agence média comme DARWIN peut intervenir dans mon secteur d'activité ?",
-    a: "Oui. Nous accompagnons des annonceurs dans des secteurs très différents — retail, e-commerce, tourisme, services, formation, santé, immobilier, loisirs, cosmétiques, équipement de la maison, btoc, btob, entre autres. Chaque secteur a ses propres contraintes : saisonnalité, cycles de décision, budgets, réglementation, développement territorial, support privilégié par la cible. Ce qui compte, ce n'est pas d'avoir déjà travaillé exactement dans votre niche — c'est de savoir adapter la méthode à vos enjeux spécifiques, selon vos catégories de produits et vos audiences. Et ça, c'est ce que vingt-trois ans de campagnes digitales d'acquisition nous ont appris à faire.",
+    a: "Oui. Nous accompagnons des annonceurs dans des secteurs très différents : retail, e-commerce, tourisme, services, formation, santé, immobilier, loisirs, cosmétiques, équipement de la maison, btoc, btob, entre autres. Chaque secteur a ses propres contraintes : saisonnalité, cycles de décision, budgets, réglementation, développement territorial, support privilégié par la cible. Ce qui compte, ce n'est pas d'avoir déjà travaillé exactement dans votre niche. C'est de savoir adapter la méthode à vos enjeux spécifiques, selon vos catégories de produits et vos audiences. Et ça, c'est ce que vingt-trois ans de campagnes digitales d'acquisition nous ont appris à faire.",
   },
   {
     q: "Agence média intégrée ou agence média indépendante : qu'est-ce qui change ?",
-    a: "Une agence média intégrée dans un grand groupe publicitaire fonctionne avec des accords-cadres et des inventaires pré-négociés. Ça peut être un avantage sur le volume, mais ça crée aussi des biais : on vous oriente parfois vers les emplacements que l'agence a intérêt à remplir, pas forcément ceux qui performent le mieux pour vous. DARWIN est indépendant et responsable. Nous n'avons aucun accord exclusif avec aucune régie. Nos recommandations sont dictées par vos données et vos objectifs — pas par un accord commercial avec un partenaire média.",
+    a: "Une agence média intégrée dans un grand groupe publicitaire fonctionne avec des accords-cadres et des inventaires pré-négociés. Ça peut être un avantage sur le volume, mais ça crée aussi des biais : on vous oriente parfois vers les emplacements que l'agence a intérêt à remplir, pas forcément ceux qui performent le mieux pour vous. DARWIN est indépendant et responsable. Nous n'avons aucun accord exclusif avec aucune régie. Nos recommandations sont dictées par vos données et vos objectifs, pas par un accord commercial avec un partenaire média.",
   },
 ]
 
@@ -141,23 +141,18 @@ export default function AgenceMediaPage() {
               <span style={{ color: '#0a0a0a' }}>Agence Média</span>
             </div>
 
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 28 }}>
-              <span style={{ display: 'inline-block', width: 32, height: 3, background: '#FFF127' }} />
-              <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#0a0a0a' }}>Expertise Média</span>
-            </div>
-
             <h1 className="font-anton" style={{ fontSize: 'clamp(2.6rem, 5vw, 4.8rem)', lineHeight: 0.95, textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 28px' }}>
-              <span style={{ display: 'block' }}>CHAQUE LEVIER</span>
-              <span style={{ display: 'block' }}>MÉDIA JOUE UN</span>
+              <span style={{ display: 'block' }}>AGENCE MÉDIA,</span>
+              <span style={{ display: 'block' }}>CHAQUE LEVIER JOUE UN</span>
               <span style={{ display: 'inline-block', background: '#FFF127', padding: '0 8px', marginBottom: 4 }}>RÔLE PRÉCIS</span>
               <span style={{ display: 'block' }}>DANS LA PERFORMANCE</span>
             </h1>
 
             <p style={{ fontSize: '1rem', lineHeight: 1.75, color: '#555', marginBottom: 16, maxWidth: 460 }}>
-              Une agence média, ça ne se limite pas à acheter de la publicité. <strong>Display</strong> pour marquer les esprits. <strong>Vidéo</strong> pour raconter votre histoire. <strong>Audio</strong> pour créer de la proximité. <strong>Programmatique</strong> pour cibler avec précision. <strong>Email</strong> et <strong>SMS</strong> pour déclencher l&apos;action. Le{' '}<Link href="/agence-media/plan-media" style={{ color: '#555', textDecoration: 'underline', textUnderlineOffset: '3px' }}>media digital</Link> n&apos;est pas une addition de canaux. C&apos;est un <strong>système d&apos;activation</strong> où chaque levier intervient à un moment clé du parcours d&apos;achat ou de conversion.
+              Une <strong>agence média</strong>, ça ne se limite pas à acheter de la publicité. Display pour marquer les esprits. Vidéo pour raconter votre histoire. Audio pour créer de la proximité. Programmatique pour cibler avec précision. Email et SMS pour déclencher l&apos;action. Le media digital n&apos;est pas une addition de canaux. C&apos;est un système d&apos;activation où chaque levier intervient à un moment clé du parcours d&apos;achat ou de conversion.
             </p>
             <p style={{ fontSize: '1rem', lineHeight: 1.75, color: '#555', marginBottom: 40, maxWidth: 460 }}>
-              Chez DARWIN, notre agence média construit des stratégies digitales sur-mesure qui exploitent ces opportunités de conversion pour transformer votre visibilité en{' '}<Link href="/agence-media/generation-de-leads" style={{ color: '#555', textDecoration: 'underline', textUnderlineOffset: '3px' }}>croissance business</Link>.
+              Chez DARWIN, notre agence média construit des stratégies digitales sur-mesure qui exploitent ces opportunités de conversion pour transformer votre visibilité en croissance business.
             </p>
 
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 48 }}>
@@ -210,10 +205,10 @@ export default function AgenceMediaPage() {
           </div>
           <div>
             <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', margin: '0 0 20px' }}>
-              Display d&apos;un côté, emailing de l&apos;autre, un prestataire pour la vidéo, un autre pour le programmatique. Les formats publicitaires se multiplient, les plateformes changent, les comportements évoluent — et personne ne voit le tableau complet. Vous avez des reportings, mais pas de lecture unifiée de la performance. Chaque levier vit sa vie. Le budget file, les résultats restent flous.
+              Display d&apos;un côté, emailing de l&apos;autre, un prestataire pour la vidéo, un autre pour le programmatique. Les formats publicitaires se multiplient, les plateformes changent, les comportements évoluent. Personne ne voit le tableau complet. Vous avez des reportings, mais pas de lecture unifiée de la performance. Chaque levier vit sa vie. Le budget file, les résultats restent flous.
             </p>
             <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', margin: 0 }}>
-              C&apos;est le symptôme d&apos;un pilotage média fragmenté. Et c&apos;est exactement le problème qu&apos;un{' '}<Link href="/agence-media/audit-strategie-digitale" style={{ color: '#333', textDecoration: 'underline', textUnderlineOffset: '3px' }}>audit de votre stratégie digitale</Link> permet de poser à plat — avant de reconstruire un dispositif qui tient la route.
+              C&apos;est le symptôme d&apos;un pilotage média fragmenté. Et c&apos;est exactement le problème qu&apos;un{' '}<Link href="/agence-media/audit-strategie-digitale" style={{ color: '#333', textDecoration: 'underline', textUnderlineOffset: '3px' }}>audit de votre stratégie digitale</Link> permet de poser à plat, avant de reconstruire un dispositif qui tient la route.
             </p>
             <div style={{ marginTop: 24, display: 'flex', gap: 24 }}>
               <div style={{ borderLeft: '3px solid #0a0a0a', paddingLeft: 16 }}>
@@ -244,13 +239,13 @@ export default function AgenceMediaPage() {
                 QU&apos;EST-CE QU&apos;UNE<br />AGENCE MÉDIA ?
               </h2>
               <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 20, textAlign: 'justify' }}>
-                Une agence média est un partenaire spécialisé dans la planification, la négociation et l&apos;achat d&apos;espaces publicitaires pour le compte d&apos;annonceurs. Elle ne « place pas des pubs ». Elle décide où, quand et comment vos messages doivent atteindre vos audiences — en s&apos;appuyant sur la data collectée, l&apos;intelligence artificielle, les algorithmes, les comportements digitaux, cet ensemble étant à disposition de vos campagnes digitales et de vos objectifs marketing. Ce sont plusieurs compétences, qui combinent des expertises média et pluridisciplinaires, des concepts créatifs et un pilotage de la performance.
+                Une agence média est un <strong>partenaire spécialisé dans la planification, la négociation et l&apos;achat d&apos;espaces publicitaires</strong> pour le compte d&apos;annonceurs. Elle ne « place pas des pubs ». Elle décide où, quand et comment vos messages doivent atteindre vos audiences, en s&apos;appuyant sur la data collectée, l&apos;intelligence artificielle, les algorithmes, les comportements digitaux, cet ensemble étant à disposition de vos campagnes digitales et de vos objectifs marketing. Ce sont plusieurs compétences, qui combinent des expertises média et pluridisciplinaires, des concepts créatifs et un pilotage de la performance.
               </p>
               <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 20, textAlign: 'justify' }}>
-                Concrètement, une agence média intervient à trois niveaux. D&apos;abord, la <Link href="/agence-media/audit-strategie-digitale" style={{ color: '#444', textDecoration: 'underline', textUnderlineOffset: '3px' }}><strong>stratégie</strong></Link> : identifier les leviers pertinents en fonction de vos cibles, de votre budget et de vos objectifs sur le digital. Ensuite, l&apos;<Link href="/agence-media/plan-media" style={{ color: '#444', textDecoration: 'underline', textUnderlineOffset: '3px' }}><strong>activation</strong></Link> : créer le concept créatif et les messages, paramétrer, lancer, itérer et piloter les campagnes sur les plateformes retenues. Enfin, l&apos;<strong>optimisation</strong> : analyser les performances en continu pour réallouer les budgets vers ce qui fonctionne — et mettre en pause ce qui ne délivre pas.
+                Concrètement, une agence média intervient à trois niveaux. D&apos;abord, l&apos;audit et la stratégie digitale : identifier les leviers pertinents en fonction de vos cibles, de votre budget et de vos objectifs sur le digital. Ensuite, <Link href="/agence-media/plan-media" style={{ color: '#444', textDecoration: 'underline', textUnderlineOffset: '3px' }}>l&apos;activation et le plan média</Link> : créer le concept créatif et les messages, paramétrer, lancer, itérer et piloter les campagnes sur les plateformes retenues. Enfin, l&apos;optimisation : analyser les performances en continu pour réallouer les budgets vers ce qui fonctionne, et mettre en pause ce qui ne délivre pas.
               </p>
               <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', margin: 0, textAlign: 'justify' }}>
-                Chez DARWIN, nous ajoutons une dimension que peu d&apos;agences média proposent : nous couvrons et déployons toutes les solutions d&apos;acquisition du digital, avec le SEO, le SEA et le Social Ads. Vos campagnes média — qu&apos;elles visent la <Link href="/agence-media/generation-de-leads" style={{ color: '#444', textDecoration: 'underline', textUnderlineOffset: '3px' }}>génération de leads</Link>, la croissance du CA, la notoriété ou le trafic en magasin — s&apos;inscrivent dans un dispositif d&apos;acquisition digital cohérent, piloté par une même équipe marketing.
+                Chez DARWIN, nous ajoutons une dimension que peu d&apos;agences média proposent : nous couvrons et déployons toutes les solutions d&apos;acquisition du digital, avec le SEO, le SEA et le Social Ads. Vos campagnes média (qu&apos;elles visent la génération de leads qualifiés, la croissance du CA, la notoriété ou le trafic en magasin) s&apos;inscrivent dans <strong>un dispositif d&apos;acquisition digital cohérent</strong>, piloté par une même équipe marketing.
               </p>
             </div>
 
@@ -270,7 +265,7 @@ export default function AgenceMediaPage() {
                 <div style={{ position: 'absolute', bottom: -12, left: 0, width: 48, height: 3, background: '#FFF127', zIndex: 2 }} />
               </div>
               <p style={{ fontSize: '0.75rem', color: '#aaa', marginTop: 24, lineHeight: 1.6, fontWeight: 500 }}>
-                L&apos;équipe DARWIN en session de pilotage — Aix-en-Provence
+                L&apos;équipe DARWIN en session de pilotage, Aix-en-Provence
               </p>
             </div>
 
@@ -333,71 +328,105 @@ export default function AgenceMediaPage() {
 
           <div className="rsp-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
             {services.map((card) => (
-              <Link
+              <div
                 key={card.href}
-                href={card.href}
                 style={{
                   display: 'block',
                   padding: '36px 32px',
                   background: '#fff',
                   borderTop: `4px solid ${card.accent}`,
-                  textDecoration: 'none',
                   transition: 'transform 0.2s, box-shadow 0.2s',
                 }}
                 className="levier-card"
               >
                 <h3 className="font-anton" style={{ fontSize: '1.5rem', textTransform: 'uppercase', color: '#0a0a0a', marginBottom: 14, lineHeight: 1.1 }}>{card.title}</h3>
                 <p style={{ fontSize: '0.85rem', lineHeight: 1.75, color: '#666', margin: '0 0 24px' }}>{card.desc}</p>
-                <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: card.accent === '#FFF127' ? '#0a0a0a' : card.accent }}>Découvrir →</span>
-              </Link>
+                <Link href={card.href} style={{ display: 'inline-block', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: card.accent === '#FFF127' ? '#0a0a0a' : card.accent }}>Découvrir →</Link>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* ─── VOS OBJECTIFS, NOTRE STRATÉGIE ─── */}
-      <section style={{ background: '#fff', padding: '96px 24px', borderTop: '1px solid #eee' }}>
+      <section style={{ background: '#fff', padding: '120px 24px', borderTop: '1px solid #eee' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+
+          {/* Header */}
           <div style={{ marginBottom: 64 }}>
             <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 16 }}>
               Vos objectifs, notre stratégie
             </p>
-            <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 3.6rem)', textTransform: 'uppercase', lineHeight: 1, margin: 0, maxWidth: 800 }}>
+            <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 4vw, 3.6rem)', textTransform: 'uppercase', lineHeight: 1, margin: 0, maxWidth: 900 }}>
               BRANDING, BRANDFORMANCE OU PERFORMANCE : ADAPTEZ VOTRE MÉDIA À VOS OBJECTIFS
             </h2>
           </div>
 
-          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 2 }}>
+          {/* 4 cards — traitement uniforme (gris #fafafa), différenciation minimale sur la card brandformance */}
+          <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 0 }}>
             {[
               {
+                num: '01',
                 title: 'Vous voulez développer votre notoriété ?',
-                text: "Nous activons les leviers qui marquent les esprits. Display à grande échelle, vidéo immersive, DOOH dans les lieux de passage, audio digital dans les moments d'écoute. L'objectif : maximiser votre reach, installer la répétition sur vos cibles et construire une image de marque forte dans la durée. La notoriété ne se mesure pas en clics — elle se mesure en parts de voix, en mémorisation publicitaire, en trafic direct sur votre site. Nous pilotons ces indicateurs avec la même rigueur que la performance pure.",
+                feature: false,
+                text: <span>Nous activons les leviers qui marquent les esprits. Display à grande échelle, vidéo immersive, DOOH dans les lieux de passage, <Link href="/agence-media/audio-digital" style={{ color: '#0a0a0a', textDecoration: 'underline', textUnderlineOffset: '3px' }}>audio digital dans les moments d&apos;écoute</Link>. L&apos;objectif : maximiser votre reach, installer la répétition sur vos cibles et construire une image de marque forte dans la durée. La notoriété ne se mesure pas en clics, elle se mesure en parts de voix, en mémorisation publicitaire, en trafic direct sur votre site. Nous pilotons ces indicateurs avec la même rigueur que la performance pure.</span>,
               },
               {
+                num: '02',
                 title: "Vous cherchez l'équilibre entre image et résultats ?",
-                text: "C'est ce qu'on appelle le brandformance. Construire votre marque tout en générant des résultats mesurables, dans le même dispositif. Cette approche hybride fonctionne particulièrement bien pour les annonceurs qui veulent renforcer leur visibilité sans sacrifier le volume de conversions. Concrètement, ça signifie coupler des formats de notoriété (vidéo, CTV, audio) qui vont venir nourrir des leviers d'activation directe (emailing, SMS). Le branding nourrit la performance, la performance finance le branding. Quand les deux se parlent, le coût d'acquisition baisse — on l'a mesuré chez nos clients retail et e-commerce.",
+                feature: true,
+                text: "C'est ce qu'on appelle le brandformance. Construire votre marque tout en générant des résultats mesurables, dans le même dispositif. Cette approche hybride fonctionne particulièrement bien pour les annonceurs qui veulent renforcer leur visibilité sans sacrifier le volume de conversions. Concrètement, ça signifie coupler des formats de notoriété (vidéo, CTV, audio) qui vont venir nourrir des leviers d'activation directe (emailing, SMS). Le branding nourrit la performance, la performance finance le branding. Quand les deux se parlent, le coût d'acquisition baisse. On l'a mesuré chez nos clients retail et e-commerce.",
               },
               {
+                num: '03',
                 title: 'Vous avez besoin de générer du business maintenant ?',
-                text: "Retargeting display pour récupérer vos visiteurs, campagnes emailing d'acquisition pour recruter à grande échelle, affiliation pour ne payer que les résultats. Nous déployons les leviers les plus directs pour transformer vos audiences en clients. Chaque action est tracée, chaque euro est optimisé. Pas de budget « image » caché dans un plan qui promet de la performance.",
+                feature: false,
+                text: <span>Retargeting display pour récupérer vos visiteurs, <Link href="/agence-media/campagnes-emailing" style={{ color: '#0a0a0a', textDecoration: 'underline', textUnderlineOffset: '3px' }}>campagnes emailing d&apos;acquisition pour recruter à grande échelle</Link>, affiliation pour ne payer que les résultats. Nous déployons les leviers les plus directs pour transformer vos audiences en clients. Chaque action est tracée, chaque euro est optimisé. Pas de budget « image » caché dans un plan qui promet de la performance.</span>,
               },
               {
+                num: '04',
                 title: 'Vous souhaitez booster le trafic dans vos points de vente ?',
-                text: "Nous couplons des dispositifs en ultra-local — DOOH programmatique géociblé au kilomètre, campagnes SMS géolocalisées, display contextuel — pour maximiser votre couverture sur cible et votre visibilité locale. Nous analysons en temps réel les retombées en magasin pour piloter les leviers et atteindre le coût par visite le plus bas possible. C'est mesurable et piloté. Et pour les réseaux de franchise, c'est ce qui fait la différence entre une campagne nationale qui s'évapore et un dispositif local qui remplit les points de vente.",
+                feature: false,
+                text: <span>Nous couplons des dispositifs en ultra-local (DOOH programmatique géociblé au kilomètre, <Link href="/agence-media/campagnes-rcs-sms" style={{ color: '#0a0a0a', textDecoration: 'underline', textUnderlineOffset: '3px' }}>campagnes SMS géolocalisées</Link>, display contextuel) pour maximiser votre couverture sur cible et votre visibilité locale. Nous analysons en temps réel les retombées en magasin pour piloter les leviers et atteindre le coût par visite le plus bas possible. C&apos;est mesurable et piloté. Et pour les réseaux de franchise, c&apos;est ce qui fait la différence entre une campagne nationale qui s&apos;évapore et un dispositif local qui remplit les points de vente.</span>,
               },
             ].map((item) => (
-              <div
-                key={item.title}
+              <article
+                key={item.num}
+                className="objective-card"
                 style={{
-                  padding: '48px 40px',
+                  position: 'relative',
+                  padding: '64px 56px 56px',
                   background: '#fafafa',
                   border: '1px solid #ebebeb',
+                  borderTop: item.feature ? '4px solid #FFF127' : '1px solid #ebebeb',
+                  minHeight: 420,
+                  overflow: 'hidden',
                 }}
               >
-                <div style={{ display: 'inline-block', background: '#FFF127', height: 3, width: 32, marginBottom: 20 }} />
-                <h3 className="font-anton" style={{ fontSize: '1.3rem', textTransform: 'uppercase', marginBottom: 16, lineHeight: 1.15, color: '#0a0a0a' }}>{item.title}</h3>
-                <p style={{ fontSize: '0.9rem', lineHeight: 1.8, color: '#444', margin: 0 }}>{item.text}</p>
-              </div>
+                <span
+                  className="font-anton"
+                  aria-hidden="true"
+                  style={{
+                    position: 'absolute',
+                    top: 28,
+                    right: 40,
+                    fontSize: '6rem',
+                    color: '#0a0a0a',
+                    lineHeight: 1,
+                    letterSpacing: '-0.04em',
+                    userSelect: 'none',
+                  }}
+                >
+                  {item.num}
+                </span>
+                <div style={{ display: 'inline-block', background: '#FFF127', height: 3, width: 36, marginBottom: 28 }} />
+                <h3 className="font-anton" style={{ fontSize: '1.5rem', textTransform: 'uppercase', marginBottom: 22, lineHeight: 1.1, color: '#0a0a0a', maxWidth: 440 }}>
+                  {item.title}
+                </h3>
+                <p style={{ fontSize: '0.93rem', lineHeight: 1.85, color: '#444', margin: 0 }}>
+                  {item.text}
+                </p>
+              </article>
             ))}
           </div>
         </div>
@@ -427,14 +456,14 @@ export default function AgenceMediaPage() {
                 category: 'SMS · Média',
                 result: '8K',
                 resultLabel: 'rendez-vous générés / mois',
-                period: '+23% de taux de transformation',
+                period: '+23\u00A0% de taux de transformation',
                 img: '/images/cas-clients/verisure-cover.jpg',
                 href: '/cas-clients/verisure',
               },
               {
                 client: 'Préfon',
                 category: 'Emailing · Média',
-                result: '-10%',
+                result: '-10\u00A0%',
                 resultLabel: "de coût d'acquisition",
                 period: '12 ans de collaboration',
                 img: '/images/cas-clients/prefon-cover.jpg',
@@ -443,7 +472,7 @@ export default function AgenceMediaPage() {
               {
                 client: 'Acadomia',
                 category: 'SMA · Média · Display',
-                result: '+65%',
+                result: '+65\u00A0%',
                 resultLabel: 'de leads générés / mois',
                 period: 'x2 taux de conversion landing page',
                 img: '/images/cas-clients/acadomia-cover.jpg',
@@ -508,17 +537,17 @@ export default function AgenceMediaPage() {
             {[
               {
                 num: '01', title: 'Audit', subtitle: 'média complet',
-                desc: <span>Nous commençons par analyser votre dispositif digital : campagnes en cours, historiques des performances, positionnement concurrentiel, <Link href="/agence-media/audit-strategie-digitale" style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>mix marketing</Link>. Cet audit identifie les quick wins et pose les bases d&apos;une stratégie efficace.</span>,
+                desc: "Nous commençons par analyser votre dispositif digital : campagnes en cours, historiques des performances, positionnement concurrentiel, mix marketing. Cet audit identifie les quick wins et pose les bases d'une stratégie efficace.",
                 icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>,
               },
               {
                 num: '02', title: 'Stratégie', subtitle: 'personnalisée',
-                desc: <span>À partir de vos objectifs business, de votre budget et de vos cibles, nous construisons un plan média sur-mesure. Chaque recommandation est justifiée et proposée avec des <Link href="/agence-media/nos-engagements" style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>projections réalistes</Link>.</span>,
+                desc: "À partir de vos objectifs business, de votre budget et de vos cibles, nous construisons un plan média sur-mesure. Chaque recommandation est justifiée et proposée avec des projections réalistes.",
                 icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>,
               },
               {
                 num: '03', title: 'Activation', subtitle: '& lancement',
-                desc: <span>Paramétrage des campagnes, mise en place du tracking, création ou adaptation des visuels. Nos consultants seniors prennent en charge l&apos;intégralité du lancement. Canaux, formats, budgets, <Link href="/agence-media/plan-media" style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>KPIs</Link>. On lance.</span>,
+                desc: "Paramétrage des campagnes, mise en place du tracking, création ou adaptation des visuels. Nos consultants seniors prennent en charge l'intégralité du lancement selon votre plan média et ses KPIs. On lance.",
                 icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>,
               },
               {
@@ -528,7 +557,7 @@ export default function AgenceMediaPage() {
               },
               {
                 num: '05', title: 'Reporting', subtitle: '& itération',
-                desc: <span>Dashboards personnalisés en temps réel, reportings périodiques avec analyse et recommandations. Vous savez toujours où vous en êtes — et où nous allons. <Link href="/agence-media/faq" style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>Attribution multi-touch</Link> pour comprendre la contribution réelle de chaque levier.</span>,
+                desc: "Dashboards personnalisés en temps réel, reportings périodiques avec analyse et recommandations. Vous savez toujours où vous en êtes, et où nous allons. Attribution multi-touch pour comprendre la contribution réelle de chaque levier.",
                 icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF127" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>,
               },
             ].map((step, i) => (
@@ -570,10 +599,10 @@ export default function AgenceMediaPage() {
               LE MÉDIA QUI CONVERTIT,<br />PAS JUSTE QUI DIFFUSE
             </h2>
             <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 24 }}>
-              DARWIN fait partie de la <strong>Creative Thinking Community</strong> — un groupement de talents qui réunit performance digitale, branding, création de sites et UX/UI design. Cette organisation est ce qui nous distingue des agences média classiques et des régies publicitaires : quand vous activez vos <Link href="/agence-media/campagnes-emailing" style={{ color: '#444', textDecoration: 'underline', textUnderlineOffset: '3px' }}>campagnes emailing</Link>, vos <Link href="/agence-media/campagnes-rcs-sms" style={{ color: '#444', textDecoration: 'underline', textUnderlineOffset: '3px' }}>SMS/RCS</Link> ou vos dispositifs en <Link href="/agence-media/tv-segmentee-ctv" style={{ color: '#444', textDecoration: 'underline', textUnderlineOffset: '3px' }}>TV segmentée</Link>, vous bénéficiez d&apos;un collectif de spécialistes complémentaires — mobilisables dès le cadrage du projet.
+              DARWIN fait partie de la <strong>Creative Thinking Community, un groupement de talents qui réunit performance digitale</strong>, branding, création de sites et UX/UI design. Cette organisation est ce qui nous distingue des agences média classiques et des régies publicitaires : quand vous activez vos campagnes emailing, vos SMS/RCS ou <Link href="/agence-media/tv-segmentee-ctv" style={{ color: '#444', textDecoration: 'underline', textUnderlineOffset: '3px' }}>vos dispositifs en TV segmentée</Link>, vous bénéficiez d&apos;un collectif de spécialistes complémentaires, mobilisables dès le cadrage du projet.
             </p>
             <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', marginBottom: 40 }}>
-              Un visiteur qui découvre votre marque via une campagne <Link href="/agence-media/campagnes-dooh" style={{ color: '#444', textDecoration: 'underline', textUnderlineOffset: '3px' }}>display ou DOOH</Link> sera retouché en SEA, touché en <Link href="/agence-media/audio-digital" style={{ color: '#444', textDecoration: 'underline', textUnderlineOffset: '3px' }}>audio digital</Link>, nourri en contenu. Nous pensons votre stratégie comme un <strong>système</strong>, pas comme une juxtaposition de leviers. La data, la créativité et la performance ne sont pas trois forces à assembler. Ce sont trois langues que DARWIN parle couramment, parce que son équipe les pratique ensemble chaque jour. C&apos;est pour ça que nos clients restent en moyenne 7 ans. Pas parce qu&apos;on les fidélise — parce qu&apos;on leur prouve, mois après mois, que ça marche.
+              Un visiteur qui découvre votre marque via <Link href="/agence-media/campagnes-dooh" style={{ color: '#444', textDecoration: 'underline', textUnderlineOffset: '3px' }}>une campagne display ou DOOH</Link> sera retouché en SEA, touché en audio digital, nourri en contenu. Nous pensons votre stratégie <strong>comme un système, pas comme une juxtaposition de leviers</strong>. La data, la créativité et la performance ne sont pas trois forces à assembler. Ce sont trois langues que DARWIN parle couramment, parce que son équipe les pratique ensemble chaque jour. C&apos;est pour ça que nos clients restent en moyenne 7 ans. Pas parce qu&apos;on les fidélise, parce qu&apos;on leur prouve, mois après mois, que ça marche.
             </p>
             <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#0a0a0a', color: '#fff', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
               Échangeons sur votre stratégie →
@@ -665,7 +694,7 @@ export default function AgenceMediaPage() {
             ÉCHANGEONS SUR<br />VOTRE STRATÉGIE MÉDIA
           </h2>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#333', marginBottom: 40, maxWidth: 560, margin: '0 auto 40px' }}>
-            Décrivez-nous votre projet et vos enjeux marketing. Nous analysons vos campagnes publicitaires, votre mix média et vos opportunités de visibilité pour développer un dispositif plus performant — et nous revenons vers vous sous 24h ouvrées avec un diagnostic actionnable.
+            Décrivez-nous votre projet et vos enjeux marketing. Nous analysons vos campagnes publicitaires, votre mix média et vos opportunités de visibilité pour développer un dispositif plus performant. Nous revenons vers vous sous 24h ouvrées avec un diagnostic actionnable.
           </p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#0a0a0a', color: '#fff', padding: '16px 36px', borderRadius: 4, textDecoration: 'none', fontSize: '0.88rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
