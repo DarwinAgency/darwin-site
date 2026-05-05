@@ -28,7 +28,6 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     type: 'website',
   },
-  robots: { index: false, follow: false },
 };
 
 const jsonLd = {
