@@ -350,26 +350,25 @@ export default function AgenceMediaPage() {
         </div>
       </section>
 
-      {/* ─── INTERVIEW CAROLE ─── */}
+      {/* ─── VOS OBJECTIFS, NOTRE STRATÉGIE ─── */}
       <section style={{ background: '#fff', padding: '88px 0 96px', borderTop: '1px solid #eee', position: 'relative', overflow: 'hidden' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px' }}>
 
           {/* Header + portrait — layout 2 colonnes asymétriques */}
           <div className="rsp-interview-hero" style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: 64, alignItems: 'center', marginBottom: 64 }}>
             <div>
-              <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 3.8vw, 3.4rem)', textTransform: 'uppercase', lineHeight: 0.98, margin: '0 0 24px', color: '#0a0a0a' }}>
-                BRANDING, BRANDFORMANCE OU PERFORMANCE&nbsp;:{' '}
-                <span style={{ display: 'inline-block', position: 'relative', whiteSpace: 'nowrap' }}>
-                  <span style={{ position: 'relative', zIndex: 1 }}>CAROLE TRANCHE.</span>
-                  <span aria-hidden="true" style={{ position: 'absolute', left: -4, right: -4, bottom: 2, height: '34%', background: '#FFF127', zIndex: 0 }} />
-                </span>
+              <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 16 }}>
+                Vos objectifs, notre stratégie
+              </p>
+              <h2 className="font-anton" style={{ fontSize: 'clamp(2rem, 3.8vw, 3.4rem)', textTransform: 'uppercase', lineHeight: 1, margin: '0 0 24px', color: '#0a0a0a' }}>
+                BRANDING, BRANDFORMANCE OU PERFORMANCE&nbsp;: ADAPTEZ VOTRE MÉDIA À VOS OBJECTIFS
               </h2>
               <p style={{ fontSize: '0.98rem', lineHeight: 1.7, color: '#333', margin: '0 0 32px', maxWidth: 560 }}>
                 Directrice média chez DARWIN, Carole Kabanda pilote les dispositifs d&apos;acquisition de marques nationales comme de PME en croissance.
               </p>
-              <div style={{ borderLeft: '3px solid #FFF127', paddingLeft: 20, maxWidth: 540 }}>
-                <p className="font-anton" style={{ fontSize: 'clamp(1.2rem, 2vw, 1.7rem)', textTransform: 'uppercase', lineHeight: 1.15, color: '#0a0a0a', margin: 0 }}>
-                  «&nbsp;Mon métier, c&apos;est de ne pas vendre la même chose à tout le monde.&nbsp;»
+              <div style={{ borderLeft: '3px solid #FFF127', paddingLeft: 20, maxWidth: 560 }}>
+                <p className="font-anton" style={{ fontSize: 'clamp(1.1rem, 1.7vw, 1.5rem)', textTransform: 'uppercase', lineHeight: 1.2, color: '#0a0a0a', margin: 0 }}>
+                  «&nbsp;Mon métier, c&apos;est de trouver des solutions clé en main mais de les adapter à chaque stratégie pour en faire des dispositifs uniques et performants.&nbsp;»
                 </p>
               </div>
             </div>
@@ -394,28 +393,28 @@ export default function AgenceMediaPage() {
             </div>
           </div>
 
-          {/* Q&A — 2x2 grid compact */}
+          {/* Q&A — 2x2 grid compact, textes originaux conservés */}
           <div className="rsp-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px 56px', borderTop: '1px solid #0a0a0a', paddingTop: 48, marginBottom: 64 }}>
             {[
               {
                 num: '01',
-                q: '«\u00A0Branding, brandformance, performance\u00A0: qu’est-ce qui change pour vous au moment du brief\u00A0?\u00A0»',
-                a: <>Trois grilles de lecture pour le même budget. Le branding fait exister la marque dans la tête des gens. La performance veut une vente, un lead, un appel, maintenant. Le brandformance, c&apos;est l&apos;entre-deux devenu la norme. Ce qui change, c&apos;est rarement le levier. C&apos;est la manière dont on mesure et dont on pilote.</>,
+                q: 'Vous voulez développer votre notoriété\u00A0?',
+                a: <>Nous activons les leviers qui marquent les esprits. Display à grande échelle, vidéo immersive, DOOH dans les lieux de passage, audio digital dans les moments d&apos;écoute. L&apos;objectif&nbsp;: maximiser votre reach, installer la répétition sur vos cibles et construire une image de marque forte dans la durée. La notoriété ne se mesure pas en clics, elle se mesure en parts de voix, en mémorisation publicitaire, en trafic direct sur votre site. Nous pilotons ces indicateurs avec la même rigueur que la performance pure.</>,
               },
               {
                 num: '02',
-                q: '«\u00A0Comment vous savez, dès le premier rendez-vous, quelle approche choisir\u00A0?\u00A0»',
-                a: <>Je pose deux questions. Qu&apos;est-ce qui se passe si vous ne lancez rien dans six mois&nbsp;? Et qu&apos;est-ce qui se passe si ça marche au-delà de vos espérances&nbsp;? Une marque qui doit exister sur un marché saturé n&apos;a pas les mêmes priorités qu&apos;un e-commerçant qui doit tenir son trimestre. Mon métier, c&apos;est de ne pas mélanger les deux.</>,
+                q: 'Vous cherchez l\u2019équilibre entre image et résultats\u00A0?',
+                a: <>C&apos;est ce qu&apos;on appelle le brandformance. Construire votre marque tout en générant des résultats mesurables, dans le même dispositif. Cette approche hybride fonctionne particulièrement bien pour les annonceurs qui veulent renforcer leur visibilité sans sacrifier le volume de conversions. Concrètement, ça signifie coupler des formats de notoriété (vidéo, CTV, audio) qui vont venir nourrir des leviers d&apos;activation directe (emailing, SMS). Le branding nourrit la performance, la performance finance le branding. Quand les deux se parlent, le coût d&apos;acquisition baisse. On l&apos;a mesuré chez nos clients retail et e-commerce.</>,
               },
               {
                 num: '03',
-                q: '«\u00A0Le brandformance, c’est la nouvelle promesse à la mode. Vous y croyez\u00A0?\u00A0»',
-                a: <>Je l&apos;ai vu fonctionner. Sur le retail et le e-commerce, surtout. Quand on couple un format de notoriété (CTV, audio digital, vidéo) avec des leviers d&apos;activation directe comme l&apos;emailing ou le SMS, le CPA baisse mécaniquement. Mais seulement si les deux équipes se parlent et regardent la même data.</>,
+                q: 'Vous avez besoin de générer du business maintenant\u00A0?',
+                a: <>Retargeting display pour récupérer vos visiteurs, campagnes emailing d&apos;acquisition pour recruter à grande échelle, affiliation pour ne payer que les résultats. Nous déployons les leviers les plus directs pour transformer vos audiences en clients. Chaque action est tracée, chaque euro est optimisé. Pas de budget «&nbsp;image&nbsp;» caché dans un plan qui promet de la performance.</>,
               },
               {
                 num: '04',
-                q: '«\u00A0Quand un client veut juste du résultat tout de suite, ou du trafic en magasin\u00A0?\u00A0»',
-                a: <>On y va, mais sans planquer la vérité. Retargeting, emailing d&apos;acquisition, affiliation pour ne payer qu&apos;à la conversion. Pour les réseaux physiques&nbsp;: DOOH géociblé, SMS géolocalisés, mesure des retombées en magasin au kilomètre près. Pas d&apos;entourloupe.</>,
+                q: 'Vous souhaitez booster le trafic dans vos points de vente\u00A0?',
+                a: <>Nous couplons des dispositifs en ultra-local (DOOH programmatique géociblé au kilomètre, campagnes SMS géolocalisées, display contextuel) pour maximiser votre couverture sur cible et votre visibilité locale. Nous analysons en temps réel les retombées en magasin pour piloter les leviers et atteindre le coût par visite le plus bas possible. C&apos;est mesurable et piloté. Et pour les réseaux de franchise, c&apos;est ce qui fait la différence entre une campagne nationale qui s&apos;évapore et un dispositif local qui remplit les points de vente.</>,
               },
             ].map((item) => (
               <article key={item.num} style={{ display: 'grid', gridTemplateColumns: '64px 1fr', gap: 20, alignItems: 'start' }}>
