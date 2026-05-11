@@ -3,8 +3,22 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
+
+const PILLAR_PAGES = [
+  '/agence-media',
+  '/agence-seo',
+  '/agence-sma',
+  '/agence-sea',
+  '/agence-analytics',
+  '/formations',
+  '/studio-creatif',
+]
 
 export default function Footer() {
+  const pathname = usePathname()
+  const hideCtaBand = PILLAR_PAGES.includes(pathname)
+
   const [email, setEmail] = useState('')
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
@@ -40,36 +54,38 @@ export default function Footer() {
     <footer style={{ background: '#0a0a0a', color: '#fff' }}>
 
       {/* ── CTA BAND ── */}
-      <div className="rsp-cta-band" style={{ background: '#29C5F5', padding: '40px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
-        <div>
-          <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.45)', marginBottom: 10 }}>
-            PRÊT À PASSER À L&apos;ACTION ?
-          </p>
-          <p className="font-anton" style={{ fontSize: 'clamp(1.4rem, 3vw, 2.6rem)', textTransform: 'uppercase', color: '#0a0a0a', margin: 0, lineHeight: 1 }}>
-            BOOSTONS VOTRE PERFORMANCE DIGITALE
-          </p>
+      {!hideCtaBand && (
+        <div className="rsp-cta-band" style={{ background: '#29C5F5', padding: '40px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
+          <div>
+            <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.45)', marginBottom: 10 }}>
+              PRÊT À PASSER À L&apos;ACTION ?
+            </p>
+            <p className="font-anton" style={{ fontSize: 'clamp(1.4rem, 3vw, 2.6rem)', textTransform: 'uppercase', color: '#0a0a0a', margin: 0, lineHeight: 1 }}>
+              BOOSTONS VOTRE PERFORMANCE DIGITALE
+            </p>
+          </div>
+          <Link
+            href="/contact"
+            style={{
+              background: '#0a0a0a',
+              color: '#fff',
+              padding: '16px 36px',
+              fontWeight: 700,
+              fontSize: '0.82rem',
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+              display: 'inline-block',
+              transition: 'background 0.2s',
+            }}
+            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#1a1a1a' }}
+            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#0a0a0a' }}
+          >
+            DÉMARRER UN PROJET →
+          </Link>
         </div>
-        <Link
-          href="/contact"
-          style={{
-            background: '#0a0a0a',
-            color: '#fff',
-            padding: '16px 36px',
-            fontWeight: 700,
-            fontSize: '0.82rem',
-            letterSpacing: '0.1em',
-            textTransform: 'uppercase',
-            textDecoration: 'none',
-            whiteSpace: 'nowrap',
-            display: 'inline-block',
-            transition: 'background 0.2s',
-          }}
-          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#1a1a1a' }}
-          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#0a0a0a' }}
-        >
-          DÉMARRER UN PROJET →
-        </Link>
-      </div>
+      )}
 
       {/* ── MAIN FOOTER ── */}
       <div className="rsp-footer-grid" style={{ maxWidth: 1280, margin: '0 auto', padding: '64px 48px 48px', display: 'grid', gridTemplateColumns: '1.8fr 1fr 1fr 1fr 1fr', gap: 48 }}>
