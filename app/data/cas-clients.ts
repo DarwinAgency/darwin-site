@@ -44,6 +44,95 @@ export type CasClient = {
 
 export const CAS_CLIENTS: CasClient[] = [
   {
+    slug: 'restos-du-coeur',
+    client: 'Les Restos du Cœur',
+    leviers: ['MÉDIA'],
+    tag: 'MÉDIA',
+    title: "L'AUDIO DIGITAL POUR BOOSTER LA COLLECTE DE DONS",
+    excerpt: "Comment Darwin a mobilisé l'audio digital et le retargeting display pour générer des dons en ligne pour Les Restos du Cœur, avec un taux de complétion de 90%.",
+    context: "Les Restos du Cœur occupent une place centrale dans le paysage de la solidarité en France. Historiquement fondée sur la mobilisation populaire et les dons physiques, l'association fait face aujourd'hui à une mutation profonde de la générosité : le don est devenu plus digital, plus impulsif et plus concurrentiel.",
+    stats: [
+      { num: '90%', label: 'Taux de complétion · génération de dons post-clics' },
+    ],
+    problematique: "Dans un contexte de tension économique et de saturation des canaux digitaux, comment capter l'attention des donateurs et générer des dons en ligne, sans se limiter aux leviers traditionnels ?",
+    objectifs: [
+      "Booster le niveau de collecte de dons dans un contexte de tension économique.",
+      "Renforcer une stratégie d'acquisition et de fidélisation performante en synergie avec la mobilisation terrain.",
+      "Rester connecté émotionnellement avec les donateurs dans un univers digital saturé.",
+    ],
+    solution: [
+      {
+        id: '01',
+        title: 'CAPITALISER SUR LES ASSETS CRÉATIFS EXISTANTS',
+        text: "Une vidéo de sensibilisation à la collecte de dons, prévue en fin d'année 2025, a servi de point de départ.",
+      },
+      {
+        id: '02',
+        title: 'CRÉER UN SPOT AUDIO POUR LES PODCASTS',
+        text: "Le son de la vidéo a été extrait pour en faire un spot audio, diffusé dans un nouvel environnement : les podcasts.",
+      },
+      {
+        id: '03',
+        title: 'MAXIMISER LA CONVERSION PAR LE RETARGETING',
+        text: "Pour transformer l'écoute en action, un retargeting display a été activé sur les listeners exposés au spot.",
+      },
+    ],
+    conclusion: {
+      title: "L'AUDIO DIGITAL, UN LEVIER D'ÉMOTION",
+      text: "Dans un paysage digital saturé de visuels, l'audio digital s'impose comme un canal à part : il capte l'attention sans la concurrencer. Diffusé dans les podcasts, il s'invite dans des moments d'écoute active, là où les auditeurs sont réceptifs et peu distraits. Pour les Restos du Cœur, c'est ce contexte d'écoute qui fait toute la différence : un message sonore chargé d'émotion, délivré au bon moment, génère un engagement rare illustré ici par un taux de complétion de 90%.",
+      linkLabel: 'En savoir plus sur le MÉDIA',
+      linkHref: '/agence-media',
+    },
+    heroImg: '/images/cas-clients/restos-du-coeur-cover.jpg',
+    cardImg: '/images/cas-clients/restos-du-coeur-cover.jpg',
+    problematiqueImg: '/images/cas-clients/restos-du-coeur-ill.jpg',
+  },
+  {
+    slug: 'maty',
+    client: 'Maty',
+    leviers: ['MÉDIA'],
+    tag: 'MÉDIA',
+    title: 'DRIVE-TO-STORE MOBILE : 41% DE NOUVEAUX CLIENTS EN MAGASIN',
+    excerpt: "Comment Darwin a généré du trafic qualifié dans six bijouteries MATY grâce à un dispositif mobile géolocalisé, avec 41% de nouveaux clients en point de vente.",
+    context: "À l'approche des fêtes de fin d'année, MATY constate une baisse de trafic dans plusieurs bijouteries. La marque souhaite mener une opération test sur six boutiques (Paris Opéra, Boulogne, Grenoble, Strasbourg, Nantes et Chambéry) afin d'évaluer l'efficacité d'un dispositif mobile géolocalisé pour relancer la fréquentation en point de vente.",
+    stats: [
+      { num: '+2%', label: 'Taux de visite en magasin' },
+      { num: '41%', label: 'Nouveaux clients' },
+    ],
+    problematique: "Dans un contexte de baisse de fréquentation des points de vente, comment générer du trafic qualifié en bijouterie via le mobile, mesurer précisément son impact et valider la performance du levier pour de futures activations locales ?",
+    objectifs: [
+      "Générer du trafic qualifié en magasin et inciter les consommateurs situés dans la zone de chalandise à se déplacer.",
+      "Mesurer précisément l'impact de la campagne sur les visites et les ventes.",
+      "Capter de nouveaux clients et tester la performance du levier pour de futures activations locales.",
+    ],
+    solution: [
+      {
+        id: '01',
+        title: 'UN DISPOSITIF DRIVE-TO-STORE GÉOLOCALISÉ',
+        text: "Mise en place d'un ciblage géolocalisé combiné à un message impactant, activé sur six boutiques test à l'approche des fêtes de fin d'année.",
+      },
+      {
+        id: '02',
+        title: 'DES AUDIENCES QUALIFIÉES ET UNE SÉQUENCE DE MESSAGES',
+        text: "Activation d'audiences ciblées : anciens visiteurs, clients concurrents, habitants à proximité. Diffusion d'une séquence RCS puis SMS pour créer de la répétition et maximiser l'impact.",
+      },
+      {
+        id: '03',
+        title: 'UNE MESURE PRÉCISE DES VISITES',
+        text: "Les déplacements en magasin sont trackés grâce à une technologie mobile dédiée, permettant de mesurer en temps réel l'efficacité du dispositif et d'en valider la rentabilité.",
+      },
+    ],
+    conclusion: {
+      title: 'LE DRIVE-TO-STORE MOBILE, UN LEVIER ULTRA-CIBLÉ',
+      text: "Dans un contexte de baisse de fréquentation des points de vente, attendre que le client pousse la porte ne suffit plus. Le Drive-to-Store mobile permet d'aller le chercher là où il est littéralement. Grâce au ciblage géolocalisé, il est possible d'activer des audiences qualifiées (anciens visiteurs, clients de la concurrence, habitants à proximité) et de leur adresser un message au bon endroit, au bon moment. Pour MATY, ce dispositif a permis de générer un trafic mesurable et qualifié sur six boutiques, avec des taux de visite atteignant 2% et 41% de nouveaux clients s'étant déplacés en magasin. Une preuve concrète que le mobile peut devenir un vrai levier d'activation locale.",
+      linkLabel: 'En savoir plus sur le MÉDIA',
+      linkHref: '/agence-media',
+    },
+    heroImg: '/images/cas-clients/maty-cover.jpg',
+    cardImg: '/images/cas-clients/maty-cover.jpg',
+    problematiqueImg: '/images/cas-clients/maty-ill.jpg',
+  },
+  {
     slug: 'verisure',
     client: 'Verisure',
     leviers: ['MÉDIA'],

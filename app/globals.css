@@ -378,9 +378,86 @@ details summary::-webkit-details-marker {
   border-color: #FFF127 !important;
 }
 
+/* ---- Liens structurels des cas clients (CTA conclusion + cartes « autres cas ») ----
+   Soulignement « balayé » au survol (deux dégradés, l'un ancré à droite qui se rétracte,
+   l'autre ancré à gauche qui se déploie) + flèche qui glisse. */
+.cas-cta-link {
+  background-image:
+    linear-gradient(currentColor, currentColor),
+    linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 100% 100%, 0 100%;
+  background-size: 100% 2px, 0 2px;
+  transition: background-size 0.34s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.cas-cta-link:hover,
+.cas-cta-link:focus-visible {
+  background-size: 0 2px, 100% 2px;
+}
+.cas-cta-arrow {
+  display: inline-block;
+  transition: transform 0.34s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.cas-cta-link:hover .cas-cta-arrow,
+.cas-cta-link:focus-visible .cas-cta-arrow,
+.cas-card-hover:hover .cas-cta-arrow {
+  transform: translateX(5px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .cas-cta-link,
+  .cas-cta-arrow {
+    transition: none;
+  }
+}
+
 /* ---- Paragraphes de contenu justifiés ---- */
 .body-text {
   text-align: justify;
   hyphens: auto;
   -webkit-hyphens: auto;
+}
+
+/* ---- Liens de contenu — système unifié « souligné net au repos + surligneur au survol » ----
+   Appliqué sur tout le cocon /agence-media (cible, audit-strategie-digitale + sous-pages,
+   generation-de-leads + sous-pages). Reste à généraliser au reste du site.
+   .dw-link            → fonds blanc / clair : souligné NOIR visible, survol → surligneur jaune, texte noir
+   .dw-link--on-dark   → fond noir : souligné JAUNE visible sur texte blanc, survol → surligneur jaune, texte noir
+   .dw-link--on-accent → fonds jaune / cyan / dégradé : souligné NOIR, survol → surligneur noir, texte blanc
+   En JSX : className="dw-link" (ou "dw-link dw-link--on-dark" / "dw-link dw-link--on-accent").
+   En HTML (dangerouslySetInnerHTML) : class='dw-link' (etc.). NE PAS appliquer aux liens de nav/breadcrumb,
+   aux boutons CTA, ni aux cards structurelles de pied de page. */
+.dw-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #0a0a0a;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-skip-ink: auto;
+  background-image: linear-gradient(#FFF127, #FFF127);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0%;
+  padding: 0 0.1em;
+  border-radius: 1px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-size 0.22s ease, color 0.22s ease, text-decoration-color 0.22s ease;
+}
+.dw-link:hover,
+.dw-link:focus-visible {
+  background-size: 100% 100%;
+  text-decoration-color: transparent;
+  color: #0a0a0a;
+}
+.dw-link--on-dark {
+  text-decoration-color: #FFF127;
+}
+.dw-link--on-accent {
+  text-decoration-color: #0a0a0a;
+  background-image: linear-gradient(#0a0a0a, #0a0a0a);
+}
+.dw-link--on-accent:hover,
+.dw-link--on-accent:focus-visible {
+  text-decoration-color: transparent;
+  color: #fff;
 }

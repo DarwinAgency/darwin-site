@@ -584,6 +584,21 @@ Pages à mettre à jour (prochaines sessions) :
 
 ---
 
+## [Session 15] — Deux nouveaux cas clients + animation des liens du template
+
+### Cas clients (`app/data/cas-clients.ts`)
+- Ajout de **Les Restos du Cœur** (`/cas-clients/restos-du-coeur`, levier MÉDIA — audio digital + retargeting display, taux de complétion 90 %) et **Maty** (`/cas-clients/maty`, levier MÉDIA — drive-to-store mobile géolocalisé RCS/SMS, +2 % de visites / 41 % de nouveaux clients), repris de l'ancien site `darwin-agency.com`. Textes (contexte, problématique, objectifs, étapes de solution, conclusion) intégrés mot pour mot ; `title` et `excerpt` rédigés à partir du contenu des pages.
+- Placés en tête du tableau `CAS_CLIENTS` → affichés en premier sur la grille ; routes et sitemap générés automatiquement
+- 4 images téléchargées dans `public/images/cas-clients/` : `restos-du-coeur-cover.jpg`, `restos-du-coeur-ill.jpg`, `maty-cover.jpg`, `maty-ill.jpg`
+- Liens de conclusion → `/agence-media` (« En savoir plus sur le MÉDIA », cohérent avec les autres cas MÉDIA)
+
+### Template cas client (`app/cas-clients/[slug]/page.tsx` + `app/globals.css`)
+- Animation au survol sur les liens structurels : CTA de conclusion (soulignement « balayé » droite→gauche via deux dégradés superposés + flèche `→` qui glisse) et flèche `VOIR LE CAS →` des cartes « Découvrez nos autres cas » (glisse au survol de la carte)
+- Classes `.cas-cta-link` / `.cas-cta-arrow`, easing `cubic-bezier(0.65, 0, 0.35, 1)` ~0.34 s, fallback `prefers-reduced-motion: reduce`
+- Breadcrumb du hero volontairement non animé (convention `globals.css` : pas d'animation sur les liens de nav/breadcrumb)
+
+---
+
 ## Architecture des fichiers clés
 
 ```

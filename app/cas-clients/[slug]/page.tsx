@@ -305,13 +305,14 @@ export default async function CasClientPage({ params }: Props) {
             {cas.conclusion.text}
           </p>
           {cas.conclusion.linkHref && cas.conclusion.linkLabel && (
-            <Link href={cas.conclusion.linkHref} style={{
+            <Link href={cas.conclusion.linkHref} className="cas-cta-link" style={{
               display: 'inline-flex', alignItems: 'center', gap: 8,
               fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.1em',
               textTransform: 'uppercase', color: '#0a0a0a', textDecoration: 'none',
-              borderBottom: '2px solid #0a0a0a', paddingBottom: 2,
+              paddingBottom: 4,
             }}>
-              {cas.conclusion.linkLabel} →
+              {cas.conclusion.linkLabel}
+              <span className="cas-cta-arrow" aria-hidden="true">→</span>
             </Link>
           )}
         </div>
@@ -341,7 +342,7 @@ export default async function CasClientPage({ params }: Props) {
                       {other.excerpt}
                     </p>
                     <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#0a0a0a', borderBottom: '2px solid #FFF127', paddingBottom: 2 }}>
-                      VOIR LE CAS →
+                      VOIR LE CAS <span className="cas-cta-arrow" aria-hidden="true">→</span>
                     </span>
                   </div>
                 </Link>
