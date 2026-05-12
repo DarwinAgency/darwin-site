@@ -544,6 +544,46 @@ Pages à mettre à jour (prochaines sessions) :
 
 ---
 
+## [Session 14] — Interview Carole, cocon audit-strategie-digitale, référentiel SEO consolidé
+
+### Page Agence Média (`app/agence-media/page.tsx`)
+- Section « Vos objectifs, notre stratégie » redesignée en format éditorial : portrait de **Carole Kabanda** (directrice média) en colonne droite avec guillemets jaunes décoratifs, intro + citation encadrée (filet jaune), grille 2×2 des 4 objectifs (Notoriété / Brandformance / Performance / Drive-to-store). **Textes originaux des 4 cartes conservés mot pour mot** — seule la mise en forme change.
+- H1 : « RÔLE PRÉCIS » (encart jaune) remis sur la même ligne que « UN »
+- Lien « Découvrir → » réaffiché sur toutes les cartes de la section services
+- Retrait des `<strong>` ajoutés sans validation (« stratégies digitales », « audit et la stratégie digitale », « génération de lead qualifié », « Creative Thinking Community… », « comme un système… »)
+- Paragraphe redondant retiré dans la section « Le média qui convertit »
+- `sizes` ajouté sur les 3 images `fill` (hero, cartes cas clients, ornement) → warning Next.js résolu ; tiret cadratin retiré de l'`alt` du hero
+- Passe espaces insécables (avant `:` `;` `!` `?`, autour de `« »`)
+
+### Footer (`app/components/Footer.tsx`)
+- Le CTA cyan « Prêt à passer à l'action ? » est désormais **masqué sur les 7 pages piliers** (agence-media, agence-seo, agence-sma, agence-sea, agence-analytics, formations, studio-creatif) via `usePathname()`
+
+### Page Audit Stratégie Digitale (`app/agence-media/audit-strategie-digitale/page.tsx`)
+- Section « Définition » remontée d'un cran (juste après le hero, avant « Pourquoi un audit »)
+- `<strong>` rééquilibrés (6 → 4, tous avec mot-clé, hors callouts) : retrait de la phrase entière « Auditer, c'est reprendre de la hauteur. », `<strong>` sur « audit de stratégie digitale » (hero), « le plan marketing ressemble davantage à un empilement », définition raccourcie à « un état des lieux structuré de votre présence »
+- **Maillage interne cocon N1** : un lien contextuel par bloc H2 vers les 4 pages enfants — `marketing-strategique-vs-marketing-operationnel` (card 03), `indicateurs-de-performance-mix-marketing` (méthodo étape 03), `mix-marketing-interne-ou-externe` (« Le livrable »), `objectifs-marketing-digital` (section Définition)
+- Bouton « ← Retour Agence Média » du hero supprimé (doublon avec le breadcrumb + le lien contextuel du chapô vers `/agence-media`)
+- Ancres « DÉCOUVRIR → » → « Découvrir [nom du levier] → » dans « Nos autres leviers média »
+- Section « Cas clients » : le `<Link>` n'enveloppe plus la carte entière → ancre texte « Voir le cas [client] → » à l'intérieur
+- Passe espaces insécables + fix `+65 %` (cas client Acadomia)
+
+### Sous-pages Audit — 3 pages coquilles créées (`app/agence-media/audit-strategie-digitale/`)
+- `indicateurs-de-performance-mix-marketing/page.tsx`, `mix-marketing-interne-ou-externe/page.tsx`, `objectifs-marketing-digital/page.tsx` — chacune avec metadata complète, breadcrumb + WebPage JSON-LD, H1, note « contenu en cours de rédaction », lien retour. Contenu éditorial à intégrer ultérieurement (sur `ArticleLayoutV2`).
+- 3 routes ajoutées dans `app/sitemap.ts`
+
+### Page Marketing Stratégique vs Opérationnel (`.../marketing-strategique-vs-marketing-operationnel/page.tsx`)
+- Chapô remis aux normes cocon N2 : **2 liens up** (page cible `/agence-media` + parent N1 `/agence-media/audit-strategie-digitale`)
+- `relatedPages` sidebar : lien mort `objectifs-marketing-digital` réparé (coquille créée) + 3ᵉ entrée `mix-marketing-interne-ou-externe`
+- `<strong>` rééquilibrés (5 → 3, tous avec mot-clé / co-occurrences, hors callouts/cards)
+- H2 « Pourquoi l'articulation… échoue » → « Marketing stratégique vs opérationnel : pourquoi l'articulation échoue » (MCP en début de balise)
+- Title raccourci : « Marketing stratégique vs opérationnel | Vision & performance » (60 c, dans la fourchette 55-65)
+- Passe espaces insécables
+
+### Process — référentiel SEO consolidé (mémoires agent, hors repo)
+- Création d'un référentiel SEO unique et prioritaire consolidant les 3 fichiers `SEO maillage/` (27/04/2026) + `Production Contenus/.../2026-05-06_guide-seo-production-pages_v1.md` : format H1 `[MCP] : [complément]`, 1er H2 avec MCP, maillage cocon « poupées russes » et règles par typologie (cible/N1/N2/finale), `<strong>` anti-footprint, title 55-65 / meta 140-160, points de convergence, dofollow obligatoire, préprod par login. Les règles SEO ont été retirées du mémo conventions (qui renvoie désormais au référentiel).
+
+---
+
 ## Architecture des fichiers clés
 
 ```

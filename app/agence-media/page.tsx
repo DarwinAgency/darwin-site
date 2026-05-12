@@ -170,8 +170,9 @@ export default function AgenceMediaPage() {
           <div className="rsp-hero-img" style={{ position: 'relative', background: '#0a0a0a', overflow: 'hidden' }}>
             <Image
               src="/images/media/media-hero-bg.jpg"
-              alt="Agence Média DARWIN — Stratégie et achat d'espaces"
+              alt="Agence Média DARWIN, stratégie et achat d'espaces"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               style={{ objectFit: 'cover', objectPosition: '65% center', opacity: 0.85 }}
               priority
             />
@@ -487,6 +488,7 @@ export default function AgenceMediaPage() {
                   src={c.img}
                   alt={c.client}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   style={{ objectFit: 'cover', objectPosition: 'center top', filter: 'brightness(1.2)' }}
                 />
                 {/* Gradient overlay */}
@@ -615,6 +617,7 @@ export default function AgenceMediaPage() {
                 src="/images/media/media-ornement.jpg"
                 alt="L'équipe DARWIN au travail"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
               />
             </div>

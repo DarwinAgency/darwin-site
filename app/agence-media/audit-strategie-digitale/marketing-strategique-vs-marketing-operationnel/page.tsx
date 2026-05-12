@@ -16,13 +16,13 @@ import ArticleLayoutV2 from '../../../components/ArticleLayoutV2'
 // ─── METADATA ────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'Marketing stratégique vs opérationnel | Vision & performance | DARWIN',
-  description: 'Découvrez la différence entre marketing stratégique et marketing opérationnel : définitions, comparatif et méthode pour les articuler.',
+  title: 'Marketing stratégique vs opérationnel | Vision & performance',
+  description: 'Découvrez la différence entre marketing stratégique et marketing opérationnel\u00A0: définitions, comparatif et méthode pour les articuler.',
   alternates: { canonical: '/agence-media/audit-strategie-digitale/marketing-strategique-vs-marketing-operationnel' },
   openGraph: {
     ...ogDefaults,
     title: 'Marketing stratégique vs opérationnel | Vision & performance',
-    description: 'Découvrez la différence entre marketing stratégique et marketing opérationnel : définitions, comparatif et méthode pour les articuler.',
+    description: 'Découvrez la différence entre marketing stratégique et marketing opérationnel\u00A0: définitions, comparatif et méthode pour les articuler.',
     url: 'https://darwin-agency.fr/agence-media/audit-strategie-digitale/marketing-strategique-vs-marketing-operationnel',
   },
 }
@@ -37,7 +37,7 @@ const jsonLdBreadcrumbs = breadcrumbJsonLd([
 ])
 
 const jsonLdWebpage = webPageJsonLd(
-  'Marketing Stratégique vs Marketing Opérationnel : quelles différences ?',
+  'Marketing Stratégique vs Marketing Opérationnel\u00A0: quelles différences\u00A0?',
   'Différences clés entre marketing stratégique et opérationnel, comment les articuler et les erreurs à éviter.',
   '/agence-media/audit-strategie-digitale/marketing-strategique-vs-marketing-operationnel'
 )
@@ -56,13 +56,14 @@ const tocItems = [
 const relatedPages = [
   { href: '/agence-media/audit-strategie-digitale/objectifs-marketing-digital', label: 'Objectifs Marketing Digital', desc: 'Définir des objectifs marketing alignés sur votre stratégie business' },
   { href: '/agence-media/audit-strategie-digitale/indicateurs-de-performance-mix-marketing', label: 'Indicateurs de Performance', desc: 'Choisir les KPIs qui mesurent ce qui compte vraiment pour votre activité' },
+  { href: '/agence-media/audit-strategie-digitale/mix-marketing-interne-ou-externe', label: 'Mix marketing\u00A0: interne ou externe', desc: 'Gérer votre mix marketing en interne ou le confier à une agence externe' },
 ]
 
 const essentialPoints = [
-  'Le marketing stratégique définit le cap : à qui vous parlez, pourquoi, avec quelle promesse. Le marketing opérationnel exécute : sur quels canaux, avec quels formats, à quel rythme.',
-  'Confondre les deux niveaux revient à courir vite dans la mauvaise direction : un pilotage fin sur une mauvaise cible reste un pilotage sur une mauvaise cible.',
+  'Le marketing stratégique définit le cap\u00A0: à qui vous parlez, pourquoi, avec quelle promesse. Le marketing opérationnel exécute\u00A0: sur quels canaux, avec quels formats, à quel rythme.',
+  'Confondre les deux niveaux revient à courir vite dans la mauvaise direction\u00A0: un pilotage fin sur une mauvaise cible reste un pilotage sur une mauvaise cible.',
   'La boucle stratégie-exécution-résultats-ajustement doit fonctionner en continu, pas une fois par an lors d\'un séminaire.',
-  'Les quatre pièges récurrents : confondre planification et stratégie, brûler l\'étape stratégique, réviser le cap à chaque tendance, négliger le feedback terrain.',
+  'Les quatre pièges récurrents\u00A0: confondre planification et stratégie, brûler l\'étape stratégique, réviser le cap à chaque tendance, négliger le feedback terrain.',
   'Chez DARWIN, chaque mission commence par un audit qui identifie les déséquilibres entre vision et actions, avant d\'accélérer l\'exécution.',
 ]
 
@@ -79,7 +80,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
         { label: 'Marketing Stratégique vs Opérationnel' },
       ]}
       title={<>MARKETING<br />STRATÉGIQUE<br />VS&nbsp;OPÉRATIONNEL</>}
-      intro={<>On lance des campagnes, on teste, on analyse, on optimise. Et les résultats déçoivent. Ce sentiment de « faire du surplace » cache presque toujours le même angle mort : une confusion entre marketing stratégique et opérationnel. L&apos;un définit le cap : à qui vous parlez, pourquoi, avec quelle promesse. L&apos;autre exécute : sur quels canaux, avec quels messages, quels formats, à quel rythme. Confondre les deux, c&apos;est souvent engager des actions dans la mauvaise direction, avec peu d&apos;impact sur les ventes. Il est important de distinguer les deux registres et de montrer comment ils s&apos;articulent dans une stratégie digitale rentable, au service des campagnes et des performances des entreprises et annonceurs accompagnés par <Link href="/agence-media" style={{ color: '#0a0a0a', textDecoration: 'underline', textUnderlineOffset: '3px' }}>notre agence média à Aix-en-Provence</Link>. La méthode commence toujours par un <Link href="/agence-media/audit-strategie-digitale" style={{ color: '#0a0a0a', textDecoration: 'underline', textUnderlineOffset: '3px' }}>audit de votre stratégie digitale</Link>.</>}
+      intro={<>On lance des campagnes, on teste, on analyse, on optimise. Et les résultats déçoivent. Ce sentiment de «&nbsp;faire du surplace&nbsp;» cache presque toujours le même angle mort&nbsp;: une confusion entre marketing stratégique et opérationnel. L&apos;un définit le cap&nbsp;: à qui vous parlez, pourquoi, avec quelle promesse. L&apos;autre exécute&nbsp;: sur quels canaux, avec quels messages, quels formats, à quel rythme. Confondre les deux, c&apos;est souvent engager des actions dans la mauvaise direction, avec peu d&apos;impact sur les ventes. Il est important de distinguer les deux registres et de montrer comment ils s&apos;articulent dans une stratégie digitale rentable, au service des campagnes et des performances des entreprises et annonceurs accompagnés par <Link href="/agence-media" style={{ color: '#0a0a0a', textDecoration: 'underline', textUnderlineOffset: '3px' }}>notre agence média à Aix-en-Provence</Link>. La méthode commence toujours par un <Link href="/agence-media/audit-strategie-digitale" style={{ color: '#0a0a0a', textDecoration: 'underline', textUnderlineOffset: '3px' }}>audit de votre stratégie digitale</Link>.</>}
       shareUrl="/agence-media/audit-strategie-digitale/marketing-strategique-vs-marketing-operationnel"
       shareTitle="Marketing stratégique vs opérationnel | Vision & performance"
       heroIllustration={
@@ -153,7 +154,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       essentialPoints={essentialPoints}
       author={{ name: 'Mathilde Colonna D\'Istria', role: 'Consultante Senior Media', photo: '/images/media/media-strategie-vs-operationnel.jpg' }}
       conclusion={
-        <p dangerouslySetInnerHTML={{ __html: "La frontière entre marketing stratégique et marketing opérationnel n'est pas un débat de vocabulaire enseigné en master. Elle structure la façon dont vous investissez votre énergie et vos budgets. Une agence qui se contente d'exécuter sans comprendre votre positionnement, votre offre et votre vision peut vous faire avancer. <strong>Pas forcément dans la bonne direction.</strong> Chez DARWIN, chaque mission commence par un audit de votre stratégie digitale : on identifie les déséquilibres entre votre vision et vos actions, on clarifie vos objectifs marketing et on aligne vos indicateurs de performance sur ce qui compte vraiment pour votre activité." }} />
+        <p dangerouslySetInnerHTML={{ __html: "La frontière entre marketing stratégique et marketing opérationnel n'est pas un débat de vocabulaire enseigné en master. Elle structure la façon dont vous investissez votre énergie et vos budgets. Une agence qui se contente d'exécuter sans comprendre votre positionnement, votre offre et votre vision peut vous faire avancer. Pas forcément dans la bonne direction. Chez DARWIN, chaque mission commence par un audit de votre stratégie digitale\u00A0: on identifie les déséquilibres entre votre vision et vos actions, on clarifie vos objectifs marketing et on aligne vos indicateurs de performance sur ce qui compte vraiment pour votre activité." }} />
       }
     >
       <>
@@ -163,12 +164,12 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       <section id="marketing-strategique" className="artv2-section">
         <div className="artv2-section-header">
           <span className="artv2-eyebrow">DÉFINITION</span>
-          <h2 className="font-anton artv2-h2">Le marketing stratégique : décider avant&nbsp;d&apos;agir</h2>
+          <h2 className="font-anton artv2-h2">Le marketing stratégique&nbsp;: décider avant&nbsp;d&apos;agir</h2>
         </div>
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Le marketing stratégique intervient <strong>en amont de toute action</strong>. Avant le choix d'un canal, avant la rédaction d'un message, avant la première enchère Google Ads. C'est le travail qui répond à trois questions : qui sont mes clients prioritaires, quelle valeur unique je leur propose, et pourquoi choisiraient-ils mon offre, mon produit, plutôt que celui d'un concurrent." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "<strong>Le marketing stratégique intervient en amont de toute action</strong>. Avant le choix d'un canal, avant la rédaction d'un message, avant la première enchère Google Ads. C'est le travail qui répond à trois questions\u00A0: qui sont mes clients prioritaires, quelle valeur unique je leur propose, et pourquoi choisiraient-ils mon offre, mon produit, plutôt que celui d'un concurrent." }} />
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Ce travail s'appuie sur des référentiels éprouvés : les cinq forces de Michael Porter pour cartographier la concurrence, une matrice SWOT pour croiser forces internes et opportunités de marché, une segmentation qui hiérarchise les cibles par potentiel et accessibilité. Le livrable, ce n'est pas un slide deck de 80 pages. C'est une feuille de route tenable : trois à cinq priorités claires, un positionnement défendable, des objectifs chiffrés." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Ce travail s'appuie sur des référentiels éprouvés\u00A0: les cinq forces de Michael Porter pour cartographier la concurrence, une matrice SWOT pour croiser forces internes et opportunités de marché, une segmentation qui hiérarchise les cibles par potentiel et accessibilité. Le livrable, ce n'est pas un slide deck de 80 pages. C'est une feuille de route tenable\u00A0: trois à cinq priorités claires, un positionnement défendable, des objectifs chiffrés." }} />
 
         <blockquote className="artv2-blockquote">
           <p dangerouslySetInnerHTML={{ __html: "En pratique, le marketing stratégique s'analyse tous les douze à dix-huit mois. Il s'ajuste, il ne se réécrit pas chaque trimestre au gré des tendances. Sans ce socle, pendant des semaines vous pouvez affiner vos campagnes avec peu de résultat ou d'impact sur vos conversions, malgré des actions pour développer les performances des produits de votre marque. Le problème n'est pas l'exécution, mais la cible." }} />
@@ -181,15 +182,15 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       <section id="marketing-operationnel" className="artv2-section">
         <div className="artv2-section-header">
           <span className="artv2-eyebrow">DÉFINITION</span>
-          <h2 className="font-anton artv2-h2">Le marketing opérationnel : traduire la&nbsp;stratégie</h2>
+          <h2 className="font-anton artv2-h2">Le marketing opérationnel&nbsp;: traduire la&nbsp;stratégie</h2>
         </div>
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Le marketing opérationnel est la partie visible. Les campagnes, les contenus, les performances obtenues, les annonces, les plans média. C'est ce qu'on voit tourner au quotidien." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "<strong>Le marketing opérationnel est la partie visible</strong>. Les campagnes, les contenus, les performances obtenues, les annonces, les plans média. C'est ce qu'on voit tourner au quotidien." }} />
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Il s'appuie historiquement sur le Marketing Mix : les 4P de Jérôme McCarthy (Produit, Prix, Place, Promotion). Ces quatre leviers se déclinent aujourd'hui dans un environnement digital dense, où la formation aux nouvelles technologies est quasi perpétuelle : SEO, GEO, IA, LLM, SEA pour la visibilité pendant tout le tunnel jusqu'à la vente finale, de l'initiation jusqu'à la conversion, Social Ads pour la notoriété et le retargeting, emailing et SMS/RCS pour la conversion, programmatique pour le reach qualifié." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Il s'appuie historiquement sur le Marketing Mix\u00A0: les 4P de Jérôme McCarthy (Produit, Prix, Place, Promotion). Ces quatre leviers se déclinent aujourd'hui dans un environnement digital dense, où la formation aux nouvelles technologies est quasi perpétuelle\u00A0: SEO, GEO, IA, LLM, SEA pour la visibilité pendant tout le tunnel jusqu'à la vente finale, de l'initiation jusqu'à la conversion, Social Ads pour la notoriété et le retargeting, emailing et SMS/RCS pour la conversion, programmatique pour le reach qualifié." }} />
 
         <blockquote className="artv2-blockquote artv2-blockquote--highlight">
-          <p dangerouslySetInnerHTML={{ __html: "Le marketing opérationnel a des exigences de mesure, de performance et d'analyse. Chaque euro engagé doit pouvoir se relier à un résultat : leads qualifiés, leads transformés en clients, chiffre d'affaires, ventes, panier moyen, coût par acquisition. C'est aussi ce qui le rend attirant, et trompeur. Le risque, c'est de prendre le tableau de bord pour la stratégie. <strong>Un pilotage fin sur une mauvaise cible</strong> reste un pilotage sur une mauvaise cible." }} />
+          <p dangerouslySetInnerHTML={{ __html: "Le marketing opérationnel a des exigences de mesure, de performance et d'analyse. Chaque euro engagé doit pouvoir se relier à un résultat\u00A0: leads qualifiés, leads transformés en clients, chiffre d'affaires, ventes, panier moyen, coût par acquisition. C'est aussi ce qui le rend attirant, et trompeur. Le risque, c'est de prendre le tableau de bord pour la stratégie. Un pilotage fin sur une mauvaise cible reste un pilotage sur une mauvaise cible." }} />
         </blockquote>
 
         <div style={{ position: 'relative', marginTop: 32 }}>
@@ -218,7 +219,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       <section id="comparatif" className="artv2-section">
         <div className="artv2-section-header">
           <span className="artv2-eyebrow">COMPARATIF</span>
-          <h2 className="font-anton artv2-h2">Marketing stratégique vs opérationnel : ce qui les&nbsp;distingue</h2>
+          <h2 className="font-anton artv2-h2">Marketing stratégique vs opérationnel&nbsp;: ce qui les&nbsp;distingue</h2>
         </div>
 
         {/* ── Tableau comparatif ── */}
@@ -239,8 +240,8 @@ export default function MarketingStrategiqueVsOperationnelPage() {
               </tr>
               <tr style={{ borderBottom: '1px solid #f0f0f0' }}>
                 <td style={{ padding: '16px 20px', background: '#f9f9f9', borderRight: '1px solid #e8e8e8', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#999' }}>Question clé</td>
-                <td style={{ padding: '16px 20px', borderRight: '1px solid #f0f0f0', borderLeft: '3px solid #FFF127', fontWeight: 500, color: '#0a0a0a' }}>Où allons-nous et pourquoi ?</td>
-                <td style={{ padding: '16px 20px', color: '#555' }}>Comment y allons-nous avec le budget disponible ?</td>
+                <td style={{ padding: '16px 20px', borderRight: '1px solid #f0f0f0', borderLeft: '3px solid #FFF127', fontWeight: 500, color: '#0a0a0a' }}>Où allons-nous et pourquoi&nbsp;?</td>
+                <td style={{ padding: '16px 20px', color: '#555' }}>Comment y allons-nous avec le budget disponible&nbsp;?</td>
               </tr>
               <tr>
                 <td style={{ padding: '16px 20px', background: '#f9f9f9', borderRight: '1px solid #e8e8e8', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#999' }}>Outils</td>
@@ -251,9 +252,9 @@ export default function MarketingStrategiqueVsOperationnelPage() {
           </table>
         </div>
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Ce qui lie les deux, c'est la boucle. La stratégie descend vers l'exécution sous forme de priorités claires. L'exécution remonte vers la stratégie sous forme de signaux : taux de clic, objections commerciales, audiences qui convertissent mieux que prévu, messages qui tombent à plat." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Ce qui lie les deux, c'est la boucle. La stratégie descend vers l'exécution sous forme de priorités claires. L'exécution remonte vers la stratégie sous forme de signaux\u00A0: taux de clic, objections commerciales, audiences qui convertissent mieux que prévu, messages qui tombent à plat." }} />
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "La stratégie sans exécution reste une note d'intention dans un tiroir. L'exécution sans stratégie est une agitation bien organisée." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "La stratégie sans exécution reste une note d'intention dans un tiroir. <strong>L'exécution sans stratégie est une agitation bien organisée</strong>." }} />
 
         {/* ── Schéma d'articulation ── */}
         <p style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#29C5F5', margin: '40px 0 24px' }}>
@@ -305,13 +306,13 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       <section id="echec" className="artv2-section">
         <div className="artv2-section-header">
           <span className="artv2-eyebrow">DIAGNOSTIC</span>
-          <h2 className="font-anton artv2-h2">Pourquoi l&apos;articulation marketing stratégique / opérationnel&nbsp;échoue</h2>
+          <h2 className="font-anton artv2-h2">Marketing stratégique vs opérationnel&nbsp;: pourquoi l&apos;articulation&nbsp;échoue</h2>
         </div>
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "L'échec survient le plus souvent quand la stratégie ne « descend » pas vers les équipes opérationnelles. Le CODIR a validé un positionnement en janvier. En juin, l'équipe performance en ignore l'essentiel et continue de pousser les audiences qui « tournent bien ». Résultat : un pilotage opérationnel efficace sur un terrain mal choisi." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "L'échec survient le plus souvent quand la stratégie ne «\u00A0descend\u00A0» pas vers les équipes opérationnelles. Le CODIR a validé un positionnement en janvier. En juin, l'équipe performance en ignore l'essentiel et continue de pousser les audiences qui «\u00A0tournent bien\u00A0». Résultat\u00A0: un pilotage opérationnel efficace sur un terrain mal choisi." }} />
 
         <blockquote className="artv2-blockquote">
-          <p dangerouslySetInnerHTML={{ __html: "L'autre dérive est symétrique. La réactivité pure : optimiser un coût d'acquisition sans savoir si l'on parle à la bonne cible, ou publier du contenu sans objectif de conversion clair. Quand vos actions opérationnelles ne nourrissent pas votre capital de marque, vous détruisez de la valeur à long terme au profit de gains immédiats." }} />
+          <p dangerouslySetInnerHTML={{ __html: "L'autre dérive est symétrique. La réactivité pure\u00A0: optimiser un coût d'acquisition sans savoir si l'on parle à la bonne cible, ou publier du contenu sans objectif de conversion clair. Quand vos actions opérationnelles ne nourrissent pas votre capital de marque, vous détruisez de la valeur à long terme au profit de gains immédiats." }} />
         </blockquote>
       </section>
 
@@ -321,7 +322,7 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       <section id="pieges" className="artv2-section">
         <div className="artv2-section-header">
           <span className="artv2-eyebrow">ERREURS À ÉVITER</span>
-          <h2 className="font-anton artv2-h2">Marketing stratégique vs opérationnel : les pièges&nbsp;courants</h2>
+          <h2 className="font-anton artv2-h2">Marketing stratégique vs opérationnel&nbsp;: les pièges&nbsp;courants</h2>
         </div>
 
         <div className="artv2-card-accent">
@@ -333,19 +334,19 @@ export default function MarketingStrategiqueVsOperationnelPage() {
         <div className="artv2-card-accent">
           <span className="font-anton artv2-h3" style={{ display: 'block', marginBottom: 6 }}>02</span>
           <h3 className="font-anton" style={{ fontSize: '1.15rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 14px', lineHeight: 1.2 }}>Brûler l&apos;étape stratégique pour aller vite</h3>
-          <p dangerouslySetInnerHTML={{ __html: "Vient ensuite <strong>la tentation de brûler l'étape stratégique pour aller plus vite</strong>. La pression du court terme est réelle. Pourtant, une semaine d'analyse sérieuse en amont évite des mois de budget investi dans la mauvaise direction. C'est souvent le meilleur investissement du trimestre." }} />
+          <p dangerouslySetInnerHTML={{ __html: "Vient ensuite la tentation de brûler l'étape stratégique pour aller plus vite. La pression du court terme est réelle. Pourtant, une semaine d'analyse sérieuse en amont évite des mois de budget investi dans la mauvaise direction. C'est souvent le meilleur investissement du trimestre." }} />
         </div>
 
         <div className="artv2-card-accent">
           <span className="font-anton artv2-h3" style={{ display: 'block', marginBottom: 6 }}>03</span>
           <h3 className="font-anton" style={{ fontSize: '1.15rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 14px', lineHeight: 1.2 }}>Réviser le marketing stratégique trop souvent</h3>
-          <p dangerouslySetInnerHTML={{ __html: "Il y a aussi l'erreur inverse : réviser la stratégie à chaque nouvelle tendance, chaque changement d'algorithme, chaque rapport de benchmarks. Le marketing stratégique n'est pas une météo. Il se relit, il s'ajuste, mais il ne se réécrit pas chaque trimestre. Si vos fondamentaux bougent aussi souvent, c'est qu'ils n'étaient pas encore vraiment des fondamentaux." }} />
+          <p dangerouslySetInnerHTML={{ __html: "Il y a aussi l'erreur inverse\u00A0: réviser la stratégie à chaque nouvelle tendance, chaque changement d'algorithme, chaque rapport de benchmarks. Le marketing stratégique n'est pas une météo. Il se relit, il s'ajuste, mais il ne se réécrit pas chaque trimestre. Si vos fondamentaux bougent aussi souvent, c'est qu'ils n'étaient pas encore vraiment des fondamentaux." }} />
         </div>
 
         <div className="artv2-card-accent">
           <span className="font-anton artv2-h3" style={{ display: 'block', marginBottom: 6 }}>04</span>
           <h3 className="font-anton" style={{ fontSize: '1.15rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 14px', lineHeight: 1.2 }}>Négliger le feedback du terrain opérationnel</h3>
-          <p dangerouslySetInnerHTML={{ __html: "Dernier piège, plus silencieux : négliger le feedback du terrain. Les campagnes, les taux de clics, les taux de conversions ou de complétions disent quelque chose sur vos cibles, vos messages, votre positionnement. Les données s'étudient, elles aident à prendre les bonnes décisions, à avoir les bonnes approches. Ces signaux concrets doivent remonter et alimenter la réflexion stratégique. Ce n'est pas automatique. Ça se construit sur la base d'études régulières." }} />
+          <p dangerouslySetInnerHTML={{ __html: "Dernier piège, plus silencieux\u00A0: négliger le feedback du terrain. Les campagnes, les taux de clics, les taux de conversions ou de complétions disent quelque chose sur vos cibles, vos messages, votre positionnement. Les données s'étudient, elles aident à prendre les bonnes décisions, à avoir les bonnes approches. Ces signaux concrets doivent remonter et alimenter la réflexion stratégique. Ce n'est pas automatique. Ça se construit sur la base d'études régulières." }} />
         </div>
       </section>
 
@@ -355,20 +356,20 @@ export default function MarketingStrategiqueVsOperationnelPage() {
       <section id="theorie-action" className="artv2-section">
         <div className="artv2-section-header">
           <span className="artv2-eyebrow">MISE EN PRATIQUE</span>
-          <h2 className="font-anton artv2-h2">Marketing stratégique : de la théorie à&nbsp;l&apos;action</h2>
+          <h2 className="font-anton artv2-h2">Marketing stratégique&nbsp;: de la théorie à&nbsp;l&apos;action</h2>
         </div>
 
         <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Pour qu'une entreprise progresse durablement sur son marché, la mise en œuvre suit quatre temps." }} />
 
         <ul style={{ margin: '0 0 28px', paddingLeft: 24 }}>
-          <li className="artv2-body" style={{ marginBottom: 8 }} dangerouslySetInnerHTML={{ __html: "Audit &amp; analyse : matrice SWOT, analyse concurrentielle, lecture des performances passées. On pose à plat ce qui marche, ce qui consomme le budget sans résultat, et ce qu'on a oublié de tester." }} />
-          <li className="artv2-body" style={{ marginBottom: 8 }} dangerouslySetInnerHTML={{ __html: "Définition du cap : objectifs business chiffrés (part de marché, ROAS pour retour sur dépense publicitaire, taux de rétention), priorités éditoriales, choix de segments cibles." }} />
-          <li className="artv2-body" style={{ marginBottom: 8 }} dangerouslySetInnerHTML={{ __html: "Déploiement multicanal : inbound marketing, automation, stratégie CRM, avec un arbitrage clair entre acquisition, fidélisation et branding." }} />
-          <li className="artv2-body" dangerouslySetInnerHTML={{ __html: "Remontée de data : les KPIs opérationnels alimentent la réflexion stratégique des professionnels du marketing digital, pour ajuster le tir au trimestre suivant." }} />
+          <li className="artv2-body" style={{ marginBottom: 8 }} dangerouslySetInnerHTML={{ __html: "Audit &amp; analyse\u00A0: matrice SWOT, analyse concurrentielle, lecture des performances passées. On pose à plat ce qui marche, ce qui consomme le budget sans résultat, et ce qu'on a oublié de tester." }} />
+          <li className="artv2-body" style={{ marginBottom: 8 }} dangerouslySetInnerHTML={{ __html: "Définition du cap\u00A0: objectifs business chiffrés (part de marché, ROAS pour retour sur dépense publicitaire, taux de rétention), priorités éditoriales, choix de segments cibles." }} />
+          <li className="artv2-body" style={{ marginBottom: 8 }} dangerouslySetInnerHTML={{ __html: "Déploiement multicanal\u00A0: inbound marketing, automation, stratégie CRM, avec un arbitrage clair entre acquisition, fidélisation et branding." }} />
+          <li className="artv2-body" dangerouslySetInnerHTML={{ __html: "Remontée de data\u00A0: les KPIs opérationnels alimentent la réflexion stratégique des professionnels du marketing digital, pour ajuster le tir au trimestre suivant." }} />
         </ul>
 
         <blockquote className="artv2-blockquote artv2-blockquote--highlight">
-          <p dangerouslySetInnerHTML={{ __html: "<strong>Le conseil de DARWIN.</strong> Planifier vos posts LinkedIn pour le trimestre n'est pas de la stratégie. C'est de l'opérationnel. Décider quelle cible vous servez, avec quelle promesse, et pourquoi elle devrait vous choisir : c'est stratégique. Les deux travaux sont utiles. Ce ne sont pas les mêmes. Ils doivent se travailler en alternance et se nourrir, l'un de l'autre, pour ouvrir de nouveaux chapitres et de nouvelles voies porteuses de croissance." }} />
+          <p dangerouslySetInnerHTML={{ __html: "Le conseil de DARWIN. Planifier vos posts LinkedIn pour le trimestre n'est pas de la stratégie. C'est de l'opérationnel. Décider quelle cible vous servez, avec quelle promesse, et pourquoi elle devrait vous choisir\u00A0: c'est stratégique. Les deux travaux sont utiles. Ce ne sont pas les mêmes. Ils doivent se travailler en alternance et se nourrir, l'un de l'autre, pour ouvrir de nouveaux chapitres et de nouvelles voies porteuses de croissance." }} />
         </blockquote>
       </section>
 
