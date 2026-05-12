@@ -43,7 +43,7 @@ const auditPillars = [
   {
     id: '03',
     title: 'Diagnostic stratégique vs opérationnel',
-    desc: "L'audit se situe exactement à la jonction du <a href='/agence-media/audit-strategie-digitale/marketing-strategique-vs-marketing-operationnel' style='color:#29C5F5;text-decoration:underline;text-underline-offset:3px'>marketing stratégique et opérationnel</a>. D'un côté, il interroge la vision\u00A0: vos objectifs sont-ils clairs\u00A0? Votre positionnement est-il traduit dans vos actions digitales\u00A0? Votre segmentation reflète-t-elle la réalité de votre marché\u00A0? De l'autre, il plonge dans l'exécution\u00A0: vos campagnes atteignent-elles les bonnes personnes\u00A0? Vos plateformes sont-elles correctement paramétrées\u00A0? Vos données remontent-elles là où elles doivent remonter\u00A0? Votre présence est-elle sur les bons emplacements\u00A0? La plupart des problèmes de performance naissent dans le décalage entre ces deux niveaux. Pas dans un nouvel outil ou un budget supplémentaire. Dans la remise en cohérence de ce qui existe déjà.",
+    desc: "L'audit se situe exactement à la jonction du <a href='/agence-media/audit-strategie-digitale/marketing-strategique-vs-marketing-operationnel' class='dw-link'>marketing stratégique et opérationnel</a>. D'un côté, il interroge la vision\u00A0: vos objectifs sont-ils clairs\u00A0? Votre positionnement est-il traduit dans vos actions digitales\u00A0? Votre segmentation reflète-t-elle la réalité de votre marché\u00A0? De l'autre, il plonge dans l'exécution\u00A0: vos campagnes atteignent-elles les bonnes personnes\u00A0? Vos plateformes sont-elles correctement paramétrées\u00A0? Vos données remontent-elles là où elles doivent remonter\u00A0? Votre présence est-elle sur les bons emplacements\u00A0? La plupart des problèmes de performance naissent dans le décalage entre ces deux niveaux. Pas dans un nouvel outil ou un budget supplémentaire. Dans la remise en cohérence de ce qui existe déjà.",
     items: ['Alignement vision stratégique / actions digitales', 'Évaluation du positionnement et de la segmentation', 'Vérification du paramétrage des outils', 'Détection des décalages stratégie/exécution'],
   },
   {
@@ -57,7 +57,7 @@ const auditPillars = [
 const methodologySteps = [
   { num: '01', title: 'Définition du périmètre', desc: "On ne peut pas tout auditer avec la même profondeur en même temps. Il faut prioriser selon vos enjeux\u00A0: est-ce l'acquisition qui pose question\u00A0? La rétention\u00A0? La visibilité organique\u00A0? Le coût par lead\u00A0? Ce cadrage initial conditionne la pertinence de tout le reste." },
   { num: '02', title: 'Immersion & collecte', desc: "On collecte les données existantes\u00A0: analytics, CRM, outils publicitaires, rapports précédents, historique des actions. On échange avec vos équipes pour comprendre les choix passés, les contraintes internes, les objectifs qui ont évolué. L'information brute ne suffit pas, il faut la contextualiser." },
-  { num: '03', title: 'Analyse & croisement des données', desc: "Pas uniquement vos KPIs\u00A0: on intègre aussi des données de marché, des benchmarks sectoriels, des analyses concurrentielles. L'idée est de situer votre performance dans un contexte réel, pas dans un vide. Canal par canal, avec une attention particulière aux interactions entre leviers. Un contenu bien référencé qui ne génère aucun lead, ce n'est pas forcément un problème de SEO. C'est peut-être un problème de parcours, de CTA, ou de ciblage en amont. Les silos d'analyse passent à côté de ces connexions. Nous croisons <a href='/agence-media/audit-strategie-digitale/indicateurs-de-performance-mix-marketing' style='color:#29C5F5;text-decoration:underline;text-underline-offset:3px'>les indicateurs de performance</a> pour révéler les vraies causes." },
+  { num: '03', title: 'Analyse & croisement des données', desc: "Pas uniquement vos KPIs\u00A0: on intègre aussi des données de marché, des benchmarks sectoriels, des analyses concurrentielles. L'idée est de situer votre performance dans un contexte réel, pas dans un vide. Canal par canal, avec une attention particulière aux interactions entre leviers. Un contenu bien référencé qui ne génère aucun lead, ce n'est pas forcément un problème de SEO. C'est peut-être un problème de parcours, de CTA, ou de ciblage en amont. Les silos d'analyse passent à côté de ces connexions. Nous croisons <a href='/agence-media/audit-strategie-digitale/indicateurs-de-performance-mix-marketing' class='dw-link'>les indicateurs de performance</a> pour révéler les vraies causes." },
   { num: '04', title: 'Formalisation des recommandations', desc: "Pas une liste à la Prévert. Un plan structuré, avec des priorités, des estimations de ressources nécessaires, et des indicateurs de suivi pour mesurer l'impact dans le temps. Ce livrable est conçu pour être actionnable immédiatement par votre équipe ou par un partenaire externe." },
 ]
 
@@ -132,7 +132,7 @@ export default function AuditStrategieDigitalePage() {
               VOTRE MIX MARKETING
             </h1>
             <p style={{ fontSize: '1rem', color: '#555', lineHeight: 1.8, marginBottom: 40, textAlign: 'justify' }}>
-              Vous investissez en digital depuis des années. Des campagnes tournent, vos annonces sont diffusées quotidiennement, des budgets sont investis. Mais sauriez-vous dire, à l&apos;instant T, ce qui fonctionne vraiment et les réseaux qui coûtent avec peu de résultats et de rentabilité&nbsp;? C&apos;est précisément la question à laquelle un <strong>audit de stratégie digitale</strong> apporte une réponse, en interne ou avec <Link href="/agence-media" style={{ color: '#0a0a0a', textDecoration: 'underline', textUnderlineOffset: '3px' }}>une agence média experte de votre mix marketing</Link>. Pas un diagnostic vague. Une lecture lucide et experte, levier par levier, pour reprendre la main.
+              Vous investissez en digital depuis des années. Des campagnes tournent, vos annonces sont diffusées quotidiennement, des budgets sont investis. Mais sauriez-vous dire, à l&apos;instant T, ce qui fonctionne vraiment et les réseaux qui coûtent avec peu de résultats et de rentabilité&nbsp;? C&apos;est précisément la question à laquelle un <strong>audit de stratégie digitale</strong> apporte une réponse, en interne ou avec <Link href="/agence-media" className="dw-link">une agence média experte de votre mix marketing</Link>. Pas un diagnostic vague. Une lecture lucide et experte, levier par levier, pour reprendre la main.
             </p>
             <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
               <Link href="/contact" style={{
@@ -196,7 +196,7 @@ export default function AuditStrategieDigitalePage() {
           </div>
           <div>
             <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }}>
-              L&apos;audit d&apos;une stratégie digitale, c&apos;est <strong style={{ color: '#fff' }}>un état des lieux structuré de votre présence</strong>{' '}sur internet et sur le digital, pour tous les canaux déployés&nbsp;: référencement naturel, LLM, référencement payant, emailing, DOOH, site web, SMS, outils de suivi analytics, collecte et stockage des informations. L&apos;objectif n&apos;est pas de tout remettre en cause. C&apos;est de comprendre où vous en êtes, de mesurer <Link href="/agence-media/audit-strategie-digitale/objectifs-marketing-digital" style={{ color: '#fff', textDecoration: 'underline', textUnderlineOffset: '3px' }}>l&apos;écart entre vos objectifs et vos résultats réels</Link>, et d&apos;identifier de possibles points de friction qui potentiellement freinent votre performance.
+              L&apos;audit d&apos;une stratégie digitale, c&apos;est <strong style={{ color: '#fff' }}>un état des lieux structuré de votre présence</strong>{' '}sur internet et sur le digital, pour tous les canaux déployés&nbsp;: référencement naturel, LLM, référencement payant, emailing, DOOH, site web, SMS, outils de suivi analytics, collecte et stockage des informations. L&apos;objectif n&apos;est pas de tout remettre en cause. C&apos;est de comprendre où vous en êtes, de mesurer <Link href="/agence-media/audit-strategie-digitale/objectifs-marketing-digital" className="dw-link dw-link--on-dark">l&apos;écart entre vos objectifs et vos résultats réels</Link>, et d&apos;identifier de possibles points de friction qui potentiellement freinent votre performance.
             </p>
             <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.85, marginBottom: 20, textAlign: 'justify' }}>
               Concrètement, on passe au crible chaque levier actif&nbsp;: sa contribution réelle au chiffre d&apos;affaires, son coût d&apos;acquisition, sa cohérence avec votre cible. On examine aussi ce qui manque&nbsp;: les canaux sous-exploités, les données non collectées, les opportunités invisibles, les pépites cachées. On évalue votre communication digitale dans sa globalité, sur tous vos réseaux, y compris l&apos;expérience vécue par vos visiteurs à chaque point de contact.
@@ -335,7 +335,7 @@ export default function AuditStrategieDigitalePage() {
               À l&apos;issue de l&apos;audit, vous disposez d&apos;une vision complète et documentée de votre présence digitale. Plus précisément, vous repartez avec un diagnostic complet de chaque levier actif&nbsp;: ce qui performe, ce qui stagne, ce qui mobilise des ressources sans retour tangible. Un regard expert, extérieur, sur un ensemble que vous n&apos;avez plus le recul nécessaire pour évaluer depuis l&apos;intérieur.
             </p>
             <p style={{ fontSize: '1rem', color: '#0a0a0a', lineHeight: 1.85, textAlign: 'justify' }}>
-              Mais surtout, vous repartez avec un <strong>plan d&apos;action opérationnel</strong>. Des recommandations hiérarchisées, reliées à vos objectifs business, avec des étapes concrètes et un calendrier réaliste. Pas un idéal théorique. Un chemin praticable, <Link href="/agence-media/audit-strategie-digitale/mix-marketing-interne-ou-externe" style={{ color: '#0a0a0a', textDecoration: 'underline', textUnderlineOffset: '3px' }}>adapté à vos moyens et à votre organisation</Link>. C&apos;est la différence entre savoir qu&apos;il faut «&nbsp;faire mieux en digital&nbsp;» et savoir exactement par où commencer.
+              Mais surtout, vous repartez avec un <strong>plan d&apos;action opérationnel</strong>. Des recommandations hiérarchisées, reliées à vos objectifs business, avec des étapes concrètes et un calendrier réaliste. Pas un idéal théorique. Un chemin praticable, <Link href="/agence-media/audit-strategie-digitale/mix-marketing-interne-ou-externe" className="dw-link dw-link--on-accent">adapté à vos moyens et à votre organisation</Link>. C&apos;est la différence entre savoir qu&apos;il faut «&nbsp;faire mieux en digital&nbsp;» et savoir exactement par où commencer.
             </p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -479,11 +479,44 @@ export default function AuditStrategieDigitalePage() {
         </div>
       </section>
 
-      {/* ── LIENS INTERNES — PAGES SOEURS N1 ────────────── */}
-      <section style={{ background: '#fafafa', padding: '80px 32px', borderTop: '1px solid #ebebeb' }}>
+      {/* ── SOUS-PAGES CLUSTER (liens vers les pages de niveau inférieur) ── */}
+      <section className="rsp-section" style={{ background: '#fff', padding: '80px 32px', borderTop: '1px solid #eee' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#aaa', marginBottom: 12 }}>
-            POUR EN SAVOIR PLUS
+          <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#29C5F5', marginBottom: 12 }}>
+            ALLER PLUS LOIN
+          </p>
+          <h2 className="font-anton" style={{ fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)', textTransform: 'uppercase', color: '#0a0a0a', marginBottom: 48 }}>
+            NOS GUIDES AUDIT STRATÉGIE DIGITALE
+          </h2>
+          <div className="rsp-4col" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
+            {[
+              { label: 'Marketing stratégique vs opérationnel', desc: 'Distinguer la vision de l\'exécution et les articuler', href: '/agence-media/audit-strategie-digitale/marketing-strategique-vs-marketing-operationnel' },
+              { label: 'Indicateurs de performance du mix marketing', desc: 'Choisir les KPIs qui mesurent ce qui compte vraiment', href: '/agence-media/audit-strategie-digitale/indicateurs-de-performance-mix-marketing' },
+              { label: 'Mix marketing : interne ou externe', desc: 'Gérer en interne ou confier à une agence externe', href: '/agence-media/audit-strategie-digitale/mix-marketing-interne-ou-externe' },
+              { label: 'Objectifs marketing digital', desc: 'Définir des objectifs alignés sur votre stratégie business', href: '/agence-media/audit-strategie-digitale/objectifs-marketing-digital' },
+            ].map(link => (
+              <Link key={link.href} href={link.href} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                <div style={{ background: '#fafafa', overflow: 'hidden', border: '1px solid #ebebeb', borderTop: '3px solid #FFF127', padding: '28px 24px' }}>
+                  <p className="font-anton" style={{ fontSize: '0.9rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 8px', lineHeight: 1.2 }}>{link.label}</p>
+                  <p style={{ fontSize: '0.78rem', color: '#555', lineHeight: 1.6, margin: '0 0 16px' }}>{link.desc}</p>
+                  <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#0a0a0a', letterSpacing: '0.1em', textTransform: 'uppercase', borderBottom: '2px solid #0a0a0a', paddingBottom: 2 }}>DÉCOUVRIR →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── LIENS INTERNES — AUTRES LEVIERS MÉDIA (pages de niveau équivalent) ── */}
+      <section style={{
+        background: 'linear-gradient(135deg, #27D9E5 0%, #B8E000 100%)',
+        padding: '160px 32px 80px',
+        clipPath: 'polygon(0 80px, 100% 0, 100% 100%, 0 100%)',
+        marginTop: '-80px',
+      }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+          <p style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.45)', marginBottom: 12 }}>
+            NOS EXPERTISES
           </p>
           <h2 className="font-anton" style={{ fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)', textTransform: 'uppercase', color: '#0a0a0a', marginBottom: 48 }}>
             NOS AUTRES LEVIERS MÉDIA
@@ -498,11 +531,13 @@ export default function AuditStrategieDigitalePage() {
               { label: 'TV segmentée & CTV', desc: 'Impact TV avec la précision du ciblage digital', href: '/agence-media/tv-segmentee-ctv' },
               { label: 'Campagnes DOOH', desc: 'Affichage digital extérieur en temps réel', href: '/agence-media/campagnes-dooh' },
             ].map(link => (
-              <div key={link.href} className="levier-card" style={{ background: '#fff', overflow: 'hidden', border: '1px solid #ebebeb', borderTop: '3px solid #FFF127', padding: '28px 24px' }}>
-                <p className="font-anton" style={{ fontSize: '0.9rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 8px', lineHeight: 1.2 }}>{link.label}</p>
-                <p style={{ fontSize: '0.78rem', color: '#555', lineHeight: 1.6, margin: '0 0 16px' }}>{link.desc}</p>
-                <Link href={link.href} style={{ fontSize: '0.72rem', fontWeight: 700, color: '#0a0a0a', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Découvrir {link.label} →</Link>
-              </div>
+              <Link key={link.href} href={link.href} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                <div style={{ background: '#fff', overflow: 'hidden', boxShadow: '0 4px 32px rgba(0,0,0,0.12)', borderTop: '3px solid #FFF127', padding: '28px 24px' }}>
+                  <p className="font-anton" style={{ fontSize: '0.9rem', textTransform: 'uppercase', color: '#0a0a0a', margin: '0 0 8px', lineHeight: 1.2 }}>{link.label}</p>
+                  <p style={{ fontSize: '0.78rem', color: '#555', lineHeight: 1.6, margin: '0 0 16px' }}>{link.desc}</p>
+                  <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#0a0a0a', letterSpacing: '0.1em', textTransform: 'uppercase', borderBottom: '2px solid #0a0a0a', paddingBottom: 2 }}>DÉCOUVRIR →</span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

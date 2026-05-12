@@ -22,6 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/agence-media/audit-strategie-digitale/mix-marketing-interne-ou-externe`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/agence-media/generation-de-leads`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/agence-media/generation-de-leads/comment-trouver-des-leads`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/agence-media/generation-de-leads/comment-generer-des-leads-en-b2b`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE}/agence-media/generation-de-leads/etapes-de-qualification-d-un-lead`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/recrutement`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 },
     { url: `${BASE}/creative-thinking-community`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   ]

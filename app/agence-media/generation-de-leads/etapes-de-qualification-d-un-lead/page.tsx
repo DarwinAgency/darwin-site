@@ -13,13 +13,13 @@ import { ogDefaults } from '../../../lib/og'
 import ArticleLayoutV2 from '../../../components/ArticleLayoutV2'
 
 export const metadata: Metadata = {
-  title: 'Qualification d\'un Lead : les Étapes Clés pour Mieux Convertir — DARWIN',
-  description: 'MQL, SQL, scoring, BANT, CHAMP : les étapes clés de la qualification d\'un lead pour convertir plus et mieux. Processus, outils et accompagnement DARWIN.',
+  title: 'Qualification d\'un Lead : les Étapes Clés pour Convertir | DARWIN',
+  description: 'Qualifiez vos leads avant de les transmettre aux commerciaux : MQL, SQL, scoring, BANT, CHAMP. Le processus, les outils et l\'accompagnement DARWIN.',
   alternates: { canonical: '/agence-media/generation-de-leads/etapes-de-qualification-d-un-lead' },
   openGraph: {
     ...ogDefaults,
-    title: 'Qualification d\'un Lead : les Étapes Clés pour Mieux Convertir',
-    description: 'MQL, SQL, scoring, BANT, CHAMP : les étapes clés de la qualification d\'un lead pour convertir plus et mieux. Processus, outils et accompagnement DARWIN.',
+    title: 'Qualification d\'un Lead : les Étapes Clés pour Convertir',
+    description: 'Qualifiez vos leads avant de les transmettre aux commerciaux : MQL, SQL, scoring, BANT, CHAMP. Le processus, les outils et l\'accompagnement DARWIN.',
     url: 'https://darwin-agency.fr/agence-media/generation-de-leads/etapes-de-qualification-d-un-lead',
   },
 }
@@ -47,7 +47,6 @@ const tocItems = [
 ]
 
 const relatedPages = [
-  { href: '/agence-media/generation-de-leads', label: 'Génération de Leads', desc: 'Stratégies et méthodes pour attirer des prospects qualifiés' },
   { href: '/agence-media/generation-de-leads/comment-trouver-des-leads', label: 'Comment Trouver des Leads', desc: 'Sources, canaux et méthodes pour votre pipeline' },
   { href: '/agence-media/generation-de-leads/comment-generer-des-leads-en-b2b', label: 'Générer des Leads en B2B', desc: 'Les leviers spécifiques pour capter des décisionnaires en B2B' },
 ]
@@ -71,7 +70,7 @@ export default function QualificationLeadPage() {
         { label: 'Qualification d\'un Lead' },
       ]}
       title={<>QUALIFICATION<br />D&apos;UN LEAD : LES<br />ÉTAPES&nbsp;CLÉS</>}
-      intro="Le débat est vieux comme le marketing digital. Les commerciaux se plaignent : « On nous envoie des leads trop froids. » Le marketing répond : « On vous envoie du volume, c'est à vous de vendre. » Les deux équipes ont souvent raison — et tort à la fois. Le vrai problème, c'est la qualification et l'analyse d'un lead qui s'avère insuffisante et pas assez structurée. Sans processus clair pour évaluer un prospect dans le processus de vente, tout le monde perd de l'énergie. Et le temps commercial, c'est une ressource coûteuse pour une société ou une marque."
+      intro={<>Le débat est vieux comme le marketing digital. Les commerciaux se plaignent : « On nous envoie des leads trop froids. » Le marketing répond : « On vous envoie du volume, c&apos;est à vous de vendre. » Les deux équipes ont souvent raison — et tort à la fois. Le vrai problème, c&apos;est la qualification et l&apos;analyse d&apos;un lead qui s&apos;avère insuffisante et pas assez structurée. Sans processus clair pour évaluer un prospect dans le processus de vente, tout le monde perd de l&apos;énergie. Et le temps commercial, c&apos;est une ressource coûteuse pour une société ou une marque. Chez DARWIN, notre <Link href="/agence-media" className="dw-link">agence média</Link> intègre cette étape dans chaque dispositif de <Link href="/agence-media/generation-de-leads" className="dw-link">génération de leads</Link>.</>}
       shareUrl="/agence-media/generation-de-leads/etapes-de-qualification-d-un-lead"
       shareTitle="Qualification d'un Lead : les Étapes Clés pour Mieux Convertir"
       heroIllustration={
@@ -158,7 +157,7 @@ export default function QualificationLeadPage() {
       essentialPoints={essentialPoints}
       author={{ name: 'Carole Kabanda', role: 'Directrice Media', photo: '/images/team/carole-kabanda.jpg' }}
       conclusion={
-        <p dangerouslySetInnerHTML={{ __html: "On configure les automatisations nécessaires pour identifier les leads chauds et les faire remonter directement dans le pipeline commercial, au bon moment, sans traitement manuel ni délai qui refroidit l'intérêt. Nos équipes sont alimentées par vos équipes commerciales qui exploitent les leads : joignabilité, maturité, objections. Et on suit les taux de conversion à chaque étape pour ajuster le processus dans le temps. Résultat : une équipe de vendeurs qui passe moins de temps à prospecter à froid et plus de temps à convertir les meilleurs prospects — ceux qui ont déjà levé la main. Les gains sur le <strong>taux de conversion</strong> sont souvent visibles à court&nbsp;terme." }} />
+        <p dangerouslySetInnerHTML={{ __html: "On configure les automatisations nécessaires pour identifier les leads chauds et les faire remonter directement dans le pipeline commercial, au bon moment, sans traitement manuel ni délai qui refroidit l'intérêt. Nos équipes sont alimentées par vos équipes commerciales qui exploitent les leads : joignabilité, maturité, objections. Et on suit les taux de conversion à chaque étape pour ajuster le processus dans le temps. Résultat : une équipe de vendeurs qui passe moins de temps à prospecter à froid et plus de temps à convertir les meilleurs prospects — ceux qui ont déjà levé la main. Les gains sur le taux de conversion sont souvent visibles à court&nbsp;terme." }} />
       }
     >
       <>
@@ -172,7 +171,7 @@ export default function QualificationLeadPage() {
         </div>
 
         <p className="artv2-body">
-          Qualifier un lead, c&apos;est évaluer dans quelle mesure un prospect correspond à votre client idéal et se trouve dans les bonnes conditions pour acheter votre produit ou votre service. C&apos;est la brique la plus importante d&apos;une stratégie commerciale rentable, et souvent la moins bien travaillée. Ce n&apos;est pas simplement vérifier qu&apos;il a laissé un email valide. C&apos;est comprendre qui il est, ce qu&apos;il cherche, s&apos;il en a les moyens — et si le moment est le bon.
+          <strong>Qualifier un lead</strong>, c&apos;est évaluer dans quelle mesure un prospect correspond à votre client idéal et se trouve dans les bonnes conditions pour acheter votre produit ou votre service. C&apos;est la brique la plus importante d&apos;une stratégie commerciale rentable, et souvent la moins bien travaillée. Ce n&apos;est pas simplement vérifier qu&apos;il a laissé un email valide. C&apos;est comprendre qui il est, ce qu&apos;il cherche, s&apos;il en a les moyens — et si le moment est le bon.
         </p>
         <p className="artv2-body">
           La qualification repose sur deux dimensions complémentaires. La première repose sur des critères sociodémographiques : profession, zone géographique, âges, statuts, civilité… Ces données permettent de vérifier que le prospect est dans votre cible et qu&apos;il correspond au profil idéal que vous souhaitez atteindre.
@@ -195,10 +194,10 @@ export default function QualificationLeadPage() {
         </div>
 
         <p className="artv2-body">
-          Ces deux acronymes structurent le processus de qualification dans la plupart des organisations. Les confondre est l&apos;une des sources principales de friction entre marketing et commercial.
+          Ces deux acronymes <strong>structurent le processus de qualification dans la plupart des organisations</strong>. Les confondre est l&apos;une des sources principales de friction entre marketing et commercial.
         </p>
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Un <strong>MQL</strong> — <strong>marketing qualified lead</strong> — est un prospect que l'équipe marketing juge, selon des critères précis, suffisamment engagé pour mériter une attention. Il a interagi avec plusieurs contenus, rempli un formulaire, assisté à un webinaire. Il est dans votre base, il vous connaît. Mais il n'est pas encore prêt à recevoir une offre commerciale ou il a besoin d'en savoir encore un petit peu plus avant de convertir." }} />
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Un <strong>SQL</strong> — <strong>sales qualified lead</strong> — est un MQL que l'équipe commerciale a validé après un premier contact. Il a confirmé son besoin, son budget, son appétence pour le produit ou le service, son délai de décision et son rôle dans le processus d'achat. C'est lui qu'on travaille en priorité, avec un effort commercial pour le transformer en client, proportionnel à son potentiel et sa capacité à convertir." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Un MQL — marketing qualified lead — est un prospect que l'équipe marketing juge, selon des critères précis, suffisamment engagé pour mériter une attention. Il a interagi avec plusieurs contenus, rempli un formulaire, assisté à un webinaire. Il est dans votre base, il vous connaît. Mais il n'est pas encore prêt à recevoir une offre commerciale ou il a besoin d'en savoir encore un petit peu plus avant de convertir." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "Un SQL — sales qualified lead — est un MQL que l'équipe commerciale a validé après un premier contact. Il a confirmé son besoin, son budget, son appétence pour le produit ou le service, son délai de décision et son rôle dans le processus d'achat. C'est lui qu'on travaille en priorité, avec un effort commercial pour le transformer en client, proportionnel à son potentiel et sa capacité à convertir." }} />
 
         <blockquote className="artv2-blockquote artv2-blockquote--highlight">
           <p>
@@ -231,7 +230,7 @@ export default function QualificationLeadPage() {
         </div>
 
         <p className="artv2-body">
-          Le lead scoring est l&apos;outil le plus opérationnel pour gérer la qualification à grande échelle et améliorer le taux de conversion. Le principe est simple : on attribue des points à chaque action ou information relative à un prospect. Plus le score est élevé, plus le lead est prioritaire en raison de ses chances de se convertir en client.
+          <strong>Le lead scoring est l&apos;outil le plus opérationnel</strong>{' '}pour gérer la qualification à grande échelle et améliorer le taux de conversion. Le principe est simple : on attribue des points à chaque action ou information relative à un prospect. Plus le score est élevé, plus le lead est prioritaire en raison de ses chances de se convertir en client.
         </p>
 
         <div className="artv2-card-accent">
@@ -275,10 +274,10 @@ export default function QualificationLeadPage() {
         </p>
 
         <div className="artv2-card-dark">
-          <p dangerouslySetInnerHTML={{ __html: "<strong>BANT</strong> est la plus ancienne : <em>Budget, Authority, Need, Timeline</em>. Le prospect a-t-il le budget ? Est-il décisionnaire ? A-t-il un besoin réel ? Quel est son délai ? C'est une grille efficace pour les cycles d'achat courts et les offres bien définies. Elle est parfois critiquée pour sa rigidité — en B2B complexe, le budget n'est pas toujours identifié au premier contact." }} />
+          <p dangerouslySetInnerHTML={{ __html: "BANT est la plus ancienne : <em>Budget, Authority, Need, Timeline</em>. Le prospect a-t-il le budget ? Est-il décisionnaire ? A-t-il un besoin réel ? Quel est son délai ? C'est une grille efficace pour les cycles d'achat courts et les offres bien définies. Elle est parfois critiquée pour sa rigidité — en B2B complexe, le budget n'est pas toujours identifié au premier contact." }} />
         </div>
 
-        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "<strong>CHAMP</strong> est une version plus contemporaine : <em>Challenges, Authority, Money, Prioritization</em>. L'ordre change : on commence par le problème du prospect, pas par son portefeuille. Cette approche est mieux adaptée aux ventes consultatives où l'enjeu est d'abord de comprendre la situation avant de proposer une solution." }} />
+        <p className="artv2-body" dangerouslySetInnerHTML={{ __html: "CHAMP est une version plus contemporaine : <em>Challenges, Authority, Money, Prioritization</em>. L'ordre change : on commence par le problème du prospect, pas par son portefeuille. Cette approche est mieux adaptée aux ventes consultatives où l'enjeu est d'abord de comprendre la situation avant de proposer une solution." }} />
 
         <blockquote className="artv2-blockquote artv2-blockquote--highlight">
           <p>
@@ -333,7 +332,7 @@ export default function QualificationLeadPage() {
         </p>
 
         <p className="artv2-body">
-          On commence par aligner vos équipes marketing et commerciales sur une définition commune du lead qualifié. C&apos;est souvent la première étape la plus productive — et celle qu&apos;on saute le plus souvent. Ensuite, on met en place ou on optimise votre scoring en s&apos;appuyant sur vos données historiques de conversion, pour calibrer les critères qui comptent vraiment pour votre activité.
+          On commence par aligner vos équipes marketing et commerciales sur <strong>une définition commune du lead qualifié</strong>. C&apos;est souvent la première étape la plus productive — et celle qu&apos;on saute le plus souvent. Ensuite, on met en place ou on optimise votre scoring en s&apos;appuyant sur vos données historiques de conversion, pour calibrer les critères qui comptent vraiment pour votre activité.
         </p>
       </section>
       </>

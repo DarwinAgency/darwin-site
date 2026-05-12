@@ -599,6 +599,16 @@ Pages à mettre à jour (prochaines sessions) :
 
 ---
 
+## [Session 16] — Cocon « génération de leads » : passe SEO & typo
+
+### Pages `app/agence-media/generation-de-leads/` (hub + sous-pages)
+- Page hub + `comment-trouver-des-leads`, `comment-generer-des-leads-en-b2b`, `etapes-de-qualification-d-un-lead` : retrait des tirets cadratins (remplacés par virgules ou `:`), espaces insécables avant `: ; ! ?` et autour de `« »` (` `), titles raccourcis dans la fourchette 55-65 c. et metas resserrées (≤ 150 c.)
+- 2 routes ajoutées dans `app/sitemap.ts` : `comment-generer-des-leads-en-b2b`, `etapes-de-qualification-d-un-lead`
+- `HANDOVER.md` : gabarit metadata « max 160 » → « max 150 caractères »
+- Coquilles diverses dans `audit-strategie-digitale/page.tsx` et `marketing-strategique-vs-marketing-operationnel/page.tsx`
+
+---
+
 ## Architecture des fichiers clés
 
 ```

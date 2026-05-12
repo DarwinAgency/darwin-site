@@ -267,7 +267,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Titre de la page — Darwin Agency",
-  description: "Description de la page pour Google (max 160 caractères)",
+  description: "Description de la page pour Google (max 150 caractères)",
 };
 
 export default function MaNouvellePage() {
