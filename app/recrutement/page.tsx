@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/recrutement' },
   openGraph: {
     ...ogDefaults,
+    images: [{ url: '/images/team/recrutement-hero.jpg', width: 1200, height: 630, alt: "Rejoindre l'équipe DARWIN" }],
     title: "Rejoindre DARWIN — Offres d'emploi",
     description: "Rejoignez une équipe de 30+ experts seniors. SEO, SEA, SMA, Analytics à Aix-en-Provence.",
     url: 'https://darwin-agency.fr/recrutement',

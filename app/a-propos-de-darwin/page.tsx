@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/a-propos-de-darwin' },
   openGraph: {
     ...ogDefaults,
+    images: [{ url: '/images/agence/agence-hero.jpg', width: 1200, height: 630, alt: "L'agence DARWIN" }],
     title: "DARWIN — L'agence marketing digital depuis 2003",
     description: `30+ experts seniors, 400+ clients accompagnés, ${DARWIN_YEARS} ans de performance digitale.`,
     url: 'https://darwin-agency.fr/a-propos-de-darwin',

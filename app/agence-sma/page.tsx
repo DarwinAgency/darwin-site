@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/agence-sma' },
   openGraph: {
     ...ogDefaults,
+    images: [{ url: '/images/sma/cover-agence-sma.jpeg', width: 1200, height: 630, alt: 'Agence Social Media Ads DARWIN' }],
     title: "Agence SMA — Social Media Ads & réseaux sociaux | DARWIN",
     description: "Vous cherchez à développer votre marque sur les réseaux sociaux? Face à la multiplicité des plateformes et des formats publicitaires, piloter efficacement vos campagnes Social Ads nécessite l'accompagnement d'un professionnel.",
     url: 'https://darwin-agency.fr/agence-sma',

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/studio-creatif' },
   openGraph: {
     ...ogDefaults,
+    images: [{ url: '/images/studio/cover-studio-creatif.jpeg', width: 1200, height: 630, alt: 'Studio créatif DARWIN' }],
     title: "Studio Créatif — Direction artistique & contenu | DARWIN",
     description: "Lorem ipsum dolor sit amet. Studio créatif intégré depuis 2003.",
     url: 'https://darwin-agency.fr/studio-creatif',

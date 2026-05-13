@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/agence-seo' },
   openGraph: {
     ...ogDefaults,
+    images: [{ url: '/images/seo/seo-equipe.jpg', width: 1200, height: 630, alt: 'Agence SEO DARWIN' }],
     title: "Agence SEO — Référencement naturel & GEO | DARWIN",
     description: "Expert SEO depuis 2003. Audit, technique, contenu, netlinking et GEO pour être visible dans Google et les LLMs.",
     url: 'https://darwin-agency.fr/agence-seo',

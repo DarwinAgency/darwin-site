@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/agence-media/generation-de-leads' },
   openGraph: {
     ...ogDefaults,
+    images: [{ url: '/images/media/generation-leads-darwin.jpg', width: 1200, height: 630, alt: 'Génération de leads B2B et B2C — DARWIN' }],
     title: 'Génération de leads B2B & B2C\u00A0: méthodes qui convertissent | DARWIN',
     description: "Dispositif intégré de génération de leads qualifiés\u00A0: du premier contact publicitaire à la signature. SEO, SEA, emailing, SMS, social ads, programmatique.",
     url: 'https://darwin-agency.fr/agence-media/generation-de-leads',
@@ -525,7 +526,7 @@ export default function GenerationDeLeadsPage() {
               <Link key={cas.slug} href={`/cas-clients/${cas.slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <div style={{ background: '#fafafa', border: '1px solid #e8e8e8', overflow: 'hidden' }}>
                   <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden' }}>
-                    <img src={cas.img} alt={`Cas client ${cas.client}`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                    <Image src={cas.img} alt={`Cas client ${cas.client}`} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
                     <span style={{ position: 'absolute', top: 16, left: 16, background: '#FFF127', color: '#0a0a0a', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '4px 10px' }}>
                       {cas.levier}
                     </span>

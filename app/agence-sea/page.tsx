@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/agence-sea' },
   openGraph: {
     ...ogDefaults,
+    images: [{ url: '/images/sea/cover-agence-sea.jpeg', width: 1200, height: 630, alt: 'Agence SEA Google Ads DARWIN' }],
     title: "Agence SEA — Google Ads & référencement payant | DARWIN",
     description: "Agence SEA certifiée Google Partner. Stratégie d'enchères, Google Shopping, Performance Max, YouTube Ads. 23 ans d'expertise, 400+ comptes gérés.",
     url: 'https://darwin-agency.fr/agence-sea',

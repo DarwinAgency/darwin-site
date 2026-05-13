@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/formations' },
   openGraph: {
     ...ogDefaults,
+    images: [{ url: '/images/formation/cover-formation.jpeg', width: 1200, height: 630, alt: 'Formations digitales DARWIN' }],
     title: "Formation Digitale — Montée en compétences SEO, SEA, SMA | DARWIN",
     description: "Lorem ipsum dolor sit amet. Formations digitales certifiées depuis 2003.",
     url: 'https://darwin-agency.fr/formations',

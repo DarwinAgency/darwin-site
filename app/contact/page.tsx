@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/contact' },
   openGraph: {
     ...ogDefaults,
+    images: [{ url: '/images/contact/le-toma.jpg', width: 1200, height: 630, alt: 'Bureaux DARWIN — Aix-en-Provence' }],
     title: "Contactez DARWIN — Parlons de votre projet digital",
     description: "Vous avez un projet digital ? Discutons-en. DARWIN, agence marketing performance à Aix-en-Provence.",
     url: 'https://darwin-agency.fr/contact',

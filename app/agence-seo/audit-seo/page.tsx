@@ -5,6 +5,7 @@
 // ─────────────────────────────────────────────────────────
 
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { DARWIN_YEARS } from '../../lib/darwin'
 import { faqJsonLd, serviceJsonLd, breadcrumbJsonLd } from '../../lib/jsonld'
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/agence-seo/audit-seo' },
   openGraph: {
     ...ogDefaults,
+    images: [{ url: '/images/seo/seo-equipe.jpg', width: 1200, height: 630, alt: 'Audit SEO DARWIN' }],
     title: 'Audit SEO complet — Technique, Contenu, Netlinking & IA | DARWIN',
     description: "Diagnostic SEO complet par DARWIN : crawl technique, analyse sémantique, profil de liens et visibilité dans les moteurs génératifs. Rapport livré en 10 jours.",
     url: 'https://darwin-agency.fr/agence-seo/audit-seo',
@@ -68,7 +70,7 @@ const caseStudies = [
     levier: 'SEO',
     result: '+60% de trafic organique',
     desc: "Refonte SEO complète d'un acteur majeur de l'immobilier : audit technique approfondi, création de mini-sites thématiques et stratégie de netlinking appuyée sur les synergies partenaires.",
-    img: 'https://www.darwin-agency.com/wp-content/uploads/2025/05/Cas-clients-logic-immo.jpg',
+    img: '/images/cas-clients/logic-immo-cover.jpg',
   },
   {
     client: 'Planet-Cards',
@@ -76,7 +78,7 @@ const caseStudies = [
     levier: 'SEO',
     result: 'Visibilité organique transformée en croissance e-commerce',
     desc: "Audit SEO complet d'un e-commerce de carterie personnalisée, suivi d'une stratégie éditoriale et technique qui a transformé le trafic organique en revenus mesurables.",
-    img: 'https://www.darwin-agency.com/wp-content/uploads/2025/01/Cas-client-planet-cards.jpg',
+    img: '/images/cas-clients/planet-cards-cover.jpg',
   },
 ]
 
@@ -207,6 +209,7 @@ export default function AuditSeoPage() {
               width: '100%',
               maxWidth: 520,
             }}>
+              {/* eslint-disable-next-line @next/next/no-img-element -- SVG décoratif, non concerné par l'optimisation next/image */}
               <img
                 src="/images/illustrations/audit-seo.svg"
                 alt="Illustration audit SEO — analyse et diagnostic de visibilité"
@@ -420,7 +423,7 @@ export default function AuditSeoPage() {
               <Link key={cas.slug} href={`/cas-clients/${cas.slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <div style={{ background: '#fff', border: '1px solid #e8e8e8', overflow: 'hidden', transition: 'box-shadow 0.2s ease' }}>
                   <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden' }}>
-                    <img src={cas.img} alt={`Cas client ${cas.client}`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                    <Image src={cas.img} alt={`Cas client ${cas.client}`} fill sizes="(max-width: 768px) 100vw, 640px" style={{ objectFit: 'cover' }} />
                     <span style={{ position: 'absolute', top: 16, left: 16, background: '#FFF127', color: '#0a0a0a', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '4px 10px' }}>
                       {cas.levier}
                     </span>
@@ -561,8 +564,8 @@ export default function AuditSeoPage() {
             ].map(link => (
               <Link key={link.href} href={link.href} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <div style={{ background: '#fff', overflow: 'hidden', boxShadow: '0 4px 32px rgba(0,0,0,0.12)', borderTop: '3px solid #FFF127' }}>
-                  {/* Exception documentée : <img> utilisé pour SVG illustratif décoratif */}
                   <div style={{ background: '#f5f5f5', borderBottom: '1px solid #ebebeb' }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element -- SVG décoratif, non concerné par l'optimisation next/image */}
                     <img src={link.img} alt={`Illustration ${link.label}`} style={{ width: '100%', height: 'auto', display: 'block' }} />
                   </div>
                   <div style={{ padding: '20px 24px 24px' }}>

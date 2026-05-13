@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/agence-media' },
   openGraph: {
     ...ogDefaults,
+    images: [{ url: '/images/media/agence-media-equipe-hd.jpg', width: 1200, height: 630, alt: 'Agence média DARWIN' }],
     title: "Agence Média | Plan média & performance publicitaire | DARWIN",
     description: "Agence média experte depuis 2003. Programmatique, display, TV segmentée, DOOH, emailing, SMS/RCS. Structurez vos investissements publicitaires.",
     url: 'https://darwin-agency.fr/agence-media',

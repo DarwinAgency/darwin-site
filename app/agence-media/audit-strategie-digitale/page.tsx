@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/agence-media/audit-strategie-digitale' },
   openGraph: {
     ...ogDefaults,
+    images: [{ url: '/images/media/audit-equipe.jpg', width: 1200, height: 630, alt: 'Audit stratégie digitale DARWIN' }],
     title: 'Audit Stratégie Digitale | Optimisez votre Mix Marketing | DARWIN',
     description: "Diagnostic complet de votre présence digitale\u00A0: SEO, SEA, emailing, social, contenu. Recommandations chiffrées et plan d'action priorisé.",
     url: 'https://darwin-agency.fr/agence-media/audit-strategie-digitale',
@@ -375,7 +376,7 @@ export default function AuditStrategieDigitalePage() {
             {caseStudies.map(cas => (
               <div key={cas.slug} style={{ background: '#fff', border: '1px solid #e8e8e8', overflow: 'hidden' }}>
                 <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden' }}>
-                  <img src={cas.img} alt={`Cas client ${cas.client}`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  <Image src={cas.img} alt={`Cas client ${cas.client}`} fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
                   <span style={{ position: 'absolute', top: 16, left: 16, background: '#FFF127', color: '#0a0a0a', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '4px 10px' }}>
                     {cas.levier}
                   </span>

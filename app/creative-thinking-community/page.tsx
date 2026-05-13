@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/creative-thinking-community' },
   openGraph: {
     ...ogDefaults,
+    images: [{ url: '/images/ctc/ctc-hero.jpg', width: 1200, height: 630, alt: 'Creative Thinking Community' }],
     title: "Creative Thinking Community — Collectif d'agences expertes | DARWIN",
     description: "4 agences expertes unies pour révéler le potentiel de chaque projet : stratégie de marque, performance digitale, création web et UX/UI.",
     url: 'https://darwin-agency.fr/creative-thinking-community',

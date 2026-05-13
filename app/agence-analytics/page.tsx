@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/agence-analytics' },
   openGraph: {
     ...ogDefaults,
+    images: [{ url: '/images/analytics/cover-agence-data-tracking.jpeg', width: 1200, height: 630, alt: 'Agence Analytics & Data DARWIN' }],
     title: "Agence Analytics — Data, Tracking & Attribution | DARWIN",
     description: "Agence data certifiée Google Analytics. Tracking, GA4, attribution multi-touch, dashboards, server-side, consentement RGPD. Pilotez vos investissements par la donnée.",
     url: 'https://darwin-agency.fr/agence-analytics',
