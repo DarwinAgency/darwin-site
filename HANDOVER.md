@@ -151,7 +151,8 @@ darwin-agency/
 │   ├── layout.tsx              ← Layout commun (header + footer + SEO global)
 │   ├── page.tsx                ← Page d'accueil
 │   ├── not-found.tsx           ← Page 404
-│   └── sitemap.ts              ← Sitemap généré automatiquement
+│   ├── sitemap.ts              ← Sitemap généré automatiquement
+│   └── robots.ts               ← robots.txt généré (bloqué en préprod via PREVIEW_AUTH_ENABLED)
 ├── public/                     ← Images et fichiers statiques
 │   ├── images/                 ← Photos du site
 │   │   ├── blog/               ← Images des articles de blog
@@ -159,7 +160,6 @@ darwin-agency/
 │   │   ├── team/               ← Photos de l'équipe
 │   │   └── ...
 │   ├── logos/                  ← Logos clients, certifications, récompenses
-│   ├── robots.txt              ← Instructions pour les moteurs de recherche
 │   └── llms.txt                ← Instructions pour les IA (ChatGPT, etc.)
 ├── scripts/                    ← Scripts utilitaires
 ├── next.config.ts              ← Configuration Next.js
@@ -491,7 +491,7 @@ Pour les réseaux sociaux (partage LinkedIn, Twitter…), chaque page importante
 
 ### Robots
 
-Le fichier `public/robots.txt` contrôle l'indexation par Google.
+Le fichier `app/robots.ts` génère le `robots.txt` : indexation **bloquée** quand `PREVIEW_AUTH_ENABLED=true` (préprod), **autorisée** sinon (prod).
 Le sitemap est généré automatiquement par `app/sitemap.ts`.
 
 ### JSON-LD (données structurées)
