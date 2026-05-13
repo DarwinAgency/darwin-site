@@ -137,9 +137,12 @@ export default async function BlogArticlePage({ params }: Props) {
                 width: 44, height: 44, borderRadius: '50%',
                 overflow: 'hidden', background: '#f0f0f0', flexShrink: 0,
               }}>
-                <img
+                <Image
                   src={article.author.photo}
                   alt={article.author.name}
+                  width={44}
+                  height={44}
+                  sizes="44px"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
@@ -372,9 +375,12 @@ export default async function BlogArticlePage({ params }: Props) {
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 16 }}>
               <div style={{ width: 48, height: 48, borderRadius: '50%', overflow: 'hidden', background: '#f0f0f0', flexShrink: 0 }}>
-                <img
+                <Image
                   src={article.author.photo}
                   alt={article.author.name}
+                  width={48}
+                  height={48}
+                  sizes="48px"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>

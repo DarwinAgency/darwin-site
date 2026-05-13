@@ -334,11 +334,13 @@ export default function AgencePage() {
                   overflow: 'hidden',
                 }}
               >
-                <div style={{ width: '100%', aspectRatio: '3/4', marginBottom: 20, overflow: 'hidden', background: '#f0f0f0' }}>
-                  <img
+                <div style={{ position: 'relative', width: '100%', aspectRatio: '3/4', marginBottom: 20, overflow: 'hidden', background: '#f0f0f0' }}>
+                  <Image
                     src={member.photo}
                     alt={member.name}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 240px"
+                    style={{ objectFit: 'cover', objectPosition: 'top' }}
                   />
                 </div>
                 <h3 style={{ fontWeight: 700, fontSize: '0.95rem', color: '#0a0a0a', marginBottom: 6, lineHeight: 1.3 }}>{member.name}</h3>

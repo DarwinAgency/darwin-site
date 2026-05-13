@@ -199,8 +199,9 @@ export default async function CasClientPage({ params }: Props) {
             </p>
           </div>
 
-          {/* Bloc droit — image à proportions naturelles */}
+          {/* Bloc droit — image à proportions naturelles (dimensions variables selon le cas) */}
           <div className="rsp-sticky" style={{ position: 'sticky', top: 120 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element -- ratio inconnu à la compilation, fill/width+height inapplicables */}
             <img
               src={cas.problematiqueImg}
               alt={`Illustration ${cas.client}`}

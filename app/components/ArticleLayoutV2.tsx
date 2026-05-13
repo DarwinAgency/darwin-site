@@ -1,6 +1,7 @@
 'use client'
 
 import { ReactNode, useEffect, useState, useRef } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 interface TocItem {
@@ -768,7 +769,7 @@ export default function ArticleLayoutV2({
               <hr className="artv2-sidebar-divider" />
               <div className="artv2-author">
                 <div className="artv2-author-photo">
-                  <img src={author.photo} alt={author.name} />
+                  <Image src={author.photo} alt={author.name} width={48} height={48} sizes="48px" style={{ objectFit: 'cover' }} />
                 </div>
                 <div>
                   <p className="artv2-author-name">{author.name}</p>
